@@ -1,0 +1,5 @@
+Dimension,Value,Notes
+Evaluation Partition,"Full Retrospective Database Cohort (N = 2,107)",Single integrated operational repository
+Patient / Study Identifier,Unique Indiana University Study UID per Case,Zero cross-study patient leakage within repository
+Training vs. Evaluation Leakage,Zero Training Leakage (Model NOT Fine-Tuned),google/medgemma-4b-it evaluated strictly zero-shot/prompted
+Independent Test Split Status,Retrospective Cohort (Pre-Clinical Baseline),Independent prospective radiologist panel holdout required for clinical claims

@@ -1,0 +1,4 @@
+Class Label,Case Count,Percentage,IU Reference Source,Imbalance Ratio
+Normal,1054,50.02%,Problems == 'normal',1.00 : 1.00
+Abnormal,1053,49.98%,Problems != 'normal',1.00 : 1.00
+Total Cohort,2107,100.00%,indiana_reports.csv,Balanced

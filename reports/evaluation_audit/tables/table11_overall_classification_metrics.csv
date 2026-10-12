@@ -1,0 +1,8 @@
+Metric,Value,Formula,Denominator,Status
+Accuracy,0.6806,(TP + TN) / (TP + TN + FP + FN),"2,107 (1434 / 2107)",Evaluated
+Specificity (Normal),0.9867,TN / (TN + FP),"1,054 (1040 / 1054)",Evaluated
+Precision (Abnormal),0.9657,TP / (TP + FP),408 (394 / 408),Evaluated
+Sensitivity / Recall (Abnormal),0.3742,TP / (TP + FN),"1,053 (394 / 1053)",Evaluated
+F1-Score (Abnormal),0.5394,2 * Prec * Rec / (Prec + Rec),Harmonic Mean,Evaluated
+Macro-F1,0.6474,(F1_norm + F1_abn) / 2,Unweighted Mean,Evaluated
+Weighted-F1,0.6475,Sum(w_c * F1_c),Class Support Weighted,Evaluated

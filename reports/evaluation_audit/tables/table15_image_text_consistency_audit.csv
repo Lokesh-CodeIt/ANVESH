@@ -1,0 +1,5 @@
+Metric,Observed Count,Proportion,Interpretation
+Model-Asserted Consistency (consistent=True),2107,100.0%,Model asserted consistent in all precomputed outputs
+Grounded Cohort (has_source_text=True),2085,98.96%,Original text available for multimodal verification
+Ungrounded Cohort (has_source_text=False),22,1.04%,Clinical text absent; model consistency ungrounded
+Independent Radiologist Paired Consistency Reference,0,Not Evaluated,Requires blinded dual-reader panel

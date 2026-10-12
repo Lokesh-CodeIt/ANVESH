@@ -1,0 +1,4 @@
+Analysis,Result,Missing Requirement,Next Action
+Receiver Operating Characteristic (ROC-AUC),Not Evaluated,Continuous softmax probability outputs from MedGemma,Extract raw token logits during inference
+Precision-Recall AUC (PR-AUC),Not Evaluated,Continuous confidence scores across varying decision thresholds,Save probability distributions for abnormal tokens
+Operating Threshold Sweep,Not Applicable,"Model output is categorical JSON text string, not continuous score",Instrument VLM log-likelihood evaluation

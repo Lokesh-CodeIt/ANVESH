@@ -1,0 +1,17 @@
+{
+  "backup_file": "medauth_vlm_pre_import_20261011_174043.sql",
+  "created_at": "2026-10-11T12:10:44.203516+00:00",
+  "database": "medauth_vlm",
+  "host": "localhost",
+  "port": "5432",
+  "size_bytes": 1996604,
+  "sha256": "2fd744e28e05ac3c79bf306a93626009de9644ae1b194310a4d9b677cbf48f6a",
+  "verified": true,
+  "tables_verified": [
+    "cases",
+    "case_images",
+    "evidence",
+    "policies",
+    "reviews"
+  ]
+}

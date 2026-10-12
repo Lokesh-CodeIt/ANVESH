@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-10-11T12:10:21.358355+00:00",
+  "checks": {
+    "record_count_reconciliation": {
+      "passed": true,
+      "details": {
+        "b4_count": 400,
+        "b5_count": 357,
+        "b6_count": 400,
+        "sum_normalized": 1157,
+        "source_count": 1157
+      }
+    },
+    "canonical_schema_conformance": {
+      "passed": true,
+      "details": {
+        "error_count": 0,
+        "errors_sample": []
+      }
+    },
+    "integer_id_validity_and_internal_uniqueness": {
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    "cross_batch_and_db_collision_audit": {
+      "passed": true,
+      "details": {
+        "b4_b5_collisions": 0,
+        "b4_b6_collisions": 0,
+        "b5_b6_collisions": 0,
+        "b4_db_collisions": 0,
+        "b5_db_collisions": 0,
+        "b6_db_collisions": 0,
+        "existing_db_cases_count": 950,
+        "existing_db_evidence_count": 950
+      }
+    },
+    "preservation_of_genuine_raw_model_outputs": {
+      "passed": true,
+      "details": {
+        "error_count": 0,
+        "errors_sample": []
+      }
+    },
+    "absent_batch_5_cases_verification": {
+      "passed": true,
+      "details": {
+        "missing_count": 43,
+        "matches_expected_43_ids": true,
+        "fabricated_records": 0
+      }
+    },
+    "batch_6_missing_raw_and_provenance_preservation": {
+      "passed": true,
+      "details": {
+        "all_raw_model_outputs_are_null": true,
+        "provenance_records_count": 400,
+        "provenance_aligned_with_normalized": true
+      }
+    },
+    "evidence_jsonb_compliance": {
+      "passed": true,
+      "details": {
+        "error_count": 0
+      }
+    },
+    "source_file_immutability": {
+      "passed": true,
+      "details": {
+        "immutability_errors": [],
+        "verified_files_count": 10
+      }
+    },
+    "repeatability_and_hash_stability": {
+      "passed": true,
+      "details": {
+        "batch_4_sha256": "6d321f87e84e4f552d0b5f5b8e9ec40ab35a19fe8c593ad6cbbcac2dba10b8e5",
+        "batch_5_sha256": "1adf91b8062655dc7d6ec94ac595e7eadd91249943c2488f110ff5972144e8b7",
+        "batch_6_sha256": "3d2cdcc4bdd4272c49e3c97a42270f6b96acae47c5bbb54ca62fc92b77853d91"
+      }
+    },
+    "security_and_secret_leakage_audit": {
+      "passed": true,
+      "details": {
+        "leak_errors": [],
+        "files_scanned": [
+          "evidence_batch_4.json",
+          "evidence_batch_5.json",
+          "evidence_batch_6.json",
+          "provenance_batch_6.json"
+        ]
+      }
+    }
+  },
+  "summary": {
+    "total_checks": 11,
+    "passed_checks": 11,
+    "failed_checks": 0
+  },
+  "final_status": "READY FOR DATABASE IMPORT"
+}

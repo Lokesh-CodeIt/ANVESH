@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-10-11T11:25:39.379804+00:00",
+  "immutability_verified": true,
+  "source_files": {
+    "AI_PORJECT_DATASET/precomputed_evidence/evidence_cleaned.json": {
+      "size_bytes": 276009,
+      "sha256": "e7ac860b776ee46682406c6940d5389433e111aeb0ef0cd03e0f97d85f299909",
+      "last_modified": "2026-09-20T19:20:28.201141+00:00"
+    },
+    "AI_PORJECT_DATASET/precomputed_evidence/evidence_batch_2.json": {
+      "size_bytes": 735212,
+      "sha256": "276a3fc4faf8bae21ff6bdcaee74e06355dda8449309dacec81b5dc3f41df6e3",
+      "last_modified": "2026-09-27T13:51:37.966365+00:00"
+    },
+    "AI_PORJECT_DATASET/precomputed_evidence/evidence_batch_3.json": {
+      "size_bytes": 739764,
+      "sha256": "06859f0078b4b898eb7ee8fd144a5bba3c384aa66d373c691efbb25b4bfdaef5",
+      "last_modified": "2026-09-28T16:27:49.695157+00:00"
+    },
+    "AI_PORJECT_DATASET/precomputed_evidence/evidence_results.json": {
+      "size_bytes": 1994790,
+      "sha256": "2173676619f7a90657ec90f354f250718bea80399fea15e235fcf87f0402521a",
+      "last_modified": "2026-10-11T09:46:15.092653+00:00"
+    },
+    "AI_PORJECT_DATASET/colab_upload/case_batch.json": {
+      "size_bytes": 125713,
+      "sha256": "fdbe2391182e481088b14931a522f039c7605048360b0944a5c6de0f9f5f3736",
+      "last_modified": "2026-09-19T07:04:21.453301+00:00"
+    },
+    "AI_PORJECT_DATASET/colab_upload/case_batch_2.json": {
+      "size_bytes": 341003,
+      "sha256": "3f72bcd3cd6b256234e3222bf5edf1a977d17703a22450ae98fed1b81b6fd9e5",
+      "last_modified": "2026-09-21T05:58:09.383216+00:00"
+    },
+    "AI_PORJECT_DATASET/colab_upload/case_batch_3.json": {
+      "size_bytes": 353196,
+      "sha256": "e76b6981890ded123ad5c704bd06c76bec00544dc8c2ece66941e7b2d4c2d4ea",
+      "last_modified": "2026-09-27T10:26:14.617003+00:00"
+    },
+    "AI_PORJECT_DATASET/colab_upload/case_batch_4.json": {
+      "size_bytes": 349012,
+      "sha256": "480b055ce03aabaa3b1f0c1389266947b41bbb641c2f5caf7671ca7b0a7400e1",
+      "last_modified": "2026-09-27T10:29:20.371243+00:00"
+    },
+    "AI_PORJECT_DATASET/colab_upload/case_batch_5.json": {
+      "size_bytes": 348063,
+      "sha256": "7f76b12ec0350c1d0a6cb656f0d8d3e19f6789bbcb7285cc3ec748a54891f8c4",
+      "last_modified": "2026-09-27T10:33:13.637568+00:00"
+    },
+    "AI_PORJECT_DATASET/colab_upload/case_batch_6.json": {
+      "size_bytes": 346969,
+      "sha256": "9ce2e118be361f075f63552839ee1fd88ef6feb1d7f8ff2ab371a6517095ae11",
+      "last_modified": "2026-09-27T10:36:25.271794+00:00"
+    }
+  }
+}

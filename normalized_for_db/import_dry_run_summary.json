@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-10-11T12:11:01.758593+00:00",
+  "dry_run": false,
+  "target_batch": "all",
+  "initial_db_counts": {
+    "cases": 950,
+    "case_images": 1839,
+    "evidence": 950,
+    "policies": 100,
+    "reviews": 3
+  },
+  "final_db_counts": {
+    "cases": 2107,
+    "case_images": 4093,
+    "evidence": 2107,
+    "policies": 100,
+    "reviews": 3
+  },
+  "proposed_inserts": {
+    "cases": 1157,
+    "case_images": 2254,
+    "evidence": 1157
+  },
+  "skips_identical": {
+    "cases": 0,
+    "evidence": 0
+  },
+  "quarantined_conflicts": [],
+  "batches_detail": {
+    "batch_4": {
+      "manifest_total": 400,
+      "scheduled_cases": 400,
+      "scheduled_evidence": 400,
+      "cases_inserted": 400,
+      "case_images_inserted": 782,
+      "evidence_inserted": 400,
+      "skips_identical": 0,
+      "quarantines": 0
+    },
+    "batch_5": {
+      "manifest_total": 400,
+      "scheduled_cases": 357,
+      "scheduled_evidence": 357,
+      "cases_inserted": 357,
+      "case_images_inserted": 702,
+      "evidence_inserted": 357,
+      "skips_identical": 0,
+      "quarantines": 0
+    },
+    "batch_6": {
+      "manifest_total": 400,
+      "scheduled_cases": 400,
+      "scheduled_evidence": 400,
+      "cases_inserted": 400,
+      "case_images_inserted": 770,
+      "evidence_inserted": 400,
+      "skips_identical": 0,
+      "quarantines": 0
+    }
+  }
+}

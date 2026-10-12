@@ -1,0 +1,38 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# Application logs
+*.log
+app.log
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Dependencies and build outputs
+node_modules/
+dist/
+dist-ssr/
+
+# Raw large dataset archives (31GB+, exceeds GitHub limits)
+AI_PORJECT_DATASET/
+
+# Temporary and office lock files
+~$*
+*.tmp
+.vscode/
+.idea/

@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-10-11T12:11:35.816832+00:00",
+  "checks": {
+    "table_counts": {
+      "passed": true,
+      "actual": {
+        "cases": 2107,
+        "case_images": 4093,
+        "evidence": 2107,
+        "policies": 100,
+        "reviews": 3
+      },
+      "expected": {
+        "cases": 2107,
+        "case_images": 4093,
+        "evidence": 2107,
+        "policies": 100,
+        "reviews": 3
+      }
+    },
+    "batch_1_to_3_preserved": {
+      "passed": true,
+      "expected_count": 950,
+      "present_in_db": 950
+    },
+    "batch_4_verification": {
+      "passed": true,
+      "cases_count": 400,
+      "in_cases_table": true,
+      "in_evidence_table": true,
+      "null_or_empty_raw_output": 0
+    },
+    "batch_5_verification": {
+      "passed": true,
+      "inserted_cases_count": 357,
+      "absent_cases_count": 43,
+      "absent_cases_in_cases_table": 0,
+      "absent_cases_in_evidence_table": 0,
+      "null_or_empty_raw_output": 0
+    },
+    "batch_6_verification": {
+      "passed": true,
+      "cases_count": 400,
+      "in_cases_table": true,
+      "in_evidence_table": true,
+      "non_null_raw_output_count": 0
+    },
+    "relationship_and_orphan_integrity": {
+      "passed": true,
+      "orphaned_images": 0,
+      "orphaned_evidence": 0,
+      "cases_without_evidence": 0,
+      "cases_without_images": 0
+    },
+    "jsonb_not_null_and_non_empty": {
+      "passed": true,
+      "invalid_or_empty_jsonb_rows": 0
+    }
+  },
+  "all_passed": true
+}

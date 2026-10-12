@@ -1,0 +1,12 @@
+Benchmark Dimension,Evaluated Cohort,Empirical Measurement,Units,Engineering Definition & Interpretation
+Evaluated Sample Size,Database Ingested Cases,"2,107",cases,Total active DB cases evaluated (43 uncomputed B5 excluded)
+Total Batch Runtime,Full Cohort Wall-Clock,1.1981,seconds,Single-threaded end-to-end batch duration
+Amortized Time per Case,Total Batch / N,0.5686,ms,"Batch duration divided by 2,107 cases"
+Mean Latency per Case,Individual Case Timings,0.5660,ms,Arithmetic mean of recorded measurements (1/N sum t_i)
+Median Latency per Case,50th Percentile,0.5366,ms,Median case adjudication latency
+Standard Deviation,Individual Case Timings,0.3020,ms,Low latency dispersion across varied evidence payloads
+95th Percentile Latency,Tail Latency (P95),0.9082,ms,Measured 95th percentile (P95 < 2.0 ms)
+99th Percentile Latency,Tail Latency (P99),1.3298,ms,Bounded worst-case tail latency (P99 < 2.5 ms)
+Minimum Observed Latency,Best-Case Timing,0.0068,ms,Fastest recorded single-case evaluation
+Maximum Observed Latency,Worst-Case Timing,8.3809,ms,Maximum recorded single-case evaluation
+Adjudication Throughput,Single CPU Core,"1,758.6",cases/sec,Cases processed per second (N / T_total)

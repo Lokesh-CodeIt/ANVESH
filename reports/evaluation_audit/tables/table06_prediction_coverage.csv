@@ -1,0 +1,6 @@
+Audit Category,Count,Rate,Operational Assessment
+Total Evaluated Cases,2107,100.0%,Complete case cohort
+Structured JSONB Evidence Extracted,2107,100.0%,Zero null evidence records
+Raw Model Output String Persisted,1707,81.02%,Batches 1-5 preserved; Batch 6 omitted
+Batch 6 Missing Raw Output,400,18.98%,JSONB parsed but raw string unpersisted
+Batch 5 Colab GPU Timeout Exclusions,43,2.00% of candidate pool,Preserved in recovery manifest; strictly excluded

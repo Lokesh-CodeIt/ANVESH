@@ -1,0 +1,6 @@
+Field,Populated Count,Completeness,Schema Rule,Status
+image_evidence.modality,2107,100.0%,Non-empty string ('Chest X-ray'),Evaluated
+image_evidence.body_part,2107,100.0%,Non-empty string ('chest'),Evaluated
+image_evidence.findings,2107,100.0%,List of strings,Evaluated
+image_evidence.impression_summary,2107,100.0%,Non-empty summary string,Evaluated
+Independent Entity Span F1,0,Not Evaluated,Requires radiologist span annotations,Not Evaluated

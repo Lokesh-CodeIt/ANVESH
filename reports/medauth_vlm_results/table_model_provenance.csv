@@ -1,0 +1,5 @@
+Component,Model / Algorithm,Architecture / Parameters,Training Status,Execution Environment,Inference Role
+VLM Extractor,google/medgemma-4b-it,SigLIP ViT + Gemma 4B Causal LLM,Pretrained Foundation Model,Google Colab T4 GPU (Offline),Tripartite Evidence JSON Extraction
+Policy Engine,MedAuth Deterministic Rules,Deterministic Python Logic (255 lines),Hardcoded Clinical Rules,Local Host (FastAPI Uvicorn),5-Point Guideline & Score Adjudication
+Relational Store,PostgreSQL 18.6,Relational Engine + Native JSONB,N/A,Localhost:5432 (ACID),Persistent Evidence & Review Audit
+REST Engine,FastAPI 0.115+,Asynchronous Starlette + Pydantic v2,N/A,Localhost:8000,11 Production API Endpoints

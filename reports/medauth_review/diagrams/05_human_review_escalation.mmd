@@ -1,0 +1,23 @@
+stateDiagram-v2
+    [*] --> Ingested: Case & Evidence Loaded
+    Ingested --> AutomatedAssessment: Run Policy Engine
+    
+    state AutomatedAssessment {
+        [*] --> CheckGrounding
+        CheckGrounding --> CheckMedicalNecessity
+        CheckMedicalNecessity --> CheckExclusions
+        CheckExclusions --> ScoreCalculated
+    }
+    
+    AutomatedAssessment --> LowRiskApproved: Score >= 80 & Complete Text & Normal/Mild
+    AutomatedAssessment --> ManualReviewRequired: Score < 80 OR has_source_text=False OR Abnormal Discrepancy
+    
+    ManualReviewRequired --> ReviewerAssigned: Physician / Adjudicator Opens Case
+    ReviewerAssigned --> InquireMoreInfo: Additional Clinical Documentation Needed
+    ReviewerAssigned --> AdjudicatedApproved: Clinical Findings Validated
+    ReviewerAssigned --> AdjudicatedDenied: Policy Criteria Not Met
+    
+    InquireMoreInfo --> ReviewerAssigned: Provider Resubmits Evidence
+    AdjudicatedApproved --> [*]: Authorization Granted & Stored
+    AdjudicatedDenied --> [*]: Denial Reason Stored in Audit Log
+    LowRiskApproved --> [*]: Expedited Review Completed

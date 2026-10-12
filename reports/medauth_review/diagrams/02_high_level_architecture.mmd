@@ -1,0 +1,36 @@
+graph TD
+    classDef layerStyle fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+    classDef compStyle fill:#e0f7fa,stroke:#00838f,stroke-width:2px;
+
+    subgraph L1["Presentation Layer (Planned / API Ready)"]
+        UI[Medical Reviewer Dashboard]:::compStyle
+        API_DOC[Swagger / OpenAPI Documentation]:::compStyle
+    end
+
+    subgraph L2["Application & Business Logic Layer"]
+        API[FastAPI Service - main.py]:::compStyle
+        Policy[Policy Evaluation Engine - policy_engine.py]:::compStyle
+        Auth[Logging & Request Auditing Middleware]:::compStyle
+    end
+
+    subgraph L3["Persistence & Storage Layer"]
+        ORM[SQLAlchemy ORM Models - models.py]:::compStyle
+        PG[(PostgreSQL 18 - medauth_vlm)]:::compStyle
+        Static[Local Medical Images Repository]:::compStyle
+    end
+
+    subgraph L4["Evidence Ingestion Layer"]
+        Norm[Deterministic Normalization - normalize_batches.py]:::compStyle
+        Importer[Transaction-Safe Importer - import_batches_db.py]:::compStyle
+        Colab[Google Colab MedGemma-4B Inference]:::compStyle
+    end
+
+    UI --> API
+    API_DOC --> API
+    API --> Policy
+    API --> ORM
+    ORM --> PG
+    API --> Static
+    Colab --> Norm
+    Norm --> Importer
+    Importer --> PG

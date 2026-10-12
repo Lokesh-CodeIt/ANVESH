@@ -1,0 +1,5 @@
+Dimension,Count,Details,Status
+Total Persisted Policies,100,"Alaska (64), Alabama (36) CMS exchange plans",Evaluated
+Policy Retrieval Method,Exact Key Lookup,Primary key index on Policy.plan_id,Evaluated
+Retrieval Precision@1,1.0000,100% deterministic relational query,Evaluated
+Semantic Dense Retrieval Precision@k,Not Applicable,"System uses exact plan ID, not vector retrieval",Not Applicable

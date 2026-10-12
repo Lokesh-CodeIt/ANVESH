@@ -1,0 +1,5 @@
+Dataset Asset,Source,Labels,Permitted Use,Task
+IU Chest X-Ray,NLM / Open-i,Problems column ('normal' vs abnormal),Open Access Research,Normality classification
+CMS Health Exchange PUFs,CMS.gov,"is_covered, cost-sharing",U.S. Public Domain,Policy checklist evaluation
+google/medgemma-4b-it,Google DeepMind / HF,Foundation Model (Inference only),Gemma Open License,Offline evidence precomputation
+Commercial Payer Claims,Payer Clearinghouse,Medical Director Determinations,Restricted BAA (Unavailable),Payer authorization validation (Not Evaluated)

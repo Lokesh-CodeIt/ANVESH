@@ -1,0 +1,5 @@
+Limitation,Clinical Impact,Mitigation / Roadmap
+Absence of Prospective Radiologist Multi-Reader Ground Truth,Diagnostic sensitivity (37.4%) reflects uncalibrated token extraction rather than formal radiologist consensus,Multi-reader multi-case (MRMC) panel of 3 thoracic radiologists
+Absence of Payer Clearinghouse Decision Ground Truth,System recommendations verify guideline rules but cannot be compared to actual payer claims approvals/denials,Health plan clearinghouse pilot under BAA
+Restricted Modality Scope (Thoracic Plain Film Only),"Cross-sectional imaging (CT, MRI) prior authorization requires 3D volumetric adaptation",CT slice volumetric vision-language foundation models
+Unpersisted Softmax Logits / Log-Likelihoods,"Precludes ECE, Brier score, and ROC threshold calibration",Update offline pipeline to log top-k token probabilities

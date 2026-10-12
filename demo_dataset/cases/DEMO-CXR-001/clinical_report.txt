@@ -1,0 +1,30 @@
+================================================================================
+ANVESH CLINICAL RADIOLOGY REPORT — DEMONSTRATION RECORD
+IDENTIFIER: DEMO-CXR-001 | PATIENT REF: DEMO-MEM-0042
+DATE OF EXAMINATION: 2026-10-01 09:15 UTC
+PROCEDURE: Chest Radiography (2 Views PA/LAT)
+SOURCE: Indiana University Chest X-ray Research Benchmark (Open-i NIH)
+NOTE: SYNTHETIC DEMO EXAMPLE — NOT LIVE MODEL INFERENCE — NOT CLINICALLY VALIDATED.
+================================================================================
+
+CLINICAL INDICATION:
+Progressive exertional dyspnea for 3 weeks in a 58-year-old patient. Clinical team requests
+evaluation for cardiomegaly, interstitial edema, or pleural effusion prior to elective cardioversion.
+
+TECHNIQUE:
+Frontal (PA) and lateral chest radiographs obtained in upright position.
+
+FINDINGS:
+Cardiac silhouette is mildly enlarged with a cardiothoracic ratio of approximately 0.56.
+Pulmonary vascularity is within normal limits without frank cephalization or pulmonary edema.
+Mild blunting of the left costophrenic angle is noted, suspicious for a trace pleural effusion.
+Right lung field is clear without focal parenchymal consolidation, pneumothorax, or acute airspace disease.
+Bony thorax and osseous structures appear intact.
+
+IMPRESSION:
+1. Mild cardiomegaly.
+2. Trace left-sided pleural effusion; clinical correlation with volume status advised.
+3. No acute focal pneumonia or pneumothorax.
+
+REVIEWER GUIDANCE:
+Requires licensed human review. Cross-reference clinical documentation for prior heart failure diagnosis.

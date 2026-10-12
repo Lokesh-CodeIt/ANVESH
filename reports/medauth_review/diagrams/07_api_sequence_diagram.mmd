@@ -1,0 +1,27 @@
+sequenceDiagram
+    autonumber
+    actor Clinician as Reviewing Clinician
+    participant Client as Frontend / Test Client
+    participant API as FastAPI Backend (main.py)
+    participant Engine as Policy Engine (policy_engine.py)
+    participant DB as PostgreSQL (medauth_vlm)
+
+    Clinician->>Client: Open Case Review (case_id=67, plan_id='AK123')
+    Client->>API: GET /cases/67/review?plan_id=AK123
+    API->>DB: Query Case & Evidence by case_id=67
+    DB-->>API: Return Case data & Evidence JSONB
+    API->>DB: Query Policy by plan_id='AK123'
+    DB-->>API: Return Policy rules & exclusions
+    API->>Engine: compare_evidence_to_policy(evidence, policy, has_source_text)
+    Engine-->>API: Return compliance checklist & score (e.g. 85.0)
+    API->>DB: Upsert Review record in table 'reviews'
+    DB-->>API: Commit Review (id=4)
+    API-->>Client: 200 OK ReviewResponse JSON
+    Client-->>Clinician: Render Checklist, Score, and Recommendation
+
+    Clinician->>Client: Submit Decision ('Approved', Notes)
+    Client->>API: POST /reviews/4/decision {"reviewer_decision": "Approved", ...}
+    API->>DB: UPDATE reviews SET reviewer_decision='Approved', reviewed_at=NOW()
+    DB-->>API: Commit Transaction
+    API-->>Client: 200 OK Updated ReviewResponse
+    Client-->>Clinician: Confirmation Badge: Authorized

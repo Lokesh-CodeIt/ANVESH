@@ -1,0 +1,6 @@
+Evidence Component,Field Path,Database Type,Required / Nullable,Populated Count,Null / Missing Count,Completeness Rate,Verification Standard
+Image Evidence Subobject,evidence.image_evidence,JSONB,NOT NULL,2107,0,100.0%,"Dict with modality, body_part, findings, abnormalities, impression"
+Consistency Subobject,evidence.text_image_consistency,JSONB,NOT NULL,2107,0,100.0%,Dict with boolean consistent and string notes
+Clinical Support Subobject,evidence.clinical_support,JSONB,NOT NULL,2107,0,100.0%,Dict with boolean supported and string reason
+Raw Model Output (Batches 1-5),evidence.raw_model_output,TEXT,NULLABLE,"1,707",0 (in B1-5),100.0% (Batches 1-5),Authentic MedGemma 4B generation markdown
+Raw Model Output (Batch 6),evidence.raw_model_output,TEXT,NULLABLE,0,400 (in B6),0.0% (Allowed NULL),Provenance preserved in separate JSON manifest

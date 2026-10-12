@@ -1,0 +1,7 @@
+Test Suite File,Test Category,Command Executed,Tests Executed,Passed,Failed,Verification Status
+test_backend.py,API Endpoints & Error Handling,pytest test_backend.py,21,21,0,100% PASSED (In-Process TestClient)
+test_models.py,ORM Data Models & Relations,pytest test_models.py,1,1,0,100% PASSED
+test_api.py,End-to-End Workflow & Static Mount,pytest test_api.py,1,1,0,100% PASSED
+validate_normalized.py,Data Normalization & Hash Integrity,python validate_normalized.py,11,11,0,100% PASSED (11/11 Checks)
+verify_post_import.py,Post-Import Relational Audit,python verify_post_import.py,7,7,0,"100% PASSED (0 Orphans, 100% Parity)"
+Combined Test Suite,Full Regression Verification,pytest,23,23,0,ALL 23 UNIT & INTEGRATION TESTS PASSED

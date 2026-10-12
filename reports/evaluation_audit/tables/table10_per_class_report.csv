@@ -1,0 +1,5 @@
+Class,Precision,Recall / Specificity,F1-Score,Support,Recall / Sensitivity,Recall
+Normal,0.6121,0.9867,0.7555,1054,,
+Abnormal,0.9657,,0.5394,1053,0.3742,
+Macro Average,0.7889,,0.6474,2107,,0.6804
+Weighted Average,0.7888,,0.6475,2107,,0.6806

@@ -1,0 +1,8 @@
+Batch,Cases Ingested,Images Ingested,Evidence Objects,Raw Output Strings,Missing / Excluded
+Batch 1,400,776,400,400,0
+Batch 2,300,578,300,300,0
+Batch 3,250,485,250,250,0
+Batch 4,400,785,400,400,0
+Batch 5,357,695,357,357,43 cases (Colab timeout)
+Batch 6,400,774,400,0 (NULL by design),0
+Total Cohort,2107,4093,2107,1707,43

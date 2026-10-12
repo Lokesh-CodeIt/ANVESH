@@ -1,0 +1,9 @@
+Entity,Count,Unit,Source,Status
+Total Clinical Cases,2107,Cases,PostgreSQL cases table,Evaluated
+Radiograph Projections,4093,Image files,PostgreSQL case_images table,Evaluated
+Frontal Projections,2099,Projections,case_images (projection='Frontal'),Evaluated
+Lateral Projections,1994,Projections,case_images (projection='Lateral'),Evaluated
+Structured Evidence Objects,2107,JSONB objects,PostgreSQL evidence table,Evaluated
+Active Insurance Policies,100,Policies,PostgreSQL policies table,Evaluated
+Submitted Human Reviews,4,Reviews,PostgreSQL reviews table,Evaluated
+Excluded Uncomputed Batch 5 Cases,43,Cases,missing_batch_5_cases.json,Documented Exclusion

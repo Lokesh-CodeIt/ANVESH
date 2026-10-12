@@ -1,0 +1,27 @@
+================================================================================
+ANVESH CLINICAL RADIOLOGY REPORT — DEMONSTRATION RECORD
+IDENTIFIER: DEMO-CXR-003 | PATIENT REF: DEMO-MEM-0120
+DATE OF EXAMINATION: 2026-10-03 14:45 UTC
+PROCEDURE: Chest Radiography (2 Views PA/LAT)
+SOURCE: Indiana University Chest X-ray Research Benchmark (Open-i NIH)
+NOTE: SYNTHETIC DEMO EXAMPLE — NOT LIVE MODEL INFERENCE — NOT CLINICALLY VALIDATED.
+================================================================================
+
+CLINICAL INDICATION:
+64-year-old patient undergoing elective orthopedic knee reconstruction.
+Pre-operative medical risk stratification.
+
+TECHNIQUE:
+PA and lateral chest radiographs.
+
+FINDINGS:
+Lungs are clear bilaterally without active infiltrate, focal consolidation, or acute interstitial edema.
+Heart size and cardiomediastinal contours are normal.
+Costophrenic angles are sharp without evidence of pleural effusion.
+No acute osseous abnormality or pneumothorax is identified.
+
+IMPRESSION:
+Normal chest radiographic examination. No acute cardiopulmonary disease demonstrated.
+
+REVIEWER GUIDANCE:
+Demonstrates non-pathologic negative baseline findings. Evaluate pre-operative policy coverage terms.

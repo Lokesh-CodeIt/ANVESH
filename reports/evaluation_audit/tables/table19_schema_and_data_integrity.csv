@@ -1,0 +1,6 @@
+Target,Constraint,Conformity,Status
+PostgreSQL cases table,"Primary key case_id, non-null classification","2,107 / 2,107 (100.0%)",PASS
+PostgreSQL case_images table,"Foreign key cascade, non-null filename, projection","4,093 / 4,093 (100.0%)",PASS
+PostgreSQL evidence table,"Foreign key unique case_id, valid JSONB tripartite","2,107 / 2,107 (100.0%)",PASS
+Pydantic Schemas,ConfigDict(from_attributes=True) v2 validation,100.0% endpoint pass rate,PASS
+Cryptographic SHA-256 Hashing,Bit-for-bit pre- and post-import file immutability,7 / 7 files match manifest,PASS

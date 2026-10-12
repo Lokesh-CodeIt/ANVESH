@@ -1,0 +1,4 @@
+Pipeline Component,Execution Mode,Mean Latency,Median,Throughput,Hardware,Status
+Policy Engine Adjudication (Live),Single-Threaded CPU (Live),0.6317 ms,0.5640 ms,"1,576.2 c/s","Intel x86_64, Windows 11",Evaluated
+Policy Batch Runtime (Live),Single-Threaded Wall-Clock,0.6344 ms (amortized),—,"1,576.2 c/s",1.3367s total runtime,Evaluated
+MedGemma 4B VLM Inference (Colab),Offline GPU Precomputation,~5-15 seconds / case,~8.5 s,0.08 - 0.20 c/s,NVIDIA T4 / A100 (Google Colab),Documented Offline Baseline

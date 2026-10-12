@@ -1,0 +1,56 @@
+erDiagram
+    CASES ||--o{ CASE_IMAGES : "contains (1 to N)"
+    CASES ||--|| EVIDENCE : "possesses (1 to 1)"
+    CASES ||--o{ REVIEWS : "evaluated_in (0 to N)"
+    POLICIES ||--o{ REVIEWS : "applies_to (0 to N)"
+
+    CASES {
+        int case_id PK "Unique Integer Case Identifier"
+        string classification "normal | abnormal"
+        text indication "Clinical indication"
+        text findings "Radiologist dictation findings"
+        text impression "Summary clinical impression"
+        text requested_procedure "e.g. Chest X-ray"
+        boolean has_source_text "Grounding availability flag"
+    }
+
+    CASE_IMAGES {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id ON DELETE CASCADE"
+        string filename "Normalized image filename"
+        string projection "Frontal | Lateral"
+        string file_path "Relative filesystem path"
+    }
+
+    EVIDENCE {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id UNIQUE ON DELETE CASCADE"
+        jsonb image_evidence "Findings, abnormalities, impression"
+        jsonb text_image_consistency "Consistency boolean & notes"
+        jsonb clinical_support "Supported boolean & rationale"
+        text raw_model_output "Nullable raw generation markdown"
+    }
+
+    POLICIES {
+        string plan_id PK "CMS Plan Identification Code"
+        string state "2-letter US State Code"
+        string is_covered "Coverage specification"
+        string copay "Copayment amount / rules"
+        string coinsurance "Coinsurance percentage"
+        float limit_qty "Quantitative limitation"
+        string limit_unit "Limitation unit"
+        text exclusions "Medical procedure exclusions"
+    }
+
+    REVIEWS {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id ON DELETE CASCADE"
+        string plan_id FK "References policies.plan_id ON DELETE CASCADE"
+        jsonb policy_compliance "Full evaluation checklist JSONB"
+        float evidence_score "Computed score 0.0 - 100.0"
+        text recommendation "Automated guideline advice"
+        string reviewer_decision "Approved | Denied | Info Required"
+        text reviewer_notes "Human clinician rationale"
+        timestamp created_at "Evaluation timestamp"
+        timestamp reviewed_at "Decision timestamp"
+    }

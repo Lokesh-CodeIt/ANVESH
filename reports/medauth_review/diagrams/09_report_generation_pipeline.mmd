@@ -1,0 +1,15 @@
+flowchart LR
+    A[run_medauth_review.py] --> B[Read-Only PostgreSQL Connection]
+    A --> C[Inspect Local Artifacts & Checksums]
+    
+    B --> D[Query autoritative table counts & metrics]
+    C --> E[Verify SHA-256 & manifest integrity]
+    
+    D & E --> F[Generate 6 CSV Tables in reports/medauth_review/tables/]
+    D & E --> G[Generate 10 Mermaid Diagrams in reports/medauth_review/diagrams/]
+    D & E --> H[Generate summary.json & report_generation.log]
+    
+    F & G & H --> I[Compile Self-Contained index.html]
+    I --> J{CLI Option: --no-open?}
+    J -- No --> K[Launch Default Web Browser]
+    J -- Yes --> L[Print Report Path & Terminate Cleanly]

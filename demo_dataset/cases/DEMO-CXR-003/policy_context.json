@@ -1,0 +1,28 @@
+{
+  "policy_id": "POL-GEN-2026-PREOP",
+  "plan_name": "Medicare Advantage Standard Evidence-Based Pre-Surgical Diagnostic Policy",
+  "category": "Pre-Operative Clearance Diagnostic Services",
+  "effective_date": "2026-01-01",
+  "status": "active",
+  "covered_indications": [
+    "Pre-operative evaluation in patients with documented cardiopulmonary history or high surgical risk index"
+  ],
+  "clinical_criteria": [
+    {
+      "code": "CRIT-PREOP-01",
+      "description": "Documented American Society of Anesthesiologists (ASA) class score II or greater",
+      "status": "MET"
+    },
+    {
+      "code": "CRIT-PREOP-02",
+      "description": "Absence of prior unexpired chest radiograph within past 90 days",
+      "status": "MET"
+    }
+  ],
+  "exclusions": [
+    "Unconditional routine screening in asymptomatic ASA Class I patients without cardiac/pulmonary comorbidities"
+  ],
+  "adjudication_rule": "COVERED_NORMAL_EXAM",
+  "requires_licensed_physician_review": true,
+  "statutory_notice": "ANVESH evidence outputs are assistive decision-support tools. Final authorization requires explicit licensed human review."
+}

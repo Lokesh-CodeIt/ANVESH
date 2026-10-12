@@ -1,0 +1,36 @@
+{
+  "policy_id": "POL-CARDIO-2026-X",
+  "plan_name": "Commercial Comprehensive Health Plan - Specialty Cardiac Diagnostic Guidelines",
+  "category": "Cardiopulmonary Diagnostic Imaging",
+  "effective_date": "2026-01-01",
+  "status": "active",
+  "covered_indications": [
+    "New-onset or progressive dyspnea of suspected cardiac etiology",
+    "Evaluation of suspected cardiomegaly, pulmonary edema, or pleural effusion",
+    "Pre-procedure cardiothoracic clearance"
+  ],
+  "clinical_criteria": [
+    {
+      "code": "CRIT-01",
+      "description": "Documented physical examination noting dyspnea, edema, or rales",
+      "status": "MET"
+    },
+    {
+      "code": "CRIT-02",
+      "description": "Initial frontline plain radiography indicated prior to advanced cross-sectional imaging",
+      "status": "MET"
+    },
+    {
+      "code": "CRIT-03",
+      "description": "No duplicate chest radiograph performed within preceding 7 days without acute clinical change",
+      "status": "MET"
+    }
+  ],
+  "exclusions": [
+    "Routine screening in asymptomatic non-surgical patients",
+    "Standalone experimental or investigational unvalidated automated diagnostic software"
+  ],
+  "adjudication_rule": "COVERED_SUBJECT_TO_HUMAN_REVIEW",
+  "requires_licensed_physician_review": true,
+  "statutory_notice": "ANVESH evidence outputs are assistive decision-support tools. Final authorization requires explicit licensed human review."
+}

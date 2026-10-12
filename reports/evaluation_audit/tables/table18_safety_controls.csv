@@ -1,0 +1,5 @@
+Control,Trigger Condition,Triggered Cases,Action,Verification
+No-Source-Text Grounding Safeguard,has_source_text == False,22,"Cap score at <= 40, require manual review",100.0% Capped (22/22)
+Mandatory Review Flagging,Score <= 40.0 or Warning,22,Appends review warning to response checklist,100.0% Flagged (22/22)
+Human Decision Logging Table,POST /api/reviews,4,Persists physician decision with timestamp,4 Reviews in DB
+Autonomous Denial Prevention,System Recommendation,"All (2,107)",Recommends review; never issues legally binding denials,Fail-Safe Non-Autonomous

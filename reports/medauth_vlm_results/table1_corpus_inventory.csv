@@ -1,0 +1,15 @@
+Metric Category,Metric Subtype,Verified Count,Percentage,Operational Status
+Clinical Cases,Total Cases,"2,107",100.0%,Live Verified
+Clinical Cases,Normal Cases,"1,054",50.02%,Live Verified
+Clinical Cases,Abnormal Cases,"1,053",49.98%,Live Verified
+Clinical Cases,Grounded (has_source_text=True),"2,085",98.96%,Live Verified
+Clinical Cases,Ungrounded (has_source_text=False),22,1.04%,Safety Flagged (Score <= 40)
+Radiograph Projections,Total Images,"4,093",100.0%,Live Verified
+Radiograph Projections,Frontal (PA/AP),"2,099",51.28%,Live Verified
+Radiograph Projections,Lateral,"1,994",48.72%,Live Verified
+Radiograph Projections,Mean Images per Case,1.94,-,Live Verified
+Evidence Subobjects,Total JSONB Records,"2,107",100.0%,Live Verified
+Evidence Subobjects,Valid 3-Subobject Schema,"2,107",100.0%,Live Verified
+Evidence Subobjects,Genuine Raw Output Present,"1,707",81.02%,Preserved (Batches 1-5)
+Evidence Subobjects,Raw Output Explicitly NULL,400,18.98%,Documented (Batch 6)
+Insurance Policies,Total CMS Guidelines,100,100.0%,"Live Verified (AK, AL)"

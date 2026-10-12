@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-12T06:50:44.251778+00:00",
+  "model": "google/medgemma-4b-it",
+  "model_status": "Pretrained foundation model invoked offline via Google Colab; NOT fine-tuned in this repository",
+  "source_hashes": {
+    "evidence_cleaned.json": "e7ac860b776ee46682406c6940d5389433e111aeb0ef0cd03e0f97d85f299909",
+    "evidence_batch_2.json": "276a3fc4faf8bae21ff6bdcaee74e06355dda8449309dacec81b5dc3f41df6e3",
+    "evidence_batch_3.json": "06859f0078b4b898eb7ee8fd144a5bba3c384aa66d373c691efbb25b4bfdaef5",
+    "evidence_results.json": "2173676619f7a90657ec90f354f250718bea80399fea15e235fcf87f0402521a",
+    "case_batch_4.json": "480b055ce03aabaa3b1f0c1389266947b41bbb641c2f5caf7671ca7b0a7400e1",
+    "case_batch_5.json": "7f76b12ec0350c1d0a6cb656f0d8d3e19f6789bbcb7285cc3ec748a54891f8c4",
+    "case_batch_6.json": "9ce2e118be361f075f63552839ee1fd88ef6feb1d7f8ff2ab371a6517095ae11"
+  },
+  "database": "PostgreSQL 18.6 on x86_64-windows",
+  "test_suite": "29 passed tests (100% pass rate)",
+  "diagnostic_status": {
+    "status": "NOT EVALUATED / EVIDENCE UNAVAILABLE",
+    "reason": "Independent, blinded board-certified radiologist panel ground-truth diagnostic annotations are unavailable. Inferring diagnostic accuracy (F1, Sensitivity, Specificity, ROC-AUC) or temperature-scaled ECE from precomputed VLM summary tokens alone represents circular reasoning and is strictly excluded to maintain absolute scientific honesty.",
+    "prerequisites_for_clinical_evaluation": [
+      "Prospective multi-reader multi-case (MRMC) panel of 3 thoracic radiologists",
+      "Bounding-box localized ground-truth pathological labels on independent test holdout",
+      "Continuous softmax logits or log-likelihoods for calibration and ECE calculation"
+    ]
+  },
+  "policy_engine_latency": {
+    "evaluated_cases": 2107,
+    "total_runtime_seconds": 1.1981,
+    "mean_ms": 0.566,
+    "median_ms": 0.5366,
+    "std_ms": 0.302,
+    "p95_ms": 0.9082,
+    "p99_ms": 1.3298,
+    "min_ms": 0.0068,
+    "max_ms": 8.3809,
+    "throughput_cases_per_sec": 1758.6,
+    "environment": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+      "python_version": "3.13.5",
+      "timer": "time.perf_counter() monotonic clock",
+      "sample_size": 2107,
+      "measurement_mode": "Single-threaded deterministic CPU execution across 2,107 PostgreSQL ORM records"
+    }
+  }
+}

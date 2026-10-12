@@ -1,0 +1,4 @@
+Calibration Metric,Result,Missing Requirement,Next Action
+Expected Calibration Error (ECE),Not Evaluated,"Confidence probability bins b in [0, 1] and observed accuracy acc_b",Prospective logit capture
+Brier Score,Not Evaluated,Predicted posterior probability vector p_i for each case,Prospective logit capture
+Maximum Calibration Error (MCE),Not Evaluated,Bin-wise max absolute calibration error,Prospective logit capture

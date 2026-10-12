@@ -1,0 +1,34 @@
+{
+  "policy_id": "POL-PULM-2026-B",
+  "plan_name": "Commercial Standard HMO - Respiratory Infectious Disease Clinical Policy",
+  "category": "Pulmonary Diagnostic Evaluation",
+  "effective_date": "2026-01-01",
+  "status": "active",
+  "covered_indications": [
+    "Suspected community-acquired pneumonia with fever or abnormal auscultatory findings",
+    "Persistent unresolved lower respiratory symptoms exceeding 7 days duration"
+  ],
+  "clinical_criteria": [
+    {
+      "code": "CRIT-PULM-01",
+      "description": "Documented clinical signs of lower respiratory tract infection",
+      "status": "MET"
+    },
+    {
+      "code": "CRIT-PULM-02",
+      "description": "Radiographic imaging confirms anatomical site of consolidation",
+      "status": "MET"
+    },
+    {
+      "code": "CRIT-PULM-03",
+      "description": "Staging notes clarify antimicrobial treatment plan",
+      "status": "PENDING_DOCUMENTATION"
+    }
+  ],
+  "exclusions": [
+    "Routine annual employment clearance screening"
+  ],
+  "adjudication_rule": "MORE_INFORMATION_REQUIRED",
+  "requires_licensed_physician_review": true,
+  "statutory_notice": "ANVESH evidence outputs are assistive decision-support tools. Final authorization requires explicit licensed human review."
+}

@@ -1,0 +1,16 @@
+flowchart LR
+    A[Dictated Clinical Report] --> B[VLM Multimodal Prompt]
+    C[Chest Radiograph Image] --> B
+    
+    B --> D[MedGemma 4B Structured Generation]
+    D --> E{Source Text Available?}
+    
+    E -- Yes --> F[Compute Text-Image Consistency & Findings Alignment]
+    E -- No --> G[Trigger No-Source Grounding Flag has_source_text=False]
+    
+    F --> H[Full Compliance Scoring: 0 - 100]
+    G --> I[Cap Evidence Score at Max 40 / 100]
+    I --> J[Append Clinical Warning: Requires Mandatory Manual Review]
+    
+    H --> K[Generate Prior Auth Recommendation]
+    J --> K

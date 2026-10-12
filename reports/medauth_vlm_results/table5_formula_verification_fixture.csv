@@ -1,0 +1,10 @@
+Metric Name,Formula Definition,Inputs,Fixture Result,Verification Outcome
+Accuracy,(TP + TN) / N,"TP=5, TN=3, N=10",0.8000,PASS (Unit Tested)
+Precision (Class 1),TP / (TP + FP),"TP=5, FP=1",0.8333,PASS (Unit Tested)
+Recall (Class 1),TP / (TP + FN),"TP=5, FN=1",0.8333,PASS (Unit Tested)
+Specificity,TN / (TN + FP),"TN=3, FP=1",0.7500,PASS (Unit Tested)
+F1-Score (Class 1),2 * P * R / (P + R),"P=0.8333, R=0.8333",0.8333,PASS (Unit Tested)
+Macro-F1,(F1_1 + F1_0) / 2,"F1_1=0.8333, F1_0=0.7500",0.7917,PASS (Unit Tested)
+Weighted-F1,sum(sup_c * F1_c) / N,"sup1=6, sup0=4",0.8000,PASS (Unit Tested)
+Confusion Matrix,"[[TN, FP], [FN, TP]]","TN=3, FP=1, FN=1, TP=5","[[3, 1], [1, 5]]",PASS (Unit Tested)
+Expected Cal. Error,sum(w_b * |acc - conf|),10 uniform bins,0.0000,PASS (Unit Tested)

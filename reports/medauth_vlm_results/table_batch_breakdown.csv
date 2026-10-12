@@ -1,0 +1,7 @@
+Batch ID,Source Filename,Case Count,Image Count,Frontal,Lateral,Raw Present,Raw NULL,Missing Cases,Status
+Batch 1,evidence_cleaned.json,150,300,150,150,150,0,0,100% Normalized
+Batch 2,evidence_batch_2.json,400,757,400,357,400,0,0,100% Normalized
+Batch 3,evidence_batch_3.json,400,782,400,382,400,0,0,100% Normalized
+Batch 4,evidence_results.json [0:400],400,782,400,382,400,0,0,100% Normalized
+Batch 5,evidence_results.json [400:757],357,702,357,345,357,0,43,43 Absent Preserved
+Batch 6,evidence_results.json [757:1157],400,770,400,370,0,400,0,Raw NULL Documented

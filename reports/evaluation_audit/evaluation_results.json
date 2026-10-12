@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "evaluation_engine": "MedAuth-VLM Real-Data Evaluation Pipeline",
+    "timestamp": "2026-10-12T06:51:42.720963+00:00",
+    "execution_host": "LAPTOP-6U7FU0RP",
+    "os": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.13.5",
+    "database_engine": "PostgreSQL 18.6",
+    "evaluator": "Antigravity Real-Data Evaluation Agent",
+    "non_negotiable_rule": "NO SYNTHETIC RESULTS - All numbers derived from verified raw sources"
+  },
+  "inventory": {
+    "cases": 2107,
+    "normal_cases": 1054,
+    "abnormal_cases": 1053,
+    "case_images": 4093,
+    "evidence_objects": 2107,
+    "policies": 100,
+    "reviews": 4,
+    "missing_b5_cases": 43,
+    "grounded_cases": 2085,
+    "ungrounded_cases": 22
+  },
+  "image_interpretation_metrics": {
+    "cohort_size": 2107,
+    "true_negatives": 1040,
+    "false_positives": 14,
+    "false_negatives": 659,
+    "true_positives": 394,
+    "accuracy": 0.6806,
+    "abnormal_precision": 0.9657,
+    "abnormal_recall_sensitivity": 0.3742,
+    "normal_specificity": 0.9867,
+    "normal_precision": 0.6121,
+    "normal_f1": 0.7555,
+    "abnormal_f1": 0.5394,
+    "macro_f1": 0.6474,
+    "weighted_f1": 0.6475
+  },
+  "policy_engine_performance": {
+    "evaluated_cases": 2107,
+    "mean_latency_ms": 0.6317,
+    "median_latency_ms": 0.564,
+    "std_latency_ms": 0.2373,
+    "p95_latency_ms": 1.0715,
+    "p99_latency_ms": 1.4332,
+    "min_latency_ms": 0.0061,
+    "max_latency_ms": 3.3633,
+    "total_batch_runtime_sec": 1.3367,
+    "sum_individual_timings_sec": 1.3311,
+    "amortized_time_per_case_ms": 0.6344,
+    "throughput_cases_per_sec": 1576.2,
+    "timing_overhead_ms": 5.63,
+    "timing_overhead_per_case_us": 2.67
+  },
+  "safety_and_grounding": {
+    "ungrounded_cases_count": 22,
+    "score_capping_threshold": 40.0,
+    "score_capping_enforcement_rate": 1.0,
+    "autonomous_denial_count": 0,
+    "human_escalation_enforced": true
+  },
+  "unmeasured_components_disclosure": {
+    "continuous_roc_auc": "NOT EVALUATED (Softmax logits unpersisted)",
+    "expected_calibration_error": "NOT EVALUATED (Continuous probabilities unpersisted)",
+    "independent_claim_grounding_f1": "NOT EVALUATED (Independent token-level entity spans unavailable)",
+    "real_payer_claim_accuracy": "NOT EVALUATED (Hospital PACS research dataset, not payer claims data)"
+  }
+}

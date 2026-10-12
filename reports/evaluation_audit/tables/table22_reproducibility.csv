@@ -1,0 +1,6 @@
+Test Suite Fixture,Tests Executed,Passed,Failed,Duration,Status
+test_api.py (FastAPI Endpoints),1,1,0,~0.5s,PASS
+test_backend.py (Regression & Auth),21,21,0,~5.2s,PASS
+test_models.py (SQLAlchemy ORM),1,1,0,~0.4s,PASS
+test_results_formulas.py (Software Math Tests),6,6,0,~0.3s,PASS
+Total Test Suite,29,29,0,8.30s,100% PASS

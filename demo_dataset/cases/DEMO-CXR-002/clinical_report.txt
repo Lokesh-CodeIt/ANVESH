@@ -1,0 +1,28 @@
+================================================================================
+ANVESH CLINICAL RADIOLOGY REPORT — DEMONSTRATION RECORD
+IDENTIFIER: DEMO-CXR-002 | PATIENT REF: DEMO-MEM-0089
+DATE OF EXAMINATION: 2026-10-02 11:30 UTC
+PROCEDURE: Chest Radiography (Single View Frontal)
+SOURCE: Indiana University Chest X-ray Research Benchmark (Open-i NIH)
+NOTE: SYNTHETIC DEMO EXAMPLE — NOT LIVE MODEL INFERENCE — NOT CLINICALLY VALIDATED.
+================================================================================
+
+CLINICAL INDICATION:
+42-year-old adult presenting with 10-day history of dry cough and low-grade fevers.
+Evaluate for bronchopneumonia, focal consolidation, or reactive adenopathy.
+
+TECHNIQUE:
+Single view upright PA chest radiograph.
+
+FINDINGS:
+Lungs are well-expanded. Patchy airspace opacities are present within the right lower lobe,
+most pronounced in the posterior basal segment. No pleural effusion or pneumothorax is identified.
+The cardiomediastinal contour is normal in size and configuration. The trachea is midline.
+Hilar contours are unremarkable without discrete adenopathy.
+
+IMPRESSION:
+1. Right lower lobe patchy airspace opacity, concerning for focal bronchopneumonia in the appropriate clinical setting.
+2. Recommend follow-up radiograph in 6-8 weeks following antibiotic therapy to confirm resolution.
+
+REVIEWER GUIDANCE:
+Missing clinical record: Baseline sputum culture documentation not attached in initial submission.

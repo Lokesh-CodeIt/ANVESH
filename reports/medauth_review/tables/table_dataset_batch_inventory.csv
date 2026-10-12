@@ -1,0 +1,8 @@
+Batch Identifier,Manifest Source,Available Cases,Image Records,Evidence Records,Raw Output Availability,Missing / Quarantined,Batch Provenance
+Batch 1,case_batch.json,150,300,150,150 / 150 Genuine (100%),"0 missing, 0 quarantined",MIMIC-CXR / CheXpert normalized cohort
+Batch 2,case_batch_2.json,400,757,400,400 / 400 Genuine (100%),"0 missing, 0 quarantined",MIMIC-CXR / CheXpert normalized cohort
+Batch 3,case_batch_3.json,400,782,400,400 / 400 Genuine (100%),"0 missing, 0 quarantined",MIMIC-CXR / CheXpert normalized cohort
+Batch 4,case_batch_4.json,400,782,400,400 / 400 Genuine (100%),"0 missing, 0 quarantined",MIMIC-CXR / CheXpert normalized cohort
+Batch 5,case_batch_5.json,357,702,357,357 / 357 Genuine (100%),43 missing uncomputed; 0 quarantined,357 valid; 43 absent (IDs 3524..3993 documented)
+Batch 6,case_batch_6.json,400,770,400,0 / 400 (Explicitly NULL),"0 missing, 0 quarantined",String IDs cast to int; provenance in provenance_batch_6.json
+Total Database,Combined 6 Batches,2107,4093,2107,"1,707 Genuine / 400 Null",43 absent (Batch 5); 0 quarantined,Unified PostgreSQL medauth_vlm repository

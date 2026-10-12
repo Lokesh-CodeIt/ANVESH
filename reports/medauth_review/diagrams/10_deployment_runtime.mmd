@@ -1,0 +1,21 @@
+graph TB
+    classDef boxStyle fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px;
+
+    Client[Web Browser / Postman / Python Client]:::boxStyle
+
+    subgraph Host["Local Workstation Environment (Windows 11 / Python 3.13)"]
+        Uvicorn[Uvicorn ASGI Server :8000]:::boxStyle
+        FastAPIApp[FastAPI Application Instance - main.py]:::boxStyle
+        StaticEngine[StaticFiles Handler: /images mount]:::boxStyle
+        EnginePool[SQLAlchemy Engine Pool: pool_size=10, max_overflow=20]:::boxStyle
+        
+        ImagesDisk[(Local Disk: AI_PORJECT_DATASET/archive (7)/images/)]:::boxStyle
+        PGInstance[(PostgreSQL 18 Service :5432 - medauth_vlm)]:::boxStyle
+    end
+
+    Client -->|HTTP / JSON Requests| Uvicorn
+    Uvicorn --> FastAPIApp
+    FastAPIApp -->|Serve Medical Images| StaticEngine
+    StaticEngine --> ImagesDisk
+    FastAPIApp -->|Connection Pool| EnginePool
+    EnginePool -->|TCP Connection| PGInstance

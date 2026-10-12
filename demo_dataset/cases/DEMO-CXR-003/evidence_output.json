@@ -1,0 +1,35 @@
+{
+  "case_id": "DEMO-CXR-003",
+  "provenance": {
+    "model_architecture": "MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)",
+    "batch_id": "demo_synthetic_batch_01",
+    "execution_environment": "Google Colab A100 (Preserved Static Outputs)",
+    "timestamp": "2026-10-03T14:50:00Z",
+    "disclaimer": "SYNTHETIC DEMO EXAMPLE \u2014 NOT LIVE MODEL INFERENCE \u2014 NOT CLINICALLY VALIDATED."
+  },
+  "image_evidence": {
+    "modality": "DX / CR",
+    "view": "Frontal PA",
+    "anatomical_body_part": "Chest / Thorax",
+    "cardiac_silhouette": "Within normal limits",
+    "lung_fields": "Clear bilaterally",
+    "findings": [
+      "Normal cardiopulmonary baseline",
+      "No active focal consolidation",
+      "No effusion",
+      "No pneumothorax"
+    ]
+  },
+  "consistency_evaluation": {
+    "text_image_consistency": true,
+    "clinical_consistency_score": 0.94,
+    "source_text_grounding": "present",
+    "confidence_tier": "HIGH_CONCORDANCE",
+    "discrepancy_flags": []
+  },
+  "precomputed_recommendation": {
+    "ai_pre_screen_outcome": "ACTIONABLE_REVIEW_READY",
+    "policy_concordance": "COVERED_BY_CRITERIA",
+    "human_review_mandate": "REQUIRED"
+  }
+}

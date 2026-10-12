@@ -1,0 +1,6 @@
+Table Name,Row Count,Primary Key,Foreign Keys,Key Fields & Constraints,Nullability Rules
+cases,2107,case_id (INT),None,"classification (VARCHAR), has_source_text (BOOL)",classification & has_source_text NOT NULL; clinical text nullable
+case_images,4093,id (INT auto),case_id -> cases.case_id (CASCADE),"filename, projection, file_path",All fields NOT NULL
+evidence,2107,id (INT auto),"case_id -> cases.case_id (UNIQUE, CASCADE)","image_evidence, text_image_consistency, clinical_support, raw_model_output",All 3 evidence subobjects JSONB NOT NULL; raw_model_output NULLABLE
+policies,100,plan_id (VARCHAR),None,"state, is_covered, copay, coinsurance, limit_qty, limit_unit","plan_id, state, is_covered, copay, coinsurance NOT NULL"
+reviews,4,id (INT auto),"case_id -> cases, plan_id -> policies (CASCADE)","policy_compliance (JSONB), evidence_score (FLOAT), reviewer_decision","case_id, plan_id, policy_compliance, created_at NOT NULL"

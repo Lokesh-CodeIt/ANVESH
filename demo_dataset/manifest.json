@@ -1,0 +1,44 @@
+{
+  "dataset_name": "ANVESH Synthetic Demonstration Dataset",
+  "version": "1.0.0",
+  "created_date": "2026-10-12",
+  "license": "Open Access Research Benchmark (Indiana University / NIH Open-i collection)",
+  "attribution": "Images derived from the de-identified public Indiana University chest X-ray collection (Demner-Fushman et al., J Am Med Inform Assoc 2016). Associated clinical reports, policy criteria, and evidence outputs are synthetic illustrative prototypes.",
+  "clinical_safety_notice": "SYNTHETIC DEMO EXAMPLE \u2014 NOT LIVE MODEL INFERENCE \u2014 NOT CLINICALLY VALIDATED. For demonstration, usability testing, and UI workflow verification only.",
+  "cases_count": 3,
+  "cases": [
+    {
+      "case_id": "DEMO-CXR-001",
+      "patient_ref": "DEMO-MEM-0042",
+      "policy_ref": "POL-CARDIO-2026-X",
+      "procedure": "Chest Radiography (2 Views PA/LAT)",
+      "indication": "Progressive exertional dyspnea x 3 weeks. Rule out cardiomegaly or pleural effusion.",
+      "image_file": "cases/DEMO-CXR-001/image/cxr_frontal_pa.png",
+      "report_file": "cases/DEMO-CXR-001/clinical_report.txt",
+      "policy_file": "cases/DEMO-CXR-001/policy_context.json",
+      "evidence_file": "cases/DEMO-CXR-001/evidence_output.json"
+    },
+    {
+      "case_id": "DEMO-CXR-002",
+      "patient_ref": "DEMO-MEM-0089",
+      "policy_ref": "POL-PULM-2026-B",
+      "procedure": "Chest Radiography (Single View)",
+      "indication": "Persistent dry cough and subacute low-grade fever. Exclude pneumonia.",
+      "image_file": "cases/DEMO-CXR-002/image/cxr_frontal_pa.png",
+      "report_file": "cases/DEMO-CXR-002/clinical_report.txt",
+      "policy_file": "cases/DEMO-CXR-002/policy_context.json",
+      "evidence_file": "cases/DEMO-CXR-002/evidence_output.json"
+    },
+    {
+      "case_id": "DEMO-CXR-003",
+      "patient_ref": "DEMO-MEM-0120",
+      "policy_ref": "POL-GEN-2026-PREOP",
+      "procedure": "Chest Radiography (2 Views PA/LAT)",
+      "indication": "Pre-operative pulmonary clearance for elective total knee arthroplasty in 64yo.",
+      "image_file": "cases/DEMO-CXR-003/image/cxr_frontal_pa.png",
+      "report_file": "cases/DEMO-CXR-003/clinical_report.txt",
+      "policy_file": "cases/DEMO-CXR-003/policy_context.json",
+      "evidence_file": "cases/DEMO-CXR-003/evidence_output.json"
+    }
+  ]
+}

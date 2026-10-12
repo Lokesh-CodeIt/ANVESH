@@ -1,0 +1,5 @@
+Score Range,Case Count,Percentage,Rule Pathway,Status
+Score = 100.0 (Full Compliance),2085,98.96%,"Consistent + Supported + Covered, text present",Evaluated
+Score = 40.0 (Hard Safeguard Cap),22,1.04%,Missing text safeguard (has_source_text=False),Evaluated
+Score < 40.0 (Uncovered / Conflict),0,0.00%,No active policies have exclusions or uncovered flags,Evaluated
+Real Payer Approval/Denial Agreement,N/A,Not Evaluated,Payer claims clearinghouse records unavailable,Not Evaluated

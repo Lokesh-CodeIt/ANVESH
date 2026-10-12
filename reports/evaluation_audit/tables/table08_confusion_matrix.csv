@@ -1,0 +1,4 @@
+Predicted \ Actual,Predicted Normal (Model),Predicted Abnormal (Model),Total Actual,Total Predicted
+Actual Normal (IU),1040,14,1054.0,
+Actual Abnormal (IU),659,394,1053.0,
+Total Predicted,1699,408,,2107.0

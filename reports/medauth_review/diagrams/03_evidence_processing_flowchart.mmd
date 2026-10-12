@@ -1,0 +1,20 @@
+flowchart TD
+    Start([Raw Colab Inference Batch JSON]) --> Ingest[Load Raw Ingestion Slice]
+    Ingest --> TypeCheck{Is Case ID Valid?}
+    TypeCheck -- No --> Quarantine[Quarantine Record with Reason]
+    TypeCheck -- Yes --> CastID[Cast to Native Integer]
+    
+    CastID --> ManifestCheck{Matches Expected Batch Manifest?}
+    ManifestCheck -- No --> Quarantine
+    ManifestCheck -- Yes --> EvCheck{Valid image_evidence, consistency, support?}
+    
+    EvCheck -- No --> Quarantine
+    EvCheck -- Yes --> RawCheck{Is Raw Model Output Present?}
+    
+    RawCheck -- Yes --> PreserveRaw[Preserve Genuine Raw Output String]
+    RawCheck -- No --> SetNull[Explicitly Set NULL & Extract Provenance Manifest]
+    
+    PreserveRaw --> Standardize[Construct Canonical Canonical Dict]
+    SetNull --> Standardize
+    Standardize --> Output([Output Normalized JSON to normalized_for_db/])
+    Quarantine --> LogQ([Record in quarantine_report.json])

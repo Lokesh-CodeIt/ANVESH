@@ -1,0 +1,6 @@
+Test Module,Test Focus,Collected,Passed,Failed,Duration,Status
+test_api.py,FastAPI Endpoint Health & Discovery,1,1,0,0.25s,PASSED
+test_backend.py,REST API Regression & Score Capping,21,21,0,6.50s,PASSED
+test_models.py,SQLAlchemy ORM Models & DB Cascade,1,1,0,0.35s,PASSED
+test_results_formulas.py,Metric Formulas & Calibration Edge Cases,6,6,0,0.28s,PASSED
+Total Test Suite,Comprehensive Automated Verification,29,29,0,14.80s,100% PASSED

@@ -1,0 +1,27 @@
+flowchart TD
+    subgraph S1["Phase 1: Read-Only Audit & Baseline Hashing"]
+        Raw[evidence_results.json 1,157 records]
+        HashPre[Compute Pre-Run SHA-256 Hashes of All Sources]
+    end
+
+    subgraph S2["Phase 2 & 3: Deterministic Normalization"]
+        B4[Batch 4: 400 cases] --> N4[evidence_batch_4.json]
+        B5[Batch 5: 357 cases] --> N5[evidence_batch_5.json]
+        B5 --> M5[missing_batch_5_cases.json: 43 IDs absent]
+        B6[Batch 6: 400 cases] --> N6[evidence_batch_6.json: raw_output NULL]
+        B6 --> P6[provenance_batch_6.json: extra metadata]
+    end
+
+    subgraph S3["Phase 4 & 5: Validation & Immutability"]
+        Val[Run validate_normalized.py: 11 Automated Checks]
+        HashPost[Verify Post-Run SHA-256 Matches Pre-Run Exactly]
+    end
+
+    subgraph S4["Phase 6: Transaction-Safe Live Import"]
+        Backup[Create Native pg_dump Backup]
+        DryRun[Execute Dry-Run Importer: Stage & Rollback]
+        Apply[Execute Live Import: Stage & Commit Atomically]
+        Verify[Independent verify_post_import.py: 2,107 Cases Verified]
+    end
+
+    Raw --> HashPre --> S2 --> Val --> HashPost --> Backup --> DryRun --> Apply --> Verify

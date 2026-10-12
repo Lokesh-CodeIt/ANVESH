@@ -1,0 +1,5 @@
+Category,Count,Proportion,Clinical Meaning
+True Negatives (TN),1040,49.36%,Correctly identified as having no extracted abnormalities
+False Positives (FP),14,0.66%,Normal radiograph flagged with model-extracted abnormality
+False Negatives (FN),659,31.28%,Abnormal radiograph where model extracted zero abnormality tokens
+True Positives (TP),394,18.70%,Abnormal radiograph correctly flagged with model-extracted abnormality

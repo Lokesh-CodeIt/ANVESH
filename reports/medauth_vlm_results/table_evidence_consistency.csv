@@ -1,0 +1,4 @@
+Subobject,Property,Evaluated Count,Consistent/Supported Count,Rate (%),Verification Status
+image_evidence,Schema Completeness,2107,2107,100.0%,Verified Live
+text_image_consistency,consistent == True,2107,2107,100.0%,Verified Live
+clinical_support,supported == True,2107,2107,100.0%,Verified Live

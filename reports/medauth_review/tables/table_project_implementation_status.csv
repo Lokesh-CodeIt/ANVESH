@@ -1,0 +1,9 @@
+Subsystem / Component,Current Status,Implementation Details,Verification Evidence,Blockers / Next Steps
+PostgreSQL Database,IMPLEMENTED & VERIFIED,"medauth_vlm database with 5 tables, 2,107 cases","verify_post_import.py (0 orphans, 2,107 cases)",None. Fully populated.
+Data Normalization Pipeline,IMPLEMENTED & VERIFIED,"normalize_batches.py, standardized Batches 4-6",validate_normalized.py (11/11 passed),None. Provenance preserved.
+FastAPI Backend Core,IMPLEMENTED & VERIFIED,"main.py with 11 endpoints, CORS, logging, error handlers",23 passed pytest tests,None. Ready for integration.
+Prior Auth Policy Engine,IMPLEMENTED & VERIFIED,policy_engine.py with grounding check for empty text,test_backend.py (score cap verified),None. Production ready.
+Database Backup System,IMPLEMENTED & VERIFIED,pg_dump script with DDL & COPY verification,1.90 MB verified SQL dump,None. Recoverable backup present.
+Review Report Generator,IMPLEMENTED & VERIFIED,run_medauth_review.py single entry point,Self-executing report generation,None. Offline & online capable.
+React Reviewer Frontend,PLANNED (NEXT PHASE),Vite / React UI for case review and escalation,API endpoints ready to serve frontend,Awaiting frontend development phase.
+Model Inference Pipeline,PRECOMPUTED (OFFLINE),MedGemma 4B run in Colab across Batches 1-6,"1,707 raw outputs; 400 provenance records",43 missing Batch 5 cases pending recovery if scheduled.

@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-10-11T12:10:21.730937+00:00",
+  "final_status": "READY FOR DATABASE IMPORT",
+  "database_target": {
+    "database": "medauth_vlm",
+    "schema": "public",
+    "tables": [
+      "cases",
+      "case_images",
+      "evidence"
+    ],
+    "existing_db_records": {
+      "cases": 950,
+      "evidence": 950
+    }
+  },
+  "proposed_import_summary": {
+    "batch_4": {
+      "proposed_cases_insert": 400,
+      "proposed_evidence_insert": 400,
+      "skips": 0,
+      "quarantine": 0
+    },
+    "batch_5": {
+      "proposed_cases_insert": 357,
+      "proposed_evidence_insert": 357,
+      "absent_missing_cases": 43,
+      "skips": 0,
+      "quarantine": 0
+    },
+    "batch_6": {
+      "proposed_cases_insert": 400,
+      "proposed_evidence_insert": 400,
+      "raw_model_output": "NULL",
+      "skips": 0,
+      "quarantine": 0
+    },
+    "total_new_cases_proposed": 1157,
+    "total_new_evidence_proposed": 1157,
+    "total_skips": 0,
+    "total_quarantines": 0
+  },
+  "all_validation_checks_passed": true,
+  "documented_limitations": [
+    "Batch 5: 43 case IDs (3524..3993) were never computed in Colab inference; intentionally left absent to prevent fabrication.",
+    "Batch 6: raw_model_output was omitted during Colab inference generation; explicitly set to NULL (allowed by database schema nullable=True), while all rich non-canonical fields are preserved in provenance_batch_6.json."
+  ]
+}

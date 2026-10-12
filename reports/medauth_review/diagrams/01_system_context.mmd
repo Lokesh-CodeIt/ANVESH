@@ -1,0 +1,23 @@
+graph TD
+    classDef actorStyle fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef sysStyle fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef dbStyle fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+
+    User[Clinical Reviewer / Doctor]:::actorStyle
+    Payer[Insurance Payer / CMS Guideline Authority]:::actorStyle
+    PACS[Hospital PACS / Clinical EHR]:::actorStyle
+
+    subgraph MedAuth["MedAuth-VLM System Boundary"]
+        API[FastAPI Backend Engine]:::sysStyle
+        Engine[Deterministic Policy Engine]:::sysStyle
+        DB[(PostgreSQL Repository)]:::dbStyle
+        VLM[Offline MedGemma-4B VLM Extraction]:::sysStyle
+    end
+
+    PACS -->|DICOM Images & Radiology Dictation| VLM
+    Payer -->|Coverage Guidelines & Exclusions| DB
+    VLM -->|Structured Evidence & Findings| DB
+    User -->|Inspect Cases & Cross-Modal Consistency| API
+    API -->|Fetch Evidence & Case Images| DB
+    API <-->|Execute Coverage Rules| Engine
+    User -->|Submit Prior Auth Authorization Decision| API

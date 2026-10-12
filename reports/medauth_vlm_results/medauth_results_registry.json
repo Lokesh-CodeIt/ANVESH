@@ -1,0 +1,427 @@
+{
+  "metadata": {
+    "project_name": "MedAuth-VLM",
+    "monograph_title": "MedAuth-VLM: Multimodal Medical Vision-Language Architecture for Prior Authorization Evidence Extraction, Cross-Modal Grounding, and Policy Verification",
+    "author": "Nilesh Marathe",
+    "affiliation": "Medical AI Systems Laboratory",
+    "timestamp_utc": "2026-10-12T06:50:44.251778+00:00",
+    "database_engine": "PostgreSQL 18.6 on x86_64-windows",
+    "vlm_foundation_model": "google/medgemma-4b-it",
+    "model_status": "Pretrained foundation model invoked offline via Google Colab; NOT fine-tuned in this repository",
+    "test_suite_status": "29 passed tests (100% pass rate)"
+  },
+  "inventory": {
+    "cases": {
+      "total": 2107,
+      "normal": 1054,
+      "normal_pct": 50.02,
+      "abnormal": 1053,
+      "abnormal_pct": 49.98,
+      "grounded_with_source_text": 2085,
+      "grounded_pct": 98.96,
+      "ungrounded_lacking_source_text": 22,
+      "ungrounded_pct": 1.04,
+      "ungrounded_case_ids": [
+        16,
+        614,
+        673,
+        894,
+        1137,
+        1147,
+        1293,
+        1297,
+        1536,
+        1566,
+        1615,
+        1690,
+        1761,
+        1778,
+        2115,
+        2601,
+        2697,
+        2765,
+        2881,
+        3434,
+        3782,
+        3973
+      ]
+    },
+    "images": {
+      "total": 4093,
+      "frontal": 2099,
+      "frontal_pct": 51.28,
+      "lateral": 1994,
+      "lateral_pct": 48.72,
+      "projections_per_case_mean": 1.94
+    },
+    "evidence": {
+      "total": 2107,
+      "jsonb_valid_count": 2107,
+      "jsonb_valid_pct": 100.0,
+      "raw_present": 1707,
+      "raw_present_pct": 81.02,
+      "raw_null": 400,
+      "raw_null_pct": 18.98,
+      "consistent_true_count": 2107,
+      "supported_true_count": 2107
+    },
+    "policies": {
+      "total": 100,
+      "states": {
+        "AK": 64,
+        "AL": 36
+      },
+      "covered_count": 100,
+      "covered_pct": 100.0
+    },
+    "reviews": {
+      "total": 4,
+      "samples": [
+        {
+          "review_id": 3,
+          "case_id": 1615,
+          "plan_id": "17091AL0010001-00",
+          "evidence_score": 40.0,
+          "reviewer_decision": null,
+          "reviewer_notes": null
+        },
+        {
+          "review_id": 4,
+          "case_id": 3782,
+          "plan_id": "17091AL0010001-00",
+          "evidence_score": 40.0,
+          "reviewer_decision": null,
+          "reviewer_notes": null
+        },
+        {
+          "review_id": 8,
+          "case_id": 1,
+          "plan_id": "17091AL0010001-00",
+          "evidence_score": 100.0,
+          "reviewer_decision": "Approved",
+          "reviewer_notes": "Clinical indications and bilateral infiltrates satisfy prior authorization criteria under CMS guidelines."
+        },
+        {
+          "review_id": 2,
+          "case_id": 67,
+          "plan_id": "17091AL0010001-00",
+          "evidence_score": 100.0,
+          "reviewer_decision": "Approved",
+          "reviewer_notes": "Clinical indications and imaging findings satisfy protocol criteria."
+        }
+      ]
+    }
+  },
+  "batch_breakdown": [
+    {
+      "batch_id": "Batch 1",
+      "source_file": "evidence_cleaned.json",
+      "case_count": 150,
+      "image_count": 300,
+      "frontal": 150,
+      "lateral": 150,
+      "raw_present": 150,
+      "raw_null": 0,
+      "missing_cases": 0,
+      "status": "100% Normalized"
+    },
+    {
+      "batch_id": "Batch 2",
+      "source_file": "evidence_batch_2.json",
+      "case_count": 400,
+      "image_count": 757,
+      "frontal": 400,
+      "lateral": 357,
+      "raw_present": 400,
+      "raw_null": 0,
+      "missing_cases": 0,
+      "status": "100% Normalized"
+    },
+    {
+      "batch_id": "Batch 3",
+      "source_file": "evidence_batch_3.json",
+      "case_count": 400,
+      "image_count": 782,
+      "frontal": 400,
+      "lateral": 382,
+      "raw_present": 400,
+      "raw_null": 0,
+      "missing_cases": 0,
+      "status": "100% Normalized"
+    },
+    {
+      "batch_id": "Batch 4",
+      "source_file": "evidence_results.json [0:400]",
+      "case_count": 400,
+      "image_count": 782,
+      "frontal": 400,
+      "lateral": 382,
+      "raw_present": 400,
+      "raw_null": 0,
+      "missing_cases": 0,
+      "status": "100% Normalized"
+    },
+    {
+      "batch_id": "Batch 5",
+      "source_file": "evidence_results.json [400:757]",
+      "case_count": 357,
+      "image_count": 702,
+      "frontal": 357,
+      "lateral": 345,
+      "raw_present": 357,
+      "raw_null": 0,
+      "missing_cases": 43,
+      "status": "43 Absent Preserved"
+    },
+    {
+      "batch_id": "Batch 6",
+      "source_file": "evidence_results.json [757:1157]",
+      "case_count": 400,
+      "image_count": 770,
+      "frontal": 400,
+      "lateral": 370,
+      "raw_present": 0,
+      "raw_null": 400,
+      "missing_cases": 0,
+      "status": "Raw NULL Documented"
+    }
+  ],
+  "sha256_checksums": {
+    "evidence_cleaned.json": "e7ac860b776ee46682406c6940d5389433e111aeb0ef0cd03e0f97d85f299909",
+    "evidence_batch_2.json": "276a3fc4faf8bae21ff6bdcaee74e06355dda8449309dacec81b5dc3f41df6e3",
+    "evidence_batch_3.json": "06859f0078b4b898eb7ee8fd144a5bba3c384aa66d373c691efbb25b4bfdaef5",
+    "evidence_results.json": "2173676619f7a90657ec90f354f250718bea80399fea15e235fcf87f0402521a",
+    "case_batch_4.json": "480b055ce03aabaa3b1f0c1389266947b41bbb641c2f5caf7671ca7b0a7400e1",
+    "case_batch_5.json": "7f76b12ec0350c1d0a6cb656f0d8d3e19f6789bbcb7285cc3ec748a54891f8c4",
+    "case_batch_6.json": "9ce2e118be361f075f63552839ee1fd88ef6feb1d7f8ff2ab371a6517095ae11"
+  },
+  "policy_engine_latency": {
+    "evaluated_cases": 2107,
+    "total_runtime_seconds": 1.1981,
+    "mean_ms": 0.566,
+    "median_ms": 0.5366,
+    "std_ms": 0.302,
+    "p95_ms": 0.9082,
+    "p99_ms": 1.3298,
+    "min_ms": 0.0068,
+    "max_ms": 8.3809,
+    "throughput_cases_per_sec": 1758.6,
+    "environment": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+      "python_version": "3.13.5",
+      "timer": "time.perf_counter() monotonic clock",
+      "sample_size": 2107,
+      "measurement_mode": "Single-threaded deterministic CPU execution across 2,107 PostgreSQL ORM records"
+    }
+  },
+  "grounding_audit_22_cases": [
+    {
+      "case_id": 16,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 614,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 673,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 894,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1137,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1147,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1293,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1297,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1536,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1566,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1615,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1690,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1761,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 1778,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 2115,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 2601,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 2697,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 2765,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 2881,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 3434,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 3782,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    },
+    {
+      "case_id": 3973,
+      "classification": "normal",
+      "has_source_text": false,
+      "evidence_score": 40.0,
+      "score_capped_at_40": true,
+      "grounding_check_status": "WARNING",
+      "recommendation": "Unverified AI evidence \u2014 no original clinical report available for grounding. Requires manual review."
+    }
+  ],
+  "diagnostic_evaluation_status": {
+    "status": "NOT EVALUATED / EVIDENCE UNAVAILABLE",
+    "reason": "Independent, blinded board-certified radiologist panel ground-truth diagnostic annotations are unavailable. Inferring diagnostic accuracy (F1, Sensitivity, Specificity, ROC-AUC) or temperature-scaled ECE from precomputed VLM summary tokens alone represents circular reasoning and is strictly excluded to maintain absolute scientific honesty.",
+    "prerequisites_for_clinical_evaluation": [
+      "Prospective multi-reader multi-case (MRMC) panel of 3 thoracic radiologists",
+      "Bounding-box localized ground-truth pathological labels on independent test holdout",
+      "Continuous softmax logits or log-likelihoods for calibration and ECE calculation"
+    ]
+  }
+}

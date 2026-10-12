@@ -1,0 +1,47 @@
+{
+  "report_generated_at": "2026-10-11T13:14:18.412808+00:00",
+  "database": {
+    "name": "medauth_vlm",
+    "schema": "public",
+    "engine": "PostgreSQL 18.6 on x86_64-windows",
+    "counts": {
+      "cases": 2107,
+      "case_images": 4093,
+      "evidence": 2107,
+      "policies": 100,
+      "reviews": 4
+    }
+  },
+  "distributions": {
+    "classifications": {
+      "abnormal": 1053,
+      "normal": 1054
+    },
+    "has_source_text": {
+      "absent": 22,
+      "present": 2085
+    },
+    "raw_model_output": {
+      "present": 1707,
+      "null": 400
+    },
+    "projections": {
+      "Frontal": 2099,
+      "Lateral": 1994
+    }
+  },
+  "artifacts_generated": {
+    "tables_csv": [
+      "table_database_inventory.csv",
+      "table_dataset_batch_inventory.csv",
+      "table_evidence_completeness.csv",
+      "table_api_inventory.csv",
+      "table_testing_matrix.csv",
+      "table_project_implementation_status.csv"
+    ],
+    "diagrams_count": 10,
+    "html_report": "index.html",
+    "technical_chapter": "medauth_vlm_technical_chapter.md"
+  },
+  "status": "VERIFIED_READY_FOR_REVIEW"
+}

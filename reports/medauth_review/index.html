@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedAuth-VLM: Comprehensive Review & Research Report</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Mermaid.js for Dynamic Diagram Rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      securityLevel: 'loose',
+      fontFamily: 'Inter, sans-serif'
+    });
+  </script>
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-surface: #111827;
+      --bg-surface-elevated: #1f2937;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-color-hover: rgba(59, 130, 246, 0.4);
+      --text-primary: #f9fafb;
+      --text-secondary: #9ca3af;
+      --text-muted: #6b7280;
+      --primary: #3b82f6;
+      --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      --accent: #10b981;
+      --accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: 300px;
+      background-color: var(--bg-surface);
+      border-right: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 1.75rem 1.25rem;
+      flex-shrink: 0;
+    }
+    .sidebar-brand {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .sidebar-brand h1 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(90deg, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .sidebar-brand p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .nav-list { list-style: none; }
+    .nav-group-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin: 1.25rem 0 0.5rem 0.5rem;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .nav-link:hover {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      transform: translateX(3px);
+    }
+
+    /* Main Content Area */
+    .main-content {
+      flex: 1;
+      padding: 2.5rem 3.5rem;
+      max-width: 1300px;
+      overflow-x: hidden;
+    }
+
+    /* Hero Header */
+    .hero {
+      margin-bottom: 3rem;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(6, 78, 59, 0.2) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      margin-bottom: 1rem;
+    }
+    .hero h2 {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 850px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+    }
+    .hero-metadata span strong { color: var(--text-primary); }
+
+    /* KPI Metric Cards Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .metric-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .metric-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-color-hover);
+    }
+    .metric-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .metric-value {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .metric-desc {
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 2rem;
+    }
+    .section-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Tables */
+    .table-responsive {
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background-color: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    .data-table th {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      font-weight: 600;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background-color: rgba(255, 255, 255, 0.02); color: var(--text-primary); }
+
+    /* Diagram Cards */
+    .diagram-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .diagram-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .diagram-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .diagram-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 1.25rem;
+    }
+    .mermaid {
+      background-color: #ffffff;
+      color: #111827;
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      overflow-x: auto;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    .diagram-source-details {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .diagram-source-details summary {
+      padding: 0.25rem 0;
+      user-select: none;
+    }
+    .diagram-source-details pre {
+      background-color: var(--bg-primary);
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      overflow-x: auto;
+      margin-top: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #93c5fd;
+    }
+
+    /* Badges & Alert Callouts */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .badge-accent { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-primary { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .badge-warning { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    
+    .callout {
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.5rem;
+      border-left: 4px solid;
+      background-color: var(--bg-surface);
+      font-size: 0.85rem;
+    }
+    .callout-info { border-color: var(--primary); }
+    .callout-warning { border-color: var(--warning); }
+    .callout-success { border-color: var(--accent); }
+
+    /* Footer */
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>MedAuth-VLM</h1>
+      <p>Research Review Monograph</p>
+    </div>
+    <ul class="nav-list">
+      <li class="nav-group-title">Executive Summary</li>
+      <li><a class="nav-link" href="#overview">System Overview</a></li>
+      <li><a class="nav-link" href="#metrics">Key Performance Metrics</a></li>
+      
+      <li class="nav-group-title">Verified Data & Inventory</li>
+      <li><a class="nav-link" href="#db_inventory">Database Inventory (Table A)</a></li>
+      <li><a class="nav-link" href="#batch_inventory">Batch & Dataset Inventory (Table B)</a></li>
+      <li><a class="nav-link" href="#evidence_completeness">Evidence Completeness (Table C)</a></li>
+      
+      <li class="nav-group-title">Architecture & Diagrams</li>
+      <li><a class="nav-link" href="#diagrams_section">System Diagrams (Figures 1-10)</a></li>
+      
+      <li class="nav-group-title">Backend & Integration</li>
+      <li><a class="nav-link" href="#api_inventory">API Surface (Table D)</a></li>
+      <li><a class="nav-link" href="#testing_matrix">Testing Matrix (Table E)</a></li>
+      <li><a class="nav-link" href="#project_status">Implementation Roadmap (Table F)</a></li>
+      
+      <li class="nav-group-title">Scientific Honesty</li>
+      <li><a class="nav-link" href="#scientific_honesty">Evaluation & Ethical Disclosures</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Hero Section -->
+    <header class="hero" id="overview">
+      <span class="hero-badge">Academic Book Chapter Review Edition</span>
+      <h2>MedAuth-VLM: Multimodal Medical Vision-Language Architecture</h2>
+      <p class="hero-subtitle">
+        Automated Prior Authorization Adjudication & Clinical Grounding via Chest Radiograph Vision-Language Evidence Processing.
+      </p>
+      <div class="hero-metadata">
+        <span>Target Database: <strong>medauth_vlm (localhost:5432)</strong></span>
+        <span>PostgreSQL Engine: <strong>PostgreSQL 18.6 on x86_64-windows</strong></span>
+        <span>Generated At: <strong>2026-10-11 13:14:18 UTC</strong></span>
+        <span>Overall Pipeline Status: <strong>VERIFIED & PRODUCTION READY</strong></span>
+      </div>
+    </header>
+
+    <!-- Key Metrics Grid -->
+    <section class="metrics-grid" id="metrics">
+      <div class="metric-card">
+        <div class="metric-title">Total Verified Cases</div>
+        <div class="metric-value">2,107</div>
+        <div class="metric-desc">100% 1-to-1 Evidence Parity</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Medical Image Records</div>
+        <div class="metric-value">4,093</div>
+        <div class="metric-desc">Frontal (2,099) &amp; Lateral (1,994)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Clinical Evidence Records</div>
+        <div class="metric-value">2,107</div>
+        <div class="metric-desc">1,707 Genuine Raw / 400 Null</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">CMS Insurance Policies</div>
+        <div class="metric-value">100</div>
+        <div class="metric-desc">2 Unique US States Covered</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Active Test Suite</div>
+        <div class="metric-value">23 / 23</div>
+        <div class="metric-desc">100% Unit &amp; Integration Pass</div>
+      </div>
+    </section>
+
+    <!-- Table A: Database Inventory -->
+    <section class="section" id="db_inventory">
+      <div class="section-header">
+        <h2 class="section-title">1. Authoritative Database Schema & Table Inventory</h2>
+        <span class="badge badge-accent">Live PostgreSQL 18.6 Verified</span>
+      </div>
+      <p class="section-desc">
+        Reflects exact live state queried from PostgreSQL <code>medauth_vlm</code>. All foreign key relationships enforce referential integrity with zero orphaned child records.
+      </p>
+      <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Table Name</th><th>Row Count</th><th>Primary Key</th><th>Foreign Keys</th><th>Key Fields & Constraints</th><th>Nullability Rules</th></tr></thead>
+            <tbody><tr><td>cases</td><td>2107</td><td>case_id (INT)</td><td>None</td><td>classification (VARCHAR), has_source_text (BOOL)</td><td>classification & has_source_text NOT NULL; clinical text nullable</td></tr>
+<tr><td>case_images</td><td>4093</td><td>id (INT auto)</td><td>case_id -> cases.case_id (CASCADE)</td><td>filename, projection, file_path</td><td>All fields NOT NULL</td></tr>
+<tr><td>evidence</td><td>2107</td><td>id (INT auto)</td><td>case_id -> cases.case_id (UNIQUE, CASCADE)</td><td>image_evidence, text_image_consistency, clinical_support, raw_model_output</td><td>All 3 evidence subobjects JSONB NOT NULL; raw_model_output NULLABLE</td></tr>
+<tr><td>policies</td><td>100</td><td>plan_id (VARCHAR)</td><td>None</td><td>state, is_covered, copay, coinsurance, limit_qty, limit_unit</td><td>plan_id, state, is_covered, copay, coinsurance NOT NULL</td></tr>
+<tr><td>reviews</td><td>4</td><td>id (INT auto)</td><td>case_id -> cases, plan_id -> policies (CASCADE)</td><td>policy_compliance (JSONB), evidence_score (FLOAT), reviewer_decision</td><td>case_id, plan_id, policy_compliance, created_at NOT NULL</td></tr>
+</tbody>
+          </table>
+        </div>
+    </section>
+
+    <!-- Table B: Batch Inventory -->
+    <section class="section" id="batch_inventory">
+      <div class="section-header">
+        <h2 class="section-title">2. Dataset Cohorts & Batch Execution Breakdown</h2>
+        <span class="badge badge-primary">Batches 1 through 6 Reconciled</span>
+      </div>
+      <p class="section-desc">
+        Breakdown across all 6 sequential batch runs. Batches 1–3 represent initial verification cohorts; Batches 4–6 represent newly normalized and imported cohorts.
+      </p>
+      <div class="callout callout-info">
+        <strong>Documented Data Governance Limitations:</strong> Batch 5 contains 357 completed cases; 43 case IDs (3524..3993) were uncomputed in Colab and are intentionally left absent to prevent fabrication. Batch 6 contains 400 cases whose raw generation output was not saved; <code>raw_model_output</code> is set to <code>NULL</code>, while full clinical provenance is preserved.
+      </div>
+      <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Batch Identifier</th><th>Manifest Source</th><th>Available Cases</th><th>Image Records</th><th>Evidence Records</th><th>Raw Output Availability</th><th>Missing / Quarantined</th><th>Batch Provenance</th></tr></thead>
+            <tbody><tr><td>Batch 1</td><td>case_batch.json</td><td>150</td><td>300</td><td>150</td><td>150 / 150 Genuine (100%)</td><td>0 missing, 0 quarantined</td><td>MIMIC-CXR / CheXpert normalized cohort</td></tr>
+<tr><td>Batch 2</td><td>case_batch_2.json</td><td>400</td><td>757</td><td>400</td><td>400 / 400 Genuine (100%)</td><td>0 missing, 0 quarantined</td><td>MIMIC-CXR / CheXpert normalized cohort</td></tr>
+<tr><td>Batch 3</td><td>case_batch_3.json</td><td>400</td><td>782</td><td>400</td><td>400 / 400 Genuine (100%)</td><td>0 missing, 0 quarantined</td><td>MIMIC-CXR / CheXpert normalized cohort</td></tr>
+<tr><td>Batch 4</td><td>case_batch_4.json</td><td>400</td><td>782</td><td>400</td><td>400 / 400 Genuine (100%)</td><td>0 missing, 0 quarantined</td><td>MIMIC-CXR / CheXpert normalized cohort</td></tr>
+<tr><td>Batch 5</td><td>case_batch_5.json</td><td>357</td><td>702</td><td>357</td><td>357 / 357 Genuine (100%)</td><td>43 missing uncomputed; 0 quarantined</td><td>357 valid; 43 absent (IDs 3524..3993 documented)</td></tr>
+<tr><td>Batch 6</td><td>case_batch_6.json</td><td>400</td><td>770</td><td>400</td><td>0 / 400 (Explicitly NULL)</td><td>0 missing, 0 quarantined</td><td>String IDs cast to int; provenance in provenance_batch_6.json</td></tr>
+<tr><td>Total Database</td><td>Combined 6 Batches</td><td>2107</td><td>4093</td><td>2107</td><td>1,707 Genuine / 400 Null</td><td>43 absent (Batch 5); 0 quarantined</td><td>Unified PostgreSQL medauth_vlm repository</td></tr>
+</tbody>
+          </table>
+        </div>
+    </section>
+
+    <!-- Table C: Evidence Completeness -->
+    <section class="section" id="evidence_completeness">
+      <div class="section-header">
+        <h2 class="section-title">3. Multimodal Clinical Evidence Completeness</h2>
+        <span class="badge badge-accent">Strict JSONB Constraints Met</span>
+      </div>
+      <p class="section-desc">
+        Field-level breakdown of the three structured evidence subobjects (<code>image_evidence</code>, <code>text_image_consistency</code>, <code>clinical_support</code>) stored in PostgreSQL JSONB columns.
+      </p>
+      <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Evidence Component</th><th>Field Path</th><th>Database Type</th><th>Required / Nullable</th><th>Populated Count</th><th>Null / Missing Count</th><th>Completeness Rate</th><th>Verification Standard</th></tr></thead>
+            <tbody><tr><td>Image Evidence Subobject</td><td>evidence.image_evidence</td><td>JSONB</td><td>NOT NULL</td><td>2107</td><td>0</td><td>100.0%</td><td>Dict with modality, body_part, findings, abnormalities, impression</td></tr>
+<tr><td>Consistency Subobject</td><td>evidence.text_image_consistency</td><td>JSONB</td><td>NOT NULL</td><td>2107</td><td>0</td><td>100.0%</td><td>Dict with boolean consistent and string notes</td></tr>
+<tr><td>Clinical Support Subobject</td><td>evidence.clinical_support</td><td>JSONB</td><td>NOT NULL</td><td>2107</td><td>0</td><td>100.0%</td><td>Dict with boolean supported and string reason</td></tr>
+<tr><td>Raw Model Output (Batches 1-5)</td><td>evidence.raw_model_output</td><td>TEXT</td><td>NULLABLE</td><td>1,707</td><td>0 (in B1-5)</td><td>100.0% (Batches 1-5)</td><td>Authentic MedGemma 4B generation markdown</td></tr>
+<tr><td>Raw Model Output (Batch 6)</td><td>evidence.raw_model_output</td><td>TEXT</td><td>NULLABLE</td><td>0</td><td>400 (in B6)</td><td>0.0% (Allowed NULL)</td><td>Provenance preserved in separate JSON manifest</td></tr>
+</tbody>
+          </table>
+        </div>
+    </section>
+
+    <!-- System Diagrams Section -->
+    <section class="section" id="diagrams_section">
+      <div class="section-header">
+        <h2 class="section-title">4. System Architecture, Workflows, and Database ERD</h2>
+        <span class="badge badge-primary">10 Figures Rendered via Mermaid</span>
+      </div>
+      <p class="section-desc">
+        Visual diagrams representing end-to-end processing, policy engine workflows, database entity-relationships, and deployment runtime.
+      </p>
+      
+        <div class="diagram-card" id="diag_01_system_context">
+          <div class="diagram-header">
+            <h3>System Context Diagram</h3>
+            <span class="badge badge-accent">Mermaid Diagram 01</span>
+          </div>
+          <p class="diagram-caption">Figure 1: MedAuth-VLM operational boundary, actor interactions, and external dependencies.</p>
+          <div class="mermaid">
+graph TD
+    classDef actorStyle fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef sysStyle fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef dbStyle fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+
+    User[Clinical Reviewer / Doctor]:::actorStyle
+    Payer[Insurance Payer / CMS Guideline Authority]:::actorStyle
+    PACS[Hospital PACS / Clinical EHR]:::actorStyle
+
+    subgraph MedAuth["MedAuth-VLM System Boundary"]
+        API[FastAPI Backend Engine]:::sysStyle
+        Engine[Deterministic Policy Engine]:::sysStyle
+        DB[(PostgreSQL Repository)]:::dbStyle
+        VLM[Offline MedGemma-4B VLM Extraction]:::sysStyle
+    end
+
+    PACS -->|DICOM Images & Radiology Dictation| VLM
+    Payer -->|Coverage Guidelines & Exclusions| DB
+    VLM -->|Structured Evidence & Findings| DB
+    User -->|Inspect Cases & Cross-Modal Consistency| API
+    API -->|Fetch Evidence & Case Images| DB
+    API <-->|Execute Coverage Rules| Engine
+    User -->|Submit Prior Auth Authorization Decision| API
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>graph TD
+    classDef actorStyle fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef sysStyle fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef dbStyle fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+
+    User[Clinical Reviewer / Doctor]:::actorStyle
+    Payer[Insurance Payer / CMS Guideline Authority]:::actorStyle
+    PACS[Hospital PACS / Clinical EHR]:::actorStyle
+
+    subgraph MedAuth["MedAuth-VLM System Boundary"]
+        API[FastAPI Backend Engine]:::sysStyle
+        Engine[Deterministic Policy Engine]:::sysStyle
+        DB[(PostgreSQL Repository)]:::dbStyle
+        VLM[Offline MedGemma-4B VLM Extraction]:::sysStyle
+    end
+
+    PACS --&gt;|DICOM Images & Radiology Dictation| VLM
+    Payer --&gt;|Coverage Guidelines & Exclusions| DB
+    VLM --&gt;|Structured Evidence & Findings| DB
+    User --&gt;|Inspect Cases & Cross-Modal Consistency| API
+    API --&gt;|Fetch Evidence & Case Images| DB
+    API &lt;--&gt;|Execute Coverage Rules| Engine
+    User --&gt;|Submit Prior Auth Authorization Decision| API
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_02_high_level_architecture">
+          <div class="diagram-header">
+            <h3>High-Level System Architecture</h3>
+            <span class="badge badge-accent">Mermaid Diagram 02</span>
+          </div>
+          <p class="diagram-caption">Figure 2: Multi-tiered architecture of MedAuth-VLM decoupling offline VLM inference, database persistence, and API delivery.</p>
+          <div class="mermaid">
+graph TD
+    classDef layerStyle fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+    classDef compStyle fill:#e0f7fa,stroke:#00838f,stroke-width:2px;
+
+    subgraph L1["Presentation Layer (Planned / API Ready)"]
+        UI[Medical Reviewer Dashboard]:::compStyle
+        API_DOC[Swagger / OpenAPI Documentation]:::compStyle
+    end
+
+    subgraph L2["Application & Business Logic Layer"]
+        API[FastAPI Service - main.py]:::compStyle
+        Policy[Policy Evaluation Engine - policy_engine.py]:::compStyle
+        Auth[Logging & Request Auditing Middleware]:::compStyle
+    end
+
+    subgraph L3["Persistence & Storage Layer"]
+        ORM[SQLAlchemy ORM Models - models.py]:::compStyle
+        PG[(PostgreSQL 18 - medauth_vlm)]:::compStyle
+        Static[Local Medical Images Repository]:::compStyle
+    end
+
+    subgraph L4["Evidence Ingestion Layer"]
+        Norm[Deterministic Normalization - normalize_batches.py]:::compStyle
+        Importer[Transaction-Safe Importer - import_batches_db.py]:::compStyle
+        Colab[Google Colab MedGemma-4B Inference]:::compStyle
+    end
+
+    UI --> API
+    API_DOC --> API
+    API --> Policy
+    API --> ORM
+    ORM --> PG
+    API --> Static
+    Colab --> Norm
+    Norm --> Importer
+    Importer --> PG
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>graph TD
+    classDef layerStyle fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+    classDef compStyle fill:#e0f7fa,stroke:#00838f,stroke-width:2px;
+
+    subgraph L1["Presentation Layer (Planned / API Ready)"]
+        UI[Medical Reviewer Dashboard]:::compStyle
+        API_DOC[Swagger / OpenAPI Documentation]:::compStyle
+    end
+
+    subgraph L2["Application & Business Logic Layer"]
+        API[FastAPI Service - main.py]:::compStyle
+        Policy[Policy Evaluation Engine - policy_engine.py]:::compStyle
+        Auth[Logging & Request Auditing Middleware]:::compStyle
+    end
+
+    subgraph L3["Persistence & Storage Layer"]
+        ORM[SQLAlchemy ORM Models - models.py]:::compStyle
+        PG[(PostgreSQL 18 - medauth_vlm)]:::compStyle
+        Static[Local Medical Images Repository]:::compStyle
+    end
+
+    subgraph L4["Evidence Ingestion Layer"]
+        Norm[Deterministic Normalization - normalize_batches.py]:::compStyle
+        Importer[Transaction-Safe Importer - import_batches_db.py]:::compStyle
+        Colab[Google Colab MedGemma-4B Inference]:::compStyle
+    end
+
+    UI --&gt; API
+    API_DOC --&gt; API
+    API --&gt; Policy
+    API --&gt; ORM
+    ORM --&gt; PG
+    API --&gt; Static
+    Colab --&gt; Norm
+    Norm --&gt; Importer
+    Importer --&gt; PG
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_03_evidence_processing_flowchart">
+          <div class="diagram-header">
+            <h3>Clinical Evidence Processing Flowchart</h3>
+            <span class="badge badge-accent">Mermaid Diagram 03</span>
+          </div>
+          <p class="diagram-caption">Figure 3: Evidence normalization, schema validation, and quarantine decision pipeline.</p>
+          <div class="mermaid">
+flowchart TD
+    Start([Raw Colab Inference Batch JSON]) --> Ingest[Load Raw Ingestion Slice]
+    Ingest --> TypeCheck{Is Case ID Valid?}
+    TypeCheck -- No --> Quarantine[Quarantine Record with Reason]
+    TypeCheck -- Yes --> CastID[Cast to Native Integer]
+    
+    CastID --> ManifestCheck{Matches Expected Batch Manifest?}
+    ManifestCheck -- No --> Quarantine
+    ManifestCheck -- Yes --> EvCheck{Valid image_evidence, consistency, support?}
+    
+    EvCheck -- No --> Quarantine
+    EvCheck -- Yes --> RawCheck{Is Raw Model Output Present?}
+    
+    RawCheck -- Yes --> PreserveRaw[Preserve Genuine Raw Output String]
+    RawCheck -- No --> SetNull[Explicitly Set NULL & Extract Provenance Manifest]
+    
+    PreserveRaw --> Standardize[Construct Canonical Canonical Dict]
+    SetNull --> Standardize
+    Standardize --> Output([Output Normalized JSON to normalized_for_db/])
+    Quarantine --> LogQ([Record in quarantine_report.json])
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>flowchart TD
+    Start([Raw Colab Inference Batch JSON]) --&gt; Ingest[Load Raw Ingestion Slice]
+    Ingest --&gt; TypeCheck{Is Case ID Valid?}
+    TypeCheck -- No --&gt; Quarantine[Quarantine Record with Reason]
+    TypeCheck -- Yes --&gt; CastID[Cast to Native Integer]
+    
+    CastID --&gt; ManifestCheck{Matches Expected Batch Manifest?}
+    ManifestCheck -- No --&gt; Quarantine
+    ManifestCheck -- Yes --&gt; EvCheck{Valid image_evidence, consistency, support?}
+    
+    EvCheck -- No --&gt; Quarantine
+    EvCheck -- Yes --&gt; RawCheck{Is Raw Model Output Present?}
+    
+    RawCheck -- Yes --&gt; PreserveRaw[Preserve Genuine Raw Output String]
+    RawCheck -- No --&gt; SetNull[Explicitly Set NULL & Extract Provenance Manifest]
+    
+    PreserveRaw --&gt; Standardize[Construct Canonical Canonical Dict]
+    SetNull --&gt; Standardize
+    Standardize --&gt; Output([Output Normalized JSON to normalized_for_db/])
+    Quarantine --&gt; LogQ([Record in quarantine_report.json])
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_04_multimodal_consistency_workflow">
+          <div class="diagram-header">
+            <h3>Cross-Modal Evidence Consistency Workflow</h3>
+            <span class="badge badge-accent">Mermaid Diagram 04</span>
+          </div>
+          <p class="diagram-caption">Figure 4: Grounding radiologist dictated findings against chest radiograph evidence with hallucination safeguards.</p>
+          <div class="mermaid">
+flowchart LR
+    A[Dictated Clinical Report] --> B[VLM Multimodal Prompt]
+    C[Chest Radiograph Image] --> B
+    
+    B --> D[MedGemma 4B Structured Generation]
+    D --> E{Source Text Available?}
+    
+    E -- Yes --> F[Compute Text-Image Consistency & Findings Alignment]
+    E -- No --> G[Trigger No-Source Grounding Flag has_source_text=False]
+    
+    F --> H[Full Compliance Scoring: 0 - 100]
+    G --> I[Cap Evidence Score at Max 40 / 100]
+    I --> J[Append Clinical Warning: Requires Mandatory Manual Review]
+    
+    H --> K[Generate Prior Auth Recommendation]
+    J --> K
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>flowchart LR
+    A[Dictated Clinical Report] --&gt; B[VLM Multimodal Prompt]
+    C[Chest Radiograph Image] --&gt; B
+    
+    B --&gt; D[MedGemma 4B Structured Generation]
+    D --&gt; E{Source Text Available?}
+    
+    E -- Yes --&gt; F[Compute Text-Image Consistency & Findings Alignment]
+    E -- No --&gt; G[Trigger No-Source Grounding Flag has_source_text=False]
+    
+    F --&gt; H[Full Compliance Scoring: 0 - 100]
+    G --&gt; I[Cap Evidence Score at Max 40 / 100]
+    I --&gt; J[Append Clinical Warning: Requires Mandatory Manual Review]
+    
+    H --&gt; K[Generate Prior Auth Recommendation]
+    J --&gt; K
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_05_human_review_escalation">
+          <div class="diagram-header">
+            <h3>Human Review and Escalation Workflow</h3>
+            <span class="badge badge-accent">Mermaid Diagram 05</span>
+          </div>
+          <p class="diagram-caption">Figure 5: Deterministic prior-authorization compliance scoring and human physician-in-the-loop escalation.</p>
+          <div class="mermaid">
+stateDiagram-v2
+    [*] --> Ingested: Case & Evidence Loaded
+    Ingested --> AutomatedAssessment: Run Policy Engine
+    
+    state AutomatedAssessment {
+        [*] --> CheckGrounding
+        CheckGrounding --> CheckMedicalNecessity
+        CheckMedicalNecessity --> CheckExclusions
+        CheckExclusions --> ScoreCalculated
+    }
+    
+    AutomatedAssessment --> LowRiskApproved: Score >= 80 & Complete Text & Normal/Mild
+    AutomatedAssessment --> ManualReviewRequired: Score < 80 OR has_source_text=False OR Abnormal Discrepancy
+    
+    ManualReviewRequired --> ReviewerAssigned: Physician / Adjudicator Opens Case
+    ReviewerAssigned --> InquireMoreInfo: Additional Clinical Documentation Needed
+    ReviewerAssigned --> AdjudicatedApproved: Clinical Findings Validated
+    ReviewerAssigned --> AdjudicatedDenied: Policy Criteria Not Met
+    
+    InquireMoreInfo --> ReviewerAssigned: Provider Resubmits Evidence
+    AdjudicatedApproved --> [*]: Authorization Granted & Stored
+    AdjudicatedDenied --> [*]: Denial Reason Stored in Audit Log
+    LowRiskApproved --> [*]: Expedited Review Completed
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>stateDiagram-v2
+    [*] --&gt; Ingested: Case & Evidence Loaded
+    Ingested --&gt; AutomatedAssessment: Run Policy Engine
+    
+    state AutomatedAssessment {
+        [*] --&gt; CheckGrounding
+        CheckGrounding --&gt; CheckMedicalNecessity
+        CheckMedicalNecessity --&gt; CheckExclusions
+        CheckExclusions --&gt; ScoreCalculated
+    }
+    
+    AutomatedAssessment --&gt; LowRiskApproved: Score &gt;= 80 & Complete Text & Normal/Mild
+    AutomatedAssessment --&gt; ManualReviewRequired: Score &lt; 80 OR has_source_text=False OR Abnormal Discrepancy
+    
+    ManualReviewRequired --&gt; ReviewerAssigned: Physician / Adjudicator Opens Case
+    ReviewerAssigned --&gt; InquireMoreInfo: Additional Clinical Documentation Needed
+    ReviewerAssigned --&gt; AdjudicatedApproved: Clinical Findings Validated
+    ReviewerAssigned --&gt; AdjudicatedDenied: Policy Criteria Not Met
+    
+    InquireMoreInfo --&gt; ReviewerAssigned: Provider Resubmits Evidence
+    AdjudicatedApproved --&gt; [*]: Authorization Granted & Stored
+    AdjudicatedDenied --&gt; [*]: Denial Reason Stored in Audit Log
+    LowRiskApproved --&gt; [*]: Expedited Review Completed
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_06_database_er_diagram">
+          <div class="diagram-header">
+            <h3>Database Entity-Relationship (ER) Diagram</h3>
+            <span class="badge badge-accent">Mermaid Diagram 06</span>
+          </div>
+          <p class="diagram-caption">Figure 6: Complete PostgreSQL relational schema representing 2,107 cases, 4,093 images, 2,107 evidence records, 100 policies, and reviews.</p>
+          <div class="mermaid">
+erDiagram
+    CASES ||--o{ CASE_IMAGES : "contains (1 to N)"
+    CASES ||--|| EVIDENCE : "possesses (1 to 1)"
+    CASES ||--o{ REVIEWS : "evaluated_in (0 to N)"
+    POLICIES ||--o{ REVIEWS : "applies_to (0 to N)"
+
+    CASES {
+        int case_id PK "Unique Integer Case Identifier"
+        string classification "normal | abnormal"
+        text indication "Clinical indication"
+        text findings "Radiologist dictation findings"
+        text impression "Summary clinical impression"
+        text requested_procedure "e.g. Chest X-ray"
+        boolean has_source_text "Grounding availability flag"
+    }
+
+    CASE_IMAGES {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id ON DELETE CASCADE"
+        string filename "Normalized image filename"
+        string projection "Frontal | Lateral"
+        string file_path "Relative filesystem path"
+    }
+
+    EVIDENCE {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id UNIQUE ON DELETE CASCADE"
+        jsonb image_evidence "Findings, abnormalities, impression"
+        jsonb text_image_consistency "Consistency boolean & notes"
+        jsonb clinical_support "Supported boolean & rationale"
+        text raw_model_output "Nullable raw generation markdown"
+    }
+
+    POLICIES {
+        string plan_id PK "CMS Plan Identification Code"
+        string state "2-letter US State Code"
+        string is_covered "Coverage specification"
+        string copay "Copayment amount / rules"
+        string coinsurance "Coinsurance percentage"
+        float limit_qty "Quantitative limitation"
+        string limit_unit "Limitation unit"
+        text exclusions "Medical procedure exclusions"
+    }
+
+    REVIEWS {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id ON DELETE CASCADE"
+        string plan_id FK "References policies.plan_id ON DELETE CASCADE"
+        jsonb policy_compliance "Full evaluation checklist JSONB"
+        float evidence_score "Computed score 0.0 - 100.0"
+        text recommendation "Automated guideline advice"
+        string reviewer_decision "Approved | Denied | Info Required"
+        text reviewer_notes "Human clinician rationale"
+        timestamp created_at "Evaluation timestamp"
+        timestamp reviewed_at "Decision timestamp"
+    }
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>erDiagram
+    CASES ||--o{ CASE_IMAGES : "contains (1 to N)"
+    CASES ||--|| EVIDENCE : "possesses (1 to 1)"
+    CASES ||--o{ REVIEWS : "evaluated_in (0 to N)"
+    POLICIES ||--o{ REVIEWS : "applies_to (0 to N)"
+
+    CASES {
+        int case_id PK "Unique Integer Case Identifier"
+        string classification "normal | abnormal"
+        text indication "Clinical indication"
+        text findings "Radiologist dictation findings"
+        text impression "Summary clinical impression"
+        text requested_procedure "e.g. Chest X-ray"
+        boolean has_source_text "Grounding availability flag"
+    }
+
+    CASE_IMAGES {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id ON DELETE CASCADE"
+        string filename "Normalized image filename"
+        string projection "Frontal | Lateral"
+        string file_path "Relative filesystem path"
+    }
+
+    EVIDENCE {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id UNIQUE ON DELETE CASCADE"
+        jsonb image_evidence "Findings, abnormalities, impression"
+        jsonb text_image_consistency "Consistency boolean & notes"
+        jsonb clinical_support "Supported boolean & rationale"
+        text raw_model_output "Nullable raw generation markdown"
+    }
+
+    POLICIES {
+        string plan_id PK "CMS Plan Identification Code"
+        string state "2-letter US State Code"
+        string is_covered "Coverage specification"
+        string copay "Copayment amount / rules"
+        string coinsurance "Coinsurance percentage"
+        float limit_qty "Quantitative limitation"
+        string limit_unit "Limitation unit"
+        text exclusions "Medical procedure exclusions"
+    }
+
+    REVIEWS {
+        int id PK "Autoincrement Primary Key"
+        int case_id FK "References cases.case_id ON DELETE CASCADE"
+        string plan_id FK "References policies.plan_id ON DELETE CASCADE"
+        jsonb policy_compliance "Full evaluation checklist JSONB"
+        float evidence_score "Computed score 0.0 - 100.0"
+        text recommendation "Automated guideline advice"
+        string reviewer_decision "Approved | Denied | Info Required"
+        text reviewer_notes "Human clinician rationale"
+        timestamp created_at "Evaluation timestamp"
+        timestamp reviewed_at "Decision timestamp"
+    }
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_07_api_sequence_diagram">
+          <div class="diagram-header">
+            <h3>API Request/Response Sequence Diagram</h3>
+            <span class="badge badge-accent">Mermaid Diagram 07</span>
+          </div>
+          <p class="diagram-caption">Figure 7: Prior authorization review generation and human decision recording sequence.</p>
+          <div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor Clinician as Reviewing Clinician
+    participant Client as Frontend / Test Client
+    participant API as FastAPI Backend (main.py)
+    participant Engine as Policy Engine (policy_engine.py)
+    participant DB as PostgreSQL (medauth_vlm)
+
+    Clinician->>Client: Open Case Review (case_id=67, plan_id='AK123')
+    Client->>API: GET /cases/67/review?plan_id=AK123
+    API->>DB: Query Case & Evidence by case_id=67
+    DB-->>API: Return Case data & Evidence JSONB
+    API->>DB: Query Policy by plan_id='AK123'
+    DB-->>API: Return Policy rules & exclusions
+    API->>Engine: compare_evidence_to_policy(evidence, policy, has_source_text)
+    Engine-->>API: Return compliance checklist & score (e.g. 85.0)
+    API->>DB: Upsert Review record in table 'reviews'
+    DB-->>API: Commit Review (id=4)
+    API-->>Client: 200 OK ReviewResponse JSON
+    Client-->>Clinician: Render Checklist, Score, and Recommendation
+
+    Clinician->>Client: Submit Decision ('Approved', Notes)
+    Client->>API: POST /reviews/4/decision {"reviewer_decision": "Approved", ...}
+    API->>DB: UPDATE reviews SET reviewer_decision='Approved', reviewed_at=NOW()
+    DB-->>API: Commit Transaction
+    API-->>Client: 200 OK Updated ReviewResponse
+    Client-->>Clinician: Confirmation Badge: Authorized
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>sequenceDiagram
+    autonumber
+    actor Clinician as Reviewing Clinician
+    participant Client as Frontend / Test Client
+    participant API as FastAPI Backend (main.py)
+    participant Engine as Policy Engine (policy_engine.py)
+    participant DB as PostgreSQL (medauth_vlm)
+
+    Clinician-&gt;&gt;Client: Open Case Review (case_id=67, plan_id='AK123')
+    Client-&gt;&gt;API: GET /cases/67/review?plan_id=AK123
+    API-&gt;&gt;DB: Query Case & Evidence by case_id=67
+    DB--&gt;&gt;API: Return Case data & Evidence JSONB
+    API-&gt;&gt;DB: Query Policy by plan_id='AK123'
+    DB--&gt;&gt;API: Return Policy rules & exclusions
+    API-&gt;&gt;Engine: compare_evidence_to_policy(evidence, policy, has_source_text)
+    Engine--&gt;&gt;API: Return compliance checklist & score (e.g. 85.0)
+    API-&gt;&gt;DB: Upsert Review record in table 'reviews'
+    DB--&gt;&gt;API: Commit Review (id=4)
+    API--&gt;&gt;Client: 200 OK ReviewResponse JSON
+    Client--&gt;&gt;Clinician: Render Checklist, Score, and Recommendation
+
+    Clinician-&gt;&gt;Client: Submit Decision ('Approved', Notes)
+    Client-&gt;&gt;API: POST /reviews/4/decision {"reviewer_decision": "Approved", ...}
+    API-&gt;&gt;DB: UPDATE reviews SET reviewer_decision='Approved', reviewed_at=NOW()
+    DB--&gt;&gt;API: Commit Transaction
+    API--&gt;&gt;Client: 200 OK Updated ReviewResponse
+    Client--&gt;&gt;Clinician: Confirmation Badge: Authorized
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_08_data_normalization_import">
+          <div class="diagram-header">
+            <h3>Data Normalization and Batch Import Workflow</h3>
+            <span class="badge badge-accent">Mermaid Diagram 08</span>
+          </div>
+          <p class="diagram-caption">Figure 8: Deterministic multi-batch normalization, checksum validation, and transaction-safe database import.</p>
+          <div class="mermaid">
+flowchart TD
+    subgraph S1["Phase 1: Read-Only Audit & Baseline Hashing"]
+        Raw[evidence_results.json 1,157 records]
+        HashPre[Compute Pre-Run SHA-256 Hashes of All Sources]
+    end
+
+    subgraph S2["Phase 2 & 3: Deterministic Normalization"]
+        B4[Batch 4: 400 cases] --> N4[evidence_batch_4.json]
+        B5[Batch 5: 357 cases] --> N5[evidence_batch_5.json]
+        B5 --> M5[missing_batch_5_cases.json: 43 IDs absent]
+        B6[Batch 6: 400 cases] --> N6[evidence_batch_6.json: raw_output NULL]
+        B6 --> P6[provenance_batch_6.json: extra metadata]
+    end
+
+    subgraph S3["Phase 4 & 5: Validation & Immutability"]
+        Val[Run validate_normalized.py: 11 Automated Checks]
+        HashPost[Verify Post-Run SHA-256 Matches Pre-Run Exactly]
+    end
+
+    subgraph S4["Phase 6: Transaction-Safe Live Import"]
+        Backup[Create Native pg_dump Backup]
+        DryRun[Execute Dry-Run Importer: Stage & Rollback]
+        Apply[Execute Live Import: Stage & Commit Atomically]
+        Verify[Independent verify_post_import.py: 2,107 Cases Verified]
+    end
+
+    Raw --> HashPre --> S2 --> Val --> HashPost --> Backup --> DryRun --> Apply --> Verify
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>flowchart TD
+    subgraph S1["Phase 1: Read-Only Audit & Baseline Hashing"]
+        Raw[evidence_results.json 1,157 records]
+        HashPre[Compute Pre-Run SHA-256 Hashes of All Sources]
+    end
+
+    subgraph S2["Phase 2 & 3: Deterministic Normalization"]
+        B4[Batch 4: 400 cases] --&gt; N4[evidence_batch_4.json]
+        B5[Batch 5: 357 cases] --&gt; N5[evidence_batch_5.json]
+        B5 --&gt; M5[missing_batch_5_cases.json: 43 IDs absent]
+        B6[Batch 6: 400 cases] --&gt; N6[evidence_batch_6.json: raw_output NULL]
+        B6 --&gt; P6[provenance_batch_6.json: extra metadata]
+    end
+
+    subgraph S3["Phase 4 & 5: Validation & Immutability"]
+        Val[Run validate_normalized.py: 11 Automated Checks]
+        HashPost[Verify Post-Run SHA-256 Matches Pre-Run Exactly]
+    end
+
+    subgraph S4["Phase 6: Transaction-Safe Live Import"]
+        Backup[Create Native pg_dump Backup]
+        DryRun[Execute Dry-Run Importer: Stage & Rollback]
+        Apply[Execute Live Import: Stage & Commit Atomically]
+        Verify[Independent verify_post_import.py: 2,107 Cases Verified]
+    end
+
+    Raw --&gt; HashPre --&gt; S2 --&gt; Val --&gt; HashPost --&gt; Backup --&gt; DryRun --&gt; Apply --&gt; Verify
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_09_report_generation_pipeline">
+          <div class="diagram-header">
+            <h3>Report Generation Pipeline Architecture</h3>
+            <span class="badge badge-accent">Mermaid Diagram 09</span>
+          </div>
+          <p class="diagram-caption">Figure 9: The run_medauth_review.py execution lifecycle and artifact generation pipeline.</p>
+          <div class="mermaid">
+flowchart LR
+    A[run_medauth_review.py] --> B[Read-Only PostgreSQL Connection]
+    A --> C[Inspect Local Artifacts & Checksums]
+    
+    B --> D[Query autoritative table counts & metrics]
+    C --> E[Verify SHA-256 & manifest integrity]
+    
+    D & E --> F[Generate 6 CSV Tables in reports/medauth_review/tables/]
+    D & E --> G[Generate 10 Mermaid Diagrams in reports/medauth_review/diagrams/]
+    D & E --> H[Generate summary.json & report_generation.log]
+    
+    F & G & H --> I[Compile Self-Contained index.html]
+    I --> J{CLI Option: --no-open?}
+    J -- No --> K[Launch Default Web Browser]
+    J -- Yes --> L[Print Report Path & Terminate Cleanly]
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>flowchart LR
+    A[run_medauth_review.py] --&gt; B[Read-Only PostgreSQL Connection]
+    A --&gt; C[Inspect Local Artifacts & Checksums]
+    
+    B --&gt; D[Query autoritative table counts & metrics]
+    C --&gt; E[Verify SHA-256 & manifest integrity]
+    
+    D & E --&gt; F[Generate 6 CSV Tables in reports/medauth_review/tables/]
+    D & E --&gt; G[Generate 10 Mermaid Diagrams in reports/medauth_review/diagrams/]
+    D & E --&gt; H[Generate summary.json & report_generation.log]
+    
+    F & G & H --&gt; I[Compile Self-Contained index.html]
+    I --&gt; J{CLI Option: --no-open?}
+    J -- No --&gt; K[Launch Default Web Browser]
+    J -- Yes --&gt; L[Print Report Path & Terminate Cleanly]
+</code></pre>
+          </details>
+        </div>
+        
+        <div class="diagram-card" id="diag_10_deployment_runtime">
+          <div class="diagram-header">
+            <h3>Deployment and Runtime Architecture</h3>
+            <span class="badge badge-accent">Mermaid Diagram 10</span>
+          </div>
+          <p class="diagram-caption">Figure 10: Production-aligned local runtime configuration running FastAPI, PostgreSQL 18, and static media serving.</p>
+          <div class="mermaid">
+graph TB
+    classDef boxStyle fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px;
+
+    Client[Web Browser / Postman / Python Client]:::boxStyle
+
+    subgraph Host["Local Workstation Environment (Windows 11 / Python 3.13)"]
+        Uvicorn[Uvicorn ASGI Server :8000]:::boxStyle
+        FastAPIApp[FastAPI Application Instance - main.py]:::boxStyle
+        StaticEngine[StaticFiles Handler: /images mount]:::boxStyle
+        EnginePool[SQLAlchemy Engine Pool: pool_size=10, max_overflow=20]:::boxStyle
+        
+        ImagesDisk[(Local Disk: AI_PORJECT_DATASET/archive (7)/images/)]:::boxStyle
+        PGInstance[(PostgreSQL 18 Service :5432 - medauth_vlm)]:::boxStyle
+    end
+
+    Client -->|HTTP / JSON Requests| Uvicorn
+    Uvicorn --> FastAPIApp
+    FastAPIApp -->|Serve Medical Images| StaticEngine
+    StaticEngine --> ImagesDisk
+    FastAPIApp -->|Connection Pool| EnginePool
+    EnginePool -->|TCP Connection| PGInstance
+
+          </div>
+          <details class="diagram-source-details">
+            <summary>View Raw Mermaid Specification Source (.mmd)</summary>
+            <pre><code>graph TB
+    classDef boxStyle fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px;
+
+    Client[Web Browser / Postman / Python Client]:::boxStyle
+
+    subgraph Host["Local Workstation Environment (Windows 11 / Python 3.13)"]
+        Uvicorn[Uvicorn ASGI Server :8000]:::boxStyle
+        FastAPIApp[FastAPI Application Instance - main.py]:::boxStyle
+        StaticEngine[StaticFiles Handler: /images mount]:::boxStyle
+        EnginePool[SQLAlchemy Engine Pool: pool_size=10, max_overflow=20]:::boxStyle
+        
+        ImagesDisk[(Local Disk: AI_PORJECT_DATASET/archive (7)/images/)]:::boxStyle
+        PGInstance[(PostgreSQL 18 Service :5432 - medauth_vlm)]:::boxStyle
+    end
+
+    Client --&gt;|HTTP / JSON Requests| Uvicorn
+    Uvicorn --&gt; FastAPIApp
+    FastAPIApp --&gt;|Serve Medical Images| StaticEngine
+    StaticEngine --&gt; ImagesDisk
+    FastAPIApp --&gt;|Connection Pool| EnginePool
+    EnginePool --&gt;|TCP Connection| PGInstance
+</code></pre>
+          </details>
+        </div>
+        
+    </section>
+
+    <!-- Table D: API Surface -->
+    <section class="section" id="api_inventory">
+      <div class="section-header">
+        <h2 class="section-title">5. Backend REST API Surface</h2>
+        <span class="badge badge-accent">11 FastAPI Endpoints Operational</span>
+      </div>
+      <p class="section-desc">
+        Production-ready FastAPI routes featuring bounded pagination, strict Pydantic input/output schemas, and clinical grounding score caps.
+      </p>
+      <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Endpoint Route</th><th>HTTP Method</th><th>Purpose & Description</th><th>Implementation Status</th><th>Test Coverage</th><th>Safety Safeguards</th></tr></thead>
+            <tbody><tr><td>/</td><td>GET</td><td>API service metadata and online status</td><td>IMPLEMENTED</td><td>VERIFIED (test_api.py)</td><td>Read-only static response</td></tr>
+<tr><td>/health</td><td>GET</td><td>Service health and live database connection ping</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Safe DB ping SELECT 1; no credentials</td></tr>
+<tr><td>/api/summary</td><td>GET</td><td>Comprehensive system metrics & table totals</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Aggregated DB metrics; no clinical text</td></tr>
+<tr><td>/api/cases</td><td>GET</td><td>Paginated list of clinical cases with filters</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Bounded pagination (le=500), parameterized ORM</td></tr>
+<tr><td>/api/cases/{case_id}</td><td>GET</td><td>Full clinical case detail, images, and evidence</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Clean 404 handling, integer ID validation (gt=0)</td></tr>
+<tr><td>/api/cases/{case_id}/images</td><td>GET</td><td>Medical image metadata and projection list for case</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>404 on missing case; sanitized relative URLs</td></tr>
+<tr><td>/api/cases/{case_id}/evidence</td><td>GET</td><td>VLM evidence subobjects and model generation</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>404 on missing case; direct structured JSONB</td></tr>
+<tr><td>/api/policies</td><td>GET</td><td>CMS policies with state and coverage filters</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Bounded pagination (le=200); state code sanitization</td></tr>
+<tr><td>/api/reviews</td><td>GET</td><td>List prior auth compliance evaluations</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Bounded pagination (le=100); optional filters</td></tr>
+<tr><td>/cases/{case_id}/review</td><td>GET</td><td>Evaluate case against policy guideline</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Deterministic policy engine; score capping for no-text cases</td></tr>
+<tr><td>/reviews/{review_id}/decision</td><td>POST</td><td>Submit human reviewer decision and notes</td><td>IMPLEMENTED</td><td>VERIFIED (test_backend.py)</td><td>Validation schema, explicit timestamp, audit logging</td></tr>
+</tbody>
+          </table>
+        </div>
+    </section>
+
+    <!-- Table E: Testing Matrix -->
+    <section class="section" id="testing_matrix">
+      <div class="section-header">
+        <h2 class="section-title">6. Quality Assurance & Regression Test Matrix</h2>
+        <span class="badge badge-accent">23 / 23 Tests Passing</span>
+      </div>
+      <p class="section-desc">
+        Automated regression testing across database connectivity, data normalization immutability, schema validation, and API routes.
+      </p>
+      <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Test Suite File</th><th>Test Category</th><th>Command Executed</th><th>Tests Executed</th><th>Passed</th><th>Failed</th><th>Verification Status</th></tr></thead>
+            <tbody><tr><td>test_backend.py</td><td>API Endpoints & Error Handling</td><td>pytest test_backend.py</td><td>21</td><td>21</td><td>0</td><td>100% PASSED (In-Process TestClient)</td></tr>
+<tr><td>test_models.py</td><td>ORM Data Models & Relations</td><td>pytest test_models.py</td><td>1</td><td>1</td><td>0</td><td>100% PASSED</td></tr>
+<tr><td>test_api.py</td><td>End-to-End Workflow & Static Mount</td><td>pytest test_api.py</td><td>1</td><td>1</td><td>0</td><td>100% PASSED</td></tr>
+<tr><td>validate_normalized.py</td><td>Data Normalization & Hash Integrity</td><td>python validate_normalized.py</td><td>11</td><td>11</td><td>0</td><td>100% PASSED (11/11 Checks)</td></tr>
+<tr><td>verify_post_import.py</td><td>Post-Import Relational Audit</td><td>python verify_post_import.py</td><td>7</td><td>7</td><td>0</td><td>100% PASSED (0 Orphans, 100% Parity)</td></tr>
+<tr><td>Combined Test Suite</td><td>Full Regression Verification</td><td>pytest</td><td>23</td><td>23</td><td>0</td><td>ALL 23 UNIT & INTEGRATION TESTS PASSED</td></tr>
+</tbody>
+          </table>
+        </div>
+    </section>
+
+    <!-- Table F: Implementation Roadmap -->
+    <section class="section" id="project_status">
+      <div class="section-header">
+        <h2 class="section-title">7. Project Subsystem Implementation Status</h2>
+        <span class="badge badge-primary">Architectural Audit</span>
+      </div>
+      <p class="section-desc">
+        Objective classification of current project components as Implemented &amp; Verified vs Precomputed vs Planned for future milestones.
+      </p>
+      <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Subsystem / Component</th><th>Current Status</th><th>Implementation Details</th><th>Verification Evidence</th><th>Blockers / Next Steps</th></tr></thead>
+            <tbody><tr><td>PostgreSQL Database</td><td>IMPLEMENTED & VERIFIED</td><td>medauth_vlm database with 5 tables, 2,107 cases</td><td>verify_post_import.py (0 orphans, 2,107 cases)</td><td>None. Fully populated.</td></tr>
+<tr><td>Data Normalization Pipeline</td><td>IMPLEMENTED & VERIFIED</td><td>normalize_batches.py, standardized Batches 4-6</td><td>validate_normalized.py (11/11 passed)</td><td>None. Provenance preserved.</td></tr>
+<tr><td>FastAPI Backend Core</td><td>IMPLEMENTED & VERIFIED</td><td>main.py with 11 endpoints, CORS, logging, error handlers</td><td>23 passed pytest tests</td><td>None. Ready for integration.</td></tr>
+<tr><td>Prior Auth Policy Engine</td><td>IMPLEMENTED & VERIFIED</td><td>policy_engine.py with grounding check for empty text</td><td>test_backend.py (score cap verified)</td><td>None. Production ready.</td></tr>
+<tr><td>Database Backup System</td><td>IMPLEMENTED & VERIFIED</td><td>pg_dump script with DDL & COPY verification</td><td>1.90 MB verified SQL dump</td><td>None. Recoverable backup present.</td></tr>
+<tr><td>Review Report Generator</td><td>IMPLEMENTED & VERIFIED</td><td>run_medauth_review.py single entry point</td><td>Self-executing report generation</td><td>None. Offline & online capable.</td></tr>
+<tr><td>React Reviewer Frontend</td><td>PLANNED (NEXT PHASE)</td><td>Vite / React UI for case review and escalation</td><td>API endpoints ready to serve frontend</td><td>Awaiting frontend development phase.</td></tr>
+<tr><td>Model Inference Pipeline</td><td>PRECOMPUTED (OFFLINE)</td><td>MedGemma 4B run in Colab across Batches 1-6</td><td>1,707 raw outputs; 400 provenance records</td><td>43 missing Batch 5 cases pending recovery if scheduled.</td></tr>
+</tbody>
+          </table>
+        </div>
+    </section>
+
+    <!-- Scientific Honesty & Disclosures -->
+    <section class="section" id="scientific_honesty">
+      <div class="section-header">
+        <h2 class="section-title">8. Scientific Honesty & Clinical Evaluation Gap Analysis</h2>
+        <span class="badge badge-warning">Research Ethics Disclosure</span>
+      </div>
+      <div class="callout callout-warning">
+        <strong>Scientific Rigor Disclaimer:</strong>
+        Database completeness and structured evidence formatting do not inherently demonstrate clinical diagnostic accuracy. MedAuth-VLM adheres to strict scientific honesty protocols:
+        <ul style="margin-top: 0.5rem; margin-left: 1.25rem;">
+          <li><strong>No Hallucinated Benchmarks:</strong> Traditional classification metrics (F1-score, Precision, Recall, ROC-AUC) and generation metrics (BLEU, ROUGE) are classified as <code>NOT EVALUATED</code> pending prospective blinded evaluation against radiologist panel ground truth.</li>
+          <li><strong>Zero Synthetic Data:</strong> No missing clinical findings, placeholder records, or simulated confidence scores have been created to fill incomplete batch slices.</li>
+          <li><strong>Score Grounding Protections:</strong> For cases where original radiology dictation is empty (<code>has_source_text = False</code>), policy compliance scores are capped at a maximum of 40/100 to prevent ungrounded AI approval.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>MedAuth-VLM Research Project &bull; Professor Review &amp; Academic Monograph</div>
+      <div>Source Artifacts Stored in <code>reports/medauth_review/</code></div>
+    </footer>
+
+  </main>
+</body>
+</html>

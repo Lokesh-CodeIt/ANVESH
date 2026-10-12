@@ -1,0 +1,5 @@
+Failure Pattern,Frequency,Percentage,Root Cause
+False Negatives (Subtle Radiographic Findings),659,31.28%,Subtle findings summarized into prose narrative without discrete tokens in abnormalities list
+Ungrounded Evidence (Missing Clinical Dictation),22,1.04%,Original Indiana University hospital records lacked transcribed report text
+Missing Raw Model String (Batch 6),400,18.98%,Raw generation strings omitted from JSON export during Colab batch 6 processing
+Batch 5 GPU Timeout Exclusions,43,2.00% of pool,Colab GPU session timeout during batch 5 precomputation; safely preserved in recovery manifest

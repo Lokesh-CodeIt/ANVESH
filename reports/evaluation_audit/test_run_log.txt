@@ -1,0 +1,40 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0 -- C:\Program Files\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\NILESH MARATHE\OneDrive\Desktop\AI PORJECT
+configfile: pytest.ini
+plugins: anyio-4.13.0
+collecting ... collected 29 items
+
+test_api.py::test_all_endpoints PASSED                                   [  3%]
+test_backend.py::test_valid_case_retrieval PASSED                        [  6%]
+test_backend.py::test_invalid_case_not_found PASSED                      [ 10%]
+test_backend.py::test_invalid_case_id_format[-1] PASSED                  [ 13%]
+test_backend.py::test_invalid_case_id_format[-99] PASSED                 [ 17%]
+test_backend.py::test_invalid_case_id_format[0] PASSED                   [ 20%]
+test_backend.py::test_invalid_case_id_format[abc] PASSED                 [ 24%]
+test_backend.py::test_invalid_case_id_format[case_67] PASSED             [ 27%]
+test_backend.py::test_review_generation_normal_case PASSED               [ 31%]
+test_backend.py::test_review_generation_no_source_text_case[1615] PASSED [ 34%]
+test_backend.py::test_review_generation_no_source_text_case[3782] PASSED [ 37%]
+test_backend.py::test_review_non_existent_plan_id PASSED                 [ 41%]
+test_backend.py::test_review_non_existent_case_id PASSED                 [ 44%]
+test_backend.py::test_submit_reviewer_decision_success PASSED            [ 48%]
+test_backend.py::test_submit_reviewer_decision_not_found PASSED          [ 51%]
+test_backend.py::test_health_check_endpoint PASSED                       [ 55%]
+test_backend.py::test_system_summary_endpoint PASSED                     [ 58%]
+test_backend.py::test_case_list_with_filters PASSED                      [ 62%]
+test_backend.py::test_case_images_endpoint PASSED                        [ 65%]
+test_backend.py::test_case_evidence_endpoint PASSED                      [ 68%]
+test_backend.py::test_policies_filter PASSED                             [ 72%]
+test_backend.py::test_reviews_endpoint PASSED                            [ 75%]
+test_models.py::test_roundtrip PASSED                                    [ 79%]
+test_results_formulas.py::TestMetricFormulas::test_standard_binary_metrics PASSED [ 82%]
+test_results_formulas.py::TestMetricFormulas::test_macro_and_weighted_f1 PASSED [ 86%]
+test_results_formulas.py::TestMetricFormulas::test_zero_division_safety PASSED [ 89%]
+test_results_formulas.py::TestMetricFormulas::test_ece_perfect_calibration PASSED [ 93%]
+test_results_formulas.py::TestMetricFormulas::test_ece_overconfident_miscalibration PASSED [ 96%]
+test_results_formulas.py::TestMetricFormulas::test_policy_engine_grounding_cap PASSED [100%]
+
+============================= 29 passed in 5.16s ==============================
+

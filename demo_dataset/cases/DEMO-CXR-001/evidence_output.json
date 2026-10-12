@@ -1,0 +1,35 @@
+{
+  "case_id": "DEMO-CXR-001",
+  "provenance": {
+    "model_architecture": "MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)",
+    "batch_id": "demo_synthetic_batch_01",
+    "execution_environment": "Google Colab A100 (Preserved Static Outputs)",
+    "timestamp": "2026-10-01T09:20:00Z",
+    "disclaimer": "SYNTHETIC DEMO EXAMPLE \u2014 NOT LIVE MODEL INFERENCE \u2014 NOT CLINICALLY VALIDATED."
+  },
+  "image_evidence": {
+    "modality": "DX / CR",
+    "view": "Frontal PA",
+    "anatomical_body_part": "Chest / Thorax",
+    "cardiac_silhouette": "Mildly enlarged (cardiothoracic ratio > 0.55)",
+    "lung_fields": "Clear bilaterally; left costophrenic angle blunting noted",
+    "findings": [
+      "Cardiomegaly noted on frontal projection",
+      "Blunting of left costophrenic sulcus",
+      "No pneumothorax",
+      "No consolidated lobar infiltrate"
+    ]
+  },
+  "consistency_evaluation": {
+    "text_image_consistency": true,
+    "clinical_consistency_score": 0.88,
+    "source_text_grounding": "present",
+    "confidence_tier": "HIGH_CONCORDANCE",
+    "discrepancy_flags": []
+  },
+  "precomputed_recommendation": {
+    "ai_pre_screen_outcome": "ACTIONABLE_REVIEW_READY",
+    "policy_concordance": "SUPPORTED_BY_EVIDENCE",
+    "human_review_mandate": "REQUIRED"
+  }
+}

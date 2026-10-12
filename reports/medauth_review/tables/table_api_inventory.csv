@@ -1,0 +1,12 @@
+Endpoint Route,HTTP Method,Purpose & Description,Implementation Status,Test Coverage,Safety Safeguards
+/,GET,API service metadata and online status,IMPLEMENTED,VERIFIED (test_api.py),Read-only static response
+/health,GET,Service health and live database connection ping,IMPLEMENTED,VERIFIED (test_backend.py),Safe DB ping SELECT 1; no credentials
+/api/summary,GET,Comprehensive system metrics & table totals,IMPLEMENTED,VERIFIED (test_backend.py),Aggregated DB metrics; no clinical text
+/api/cases,GET,Paginated list of clinical cases with filters,IMPLEMENTED,VERIFIED (test_backend.py),"Bounded pagination (le=500), parameterized ORM"
+/api/cases/{case_id},GET,"Full clinical case detail, images, and evidence",IMPLEMENTED,VERIFIED (test_backend.py),"Clean 404 handling, integer ID validation (gt=0)"
+/api/cases/{case_id}/images,GET,Medical image metadata and projection list for case,IMPLEMENTED,VERIFIED (test_backend.py),404 on missing case; sanitized relative URLs
+/api/cases/{case_id}/evidence,GET,VLM evidence subobjects and model generation,IMPLEMENTED,VERIFIED (test_backend.py),404 on missing case; direct structured JSONB
+/api/policies,GET,CMS policies with state and coverage filters,IMPLEMENTED,VERIFIED (test_backend.py),Bounded pagination (le=200); state code sanitization
+/api/reviews,GET,List prior auth compliance evaluations,IMPLEMENTED,VERIFIED (test_backend.py),Bounded pagination (le=100); optional filters
+/cases/{case_id}/review,GET,Evaluate case against policy guideline,IMPLEMENTED,VERIFIED (test_backend.py),Deterministic policy engine; score capping for no-text cases
+/reviews/{review_id}/decision,POST,Submit human reviewer decision and notes,IMPLEMENTED,VERIFIED (test_backend.py),"Validation schema, explicit timestamp, audit logging"

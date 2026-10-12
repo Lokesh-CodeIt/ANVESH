@@ -1,0 +1,13 @@
+Metric or Result,Formula,Inputs,Source Function/File,Dataset/Split,Sample Count / Value,Computed Artifact,Verification Status
+Total Case Count,N = count(cases),cases table,database.py,Total Corpus,"2,107",table1_corpus_inventory.csv,Recalculated from DB
+Normal Case Balance,N_norm / N,cases.classification='normal',models.py:Case,Total Corpus,"1,054 (50.02%)",table1_corpus_inventory.csv,Recalculated from DB
+Abnormal Case Balance,N_abnorm / N,cases.classification='abnormal',models.py:Case,Total Corpus,"1,053 (49.98%)",table1_corpus_inventory.csv,Recalculated from DB
+Grounding Compliance,N_grounded / N,cases.has_source_text=True,models.py:Case,Total Corpus,"2,085 (98.96%)",table3_grounding_audit_22_cases.csv,Recalculated from DB
+Ungrounded Safeguard Rate,N_ungrounded / N,cases.has_source_text=False,models.py:Case,Total Corpus,22 (1.04%),table3_grounding_audit_22_cases.csv,Recalculated from DB
+Evidence Score Formula,"min(40.0, S_raw) if not src else S_raw",evidence JSONB + policy,policy_engine.py:224,Total Corpus,"2,107",table4_policy_latency_benchmark.csv,Recalculated from DB
+Score Capping Rate,sum(S <= 40 | ungrounded) / 22,policy_engine execution,policy_engine.py:234,Ungrounded Split,22 / 22 (100.0%),table3_grounding_audit_22_cases.csv,Recalculated from DB
+Policy Latency (Mean),mean(t_end - t_start),time.perf_counter(),policy_engine.py,Total Corpus,0.5660 ms,table4_policy_latency_benchmark.csv,Measured Live in Real Run
+Diagnostic Sensitivity,TP / (TP + FN),Radiologist Ground Truth,N/A,Holdout Benchmark,0,N/A,STATUS: NOT EVALUATED
+Diagnostic Specificity,TN / (TN + FP),Radiologist Ground Truth,N/A,Holdout Benchmark,0,N/A,STATUS: NOT EVALUATED
+Diagnostic Macro-F1,mean(F1_c),Radiologist Ground Truth,N/A,Holdout Benchmark,0,N/A,STATUS: NOT EVALUATED
+Expected Calibration Error,sum(w_b * |acc_b - conf_b|),Logits / Probabilities,N/A,Holdout Benchmark,0,N/A,STATUS: NOT EVALUATED
