@@ -1,0 +1,2111 @@
+case_id,condition,ground_truth,prediction,is_valid_json,latency_ms,raw_output
+248,llava_base_zeroshot,abnormal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+988,llava_base_zeroshot,normal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2573,llava_base_zeroshot,normal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+270,llava_base_zeroshot,normal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+450,llava_base_zeroshot,normal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+314,llava_base_zeroshot,abnormal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+590,llava_base_zeroshot,abnormal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1047,llava_base_zeroshot,normal,normal,True,249.18211249996602,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+336,llava_base_zeroshot,normal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1627,llava_base_zeroshot,normal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1117,llava_base_zeroshot,abnormal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal anatomy""],
+""confidence"": ""high""
+}"
+367,llava_base_zeroshot,normal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3704,llava_base_zeroshot,normal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3002,llava_base_zeroshot,normal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2377,llava_base_zeroshot,normal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1685,llava_base_zeroshot,abnormal,normal,True,210.57017499998665,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3557,llava_base_zeroshot,abnormal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2811,llava_base_zeroshot,normal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2070,llava_base_zeroshot,abnormal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+191,llava_base_zeroshot,normal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2860,llava_base_zeroshot,abnormal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2277,llava_base_zeroshot,normal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1895,llava_base_zeroshot,abnormal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3282,llava_base_zeroshot,abnormal,normal,True,210.8685499999865,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1537,llava_base_zeroshot,normal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2298,llava_base_zeroshot,abnormal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2518,llava_base_zeroshot,abnormal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1919,llava_base_zeroshot,abnormal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+407,llava_base_zeroshot,normal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1868,llava_base_zeroshot,abnormal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+994,llava_base_zeroshot,normal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1878,llava_base_zeroshot,abnormal,normal,True,207.06016249999948,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2593,llava_base_zeroshot,abnormal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3657,llava_base_zeroshot,abnormal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2880,llava_base_zeroshot,normal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+739,llava_base_zeroshot,normal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+274,llava_base_zeroshot,abnormal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3110,llava_base_zeroshot,abnormal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2375,llava_base_zeroshot,abnormal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1153,llava_base_zeroshot,normal,normal,True,211.37776250003526,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+544,llava_base_zeroshot,normal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3969,llava_base_zeroshot,abnormal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1300,llava_base_zeroshot,normal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3600,llava_base_zeroshot,abnormal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1177,llava_base_zeroshot,abnormal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1421,llava_base_zeroshot,abnormal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3914,llava_base_zeroshot,normal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and no visible abnormalities""],
+""confidence"": ""high""
+}"
+3893,llava_base_zeroshot,abnormal,normal,True,219.7303875000216,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+606,llava_base_zeroshot,abnormal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1794,llava_base_zeroshot,normal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1761,llava_base_zeroshot,normal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+964,llava_base_zeroshot,normal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3316,llava_base_zeroshot,abnormal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1337,llava_base_zeroshot,abnormal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1777,llava_base_zeroshot,abnormal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3977,llava_base_zeroshot,abnormal,normal,True,210.7403874999818,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2527,llava_base_zeroshot,normal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1354,llava_base_zeroshot,abnormal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2584,llava_base_zeroshot,normal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1852,llava_base_zeroshot,normal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2709,llava_base_zeroshot,abnormal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2162,llava_base_zeroshot,abnormal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3767,llava_base_zeroshot,normal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1975,llava_base_zeroshot,normal,normal,True,210.1966249999805,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+533,llava_base_zeroshot,abnormal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1803,llava_base_zeroshot,abnormal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2771,llava_base_zeroshot,normal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1072,llava_base_zeroshot,abnormal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1180,llava_base_zeroshot,abnormal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3157,llava_base_zeroshot,normal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1647,llava_base_zeroshot,normal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3109,llava_base_zeroshot,normal,normal,True,208.48780000000033,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3940,llava_base_zeroshot,abnormal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+560,llava_base_zeroshot,normal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2459,llava_base_zeroshot,normal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+185,llava_base_zeroshot,abnormal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1049,llava_base_zeroshot,normal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2024,llava_base_zeroshot,normal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2079,llava_base_zeroshot,abnormal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2683,llava_base_zeroshot,normal,normal,True,211.8769500000326,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2873,llava_base_zeroshot,normal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+179,llava_base_zeroshot,abnormal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+700,llava_base_zeroshot,abnormal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1688,llava_base_zeroshot,normal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+615,llava_base_zeroshot,abnormal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2841,llava_base_zeroshot,normal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+420,llava_base_zeroshot,abnormal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1204,llava_base_zeroshot,abnormal,normal,True,210.68756249997023,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+167,llava_base_zeroshot,abnormal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+605,llava_base_zeroshot,abnormal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2804,llava_base_zeroshot,normal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3529,llava_base_zeroshot,abnormal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2877,llava_base_zeroshot,normal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3970,llava_base_zeroshot,normal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal anatomy and no abnormalities observed""],
+""confidence"": ""high""
+}"
+2060,llava_base_zeroshot,abnormal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2915,llava_base_zeroshot,normal,normal,True,222.72190000001046,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+793,llava_base_zeroshot,normal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2329,llava_base_zeroshot,normal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+516,llava_base_zeroshot,abnormal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+484,llava_base_zeroshot,abnormal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3550,llava_base_zeroshot,abnormal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2099,llava_base_zeroshot,normal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3092,llava_base_zeroshot,abnormal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2764,llava_base_zeroshot,normal,normal,True,211.13530000002356,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3709,llava_base_zeroshot,abnormal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2758,llava_base_zeroshot,normal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2962,llava_base_zeroshot,abnormal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1845,llava_base_zeroshot,abnormal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2775,llava_base_zeroshot,normal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+39,llava_base_zeroshot,abnormal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1508,llava_base_zeroshot,abnormal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2496,llava_base_zeroshot,abnormal,normal,True,212.37598749996778,"{
+""classification"": ""normal"",
+""findings"": [""normal anatomy""],
+""confidence"": ""high""
+}"
+3114,llava_base_zeroshot,normal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3125,llava_base_zeroshot,normal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3020,llava_base_zeroshot,normal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2464,llava_base_zeroshot,normal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3291,llava_base_zeroshot,normal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1691,llava_base_zeroshot,abnormal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2432,llava_base_zeroshot,normal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+920,llava_base_zeroshot,normal,normal,True,212.10561250001092,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1719,llava_base_zeroshot,normal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2170,llava_base_zeroshot,normal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3103,llava_base_zeroshot,abnormal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+839,llava_base_zeroshot,normal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3609,llava_base_zeroshot,abnormal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1972,llava_base_zeroshot,abnormal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+272,llava_base_zeroshot,normal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3394,llava_base_zeroshot,abnormal,normal,True,210.8492124999657,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+594,llava_base_zeroshot,abnormal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1979,llava_base_zeroshot,normal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3872,llava_base_zeroshot,abnormal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1703,llava_base_zeroshot,abnormal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2792,llava_base_zeroshot,normal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3875,llava_base_zeroshot,abnormal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2075,llava_base_zeroshot,normal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2299,llava_base_zeroshot,abnormal,normal,True,212.33617500001856,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3820,llava_base_zeroshot,abnormal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+997,llava_base_zeroshot,abnormal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+641,llava_base_zeroshot,abnormal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+948,llava_base_zeroshot,abnormal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+325,llava_base_zeroshot,normal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2899,llava_base_zeroshot,normal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3429,llava_base_zeroshot,abnormal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1980,llava_base_zeroshot,normal,normal,True,211.2987374999875,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+52,llava_base_zeroshot,normal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3307,llava_base_zeroshot,normal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+999,llava_base_zeroshot,normal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3686,llava_base_zeroshot,abnormal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2863,llava_base_zeroshot,normal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+275,llava_base_zeroshot,normal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+80,llava_base_zeroshot,normal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1079,llava_base_zeroshot,abnormal,normal,True,212.18005000002904,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2697,llava_base_zeroshot,normal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2413,llava_base_zeroshot,normal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3732,llava_base_zeroshot,abnormal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+499,llava_base_zeroshot,normal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3466,llava_base_zeroshot,abnormal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1576,llava_base_zeroshot,abnormal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+532,llava_base_zeroshot,normal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+331,llava_base_zeroshot,normal,normal,True,211.12525000000915,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1608,llava_base_zeroshot,normal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2561,llava_base_zeroshot,normal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2591,llava_base_zeroshot,normal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3809,llava_base_zeroshot,normal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2224,llava_base_zeroshot,abnormal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1307,llava_base_zeroshot,abnormal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+618,llava_base_zeroshot,normal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+18,llava_base_zeroshot,abnormal,normal,True,211.16657499999292,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1407,llava_base_zeroshot,abnormal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+539,llava_base_zeroshot,normal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2364,llava_base_zeroshot,abnormal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2772,llava_base_zeroshot,normal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2881,llava_base_zeroshot,normal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3615,llava_base_zeroshot,abnormal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1149,llava_base_zeroshot,abnormal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2017,llava_base_zeroshot,normal,normal,True,210.59748750002427,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2235,llava_base_zeroshot,abnormal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1362,llava_base_zeroshot,abnormal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1956,llava_base_zeroshot,normal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+12,llava_base_zeroshot,normal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+925,llava_base_zeroshot,abnormal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1426,llava_base_zeroshot,normal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1447,llava_base_zeroshot,normal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+119,llava_base_zeroshot,normal,normal,True,210.26877499997454,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1932,llava_base_zeroshot,normal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+857,llava_base_zeroshot,normal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+708,llava_base_zeroshot,normal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+608,llava_base_zeroshot,abnormal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+8,llava_base_zeroshot,normal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+377,llava_base_zeroshot,abnormal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1297,llava_base_zeroshot,normal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2610,llava_base_zeroshot,abnormal,normal,True,211.34281249999276,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3851,llava_base_zeroshot,abnormal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2726,llava_base_zeroshot,normal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1476,llava_base_zeroshot,normal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+393,llava_base_zeroshot,normal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3684,llava_base_zeroshot,abnormal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3579,llava_base_zeroshot,abnormal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2838,llava_base_zeroshot,normal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1364,llava_base_zeroshot,normal,normal,True,210.80699999998842,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2567,llava_base_zeroshot,normal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1625,llava_base_zeroshot,abnormal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2098,llava_base_zeroshot,normal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1076,llava_base_zeroshot,abnormal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2784,llava_base_zeroshot,normal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+200,llava_base_zeroshot,normal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2640,llava_base_zeroshot,normal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3775,llava_base_zeroshot,normal,normal,True,210.8707874999709,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2187,llava_base_zeroshot,abnormal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1768,llava_base_zeroshot,abnormal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3254,llava_base_zeroshot,normal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1085,llava_base_zeroshot,abnormal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3871,llava_base_zeroshot,normal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3273,llava_base_zeroshot,abnormal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2812,llava_base_zeroshot,abnormal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2763,llava_base_zeroshot,abnormal,normal,True,211.5181749999806,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1899,llava_base_zeroshot,normal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3676,llava_base_zeroshot,abnormal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1118,llava_base_zeroshot,normal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1141,llava_base_zeroshot,normal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2365,llava_base_zeroshot,normal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+441,llava_base_zeroshot,abnormal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2263,llava_base_zeroshot,abnormal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3047,llava_base_zeroshot,normal,normal,True,210.7938249999961,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2339,llava_base_zeroshot,normal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3267,llava_base_zeroshot,normal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3251,llava_base_zeroshot,abnormal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1389,llava_base_zeroshot,abnormal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1848,llava_base_zeroshot,abnormal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2635,llava_base_zeroshot,normal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3,llava_base_zeroshot,normal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2114,llava_base_zeroshot,abnormal,normal,True,211.47414999995817,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+798,llava_base_zeroshot,normal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+62,llava_base_zeroshot,abnormal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+383,llava_base_zeroshot,abnormal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2667,llava_base_zeroshot,normal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2390,llava_base_zeroshot,abnormal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1542,llava_base_zeroshot,abnormal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2467,llava_base_zeroshot,abnormal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+163,llava_base_zeroshot,abnormal,normal,True,210.75639999997975,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3269,llava_base_zeroshot,normal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2134,llava_base_zeroshot,abnormal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3220,llava_base_zeroshot,normal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+366,llava_base_zeroshot,normal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1319,llava_base_zeroshot,normal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3346,llava_base_zeroshot,normal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2961,llava_base_zeroshot,abnormal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3726,llava_base_zeroshot,normal,normal,True,210.13569999996662,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3094,llava_base_zeroshot,abnormal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+242,llava_base_zeroshot,normal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1405,llava_base_zeroshot,abnormal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+893,llava_base_zeroshot,normal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1879,llava_base_zeroshot,normal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3801,llava_base_zeroshot,abnormal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1952,llava_base_zeroshot,abnormal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1496,llava_base_zeroshot,abnormal,normal,True,212.95342500002334,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1702,llava_base_zeroshot,abnormal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1598,llava_base_zeroshot,normal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1398,llava_base_zeroshot,abnormal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3475,llava_base_zeroshot,normal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+470,llava_base_zeroshot,normal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3796,llava_base_zeroshot,normal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1424,llava_base_zeroshot,normal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3785,llava_base_zeroshot,abnormal,normal,True,203.66114999995943,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+827,llava_base_zeroshot,abnormal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1616,llava_base_zeroshot,normal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3722,llava_base_zeroshot,normal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+737,llava_base_zeroshot,normal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2385,llava_base_zeroshot,normal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2392,llava_base_zeroshot,normal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3595,llava_base_zeroshot,abnormal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+2118,llava_base_zeroshot,abnormal,normal,True,210.6444875000193,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3976,llava_base_zeroshot,normal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1070,llava_base_zeroshot,abnormal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3728,llava_base_zeroshot,normal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1949,llava_base_zeroshot,abnormal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2091,llava_base_zeroshot,abnormal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1928,llava_base_zeroshot,normal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+378,llava_base_zeroshot,abnormal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2061,llava_base_zeroshot,normal,normal,True,211.5026499999999,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+778,llava_base_zeroshot,abnormal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1304,llava_base_zeroshot,normal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2110,llava_base_zeroshot,normal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3623,llava_base_zeroshot,abnormal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1081,llava_base_zeroshot,abnormal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1942,llava_base_zeroshot,abnormal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1838,llava_base_zeroshot,abnormal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1774,llava_base_zeroshot,abnormal,normal,True,211.29745000001776,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+527,llava_base_zeroshot,normal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2948,llava_base_zeroshot,normal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3561,llava_base_zeroshot,normal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3280,llava_base_zeroshot,abnormal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3321,llava_base_zeroshot,normal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3361,llava_base_zeroshot,normal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1023,llava_base_zeroshot,abnormal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2264,llava_base_zeroshot,abnormal,normal,True,210.36832499999036,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3994,llava_base_zeroshot,abnormal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+982,llava_base_zeroshot,normal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+656,llava_base_zeroshot,abnormal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2855,llava_base_zeroshot,normal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+326,llava_base_zeroshot,normal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2115,llava_base_zeroshot,normal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3285,llava_base_zeroshot,normal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1541,llava_base_zeroshot,abnormal,normal,True,210.58786250000594,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3048,llava_base_zeroshot,normal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+302,llava_base_zeroshot,abnormal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1314,llava_base_zeroshot,normal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1253,llava_base_zeroshot,normal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2148,llava_base_zeroshot,normal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+866,llava_base_zeroshot,normal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2725,llava_base_zeroshot,abnormal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3258,llava_base_zeroshot,normal,normal,True,210.9286000000452,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2589,llava_base_zeroshot,abnormal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3504,llava_base_zeroshot,normal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+342,llava_base_zeroshot,abnormal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1101,llava_base_zeroshot,abnormal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3634,llava_base_zeroshot,normal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2164,llava_base_zeroshot,abnormal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1733,llava_base_zeroshot,abnormal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+312,llava_base_zeroshot,abnormal,normal,True,211.59738750003498,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+11,llava_base_zeroshot,normal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal anatomy""],
+""confidence"": ""high""
+}"
+1605,llava_base_zeroshot,normal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1520,llava_base_zeroshot,normal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3421,llava_base_zeroshot,abnormal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1222,llava_base_zeroshot,abnormal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1924,llava_base_zeroshot,abnormal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+546,llava_base_zeroshot,abnormal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+440,llava_base_zeroshot,abnormal,normal,True,210.79988750000211,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1679,llava_base_zeroshot,normal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2886,llava_base_zeroshot,abnormal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3252,llava_base_zeroshot,normal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2740,llava_base_zeroshot,abnormal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3311,llava_base_zeroshot,normal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2072,llava_base_zeroshot,abnormal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2830,llava_base_zeroshot,abnormal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+84,llava_base_zeroshot,abnormal,normal,True,210.97752499997569,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1376,llava_base_zeroshot,abnormal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2069,llava_base_zeroshot,normal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+239,llava_base_zeroshot,normal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3060,llava_base_zeroshot,normal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1167,llava_base_zeroshot,abnormal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2481,llava_base_zeroshot,abnormal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3804,llava_base_zeroshot,abnormal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+802,llava_base_zeroshot,abnormal,normal,True,210.06851250001546,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1393,llava_base_zeroshot,abnormal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3754,llava_base_zeroshot,normal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3405,llava_base_zeroshot,abnormal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+225,llava_base_zeroshot,normal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1412,llava_base_zeroshot,abnormal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1825,llava_base_zeroshot,abnormal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1861,llava_base_zeroshot,normal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3510,llava_base_zeroshot,abnormal,normal,True,210.95246250001765,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+767,llava_base_zeroshot,normal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3756,llava_base_zeroshot,abnormal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+212,llava_base_zeroshot,abnormal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+339,llava_base_zeroshot,normal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1532,llava_base_zeroshot,normal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2586,llava_base_zeroshot,abnormal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3388,llava_base_zeroshot,abnormal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+508,llava_base_zeroshot,normal,normal,True,210.9633499999859,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1618,llava_base_zeroshot,normal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2311,llava_base_zeroshot,normal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3952,llava_base_zeroshot,abnormal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3074,llava_base_zeroshot,abnormal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1361,llava_base_zeroshot,abnormal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2243,llava_base_zeroshot,abnormal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2494,llava_base_zeroshot,abnormal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1550,llava_base_zeroshot,normal,normal,True,211.2483500000053,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3584,llava_base_zeroshot,abnormal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+774,llava_base_zeroshot,abnormal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+1927,llava_base_zeroshot,abnormal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2180,llava_base_zeroshot,abnormal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+796,llava_base_zeroshot,normal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2538,llava_base_zeroshot,normal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3029,llava_base_zeroshot,abnormal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3783,llava_base_zeroshot,normal,normal,True,212.3154500000055,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3805,llava_base_zeroshot,abnormal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1503,llava_base_zeroshot,normal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1779,llava_base_zeroshot,normal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1633,llava_base_zeroshot,normal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1624,llava_base_zeroshot,abnormal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+145,llava_base_zeroshot,abnormal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and heart""],
+""confidence"": ""high""
+}"
+3010,llava_base_zeroshot,normal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2149,llava_base_zeroshot,abnormal,normal,True,213.87673750001568,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1960,llava_base_zeroshot,normal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3156,llava_base_zeroshot,normal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2418,llava_base_zeroshot,abnormal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1024,llava_base_zeroshot,normal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3443,llava_base_zeroshot,normal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2411,llava_base_zeroshot,abnormal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1657,llava_base_zeroshot,normal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2905,llava_base_zeroshot,abnormal,normal,True,211.04887500001723,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3605,llava_base_zeroshot,normal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2543,llava_base_zeroshot,abnormal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1854,llava_base_zeroshot,normal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+286,llava_base_zeroshot,abnormal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1399,llava_base_zeroshot,abnormal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2964,llava_base_zeroshot,normal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1987,llava_base_zeroshot,normal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1904,llava_base_zeroshot,abnormal,normal,True,212.16158750002023,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3299,llava_base_zeroshot,abnormal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3083,llava_base_zeroshot,normal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+1063,llava_base_zeroshot,abnormal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+465,llava_base_zeroshot,abnormal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+456,llava_base_zeroshot,abnormal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+518,llava_base_zeroshot,normal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3874,llava_base_zeroshot,abnormal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+2054,llava_base_zeroshot,abnormal,normal,True,213.37847500001317,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3562,llava_base_zeroshot,abnormal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+736,llava_base_zeroshot,abnormal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+2782,llava_base_zeroshot,abnormal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+453,llava_base_zeroshot,abnormal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+3434,llava_base_zeroshot,normal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1872,llava_base_zeroshot,abnormal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1964,llava_base_zeroshot,normal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+3499,llava_base_zeroshot,normal,normal,True,213.0731500000138,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribcage""],
+""confidence"": ""high""
+}"
+1316,llava_base_zeroshot,normal,normal,True,221.9699166666942,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+2967,llava_base_zeroshot,normal,normal,True,221.9699166666942,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3592,llava_base_zeroshot,abnormal,normal,True,221.9699166666942,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"
+3495,llava_base_zeroshot,normal,normal,True,221.9699166666942,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1139,llava_base_zeroshot,abnormal,normal,True,221.9699166666942,"{
+""classification"": ""normal"",
+""findings"": [""normal lungs and ribs""],
+""confidence"": ""high""
+}"
+1661,llava_base_zeroshot,normal,normal,True,221.9699166666942,"{
+""classification"": ""normal"",
+""findings"": [""normal chest radiograph""],
+""confidence"": ""high""
+}"

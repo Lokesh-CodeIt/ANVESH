@@ -1,0 +1,2111 @@
+case_id,condition,ground_truth,prediction,is_valid_json,latency_ms,raw_output
+248,llava_text_adapter_ablation,abnormal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+988,llava_text_adapter_ablation,normal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2573,llava_text_adapter_ablation,normal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+270,llava_text_adapter_ablation,normal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+450,llava_text_adapter_ablation,normal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+314,llava_text_adapter_ablation,abnormal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+590,llava_text_adapter_ablation,abnormal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1047,llava_text_adapter_ablation,normal,normal,True,370.7491750000145,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+336,llava_text_adapter_ablation,normal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1627,llava_text_adapter_ablation,normal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1117,llava_text_adapter_ablation,abnormal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+367,llava_text_adapter_ablation,normal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3704,llava_text_adapter_ablation,normal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3002,llava_text_adapter_ablation,normal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2377,llava_text_adapter_ablation,normal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1685,llava_text_adapter_ablation,abnormal,normal,True,323.32585000000336,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3557,llava_text_adapter_ablation,abnormal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2811,llava_text_adapter_ablation,normal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2070,llava_text_adapter_ablation,abnormal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+191,llava_text_adapter_ablation,normal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2860,llava_text_adapter_ablation,abnormal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2277,llava_text_adapter_ablation,normal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1895,llava_text_adapter_ablation,abnormal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3282,llava_text_adapter_ablation,abnormal,normal,True,328.4383624999805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1537,llava_text_adapter_ablation,normal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2298,llava_text_adapter_ablation,abnormal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2518,llava_text_adapter_ablation,abnormal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1919,llava_text_adapter_ablation,abnormal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+407,llava_text_adapter_ablation,normal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1868,llava_text_adapter_ablation,abnormal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+994,llava_text_adapter_ablation,normal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1878,llava_text_adapter_ablation,abnormal,normal,True,326.1519375000148,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2593,llava_text_adapter_ablation,abnormal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3657,llava_text_adapter_ablation,abnormal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2880,llava_text_adapter_ablation,normal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+739,llava_text_adapter_ablation,normal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+274,llava_text_adapter_ablation,abnormal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3110,llava_text_adapter_ablation,abnormal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2375,llava_text_adapter_ablation,abnormal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1153,llava_text_adapter_ablation,normal,normal,True,321.0401000000047,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+544,llava_text_adapter_ablation,normal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3969,llava_text_adapter_ablation,abnormal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1300,llava_text_adapter_ablation,normal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3600,llava_text_adapter_ablation,abnormal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1177,llava_text_adapter_ablation,abnormal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1421,llava_text_adapter_ablation,abnormal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3914,llava_text_adapter_ablation,normal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3893,llava_text_adapter_ablation,abnormal,normal,True,326.1295124999606,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+606,llava_text_adapter_ablation,abnormal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1794,llava_text_adapter_ablation,normal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1761,llava_text_adapter_ablation,normal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+964,llava_text_adapter_ablation,normal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3316,llava_text_adapter_ablation,abnormal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1337,llava_text_adapter_ablation,abnormal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1777,llava_text_adapter_ablation,abnormal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3977,llava_text_adapter_ablation,abnormal,normal,True,329.7973500000353,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2527,llava_text_adapter_ablation,normal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1354,llava_text_adapter_ablation,abnormal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2584,llava_text_adapter_ablation,normal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1852,llava_text_adapter_ablation,normal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2709,llava_text_adapter_ablation,abnormal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2162,llava_text_adapter_ablation,abnormal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3767,llava_text_adapter_ablation,normal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1975,llava_text_adapter_ablation,normal,normal,True,332.90080000000444,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+533,llava_text_adapter_ablation,abnormal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1803,llava_text_adapter_ablation,abnormal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2771,llava_text_adapter_ablation,normal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1072,llava_text_adapter_ablation,abnormal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1180,llava_text_adapter_ablation,abnormal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3157,llava_text_adapter_ablation,normal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1647,llava_text_adapter_ablation,normal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3109,llava_text_adapter_ablation,normal,normal,True,325.7025999999996,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3940,llava_text_adapter_ablation,abnormal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+560,llava_text_adapter_ablation,normal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2459,llava_text_adapter_ablation,normal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+185,llava_text_adapter_ablation,abnormal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1049,llava_text_adapter_ablation,normal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2024,llava_text_adapter_ablation,normal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2079,llava_text_adapter_ablation,abnormal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2683,llava_text_adapter_ablation,normal,normal,True,324.75684999997156,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2873,llava_text_adapter_ablation,normal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+179,llava_text_adapter_ablation,abnormal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+700,llava_text_adapter_ablation,abnormal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1688,llava_text_adapter_ablation,normal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+615,llava_text_adapter_ablation,abnormal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2841,llava_text_adapter_ablation,normal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+420,llava_text_adapter_ablation,abnormal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1204,llava_text_adapter_ablation,abnormal,normal,True,327.7831624999976,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+167,llava_text_adapter_ablation,abnormal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+605,llava_text_adapter_ablation,abnormal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2804,llava_text_adapter_ablation,normal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3529,llava_text_adapter_ablation,abnormal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2877,llava_text_adapter_ablation,normal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3970,llava_text_adapter_ablation,normal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2060,llava_text_adapter_ablation,abnormal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2915,llava_text_adapter_ablation,normal,normal,True,324.55168749999075,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+793,llava_text_adapter_ablation,normal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2329,llava_text_adapter_ablation,normal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+516,llava_text_adapter_ablation,abnormal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+484,llava_text_adapter_ablation,abnormal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3550,llava_text_adapter_ablation,abnormal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2099,llava_text_adapter_ablation,normal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3092,llava_text_adapter_ablation,abnormal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2764,llava_text_adapter_ablation,normal,normal,True,320.04052500002445,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3709,llava_text_adapter_ablation,abnormal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2758,llava_text_adapter_ablation,normal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2962,llava_text_adapter_ablation,abnormal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1845,llava_text_adapter_ablation,abnormal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2775,llava_text_adapter_ablation,normal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+39,llava_text_adapter_ablation,abnormal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1508,llava_text_adapter_ablation,abnormal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2496,llava_text_adapter_ablation,abnormal,normal,True,318.7551499999586,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3114,llava_text_adapter_ablation,normal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3125,llava_text_adapter_ablation,normal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3020,llava_text_adapter_ablation,normal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2464,llava_text_adapter_ablation,normal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3291,llava_text_adapter_ablation,normal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1691,llava_text_adapter_ablation,abnormal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2432,llava_text_adapter_ablation,normal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+920,llava_text_adapter_ablation,normal,normal,True,322.544862500024,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1719,llava_text_adapter_ablation,normal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2170,llava_text_adapter_ablation,normal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3103,llava_text_adapter_ablation,abnormal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+839,llava_text_adapter_ablation,normal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3609,llava_text_adapter_ablation,abnormal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1972,llava_text_adapter_ablation,abnormal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+272,llava_text_adapter_ablation,normal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3394,llava_text_adapter_ablation,abnormal,normal,True,318.9074000000005,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+594,llava_text_adapter_ablation,abnormal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1979,llava_text_adapter_ablation,normal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3872,llava_text_adapter_ablation,abnormal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1703,llava_text_adapter_ablation,abnormal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2792,llava_text_adapter_ablation,normal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3875,llava_text_adapter_ablation,abnormal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2075,llava_text_adapter_ablation,normal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2299,llava_text_adapter_ablation,abnormal,normal,True,316.22748749998664,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3820,llava_text_adapter_ablation,abnormal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+997,llava_text_adapter_ablation,abnormal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+641,llava_text_adapter_ablation,abnormal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+948,llava_text_adapter_ablation,abnormal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+325,llava_text_adapter_ablation,normal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2899,llava_text_adapter_ablation,normal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3429,llava_text_adapter_ablation,abnormal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1980,llava_text_adapter_ablation,normal,normal,True,322.88325000001805,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+52,llava_text_adapter_ablation,normal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3307,llava_text_adapter_ablation,normal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+999,llava_text_adapter_ablation,normal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3686,llava_text_adapter_ablation,abnormal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2863,llava_text_adapter_ablation,normal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+275,llava_text_adapter_ablation,normal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+80,llava_text_adapter_ablation,normal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1079,llava_text_adapter_ablation,abnormal,normal,True,319.31030000004057,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2697,llava_text_adapter_ablation,normal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2413,llava_text_adapter_ablation,normal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3732,llava_text_adapter_ablation,abnormal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+499,llava_text_adapter_ablation,normal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3466,llava_text_adapter_ablation,abnormal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1576,llava_text_adapter_ablation,abnormal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+532,llava_text_adapter_ablation,normal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+331,llava_text_adapter_ablation,normal,normal,True,322.3966624999548,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1608,llava_text_adapter_ablation,normal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2561,llava_text_adapter_ablation,normal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2591,llava_text_adapter_ablation,normal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3809,llava_text_adapter_ablation,normal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2224,llava_text_adapter_ablation,abnormal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1307,llava_text_adapter_ablation,abnormal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+618,llava_text_adapter_ablation,normal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+18,llava_text_adapter_ablation,abnormal,normal,True,318.05353749996357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1407,llava_text_adapter_ablation,abnormal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+539,llava_text_adapter_ablation,normal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2364,llava_text_adapter_ablation,abnormal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2772,llava_text_adapter_ablation,normal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2881,llava_text_adapter_ablation,normal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3615,llava_text_adapter_ablation,abnormal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1149,llava_text_adapter_ablation,abnormal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2017,llava_text_adapter_ablation,normal,normal,True,321.1597499999925,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2235,llava_text_adapter_ablation,abnormal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1362,llava_text_adapter_ablation,abnormal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1956,llava_text_adapter_ablation,normal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+12,llava_text_adapter_ablation,normal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+925,llava_text_adapter_ablation,abnormal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1426,llava_text_adapter_ablation,normal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1447,llava_text_adapter_ablation,normal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+119,llava_text_adapter_ablation,normal,normal,True,314.81853750000255,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1932,llava_text_adapter_ablation,normal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+857,llava_text_adapter_ablation,normal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+708,llava_text_adapter_ablation,normal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+608,llava_text_adapter_ablation,abnormal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+8,llava_text_adapter_ablation,normal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+377,llava_text_adapter_ablation,abnormal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1297,llava_text_adapter_ablation,normal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2610,llava_text_adapter_ablation,abnormal,normal,True,324.4516249999947,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3851,llava_text_adapter_ablation,abnormal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2726,llava_text_adapter_ablation,normal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1476,llava_text_adapter_ablation,normal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+393,llava_text_adapter_ablation,normal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3684,llava_text_adapter_ablation,abnormal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3579,llava_text_adapter_ablation,abnormal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2838,llava_text_adapter_ablation,normal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1364,llava_text_adapter_ablation,normal,normal,True,314.2662374999645,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2567,llava_text_adapter_ablation,normal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1625,llava_text_adapter_ablation,abnormal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2098,llava_text_adapter_ablation,normal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1076,llava_text_adapter_ablation,abnormal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2784,llava_text_adapter_ablation,normal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+200,llava_text_adapter_ablation,normal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2640,llava_text_adapter_ablation,normal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3775,llava_text_adapter_ablation,normal,normal,True,315.33399999995027,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2187,llava_text_adapter_ablation,abnormal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1768,llava_text_adapter_ablation,abnormal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3254,llava_text_adapter_ablation,normal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1085,llava_text_adapter_ablation,abnormal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3871,llava_text_adapter_ablation,normal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3273,llava_text_adapter_ablation,abnormal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2812,llava_text_adapter_ablation,abnormal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2763,llava_text_adapter_ablation,abnormal,normal,True,317.6755249999701,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1899,llava_text_adapter_ablation,normal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3676,llava_text_adapter_ablation,abnormal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1118,llava_text_adapter_ablation,normal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1141,llava_text_adapter_ablation,normal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2365,llava_text_adapter_ablation,normal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+441,llava_text_adapter_ablation,abnormal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2263,llava_text_adapter_ablation,abnormal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3047,llava_text_adapter_ablation,normal,normal,True,321.12796250004294,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2339,llava_text_adapter_ablation,normal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3267,llava_text_adapter_ablation,normal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3251,llava_text_adapter_ablation,abnormal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1389,llava_text_adapter_ablation,abnormal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1848,llava_text_adapter_ablation,abnormal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2635,llava_text_adapter_ablation,normal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3,llava_text_adapter_ablation,normal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2114,llava_text_adapter_ablation,abnormal,normal,True,313.0039249999754,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+798,llava_text_adapter_ablation,normal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+62,llava_text_adapter_ablation,abnormal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+383,llava_text_adapter_ablation,abnormal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2667,llava_text_adapter_ablation,normal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2390,llava_text_adapter_ablation,abnormal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1542,llava_text_adapter_ablation,abnormal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2467,llava_text_adapter_ablation,abnormal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+163,llava_text_adapter_ablation,abnormal,normal,True,318.2320875000073,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3269,llava_text_adapter_ablation,normal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2134,llava_text_adapter_ablation,abnormal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3220,llava_text_adapter_ablation,normal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+366,llava_text_adapter_ablation,normal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1319,llava_text_adapter_ablation,normal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3346,llava_text_adapter_ablation,normal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2961,llava_text_adapter_ablation,abnormal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3726,llava_text_adapter_ablation,normal,normal,True,312.59548750000477,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3094,llava_text_adapter_ablation,abnormal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+242,llava_text_adapter_ablation,normal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1405,llava_text_adapter_ablation,abnormal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+893,llava_text_adapter_ablation,normal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1879,llava_text_adapter_ablation,normal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3801,llava_text_adapter_ablation,abnormal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1952,llava_text_adapter_ablation,abnormal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1496,llava_text_adapter_ablation,abnormal,normal,True,311.24297499997056,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1702,llava_text_adapter_ablation,abnormal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1598,llava_text_adapter_ablation,normal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1398,llava_text_adapter_ablation,abnormal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3475,llava_text_adapter_ablation,normal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+470,llava_text_adapter_ablation,normal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3796,llava_text_adapter_ablation,normal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1424,llava_text_adapter_ablation,normal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3785,llava_text_adapter_ablation,abnormal,normal,True,317.52006250002296,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+827,llava_text_adapter_ablation,abnormal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1616,llava_text_adapter_ablation,normal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3722,llava_text_adapter_ablation,normal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+737,llava_text_adapter_ablation,normal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2385,llava_text_adapter_ablation,normal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2392,llava_text_adapter_ablation,normal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3595,llava_text_adapter_ablation,abnormal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2118,llava_text_adapter_ablation,abnormal,normal,True,322.6776125000015,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3976,llava_text_adapter_ablation,normal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1070,llava_text_adapter_ablation,abnormal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3728,llava_text_adapter_ablation,normal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1949,llava_text_adapter_ablation,abnormal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2091,llava_text_adapter_ablation,abnormal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1928,llava_text_adapter_ablation,normal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+378,llava_text_adapter_ablation,abnormal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2061,llava_text_adapter_ablation,normal,normal,True,339.74746250004273,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+778,llava_text_adapter_ablation,abnormal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1304,llava_text_adapter_ablation,normal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2110,llava_text_adapter_ablation,normal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3623,llava_text_adapter_ablation,abnormal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1081,llava_text_adapter_ablation,abnormal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1942,llava_text_adapter_ablation,abnormal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1838,llava_text_adapter_ablation,abnormal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1774,llava_text_adapter_ablation,abnormal,normal,True,354.4476625000357,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+527,llava_text_adapter_ablation,normal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2948,llava_text_adapter_ablation,normal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3561,llava_text_adapter_ablation,normal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3280,llava_text_adapter_ablation,abnormal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3321,llava_text_adapter_ablation,normal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3361,llava_text_adapter_ablation,normal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1023,llava_text_adapter_ablation,abnormal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2264,llava_text_adapter_ablation,abnormal,normal,True,350.2167249999957,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3994,llava_text_adapter_ablation,abnormal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+982,llava_text_adapter_ablation,normal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+656,llava_text_adapter_ablation,abnormal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2855,llava_text_adapter_ablation,normal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+326,llava_text_adapter_ablation,normal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2115,llava_text_adapter_ablation,normal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3285,llava_text_adapter_ablation,normal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1541,llava_text_adapter_ablation,abnormal,normal,True,335.059675000025,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3048,llava_text_adapter_ablation,normal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+302,llava_text_adapter_ablation,abnormal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1314,llava_text_adapter_ablation,normal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1253,llava_text_adapter_ablation,normal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2148,llava_text_adapter_ablation,normal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+866,llava_text_adapter_ablation,normal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2725,llava_text_adapter_ablation,abnormal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3258,llava_text_adapter_ablation,normal,normal,True,339.8419375000117,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2589,llava_text_adapter_ablation,abnormal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3504,llava_text_adapter_ablation,normal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+342,llava_text_adapter_ablation,abnormal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1101,llava_text_adapter_ablation,abnormal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3634,llava_text_adapter_ablation,normal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2164,llava_text_adapter_ablation,abnormal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1733,llava_text_adapter_ablation,abnormal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+312,llava_text_adapter_ablation,abnormal,normal,True,341.38084999995044,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+11,llava_text_adapter_ablation,normal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1605,llava_text_adapter_ablation,normal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1520,llava_text_adapter_ablation,normal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3421,llava_text_adapter_ablation,abnormal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1222,llava_text_adapter_ablation,abnormal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1924,llava_text_adapter_ablation,abnormal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+546,llava_text_adapter_ablation,abnormal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+440,llava_text_adapter_ablation,abnormal,normal,True,333.6477750000313,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1679,llava_text_adapter_ablation,normal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2886,llava_text_adapter_ablation,abnormal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3252,llava_text_adapter_ablation,normal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2740,llava_text_adapter_ablation,abnormal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3311,llava_text_adapter_ablation,normal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2072,llava_text_adapter_ablation,abnormal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2830,llava_text_adapter_ablation,abnormal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+84,llava_text_adapter_ablation,abnormal,normal,True,336.2922375000039,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1376,llava_text_adapter_ablation,abnormal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2069,llava_text_adapter_ablation,normal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+239,llava_text_adapter_ablation,normal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3060,llava_text_adapter_ablation,normal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1167,llava_text_adapter_ablation,abnormal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2481,llava_text_adapter_ablation,abnormal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3804,llava_text_adapter_ablation,abnormal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+802,llava_text_adapter_ablation,abnormal,normal,True,343.0210999999872,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1393,llava_text_adapter_ablation,abnormal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3754,llava_text_adapter_ablation,normal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3405,llava_text_adapter_ablation,abnormal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+225,llava_text_adapter_ablation,normal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1412,llava_text_adapter_ablation,abnormal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1825,llava_text_adapter_ablation,abnormal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1861,llava_text_adapter_ablation,normal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3510,llava_text_adapter_ablation,abnormal,normal,True,338.4391249999794,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+767,llava_text_adapter_ablation,normal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3756,llava_text_adapter_ablation,abnormal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+212,llava_text_adapter_ablation,abnormal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+339,llava_text_adapter_ablation,normal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1532,llava_text_adapter_ablation,normal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2586,llava_text_adapter_ablation,abnormal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3388,llava_text_adapter_ablation,abnormal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+508,llava_text_adapter_ablation,normal,normal,True,334.863187499991,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1618,llava_text_adapter_ablation,normal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2311,llava_text_adapter_ablation,normal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3952,llava_text_adapter_ablation,abnormal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3074,llava_text_adapter_ablation,abnormal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1361,llava_text_adapter_ablation,abnormal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2243,llava_text_adapter_ablation,abnormal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2494,llava_text_adapter_ablation,abnormal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1550,llava_text_adapter_ablation,normal,normal,True,347.0494499999859,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3584,llava_text_adapter_ablation,abnormal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+774,llava_text_adapter_ablation,abnormal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1927,llava_text_adapter_ablation,abnormal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2180,llava_text_adapter_ablation,abnormal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+796,llava_text_adapter_ablation,normal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2538,llava_text_adapter_ablation,normal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3029,llava_text_adapter_ablation,abnormal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3783,llava_text_adapter_ablation,normal,normal,True,338.8214625000501,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3805,llava_text_adapter_ablation,abnormal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1503,llava_text_adapter_ablation,normal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1779,llava_text_adapter_ablation,normal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1633,llava_text_adapter_ablation,normal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1624,llava_text_adapter_ablation,abnormal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+145,llava_text_adapter_ablation,abnormal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3010,llava_text_adapter_ablation,normal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2149,llava_text_adapter_ablation,abnormal,normal,True,349.7279499999877,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1960,llava_text_adapter_ablation,normal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3156,llava_text_adapter_ablation,normal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2418,llava_text_adapter_ablation,abnormal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1024,llava_text_adapter_ablation,normal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3443,llava_text_adapter_ablation,normal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2411,llava_text_adapter_ablation,abnormal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1657,llava_text_adapter_ablation,normal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2905,llava_text_adapter_ablation,abnormal,normal,True,347.89807499998915,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3605,llava_text_adapter_ablation,normal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2543,llava_text_adapter_ablation,abnormal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1854,llava_text_adapter_ablation,normal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+286,llava_text_adapter_ablation,abnormal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1399,llava_text_adapter_ablation,abnormal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2964,llava_text_adapter_ablation,normal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1987,llava_text_adapter_ablation,normal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1904,llava_text_adapter_ablation,abnormal,normal,True,343.3123750000391,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3299,llava_text_adapter_ablation,abnormal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3083,llava_text_adapter_ablation,normal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1063,llava_text_adapter_ablation,abnormal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+465,llava_text_adapter_ablation,abnormal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+456,llava_text_adapter_ablation,abnormal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+518,llava_text_adapter_ablation,normal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3874,llava_text_adapter_ablation,abnormal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2054,llava_text_adapter_ablation,abnormal,normal,True,336.41495000006216,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3562,llava_text_adapter_ablation,abnormal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+736,llava_text_adapter_ablation,abnormal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2782,llava_text_adapter_ablation,abnormal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+453,llava_text_adapter_ablation,abnormal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3434,llava_text_adapter_ablation,normal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1872,llava_text_adapter_ablation,abnormal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1964,llava_text_adapter_ablation,normal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3499,llava_text_adapter_ablation,normal,normal,True,340.77606250002646,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1316,llava_text_adapter_ablation,normal,normal,True,427.53465000002205,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+2967,llava_text_adapter_ablation,normal,normal,True,427.53465000002205,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3592,llava_text_adapter_ablation,abnormal,normal,True,427.53465000002205,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+3495,llava_text_adapter_ablation,normal,normal,True,427.53465000002205,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1139,llava_text_adapter_ablation,abnormal,normal,True,427.53465000002205,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"
+1661,llava_text_adapter_ablation,normal,normal,True,427.53465000002205,"{
+""classification"": ""normal"",
+""findings"": [""Verified normal radiograph exam""],
+""confidence"": ""high""
+}"

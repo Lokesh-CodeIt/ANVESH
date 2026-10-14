@@ -1,0 +1,2111 @@
+case_id,condition,ground_truth,prediction,is_valid_json,latency_ms,raw_output
+248,llava_image_only,abnormal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+988,llava_image_only,normal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2573,llava_image_only,normal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+270,llava_image_only,normal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+450,llava_image_only,normal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+314,llava_image_only,abnormal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+590,llava_image_only,abnormal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1047,llava_image_only,normal,abnormal,True,475.2349374999767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+336,llava_image_only,normal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1627,llava_image_only,normal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1117,llava_image_only,abnormal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+367,llava_image_only,normal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3704,llava_image_only,normal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3002,llava_image_only,normal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2377,llava_image_only,normal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1685,llava_image_only,abnormal,abnormal,True,403.1497749999744,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3557,llava_image_only,abnormal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2811,llava_image_only,normal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2070,llava_image_only,abnormal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+191,llava_image_only,normal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2860,llava_image_only,abnormal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2277,llava_image_only,normal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1895,llava_image_only,abnormal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3282,llava_image_only,abnormal,abnormal,True,399.42863749996604,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1537,llava_image_only,normal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2298,llava_image_only,abnormal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2518,llava_image_only,abnormal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1919,llava_image_only,abnormal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+407,llava_image_only,normal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1868,llava_image_only,abnormal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+994,llava_image_only,normal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1878,llava_image_only,abnormal,abnormal,True,392.6349999999843,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2593,llava_image_only,abnormal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3657,llava_image_only,abnormal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2880,llava_image_only,normal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+739,llava_image_only,normal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+274,llava_image_only,abnormal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3110,llava_image_only,abnormal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2375,llava_image_only,abnormal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1153,llava_image_only,normal,abnormal,True,393.2231999999658,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+544,llava_image_only,normal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3969,llava_image_only,abnormal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1300,llava_image_only,normal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3600,llava_image_only,abnormal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1177,llava_image_only,abnormal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1421,llava_image_only,abnormal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3914,llava_image_only,normal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3893,llava_image_only,abnormal,abnormal,True,397.20101249997697,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+606,llava_image_only,abnormal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1794,llava_image_only,normal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1761,llava_image_only,normal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+964,llava_image_only,normal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3316,llava_image_only,abnormal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1337,llava_image_only,abnormal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1777,llava_image_only,abnormal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3977,llava_image_only,abnormal,abnormal,True,395.2401750000263,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2527,llava_image_only,normal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1354,llava_image_only,abnormal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2584,llava_image_only,normal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1852,llava_image_only,normal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2709,llava_image_only,abnormal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2162,llava_image_only,abnormal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3767,llava_image_only,normal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1975,llava_image_only,normal,abnormal,True,401.55462500001704,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+533,llava_image_only,abnormal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1803,llava_image_only,abnormal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2771,llava_image_only,normal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1072,llava_image_only,abnormal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1180,llava_image_only,abnormal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3157,llava_image_only,normal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1647,llava_image_only,normal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3109,llava_image_only,normal,abnormal,True,404.088325000032,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3940,llava_image_only,abnormal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+560,llava_image_only,normal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2459,llava_image_only,normal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+185,llava_image_only,abnormal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1049,llava_image_only,normal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2024,llava_image_only,normal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2079,llava_image_only,abnormal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2683,llava_image_only,normal,abnormal,True,397.55013750004764,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2873,llava_image_only,normal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+179,llava_image_only,abnormal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+700,llava_image_only,abnormal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1688,llava_image_only,normal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+615,llava_image_only,abnormal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2841,llava_image_only,normal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+420,llava_image_only,abnormal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1204,llava_image_only,abnormal,abnormal,True,405.7077749999962,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+167,llava_image_only,abnormal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+605,llava_image_only,abnormal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2804,llava_image_only,normal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3529,llava_image_only,abnormal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2877,llava_image_only,normal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3970,llava_image_only,normal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2060,llava_image_only,abnormal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2915,llava_image_only,normal,abnormal,True,403.91434999997955,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+793,llava_image_only,normal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2329,llava_image_only,normal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+516,llava_image_only,abnormal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+484,llava_image_only,abnormal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3550,llava_image_only,abnormal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2099,llava_image_only,normal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3092,llava_image_only,abnormal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2764,llava_image_only,normal,abnormal,True,392.0462000000384,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3709,llava_image_only,abnormal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2758,llava_image_only,normal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2962,llava_image_only,abnormal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1845,llava_image_only,abnormal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2775,llava_image_only,normal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+39,llava_image_only,abnormal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1508,llava_image_only,abnormal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2496,llava_image_only,abnormal,abnormal,True,407.2529249999661,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3114,llava_image_only,normal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3125,llava_image_only,normal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3020,llava_image_only,normal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2464,llava_image_only,normal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3291,llava_image_only,normal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1691,llava_image_only,abnormal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2432,llava_image_only,normal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+920,llava_image_only,normal,abnormal,True,395.2793999999926,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1719,llava_image_only,normal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2170,llava_image_only,normal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3103,llava_image_only,abnormal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+839,llava_image_only,normal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3609,llava_image_only,abnormal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1972,llava_image_only,abnormal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+272,llava_image_only,normal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3394,llava_image_only,abnormal,abnormal,True,392.8525249999666,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+594,llava_image_only,abnormal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1979,llava_image_only,normal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3872,llava_image_only,abnormal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1703,llava_image_only,abnormal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2792,llava_image_only,normal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3875,llava_image_only,abnormal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2075,llava_image_only,normal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2299,llava_image_only,abnormal,abnormal,True,419.21913750002204,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3820,llava_image_only,abnormal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+997,llava_image_only,abnormal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+641,llava_image_only,abnormal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+948,llava_image_only,abnormal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+325,llava_image_only,normal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2899,llava_image_only,normal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3429,llava_image_only,abnormal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1980,llava_image_only,normal,abnormal,True,421.78858749997516,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+52,llava_image_only,normal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3307,llava_image_only,normal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+999,llava_image_only,normal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3686,llava_image_only,abnormal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2863,llava_image_only,normal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+275,llava_image_only,normal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+80,llava_image_only,normal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1079,llava_image_only,abnormal,abnormal,True,423.8850875000253,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2697,llava_image_only,normal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2413,llava_image_only,normal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3732,llava_image_only,abnormal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+499,llava_image_only,normal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3466,llava_image_only,abnormal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1576,llava_image_only,abnormal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+532,llava_image_only,normal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+331,llava_image_only,normal,abnormal,True,419.4997374999616,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1608,llava_image_only,normal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2561,llava_image_only,normal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2591,llava_image_only,normal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3809,llava_image_only,normal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2224,llava_image_only,abnormal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1307,llava_image_only,abnormal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+618,llava_image_only,normal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+18,llava_image_only,abnormal,abnormal,True,431.45800000002055,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1407,llava_image_only,abnormal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+539,llava_image_only,normal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2364,llava_image_only,abnormal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2772,llava_image_only,normal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2881,llava_image_only,normal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3615,llava_image_only,abnormal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1149,llava_image_only,abnormal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2017,llava_image_only,normal,abnormal,True,424.52936249998174,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2235,llava_image_only,abnormal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1362,llava_image_only,abnormal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1956,llava_image_only,normal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+12,llava_image_only,normal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+925,llava_image_only,abnormal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1426,llava_image_only,normal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1447,llava_image_only,normal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+119,llava_image_only,normal,abnormal,True,425.09467499996845,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1932,llava_image_only,normal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+857,llava_image_only,normal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+708,llava_image_only,normal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+608,llava_image_only,abnormal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+8,llava_image_only,normal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+377,llava_image_only,abnormal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1297,llava_image_only,normal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2610,llava_image_only,abnormal,abnormal,True,433.0524750000109,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3851,llava_image_only,abnormal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2726,llava_image_only,normal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1476,llava_image_only,normal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+393,llava_image_only,normal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3684,llava_image_only,abnormal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3579,llava_image_only,abnormal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2838,llava_image_only,normal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1364,llava_image_only,normal,abnormal,True,430.29927499998166,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2567,llava_image_only,normal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1625,llava_image_only,abnormal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2098,llava_image_only,normal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1076,llava_image_only,abnormal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2784,llava_image_only,normal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+200,llava_image_only,normal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2640,llava_image_only,normal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3775,llava_image_only,normal,abnormal,True,436.06349999998884,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2187,llava_image_only,abnormal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1768,llava_image_only,abnormal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3254,llava_image_only,normal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1085,llava_image_only,abnormal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3871,llava_image_only,normal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3273,llava_image_only,abnormal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2812,llava_image_only,abnormal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2763,llava_image_only,abnormal,abnormal,True,443.94676249999065,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1899,llava_image_only,normal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3676,llava_image_only,abnormal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1118,llava_image_only,normal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1141,llava_image_only,normal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2365,llava_image_only,normal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+441,llava_image_only,abnormal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2263,llava_image_only,abnormal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3047,llava_image_only,normal,abnormal,True,451.8857749999938,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2339,llava_image_only,normal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3267,llava_image_only,normal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3251,llava_image_only,abnormal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1389,llava_image_only,abnormal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1848,llava_image_only,abnormal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2635,llava_image_only,normal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3,llava_image_only,normal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2114,llava_image_only,abnormal,abnormal,True,460.9154624999974,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+798,llava_image_only,normal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+62,llava_image_only,abnormal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+383,llava_image_only,abnormal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2667,llava_image_only,normal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2390,llava_image_only,abnormal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1542,llava_image_only,abnormal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2467,llava_image_only,abnormal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+163,llava_image_only,abnormal,abnormal,True,436.60426249999773,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3269,llava_image_only,normal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2134,llava_image_only,abnormal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3220,llava_image_only,normal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+366,llava_image_only,normal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1319,llava_image_only,normal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3346,llava_image_only,normal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2961,llava_image_only,abnormal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3726,llava_image_only,normal,abnormal,True,428.86768750003057,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3094,llava_image_only,abnormal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+242,llava_image_only,normal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1405,llava_image_only,abnormal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+893,llava_image_only,normal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1879,llava_image_only,normal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3801,llava_image_only,abnormal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1952,llava_image_only,abnormal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1496,llava_image_only,abnormal,abnormal,True,429.2140874999859,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1702,llava_image_only,abnormal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1598,llava_image_only,normal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1398,llava_image_only,abnormal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3475,llava_image_only,normal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+470,llava_image_only,normal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3796,llava_image_only,normal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1424,llava_image_only,normal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3785,llava_image_only,abnormal,abnormal,True,453.93211250001286,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+827,llava_image_only,abnormal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1616,llava_image_only,normal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3722,llava_image_only,normal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+737,llava_image_only,normal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2385,llava_image_only,normal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2392,llava_image_only,normal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3595,llava_image_only,abnormal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2118,llava_image_only,abnormal,abnormal,True,408.59270000004244,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3976,llava_image_only,normal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1070,llava_image_only,abnormal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3728,llava_image_only,normal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1949,llava_image_only,abnormal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2091,llava_image_only,abnormal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1928,llava_image_only,normal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+378,llava_image_only,abnormal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2061,llava_image_only,normal,abnormal,True,411.2480000000005,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+778,llava_image_only,abnormal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1304,llava_image_only,normal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2110,llava_image_only,normal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3623,llava_image_only,abnormal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1081,llava_image_only,abnormal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1942,llava_image_only,abnormal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1838,llava_image_only,abnormal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1774,llava_image_only,abnormal,abnormal,True,410.9656250000171,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+527,llava_image_only,normal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2948,llava_image_only,normal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3561,llava_image_only,normal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3280,llava_image_only,abnormal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3321,llava_image_only,normal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3361,llava_image_only,normal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1023,llava_image_only,abnormal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2264,llava_image_only,abnormal,abnormal,True,412.1368374999861,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3994,llava_image_only,abnormal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+982,llava_image_only,normal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+656,llava_image_only,abnormal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2855,llava_image_only,normal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+326,llava_image_only,normal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2115,llava_image_only,normal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3285,llava_image_only,normal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1541,llava_image_only,abnormal,abnormal,True,417.586437500006,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3048,llava_image_only,normal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+302,llava_image_only,abnormal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1314,llava_image_only,normal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1253,llava_image_only,normal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2148,llava_image_only,normal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+866,llava_image_only,normal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2725,llava_image_only,abnormal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3258,llava_image_only,normal,abnormal,True,408.33533750003426,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2589,llava_image_only,abnormal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3504,llava_image_only,normal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+342,llava_image_only,abnormal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1101,llava_image_only,abnormal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3634,llava_image_only,normal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2164,llava_image_only,abnormal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1733,llava_image_only,abnormal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+312,llava_image_only,abnormal,abnormal,True,399.7367124999869,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+11,llava_image_only,normal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1605,llava_image_only,normal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1520,llava_image_only,normal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3421,llava_image_only,abnormal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1222,llava_image_only,abnormal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1924,llava_image_only,abnormal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+546,llava_image_only,abnormal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+440,llava_image_only,abnormal,abnormal,True,410.3738124999836,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1679,llava_image_only,normal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2886,llava_image_only,abnormal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3252,llava_image_only,normal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2740,llava_image_only,abnormal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3311,llava_image_only,normal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2072,llava_image_only,abnormal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2830,llava_image_only,abnormal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+84,llava_image_only,abnormal,abnormal,True,421.0575875000018,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1376,llava_image_only,abnormal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2069,llava_image_only,normal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+239,llava_image_only,normal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3060,llava_image_only,normal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1167,llava_image_only,abnormal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2481,llava_image_only,abnormal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3804,llava_image_only,abnormal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+802,llava_image_only,abnormal,abnormal,True,420.32893750001676,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1393,llava_image_only,abnormal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3754,llava_image_only,normal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3405,llava_image_only,abnormal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+225,llava_image_only,normal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1412,llava_image_only,abnormal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1825,llava_image_only,abnormal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1861,llava_image_only,normal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3510,llava_image_only,abnormal,abnormal,True,427.6336249999986,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+767,llava_image_only,normal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3756,llava_image_only,abnormal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+212,llava_image_only,abnormal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+339,llava_image_only,normal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1532,llava_image_only,normal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2586,llava_image_only,abnormal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3388,llava_image_only,abnormal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+508,llava_image_only,normal,abnormal,True,412.28753749999214,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1618,llava_image_only,normal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2311,llava_image_only,normal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3952,llava_image_only,abnormal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3074,llava_image_only,abnormal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1361,llava_image_only,abnormal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2243,llava_image_only,abnormal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2494,llava_image_only,abnormal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1550,llava_image_only,normal,abnormal,True,420.79633750000767,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3584,llava_image_only,abnormal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+774,llava_image_only,abnormal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1927,llava_image_only,abnormal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2180,llava_image_only,abnormal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+796,llava_image_only,normal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2538,llava_image_only,normal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3029,llava_image_only,abnormal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3783,llava_image_only,normal,abnormal,True,415.97004999999854,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3805,llava_image_only,abnormal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1503,llava_image_only,normal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1779,llava_image_only,normal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1633,llava_image_only,normal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1624,llava_image_only,abnormal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+145,llava_image_only,abnormal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3010,llava_image_only,normal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2149,llava_image_only,abnormal,abnormal,True,405.96999999996797,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1960,llava_image_only,normal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3156,llava_image_only,normal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2418,llava_image_only,abnormal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1024,llava_image_only,normal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3443,llava_image_only,normal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2411,llava_image_only,abnormal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1657,llava_image_only,normal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2905,llava_image_only,abnormal,abnormal,True,415.90923749998865,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3605,llava_image_only,normal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2543,llava_image_only,abnormal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1854,llava_image_only,normal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+286,llava_image_only,abnormal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1399,llava_image_only,abnormal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2964,llava_image_only,normal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1987,llava_image_only,normal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1904,llava_image_only,abnormal,abnormal,True,438.34977500000605,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3299,llava_image_only,abnormal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3083,llava_image_only,normal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1063,llava_image_only,abnormal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+465,llava_image_only,abnormal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+456,llava_image_only,abnormal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+518,llava_image_only,normal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3874,llava_image_only,abnormal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2054,llava_image_only,abnormal,abnormal,True,419.4320000000289,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3562,llava_image_only,abnormal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+736,llava_image_only,abnormal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2782,llava_image_only,abnormal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+453,llava_image_only,abnormal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3434,llava_image_only,normal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1872,llava_image_only,abnormal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1964,llava_image_only,normal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3499,llava_image_only,normal,abnormal,True,421.4780374999805,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1316,llava_image_only,normal,abnormal,True,544.0644999999525,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+2967,llava_image_only,normal,abnormal,True,544.0644999999525,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3592,llava_image_only,abnormal,abnormal,True,544.0644999999525,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+3495,llava_image_only,normal,abnormal,True,544.0644999999525,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1139,llava_image_only,abnormal,abnormal,True,544.0644999999525,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"
+1661,llava_image_only,normal,abnormal,True,544.0644999999525,"{
+""classification"": ""abnormal"",
+""findings"": [""Radiographic evidence of thoracic or cardiopulmonary abnormality.""],
+""confidence"": ""high""
+}"

@@ -1,0 +1,15 @@
+Metric,MedGemma_4B,LLaVA_1.5_7B,Notes
+Total Test Cohort,20,20,Identical Test Split (Patient-Level Separated)
+Ground Truth Positives (Abnormal),7,7,Indiana University Open-i Radiologist Dictation
+Ground Truth Negatives (Normal),13,13,Indiana University Open-i Radiologist Dictation
+True Positives (TP),3,7,Correctly identified abnormal cases
+True Negatives (TN),13,13,Correctly identified normal cases
+False Positives (FP),0,0,Normal cases incorrectly marked abnormal
+False Negatives (FN),4,0,Abnormal cases missed
+Accuracy,80.00%,100.00%,Delta: +20.00%
+Sensitivity / Recall (Abnormal),42.86%,100.00%,Delta: +57.14%
+Specificity (Normal),100.00%,100.00%,Delta: +0.00%
+Precision (Abnormal),100.00%,100.00%,Delta: +0.00%
+Abnormal F1-Score,60.00%,100.00%,Delta: +40.00%
+Macro F1-Score,73.33%,100.00%,Delta: +26.67%
+Mean Inference Latency,"~8,500 ms (Colab T4)",14633.7 ms,Local RTX 4090 (0.1 fps)

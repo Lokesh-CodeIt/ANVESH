@@ -1,0 +1,333 @@
+case_id,ground_truth,medgemma_pred,llava_pred,llava_abnormalities_count,llava_abnormalities,latency_ms,raw_output
+248,abnormal,normal,abnormal,1,No acute cardiopulmonary abnormality. .,15080.225799989421,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""No pneumothorax, pleural effusion or airspace consolidation"", ""Heart size and pulmonary vasculature appear within normal limits"", ""[REDACTED] [REDACTED] are intact"", ""There is a small calcified granuloma in the right midlung.""],
+""abnormalities"": [""No acute cardiopulmonary abnormality. .""],
+""impression_summary"": ""No acute cardiopulmonary abnormality. .""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+988,normal,normal,normal,0,,10411.12279999652,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""Lungs are clear"", ""No focal infiltrate"", ""No pleural effusion or pneumothorax"", ""Normal cardiomediastinal silhouette.""],
+""abnormalities"": [],
+""impression_summary"": ""No active disease.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+2573,normal,normal,normal,0,,11551.558299994213,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""Lungs are clear bilaterally"", ""There is no focal consolidation, pleural effusion, or pneumothoraces"", ""Cardiomediastinal silhouette is within normal limits"", ""[REDACTED] are unremarkable.""],
+""abnormalities"": [],
+""impression_summary"": ""No acute cardiopulmonary abnormality.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+270,normal,normal,normal,0,,11972.472900000867,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The cardiomediastinal silhouette and pulmonary vasculature are within normal limits in size"", ""The lungs are clear of focal airspace disease, pneumothorax, or pleural effusion"", ""There are no acute bony findings.""],
+""abnormalities"": [],
+""impression_summary"": ""No acute cardiopulmonary findings. .""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+450,normal,normal,normal,0,,11482.578099996317,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""No focal consolidation"", ""No pneumothorax"", ""No pleural effusions"", ""Heart size normal"", ""Cardio mediastinal silhouette is unremarkable.""],
+""abnormalities"": [],
+""impression_summary"": ""1. No acute cardiopulmonary findings.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+314,abnormal,normal,abnormal,1,No acute cardiopulmonary abnormality.,12242.164700001013,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""Low lung volumes"", ""Normal heart size"", ""The trachea is midline"", ""Lungs are clear"", ""No pneumothorax"", ""No pleural effusion.""],
+""abnormalities"": [""No acute cardiopulmonary abnormality.""],
+""impression_summary"": ""No acute cardiopulmonary abnormality.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+590,abnormal,abnormal,abnormal,1,Right middle lobe airspace disease may reflect atelectasis or pneumonia. .,14607.22320000059,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The cardiomediastinal silhouette is normal size and configuration"", ""Pulmonary vasculature within normal limits"", ""There is right middle lobe airspace disease, may reflect atelectasis or pneumonia"", ""No pleural effusion"", ""No pneumothorax"", ""Elevated right hemidiaphragm.""],
+""abnormalities"": [""Right middle lobe airspace disease may reflect atelectasis or pneumonia. .""],
+""impression_summary"": ""Right middle lobe airspace disease may reflect atelectasis or pneumonia. .""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+1047,normal,normal,normal,0,,13105.677800005651,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The lungs are clear bilaterally"", ""Specifically, no evidence of focal consolidation, pneumothorax, or pleural effusion."", ""Cardio mediastinal silhouette is unremarkable"", ""Visualized osseous structures of the thorax are without acute abnormality.""],
+""abnormalities"": [],
+""impression_summary"": ""No acute cardiopulmonary abnormality..""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+336,normal,normal,normal,0,,11118.098200007807,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The cardiomediastinal silhouette is within normal limits for appearance"", ""No focal areas of pulmonary consolidation"", ""No pneumothorax"", ""No pleural effusion"", ""The thoracic spine appears intact.""],
+""abnormalities"": [],
+""impression_summary"": ""1. No acute cardiopulmonary process.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+1627,normal,normal,normal,0,,14074.697499992908,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The lungs and pleural spaces show no acute abnormality"", ""Heart size and pulmonary vascularity within normal limits""],
+""abnormalities"": [],
+""impression_summary"": ""1. No acute pulmonary abnormality.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+1117,abnormal,abnormal,abnormal,1,"1. Patchy left lower lobe airspace disease, concerning for pneumonia. 2. Right upper lobe opacity, favoring scarring and/or granulomas. .",22069.31489999988,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The cardiomediastinal silhouette and pulmonary vasculature are within normal limits in size"", ""There is ill-defined airspace opacity in the posterior left lower lobe"", ""There is focal opacity in the right upper lobe which suggests scar and/or granulomatous calcification"", ""There is no pneumothorax or pleural effusion.""],
+""abnormalities"": [""1. Patchy left lower lobe airspace disease, concerning for pneumonia. 2. Right upper lobe opacity, favoring scarring and/or granulomas. .""],
+""impression_summary"": ""1. Patchy left lower lobe airspace disease, concerning for pneumonia. 2. Right upper lobe opacity, favoring scarring and/or granulomas. .""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clin"
+367,normal,normal,normal,0,,13430.03960000351,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The lungs are clear"", ""No focal airspace consolidation"", ""No pleural effusion or pneumothorax"", ""Heart size is within normal limits.""],
+""abnormalities"": [],
+""impression_summary"": ""Clear lungs.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+3704,normal,normal,normal,0,,14103.89369999757,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""Lungs are clear without focal consolidation, effusion or pneumothorax"", ""Normal heart size"", ""Bony thorax and soft tissues unremarkable""],
+""abnormalities"": [],
+""impression_summary"": ""Negative for acute cardiopulmonary abnormality.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+3002,normal,normal,normal,0,,14741.319099994143,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""Cardiomediastinal silhouettes are within normal limits"", ""Lungs are clear without focal consolidation, pneumothorax, or pleural effusion"", ""Bony thorax is unremarkable.""],
+""abnormalities"": [],
+""impression_summary"": ""No acute cardiopulmonary abnormalities.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+2377,normal,normal,normal,0,,14040.243800001917,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The heart size and pulmonary vascularity appear within normal limits"", ""The lungs are free of focal airspace disease"", ""No pleural effusion or pneumothorax is seen.""],
+""abnormalities"": [],
+""impression_summary"": ""No evidence of active disease.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+1685,abnormal,normal,abnormal,1,"Hyperinflated lungs, air trapping versus inspiratory [REDACTED].",18912.283199999365,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""Hyperinflated lungs with mildly flattened posterior diaphragm"", ""No focal alveolar consolidation, no definite pleural effusion seen"", ""Heart size within normal limits, no typical findings of pulmonary edema.""],
+""abnormalities"": [""Hyperinflated lungs, air trapping versus inspiratory [REDACTED].""],
+""impression_summary"": ""Hyperinflated lungs, air trapping versus inspiratory [REDACTED].""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+3557,abnormal,abnormal,abnormal,1,1. Small bilateral pleural effusions.,19970.17970000161,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""Left PICC line and NG tube remain in [REDACTED]"", ""Heart size and vascularity appear within normal limits"", ""The lungs are free of focal airspace disease"", ""Small bilateral pleural effusions are present"", ""No pneumothorax is noted.""],
+""abnormalities"": [""1. Small bilateral pleural effusions.""],
+""impression_summary"": ""1. Small bilateral pleural effusions.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+2811,normal,normal,normal,0,,12901.584499995806,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [],
+""abnormalities"": [],
+""impression_summary"": ""Heart size normal. Lungs clear""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"
+2070,abnormal,normal,abnormal,1,"Subtle interstitial markings bilateral, may represent mild pulmonary edema or chronic interstitial changes.",21236.137499989127,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""There are no acute osseous abnormalities"", ""Questionable old left posterior third and fourth rib fractures"", ""Visualized soft tissues are within normal limits"", ""Normal heart size"", ""Normal hilar vascular markings"", ""Subtle prominence of interstitial markings in the bases, left worse than right"", ""No focal area of consolidation, pleural effusion, or pneumothorax.""],
+""abnormalities"": [""Subtle interstitial markings bilateral, may represent mild pulmonary edema or chronic interstitial changes.""],
+""impression_summary"": ""Subtle interstitial markings bilateral, may represent mild pulmonary edema or chronic interstitial changes.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"
+191,normal,normal,normal,0,,15622.66969999473,"{
+""image_evidence"": {
+""modality"": ""Chest X-ray"",
+""body_part"": ""chest"",
+""findings"": [""The heart is normal in size"", ""The pulmonary vascularity is within normal limits in appearance"", ""No focal air space opacities"", ""No pleural effusions or pneumothorax"", ""No acute bony abnormalities.""],
+""abnormalities"": [],
+""impression_summary"": ""No acute cardiopulmonary abnormalities.""
+},
+""text_image_consistency"": {
+""consistent"": true,
+""notes"": ""Verified consistent with radiograph exam""
+},
+""clinical_support"": {
+""supported"": true,
+""reason"": ""Radiographic findings support clinical evaluation""
+}
+}"

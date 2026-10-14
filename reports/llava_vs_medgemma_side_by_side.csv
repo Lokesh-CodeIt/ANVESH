@@ -1,0 +1,28 @@
+Metric,MedGemma_4B_Pretrained,LLaVA_1_5_7B_FineTuned,Delta_LLaVA_minus_MedGemma
+Total Cases (N),422,422,
+Ground Truth Positives (Abnormal),211,211,
+Ground Truth Negatives (Normal),211,211,
+True Positives (TP),67,177,
+True Negatives (TN),207,198,
+False Positives (FP),4,13,
+False Negatives (FN),144,34,
+Accuracy,64.93%,88.86%,+23.93%
+Accuracy 95% CI,"[60.26%, 69.33%]","[85.50%, 91.52%]",
+Error Rate,35.07%,11.14%,-23.93%
+Balanced Accuracy,64.93%,88.86%,+23.93%
+Sensitivity / Recall (Abnormal),31.75%,83.89%,+52.13%
+Sensitivity 95% CI,"[25.85%, 38.31%]","[78.33%, 88.23%]",
+Specificity (Normal),98.10%,93.84%,-4.27%
+Specificity 95% CI,"[95.23%, 99.26%]","[89.75%, 96.36%]",
+Precision (PPV - Abnormal),94.37%,93.16%,-1.21%
+Precision 95% CI,"[86.39%, 97.79%]","[88.65%, 95.96%]",
+Negative Predictive Value (NPV),58.97%,85.34%,+26.37%
+F1-Score (Abnormal),47.52%,88.28%,+40.76%
+F1-Score (Normal),73.67%,89.39%,+15.73%
+Macro F1-Score,60.59%,88.83%,+28.24%
+Weighted F1-Score,60.59%,88.83%,+28.24%
+Matthews Correlation Coefficient (MCC),0.3991,0.7811,+0.3821
+Cohen's Kappa,0.2986,0.7773,+0.4787
+Mean Latency (ms),N/A,2433.2542,
+Median Latency (ms),N/A,2650.9685,
+P95 Latency (ms),N/A,2902.7703,

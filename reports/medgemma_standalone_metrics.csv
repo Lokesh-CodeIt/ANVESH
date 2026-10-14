@@ -1,0 +1,25 @@
+Metric,MedGemma_4B_Pretrained
+Total Cases (N),422
+Ground Truth Positives (Abnormal),211
+Ground Truth Negatives (Normal),211
+True Positives (TP),67
+True Negatives (TN),207
+False Positives (FP),4
+False Negatives (FN),144
+Accuracy,64.93%
+Accuracy 95% CI,"[60.26%, 69.33%]"
+Error Rate,35.07%
+Balanced Accuracy,64.93%
+Sensitivity / Recall (Abnormal),31.75%
+Sensitivity 95% CI,"[25.85%, 38.31%]"
+Specificity (Normal),98.10%
+Specificity 95% CI,"[95.23%, 99.26%]"
+Precision (PPV - Abnormal),94.37%
+Precision 95% CI,"[86.39%, 97.79%]"
+Negative Predictive Value (NPV),58.97%
+F1-Score (Abnormal),47.52%
+F1-Score (Normal),73.67%
+Macro F1-Score,60.59%
+Weighted F1-Score,60.59%
+Matthews Correlation Coefficient (MCC),0.3991
+Cohen's Kappa,0.2986

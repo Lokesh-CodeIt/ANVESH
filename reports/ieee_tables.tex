@@ -1,0 +1,88 @@
+% ==============================================================================
+% IEEE RESEARCH PAPER TABLES: ANVESH MULTIMODAL CXR BENCHMARK
+% Head-to-Head Comparative Study: Fine-Tuned LLaVA-1.5-7B vs. Pretrained MedGemma-4B
+% ==============================================================================
+
+\documentclass{IEEEtran}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% TABLE I: Head-to-Head Performance Comparison
+% ------------------------------------------------------------------------------
+\begin{table*}[t]
+\centering
+\caption{Comparative Diagnostic Performance: Pretrained MedGemma-4B vs. Fine-Tuned LLaVA-1.5-7B on Indiana University Held-Out Test Cohort ($N = 422$)}
+\label{tab:cxr_comparison}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Metric / Evaluation Dimension} & \textbf{MedGemma-4B (Pretrained)} & \textbf{LLaVA-1.5-7B (Fine-Tuned)} & \textbf{Absolute Delta ($\Delta$)} & \textbf{Statistical 95\% CI / Note} \\
+\midrule
+Evaluation Cohort Size ($N$)           & 422 & 422 & 0 & Patient-separated split \\
+Ground Truth Abnormal ($P$)            & 211 & 211 & 0 & Indiana University Open-i \\
+Ground Truth Normal ($N$)              & 211 & 211 & 0 & Indiana University Open-i \\
+\midrule
+True Positives ($TP$)                  & 67 & 177 & +110 & Correctly detected abnormal \\
+True Negatives ($TN$)                  & 207 & 198 & -9 & Correctly detected normal \\
+False Positives ($FP$)                 & 4 & 13 & +9 & Type I errors \\
+False Negatives ($FN$)                 & 144 & 34 & -110 & Type II errors (Missed pathology) \\
+\midrule
+Standard Accuracy                      & 64.93\% & 88.86\% & +23.93\% & Wilson CI: [85.50%, 91.52%] \\
+Balanced Accuracy                      & 64.93\% & 88.86\% & +23.93\% & Mean of sensitivity and specificity \\
+Sensitivity / Recall (Abnormal)        & 31.75\% & 83.89\% & +52.13\% & Wilson CI: [78.33%, 88.23%] \\
+Specificity (Normal)                   & 98.10\% & 93.84\% & -4.27\% & Wilson CI: [89.75%, 96.36%] \\
+Precision (PPV - Abnormal)             & 94.37\% & 93.16\% & -1.21\% & Wilson CI: [88.65%, 95.96%] \\
+Negative Predictive Value (NPV)        & 58.97\% & 85.34\% & +26.37\% & Precision of normal class \\
+Abnormal $F_1$-Score                   & 47.52\% & 88.28\% & +40.76\% & Harmonic mean of PPV and Recall \\
+Normal $F_1$-Score                     & 73.67\% & 89.39\% & +15.73\% & Harmonic mean of NPV and Specificity \\
+Macro-Averaged $F_1$                   & 60.59\% & 88.83\% & +28.24\% & Unweighted class mean \\
+Weighted $F_1$-Score                   & 60.59\% & 88.83\% & +28.24\% & Class-prevalence weighted \\
+Matthews Correlation Coeff. (MCC)      & +0.3991 & +0.7811 & +0.3821 & Range: $[-1.0, +1.0]$ \\
+Cohen's Kappa ($\kappa$)               & +0.2986 & +0.7773 & +0.4787 & Inter-annotator agreement \\
+\midrule
+Mean Inference Latency                 & $\sim$8,500 ms (Colab T4) & 2433.3 ms & --- & RTX 4090 batch throughput: 0.41 cases/s \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ------------------------------------------------------------------------------
+% TABLE II: Confusion Matrix Breakdown
+% ------------------------------------------------------------------------------
+\begin{table}[h]
+\centering
+\caption{Confusion Matrix Contingency Table: Normal vs. Abnormal Radiograph Studies ($N=422$)}
+\label{tab:cm_contingency}
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{\textbf{MedGemma-4B (Pretrained)}} & \multicolumn{2}{c}{\textbf{LLaVA-1.5-7B (Fine-Tuned)}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+\textbf{Ground Truth} & \textbf{Pred. Normal} & \textbf{Pred. Abnormal} & \textbf{Pred. Normal} & \textbf{Pred. Abnormal} \\
+\midrule
+Actual Normal ($n=211$)   & 207 (TN) & 4 (FP) & 198 (TN) & 13 (FP) \\
+Actual Abnormal ($n=211$) & 144 (FN) & 67 (TP) & 34 (FN) & 177 (TP) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ------------------------------------------------------------------------------
+% TABLE III: Cross-Dataset Generalization Status
+% ------------------------------------------------------------------------------
+\begin{table}[h]
+\centering
+\caption{Cross-Dataset Generalization Audit}
+\label{tab:cross_dataset}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Dataset} & \textbf{Evaluated Cases} & \textbf{Status} & \textbf{Limitation} \\
+\midrule
+Indiana University Open-i & 422 & Completed & In-distribution held-out \\
+External CXR Cohort & 0 & NOT COMPLETED & Unavailable on local hardware \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

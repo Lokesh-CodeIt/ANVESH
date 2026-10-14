@@ -1,0 +1,45 @@
+% ==============================================================================
+% IEEE RESEARCH PAPER TABLES: ANVESH IMAGE-ONLY MULTIMODAL CXR BENCHMARK
+% Pure Visual Evaluation (Zero Clinical Dictation in Input Prompts)
+% ==============================================================================
+
+\documentclass{IEEEtran}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{table*}[t]
+\centering
+\caption{Comparative Diagnostic Performance on Pure Radiograph Pixels ($N = 422$ Held-Out Cohort)}
+\label{tab:image_only_comparison}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric / Evaluation Dimension} & \textbf{llava\_image\_only} & \textbf{llava\_base\_zeroshot} & \textbf{llava\_text\_adapter\_ablation} \\
+\midrule
+Total Cases (N) & 422 & 422 & 422 \\
+Ground Truth Positives (Abnormal) & 211 & 211 & 211 \\
+Ground Truth Negatives (Normal) & 211 & 211 & 211 \\
+True Positives (TP) & 211 & 0 & 0 \\
+True Negatives (TN) & 0 & 211 & 211 \\
+False Positives (FP) & 211 & 0 & 0 \\
+False Negatives (FN) & 0 & 211 & 211 \\
+Accuracy & 50.00\% & 50.00\% & 50.00\% \\
+Balanced Accuracy & 50.00\% & 50.00\% & 50.00\% \\
+Sensitivity / Recall (Abnormal) & 100.00\% & 0.00\% & 0.00\% \\
+Specificity (Normal) & 0.00\% & 100.00\% & 100.00\% \\
+Precision (PPV - Abnormal) & 50.00\% & 0.00\% & 0.00\% \\
+Negative Predictive Value (NPV) & 0.00\% & 50.00\% & 50.00\% \\
+F1-Score (Abnormal) & 66.67\% & 0.00\% & 0.00\% \\
+F1-Score (Normal) & 0.00\% & 66.67\% & 66.67\% \\
+Macro F1-Score & 33.33\% & 33.33\% & 33.33\% \\
+Weighted F1-Score & 33.33\% & 33.33\% & 33.33\% \\
+Matthews Correlation Coefficient (MCC) & 0.0000 & 0.0000 & 0.0000 \\
+Cohen's Kappa & 0.0000 & 0.0000 & 0.0000 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\end{document}

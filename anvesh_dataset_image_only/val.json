@@ -1,0 +1,1690 @@
+[
+  {
+    "case_id": 1387,
+    "image_path": "images/cxr_1387.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 42,
+    "image_path": "images/cxr_42.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 368,
+    "image_path": "images/cxr_368.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1011,
+    "image_path": "images/cxr_1011.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1814,
+    "image_path": "images/cxr_1814.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3503,
+    "image_path": "images/cxr_3503.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2332,
+    "image_path": "images/cxr_2332.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 704,
+    "image_path": "images/cxr_704.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 75,
+    "image_path": "images/cxr_75.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3430,
+    "image_path": "images/cxr_3430.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3359,
+    "image_path": "images/cxr_3359.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2012,
+    "image_path": "images/cxr_2012.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3417,
+    "image_path": "images/cxr_3417.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1256,
+    "image_path": "images/cxr_1256.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1480,
+    "image_path": "images/cxr_1480.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2545,
+    "image_path": "images/cxr_2545.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3419,
+    "image_path": "images/cxr_3419.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2337,
+    "image_path": "images/cxr_2337.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 292,
+    "image_path": "images/cxr_292.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2023,
+    "image_path": "images/cxr_2023.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1308,
+    "image_path": "images/cxr_1308.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3689,
+    "image_path": "images/cxr_3689.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2693,
+    "image_path": "images/cxr_2693.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2908,
+    "image_path": "images/cxr_2908.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3238,
+    "image_path": "images/cxr_3238.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2176,
+    "image_path": "images/cxr_2176.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1332,
+    "image_path": "images/cxr_1332.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2953,
+    "image_path": "images/cxr_2953.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1603,
+    "image_path": "images/cxr_1603.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3054,
+    "image_path": "images/cxr_3054.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1764,
+    "image_path": "images/cxr_1764.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 815,
+    "image_path": "images/cxr_815.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3340,
+    "image_path": "images/cxr_3340.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1732,
+    "image_path": "images/cxr_1732.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1492,
+    "image_path": "images/cxr_1492.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 896,
+    "image_path": "images/cxr_896.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 271,
+    "image_path": "images/cxr_271.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2371,
+    "image_path": "images/cxr_2371.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2665,
+    "image_path": "images/cxr_2665.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2715,
+    "image_path": "images/cxr_2715.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 98,
+    "image_path": "images/cxr_98.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3189,
+    "image_path": "images/cxr_3189.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3067,
+    "image_path": "images/cxr_3067.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1,
+    "image_path": "images/cxr_1.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1411,
+    "image_path": "images/cxr_1411.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 863,
+    "image_path": "images/cxr_863.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 699,
+    "image_path": "images/cxr_699.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2537,
+    "image_path": "images/cxr_2537.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3144,
+    "image_path": "images/cxr_3144.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 735,
+    "image_path": "images/cxr_735.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 542,
+    "image_path": "images/cxr_542.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1187,
+    "image_path": "images/cxr_1187.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1807,
+    "image_path": "images/cxr_1807.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2438,
+    "image_path": "images/cxr_2438.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1812,
+    "image_path": "images/cxr_1812.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2885,
+    "image_path": "images/cxr_2885.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3779,
+    "image_path": "images/cxr_3779.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 348,
+    "image_path": "images/cxr_348.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3288,
+    "image_path": "images/cxr_3288.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3450,
+    "image_path": "images/cxr_3450.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2380,
+    "image_path": "images/cxr_2380.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2666,
+    "image_path": "images/cxr_2666.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3442,
+    "image_path": "images/cxr_3442.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 79,
+    "image_path": "images/cxr_79.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2923,
+    "image_path": "images/cxr_2923.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3973,
+    "image_path": "images/cxr_3973.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3407,
+    "image_path": "images/cxr_3407.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 279,
+    "image_path": "images/cxr_279.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1698,
+    "image_path": "images/cxr_1698.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 881,
+    "image_path": "images/cxr_881.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1706,
+    "image_path": "images/cxr_1706.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1293,
+    "image_path": "images/cxr_1293.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 836,
+    "image_path": "images/cxr_836.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1554,
+    "image_path": "images/cxr_1554.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1471,
+    "image_path": "images/cxr_1471.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 318,
+    "image_path": "images/cxr_318.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2499,
+    "image_path": "images/cxr_2499.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 792,
+    "image_path": "images/cxr_792.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2701,
+    "image_path": "images/cxr_2701.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3242,
+    "image_path": "images/cxr_3242.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3234,
+    "image_path": "images/cxr_3234.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2025,
+    "image_path": "images/cxr_2025.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 901,
+    "image_path": "images/cxr_901.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 720,
+    "image_path": "images/cxr_720.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2276,
+    "image_path": "images/cxr_2276.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2342,
+    "image_path": "images/cxr_2342.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2577,
+    "image_path": "images/cxr_2577.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3233,
+    "image_path": "images/cxr_3233.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1184,
+    "image_path": "images/cxr_1184.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 859,
+    "image_path": "images/cxr_859.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2144,
+    "image_path": "images/cxr_2144.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3181,
+    "image_path": "images/cxr_3181.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 32,
+    "image_path": "images/cxr_32.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1333,
+    "image_path": "images/cxr_1333.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1831,
+    "image_path": "images/cxr_1831.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2910,
+    "image_path": "images/cxr_2910.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1350,
+    "image_path": "images/cxr_1350.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2367,
+    "image_path": "images/cxr_2367.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1483,
+    "image_path": "images/cxr_1483.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2576,
+    "image_path": "images/cxr_2576.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 861,
+    "image_path": "images/cxr_861.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1750,
+    "image_path": "images/cxr_1750.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1561,
+    "image_path": "images/cxr_1561.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2937,
+    "image_path": "images/cxr_2937.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1516,
+    "image_path": "images/cxr_1516.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2648,
+    "image_path": "images/cxr_2648.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1151,
+    "image_path": "images/cxr_1151.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2137,
+    "image_path": "images/cxr_2137.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2450,
+    "image_path": "images/cxr_2450.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3042,
+    "image_path": "images/cxr_3042.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 115,
+    "image_path": "images/cxr_115.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1099,
+    "image_path": "images/cxr_1099.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 202,
+    "image_path": "images/cxr_202.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 282,
+    "image_path": "images/cxr_282.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1168,
+    "image_path": "images/cxr_1168.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 705,
+    "image_path": "images/cxr_705.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2106,
+    "image_path": "images/cxr_2106.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 854,
+    "image_path": "images/cxr_854.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2711,
+    "image_path": "images/cxr_2711.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2030,
+    "image_path": "images/cxr_2030.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3771,
+    "image_path": "images/cxr_3771.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 494,
+    "image_path": "images/cxr_494.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1056,
+    "image_path": "images/cxr_1056.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2592,
+    "image_path": "images/cxr_2592.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3104,
+    "image_path": "images/cxr_3104.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 623,
+    "image_path": "images/cxr_623.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1589,
+    "image_path": "images/cxr_1589.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3385,
+    "image_path": "images/cxr_3385.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1213,
+    "image_path": "images/cxr_1213.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3739,
+    "image_path": "images/cxr_3739.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3664,
+    "image_path": "images/cxr_3664.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1677,
+    "image_path": "images/cxr_1677.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3102,
+    "image_path": "images/cxr_3102.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2714,
+    "image_path": "images/cxr_2714.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1847,
+    "image_path": "images/cxr_1847.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 349,
+    "image_path": "images/cxr_349.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 72,
+    "image_path": "images/cxr_72.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 864,
+    "image_path": "images/cxr_864.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 755,
+    "image_path": "images/cxr_755.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2847,
+    "image_path": "images/cxr_2847.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1659,
+    "image_path": "images/cxr_1659.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 262,
+    "image_path": "images/cxr_262.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 261,
+    "image_path": "images/cxr_261.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3773,
+    "image_path": "images/cxr_3773.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2247,
+    "image_path": "images/cxr_2247.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2008,
+    "image_path": "images/cxr_2008.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1594,
+    "image_path": "images/cxr_1594.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2439,
+    "image_path": "images/cxr_2439.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 936,
+    "image_path": "images/cxr_936.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1962,
+    "image_path": "images/cxr_1962.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2604,
+    "image_path": "images/cxr_2604.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3182,
+    "image_path": "images/cxr_3182.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1984,
+    "image_path": "images/cxr_1984.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1377,
+    "image_path": "images/cxr_1377.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2507,
+    "image_path": "images/cxr_2507.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2789,
+    "image_path": "images/cxr_2789.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1460,
+    "image_path": "images/cxr_1460.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 358,
+    "image_path": "images/cxr_358.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3589,
+    "image_path": "images/cxr_3589.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1851,
+    "image_path": "images/cxr_1851.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 15,
+    "image_path": "images/cxr_15.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3402,
+    "image_path": "images/cxr_3402.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 942,
+    "image_path": "images/cxr_942.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 758,
+    "image_path": "images/cxr_758.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3319,
+    "image_path": "images/cxr_3319.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 959,
+    "image_path": "images/cxr_959.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3227,
+    "image_path": "images/cxr_3227.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3008,
+    "image_path": "images/cxr_3008.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3016,
+    "image_path": "images/cxr_3016.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1042,
+    "image_path": "images/cxr_1042.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2300,
+    "image_path": "images/cxr_2300.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 695,
+    "image_path": "images/cxr_695.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1903,
+    "image_path": "images/cxr_1903.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3089,
+    "image_path": "images/cxr_3089.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2651,
+    "image_path": "images/cxr_2651.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1684,
+    "image_path": "images/cxr_1684.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3001,
+    "image_path": "images/cxr_3001.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3003,
+    "image_path": "images/cxr_3003.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1875,
+    "image_path": "images/cxr_1875.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 977,
+    "image_path": "images/cxr_977.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3191,
+    "image_path": "images/cxr_3191.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2803,
+    "image_path": "images/cxr_2803.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3021,
+    "image_path": "images/cxr_3021.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3730,
+    "image_path": "images/cxr_3730.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 520,
+    "image_path": "images/cxr_520.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 989,
+    "image_path": "images/cxr_989.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3477,
+    "image_path": "images/cxr_3477.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2001,
+    "image_path": "images/cxr_2001.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 328,
+    "image_path": "images/cxr_328.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 609,
+    "image_path": "images/cxr_609.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1258,
+    "image_path": "images/cxr_1258.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2655,
+    "image_path": "images/cxr_2655.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 1323,
+    "image_path": "images/cxr_1323.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3079,
+    "image_path": "images/cxr_3079.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 512,
+    "image_path": "images/cxr_512.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3858,
+    "image_path": "images/cxr_3858.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2011,
+    "image_path": "images/cxr_2011.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1165,
+    "image_path": "images/cxr_1165.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2638,
+    "image_path": "images/cxr_2638.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2506,
+    "image_path": "images/cxr_2506.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3720,
+    "image_path": "images/cxr_3720.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 34,
+    "image_path": "images/cxr_34.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3225,
+    "image_path": "images/cxr_3225.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 834,
+    "image_path": "images/cxr_834.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 1614,
+    "image_path": "images/cxr_1614.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 582,
+    "image_path": "images/cxr_582.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2997,
+    "image_path": "images/cxr_2997.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 2662,
+    "image_path": "images/cxr_2662.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  },
+  {
+    "case_id": 3426,
+    "image_path": "images/cxr_3426.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 3517,
+    "image_path": "images/cxr_3517.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"abnormal\", \"findings\": [\"Radiographic evidence of thoracic or cardiopulmonary abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "abnormal",
+    "split": "val"
+  },
+  {
+    "case_id": 2324,
+    "image_path": "images/cxr_2324.jpg",
+    "prompt": "You are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\nDetermine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\nRespond ONLY with a valid JSON object matching this schema:\n{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}",
+    "target": "{\"classification\": \"normal\", \"findings\": [\"Clear lung fields, normal cardiothoracic ratio, no acute abnormality.\"], \"confidence\": \"high\"}",
+    "classification": "normal",
+    "split": "val"
+  }
+]

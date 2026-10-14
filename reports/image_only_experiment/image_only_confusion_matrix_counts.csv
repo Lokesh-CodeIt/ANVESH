@@ -1,0 +1,4 @@
+Condition,TP,TN,FP,FN,Total
+llava_image_only,211,0,211,0,422
+llava_base_zeroshot,0,211,0,211,422
+llava_text_adapter_ablation,0,211,0,211,422

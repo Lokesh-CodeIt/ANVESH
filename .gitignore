@@ -30,6 +30,10 @@ dist-ssr/
 
 # Raw large dataset archives (31GB+, exceeds GitHub limits)
 AI_PORJECT_DATASET/
+anvesh_dataset/images/
+
+# Intermediate checkpoint step directories (preserve final_adapter)
+checkpoints_*/checkpoint-*/
 
 # Temporary and office lock files
 ~$*

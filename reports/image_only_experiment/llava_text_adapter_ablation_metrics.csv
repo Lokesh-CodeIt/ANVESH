@@ -1,0 +1,28 @@
+Metric,llava_text_adapter_ablation
+Total Cases (N),422
+Ground Truth Positives (Abnormal),211
+Ground Truth Negatives (Normal),211
+True Positives (TP),0
+True Negatives (TN),211
+False Positives (FP),0
+False Negatives (FN),211
+Accuracy,50.00%
+Accuracy 95% CI,"[45.25%, 54.75%]"
+Error Rate,50.00%
+Balanced Accuracy,50.00%
+Sensitivity / Recall (Abnormal),0.00%
+Sensitivity 95% CI,"[0.00%, 1.79%]"
+Specificity (Normal),100.00%
+Specificity 95% CI,"[98.21%, 100.00%]"
+Precision (PPV - Abnormal),0.00%
+Precision 95% CI,"[0.00%, 0.00%]"
+Negative Predictive Value (NPV),50.00%
+F1-Score (Abnormal),0.00%
+F1-Score (Normal),66.67%
+Macro F1-Score,33.33%
+Weighted F1-Score,33.33%
+Matthews Correlation Coefficient (MCC),0.0000
+Cohen's Kappa,0.0000
+Mean Latency (ms),330.5433
+Median Latency (ms),325.7026
+P95 Latency (ms),354.2361

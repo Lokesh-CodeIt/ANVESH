@@ -1,0 +1,28 @@
+Metric,LLaVA_1_5_7B_FineTuned
+Total Cases (N),422
+Ground Truth Positives (Abnormal),211
+Ground Truth Negatives (Normal),211
+True Positives (TP),177
+True Negatives (TN),198
+False Positives (FP),13
+False Negatives (FN),34
+Accuracy,88.86%
+Accuracy 95% CI,"[85.50%, 91.52%]"
+Error Rate,11.14%
+Balanced Accuracy,88.86%
+Sensitivity / Recall (Abnormal),83.89%
+Sensitivity 95% CI,"[78.33%, 88.23%]"
+Specificity (Normal),93.84%
+Specificity 95% CI,"[89.75%, 96.36%]"
+Precision (PPV - Abnormal),93.16%
+Precision 95% CI,"[88.65%, 95.96%]"
+Negative Predictive Value (NPV),85.34%
+F1-Score (Abnormal),88.28%
+F1-Score (Normal),89.39%
+Macro F1-Score,88.83%
+Weighted F1-Score,88.83%
+Matthews Correlation Coefficient (MCC),0.7811
+Cohen's Kappa,0.7773
+Mean Latency (ms),2433.2542
+Median Latency (ms),2650.9685
+P95 Latency (ms),2902.7703

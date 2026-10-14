@@ -1,0 +1,28 @@
+Metric,llava_image_only
+Total Cases (N),422
+Ground Truth Positives (Abnormal),211
+Ground Truth Negatives (Normal),211
+True Positives (TP),211
+True Negatives (TN),0
+False Positives (FP),211
+False Negatives (FN),0
+Accuracy,50.00%
+Accuracy 95% CI,"[45.25%, 54.75%]"
+Error Rate,50.00%
+Balanced Accuracy,50.00%
+Sensitivity / Recall (Abnormal),100.00%
+Sensitivity 95% CI,"[98.21%, 100.00%]"
+Specificity (Normal),0.00%
+Specificity 95% CI,"[0.00%, 1.79%]"
+Precision (PPV - Abnormal),50.00%
+Precision 95% CI,"[45.25%, 54.75%]"
+Negative Predictive Value (NPV),0.00%
+F1-Score (Abnormal),66.67%
+F1-Score (Normal),0.00%
+Macro F1-Score,33.33%
+Weighted F1-Score,33.33%
+Matthews Correlation Coefficient (MCC),0.0000
+Cohen's Kappa,0.0000
+Mean Latency (ms),419.5801
+Median Latency (ms),417.5864
+P95 Latency (ms),460.5663

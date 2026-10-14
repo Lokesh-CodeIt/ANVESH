@@ -1,0 +1,7 @@
+{
+  "step": 184,
+  "epoch": 0,
+  "timestamp": 1791981305.6198068,
+  "model_id": "llava-hf/llava-1.5-7b-hf",
+  "task": "image_only"
+}

@@ -1,0 +1,3800 @@
+[
+  {
+    "case_id": 248,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 988,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2573,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 270,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 450,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 314,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 590,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1047,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 249.18211249996602,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 336,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1627,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1117,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal anatomy\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 367,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3704,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3002,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2377,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1685,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.57017499998665,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3557,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2811,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2070,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 191,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2860,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2277,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1895,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3282,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8685499999865,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1537,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2298,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2518,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1919,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 407,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1868,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 994,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1878,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 207.06016249999948,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2593,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3657,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2880,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 739,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 274,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3110,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2375,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1153,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.37776250003526,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 544,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3969,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1300,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3600,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1177,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1421,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3914,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and no visible abnormalities\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3893,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 219.7303875000216,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 606,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1794,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1761,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 964,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3316,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1337,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1777,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3977,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7403874999818,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2527,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1354,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2584,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1852,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2709,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2162,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3767,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1975,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.1966249999805,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 533,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1803,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2771,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1072,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1180,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3157,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1647,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3109,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 208.48780000000033,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3940,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 560,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2459,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 185,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1049,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2024,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2079,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2683,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.8769500000326,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2873,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 179,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 700,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1688,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 615,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2841,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 420,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1204,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.68756249997023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 167,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 605,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2804,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3529,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2877,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3970,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal anatomy and no abnormalities observed\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2060,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2915,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 222.72190000001046,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 793,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2329,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 516,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 484,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3550,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2099,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3092,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2764,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.13530000002356,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3709,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2758,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2962,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1845,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2775,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 39,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1508,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2496,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.37598749996778,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal anatomy\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3114,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3125,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3020,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2464,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3291,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1691,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2432,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 920,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.10561250001092,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1719,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2170,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3103,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 839,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3609,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1972,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 272,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3394,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8492124999657,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 594,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1979,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3872,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1703,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2792,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3875,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2075,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2299,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.33617500001856,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3820,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 997,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 641,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 948,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 325,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2899,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3429,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1980,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2987374999875,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 52,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3307,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 999,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3686,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2863,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 275,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 80,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1079,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.18005000002904,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2697,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2413,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3732,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 499,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3466,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1576,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 532,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 331,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.12525000000915,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1608,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2561,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2591,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3809,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2224,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1307,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 618,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 18,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.16657499999292,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1407,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 539,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2364,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2772,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2881,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3615,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1149,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2017,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.59748750002427,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2235,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1362,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1956,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 12,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 925,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1426,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1447,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 119,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.26877499997454,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1932,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 857,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 708,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 608,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 8,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 377,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1297,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2610,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.34281249999276,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3851,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2726,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1476,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 393,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3684,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3579,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2838,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1364,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.80699999998842,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2567,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1625,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2098,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1076,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2784,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 200,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2640,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3775,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.8707874999709,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2187,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1768,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3254,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1085,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3871,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3273,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2812,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2763,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5181749999806,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1899,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3676,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1118,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1141,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2365,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 441,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2263,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3047,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.7938249999961,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2339,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3267,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3251,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1389,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1848,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2635,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2114,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.47414999995817,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 798,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 62,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 383,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2667,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2390,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1542,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2467,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 163,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.75639999997975,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3269,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2134,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3220,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 366,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1319,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3346,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2961,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3726,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.13569999996662,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3094,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 242,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1405,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 893,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1879,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3801,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1952,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1496,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.95342500002334,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1702,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1598,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1398,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3475,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 470,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3796,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1424,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3785,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 203.66114999995943,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 827,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1616,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3722,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 737,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2385,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2392,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3595,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2118,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.6444875000193,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3976,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1070,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3728,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1949,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2091,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1928,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 378,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2061,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.5026499999999,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 778,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1304,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2110,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3623,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1081,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1942,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1838,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1774,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.29745000001776,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 527,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2948,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3561,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3280,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3321,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3361,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1023,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2264,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.36832499999036,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3994,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 982,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 656,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2855,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 326,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2115,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3285,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1541,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.58786250000594,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3048,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 302,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1314,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1253,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2148,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 866,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2725,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3258,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9286000000452,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2589,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3504,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 342,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1101,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3634,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2164,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1733,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 312,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.59738750003498,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 11,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal anatomy\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1605,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1520,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3421,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1222,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1924,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 546,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 440,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.79988750000211,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1679,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2886,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3252,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2740,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3311,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2072,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2830,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 84,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.97752499997569,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1376,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2069,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 239,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3060,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1167,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2481,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3804,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 802,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.06851250001546,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1393,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3754,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3405,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 225,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1412,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1825,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1861,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3510,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.95246250001765,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 767,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3756,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 212,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 339,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1532,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2586,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3388,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 508,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 210.9633499999859,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1618,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2311,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3952,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3074,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1361,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2243,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2494,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1550,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.2483500000053,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3584,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 774,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1927,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2180,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 796,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2538,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3029,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3783,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.3154500000055,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3805,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1503,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1779,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1633,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1624,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 145,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and heart\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3010,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2149,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.87673750001568,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1960,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3156,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2418,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1024,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3443,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2411,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1657,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2905,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 211.04887500001723,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3605,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2543,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1854,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 286,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1399,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2964,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1987,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1904,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 212.16158750002023,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3299,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3083,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1063,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 465,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 456,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 518,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3874,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2054,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.37847500001317,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3562,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 736,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2782,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 453,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3434,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1872,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1964,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3499,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 213.0731500000138,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribcage\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1316,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 221.9699166666942,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 2967,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 221.9699166666942,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3592,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 221.9699166666942,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 3495,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 221.9699166666942,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1139,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "abnormal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 221.9699166666942,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal lungs and ribs\"],\n\"confidence\": \"high\"\n}"
+  },
+  {
+    "case_id": 1661,
+    "condition": "llava_base_zeroshot",
+    "ground_truth": "normal",
+    "prediction": "normal",
+    "is_valid_json": true,
+    "latency_ms": 221.9699166666942,
+    "raw_output": "{\n\"classification\": \"normal\",\n\"findings\": [\"normal chest radiograph\"],\n\"confidence\": \"high\"\n}"
+  }
+]
