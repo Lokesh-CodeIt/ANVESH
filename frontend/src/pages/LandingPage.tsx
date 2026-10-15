@@ -26,7 +26,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
   return (
     <div className="anvesh-landing-page">
-      <Preloader onComplete={() => {}} />
 
       <main id="main-content" tabIndex={-1}>
         <ErrorBoundary fallbackTitle="Clinical Overview Scene">

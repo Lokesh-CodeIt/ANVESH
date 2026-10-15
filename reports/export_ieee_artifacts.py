@@ -223,6 +223,9 @@ def export_all():
     print("Successfully exported all IEEE tables, CSVs, JSON summaries, and PNG figures!")
 
 def generate_latex_source(m_mg, m_llava):
+    mg_kappa = m_mg.get("Cohen's Kappa", 0.0)
+    llava_kappa = m_llava.get("Cohen's Kappa", 0.0)
+    delta_kappa = llava_kappa - mg_kappa
     return r"""% ==============================================================================
 % IEEE RESEARCH PAPER TABLES: ANVESH MULTIMODAL CXR BENCHMARK
 % Head-to-Head Comparative Study: Fine-Tuned LLaVA-1.5-7B vs. Pretrained MedGemma-4B
@@ -267,7 +270,7 @@ Normal $F_1$-Score                     & """ + f"{m_mg['F1-Score (Normal)']*100:
 Macro-Averaged $F_1$                   & """ + f"{m_mg['Macro F1-Score']*100:.2f}\\%" + r""" & """ + f"{m_llava['Macro F1-Score']*100:.2f}\\%" + r""" & """ + f"{(m_llava['Macro F1-Score'] - m_mg['Macro F1-Score'])*100:+.2f}\\%" + r""" & Unweighted class mean \\
 Weighted $F_1$-Score                   & """ + f"{m_mg['Weighted F1-Score']*100:.2f}\\%" + r""" & """ + f"{m_llava['Weighted F1-Score']*100:.2f}\\%" + r""" & """ + f"{(m_llava['Weighted F1-Score'] - m_mg['Weighted F1-Score'])*100:+.2f}\\%" + r""" & Class-prevalence weighted \\
 Matthews Correlation Coeff. (MCC)      & """ + f"{m_mg['Matthews Correlation Coefficient (MCC)']:+.4f}" + r""" & """ + f"{m_llava['Matthews Correlation Coefficient (MCC)']:+.4f}" + r""" & """ + f"{m_llava['Matthews Correlation Coefficient (MCC)'] - m_mg['Matthews Correlation Coefficient (MCC)']:+.4f}" + r""" & Range: $[-1.0, +1.0]$ \\
-Cohen's Kappa ($\kappa$)               & """ + f"{m_mg['Cohen\'s Kappa']:+.4f}" + r""" & """ + f"{m_llava['Cohen\'s Kappa']:+.4f}" + r""" & """ + f"{m_llava['Cohen\'s Kappa'] - m_mg['Cohen\'s Kappa']:+.4f}" + r""" & Inter-annotator agreement \\
+Cohen's Kappa ($\kappa$)               & """ + f"{mg_kappa:+.4f}" + r""" & """ + f"{llava_kappa:+.4f}" + r""" & """ + f"{delta_kappa:+.4f}" + r""" & Inter-annotator agreement \\
 \midrule
 Mean Inference Latency                 & $\sim$8,500 ms (Colab T4) & """ + f"{m_llava.get('Mean Latency (ms)', 0.0):.1f} ms" + r""" & --- & RTX 4090 batch throughput: """ + f"{1000.0/max(m_llava.get('Mean Latency (ms)', 1.0), 0.1):.2f}" + r""" cases/s \\
 \bottomrule
@@ -314,6 +317,9 @@ External CXR Cohort & 0 & NOT COMPLETED & Unavailable on local hardware \\
 """
 
 def generate_markdown_tables(m_mg, m_llava):
+    mg_kappa = m_mg.get("Cohen's Kappa", 0.0)
+    llava_kappa = m_llava.get("Cohen's Kappa", 0.0)
+    delta_kappa = llava_kappa - mg_kappa
     return f"""# ANVESH Multimodal Benchmark: IEEE Research Tables
 
 ## Table I: Head-to-Head Comparative Results (Held-Out Test Cohort, N = 422)
@@ -338,7 +344,7 @@ def generate_markdown_tables(m_mg, m_llava):
 | **Macro $F_1$-Score** | {m_mg['Macro F1-Score']*100:.2f}% | {m_llava['Macro F1-Score']*100:.2f}% | {(m_llava['Macro F1-Score'] - m_mg['Macro F1-Score'])*100:+.2f}% | Unweighted class average |
 | **Weighted $F_1$-Score** | {m_mg['Weighted F1-Score']*100:.2f}% | {m_llava['Weighted F1-Score']*100:.2f}% | {(m_llava['Weighted F1-Score'] - m_mg['Weighted F1-Score'])*100:+.2f}% | Prevalence-weighted class average |
 | **Matthews Corr. Coeff. (MCC)** | {m_mg['Matthews Correlation Coefficient (MCC)']:+.4f} | {m_llava['Matthews Correlation Coefficient (MCC)']:+.4f} | {m_llava['Matthews Correlation Coefficient (MCC)'] - m_mg['Matthews Correlation Coefficient (MCC)']:+.4f} | Pearson correlation for binary classification |
-| **Cohen's Kappa ($\kappa$)** | {m_mg['Cohen\'s Kappa']:+.4f} | {m_llava['Cohen\'s Kappa']:+.4f} | {m_llava['Cohen\'s Kappa'] - m_mg['Cohen\'s Kappa']:+.4f} | Agreement beyond chance |
+| **Cohen's Kappa ($\kappa$)** | {mg_kappa:+.4f} | {llava_kappa:+.4f} | {delta_kappa:+.4f} | Agreement beyond chance |
 | **Inference Latency** | ~8,500 ms (Colab T4) | {m_llava.get('Mean Latency (ms)', 0.0):.1f} ms | Local RTX 4090 | Measured batch execution |
 
 ---

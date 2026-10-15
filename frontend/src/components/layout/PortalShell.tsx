@@ -40,8 +40,32 @@ interface PortalShellProps {
 
 export const PortalShell: React.FC<PortalShellProps> = ({ onNavigatePublic }) => {
   const { role, isDesignPreview, isAuthenticated, enterDesignPreview, isLoadingSession } = useAuth();
-  const [currentSection, setCurrentSection] = useState('dashboard');
-  const [activeCaseId, setActiveCaseId] = useState<string>(() => isDesignPreview ? 'DEMO-CASE-101' : 'CASE_000001');
+  const [currentSection, setCurrentSection] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname;
+      if (path.includes('/workspace')) return 'workspace';
+      if (path.includes('/queue')) return 'queue';
+      if (path.includes('/history')) return 'history';
+      if (path.includes('/policies')) return 'policies';
+      if (path.includes('/analytics')) return 'analytics';
+      if (path.includes('/admin')) return 'admin';
+      const params = new URLSearchParams(window.location.search);
+      const sec = params.get('section');
+      if (sec) return sec;
+    }
+    return 'dashboard';
+  });
+  const [activeCaseId, setActiveCaseId] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname;
+      const match = path.match(/CASE_\d+|AUTH-[A-Za-z0-9-]+|DEMO-[A-Za-z0-9-]+/i);
+      if (match) return match[0];
+      const params = new URLSearchParams(window.location.search);
+      const c = params.get('caseId');
+      if (c) return c;
+    }
+    return isDesignPreview ? 'DEMO-CASE-101' : 'CASE_000001';
+  });
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   // Loading state while checking session

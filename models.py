@@ -11,7 +11,13 @@ from sqlalchemy import (
     func
 )
 from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.ext.compiler import compiles
 from sqlalchemy.orm import relationship
+
+# Enable PostgreSQL JSONB type compatibility on SQLite
+@compiles(JSONB, "sqlite")
+def compile_jsonb_sqlite(type_, compiler, **kw):
+    return "JSON"
 
 from database import Base
 

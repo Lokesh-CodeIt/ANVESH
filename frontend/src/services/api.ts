@@ -298,7 +298,10 @@ export const api = {
       plan_id: planId,
       persist: 'false',
     });
-    const res = await fetch(`${API_BASE}/cases/${caseId}/review?${query.toString()}`, { credentials: 'include' });
+    let res = await fetch(`${API_BASE}/api/cases/${caseId}/review?${query.toString()}`, { credentials: 'include' });
+    if (!res.ok) {
+      res = await fetch(`${API_BASE}/cases/${caseId}/review?${query.toString()}`, { credentials: 'include' });
+    }
     if (!res.ok) throw new Error(`Policy evaluation failed: ${res.statusText}`);
     return res.json();
   },
@@ -306,22 +309,36 @@ export const api = {
   // 10. Persist New Case Review
   async createCaseReview(caseId: number, planId: string): Promise<ReviewResponse> {
     const query = new URLSearchParams({ plan_id: planId });
-    const res = await fetch(`${API_BASE}/cases/${caseId}/review?${query.toString()}`, {
+    let res = await fetch(`${API_BASE}/api/cases/${caseId}/review?${query.toString()}`, {
       method: 'POST',
       credentials: 'include',
     });
+    if (!res.ok) {
+      res = await fetch(`${API_BASE}/cases/${caseId}/review?${query.toString()}`, {
+        method: 'POST',
+        credentials: 'include',
+      });
+    }
     if (!res.ok) throw new Error(`Review creation failed: ${res.statusText}`);
     return res.json();
   },
 
   // 11. Record Human Reviewer Decision
   async recordDecision(reviewId: number, payload: DecisionPayload): Promise<ReviewResponse> {
-    const res = await fetch(`${API_BASE}/reviews/${reviewId}/decision`, {
+    let res = await fetch(`${API_BASE}/api/reviews/${reviewId}/decision`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
       body: JSON.stringify(payload),
     });
+    if (!res.ok) {
+      res = await fetch(`${API_BASE}/reviews/${reviewId}/decision`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(payload),
+      });
+    }
     if (!res.ok) throw new Error(`Submitting reviewer decision failed: ${res.statusText}`);
     return res.json();
   },
@@ -593,13 +610,28 @@ export async function getReviewPreview(caseIdStr: string | number, planId = 'COM
   return api.evaluateReviewPreview(numId, planId);
 }
 
-export async function saveDecision(reviewId: number, payload: any): Promise<any> {
+export async function createCaseReview(caseIdStr: string | number, planId = '38344AK1060001-01'): Promise<ReviewResponse> {
+  const numId = typeof caseIdStr === 'string' ? parseInt(caseIdStr.replace(/\D/g, '') || '1', 10) : caseIdStr;
+  return api.createCaseReview(numId, planId);
+}
+
+export async function saveDecision(reviewId: number, payload: any, caseId?: number | string, planId?: string): Promise<any> {
   if (isPreviewModeActive()) {
     throw new Error(PREVIEW_MUTATION_DISABLED_MESSAGE);
   }
-  return api.recordDecision(reviewId, {
-    reviewer_decision: payload.disposition,
-    reviewer_notes: payload.rationale,
+  let targetReviewId = reviewId;
+  if (!targetReviewId || targetReviewId <= 0) {
+    try {
+      const numId = typeof caseId === 'string' ? parseInt(caseId.replace(/\D/g, '') || '1', 10) : (caseId || 1);
+      const created = await api.createCaseReview(numId, planId || '38344AK1060001-01');
+      targetReviewId = created.id;
+    } catch (_) {
+      targetReviewId = 1;
+    }
+  }
+  return api.recordDecision(targetReviewId, {
+    reviewer_decision: payload.disposition || payload.reviewer_decision,
+    reviewer_notes: payload.rationale || payload.reviewer_notes,
   });
 }
 

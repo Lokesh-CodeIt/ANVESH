@@ -40,3 +40,7 @@ checkpoints_*/checkpoint-*/
 *.tmp
 .vscode/
 .idea/
+
+# Local databases and runtime uploads
+*.db
+uploads/submissions/
