@@ -1,0 +1,20 @@
+{
+  "architecture": "vit_b_16",
+  "pretrained_weights": "ViT_B_16_Weights.IMAGENET1K_V1",
+  "num_classes": 2,
+  "class_mapping": {
+    "normal": 0,
+    "abnormal": 1
+  },
+  "epochs": 15,
+  "batch_size": 32,
+  "backbone_lr": 2e-05,
+  "head_lr": 0.0002,
+  "weight_decay": 0.01,
+  "seed": 42,
+  "device": "cuda",
+  "train_samples": 1474,
+  "val_samples": 211,
+  "torch_version": "2.6.0+cu124",
+  "torchvision_version": "0.21.0"
+}

@@ -229,5 +229,55 @@
 - **Regression Suite:** Added `tests/test_image_only_diagnosis.py` (5 tests). Total test suite expanded to **27/27 PASSED** in 0.100s.
 - **Status:** **DIAGNOSED, VERIFIED, & FULLY AUDITED**.
 
+---
 
+## Stage 14: Vision Transformer (ViT-B/16) CXR Pipeline Implementation, Training & Test Evaluation
 
+- **Date:** October 2026
+- **Investigator / Assistant:** Antigravity Autonomous Research Assistant
+- **Mandate:** Implement, train, evaluate, and verify a dedicated Vision Transformer (ViT-B/16) for pure image-only normal-vs-abnormal CXR classification, preserving all existing LLaVA and MedGemma work.
+
+### 1. Dataset Verification & Modality Isolation
+- **Dataset Partitioning Verified:**
+  - `anvesh_dataset_image_only/train.json`: 1,474 studies (737 normal, 737 abnormal; 50.0% balance)
+  - `anvesh_dataset_image_only/val.json`: 211 studies (106 normal, 105 abnormal)
+  - `anvesh_dataset_image_only/test.json`: 422 studies (211 normal, 211 abnormal; 50.0% balance)
+  - Pairwise Overlap: $\text{Train} \cap \text{Val} = \emptyset$, $\text{Train} \cap \text{Test} = \emptyset$, $\text{Val} \cap \text{Test} = \emptyset$
+  - Physical Image Audit: 2,107 images verified on disk; 0 missing, 0 unreadable.
+- **Modality Isolation:** Pure RGB pixel input ($224 \times 224$). Zero clinical prompt text, radiologist dictations, or impressions.
+
+### 2. ViT-B/16 Architecture & Training Implementation
+- **Script:** `train_vit_image_only.py`
+- **Architecture:** `torchvision.models.vit_b_16` initialized with ImageNet-1k pretrained weights (`ViT_B_16_Weights.IMAGENET1K_V1`).
+- **Head:** Linear projection $768 \to 2$ (`normal`: 0, `abnormal`: 1). Total parameters: 85.8 M.
+- **Data Augmentation (Train Only):** Conservative resizing, random resized cropping ($0.85$–$1.0$), $\pm 7^\circ$ rotation, mild color jitter ($\pm 0.1$). Random horizontal flip strictly omitted to preserve anatomical left-right asymmetry.
+- **Optimization:** AdamW with differential learning rates (backbone $2\times 10^{-5}$, head $2\times 10^{-4}$, weight decay $0.01$), CosineAnnealingLR, batch size 32, cross-entropy loss, seed 42.
+- **Hardware & Execution:** Local NVIDIA GeForce RTX 4090 24GB VRAM. 15 epochs executed in 642.62 seconds (~34s/epoch).
+- **Validation-Driven Model Selection:** Monitored validation loss and macro-F1 across all 15 epochs. Best model selected at Epoch 7 (Val Loss: 0.5038, Val Acc: 75.83%, Val AUC: 0.8358). Saved to `checkpoints_vit_image_only/best_vit_model.pt`.
+
+### 3. Fair Held-Out Test Evaluation (N = 422 Cases)
+- **Script:** `evaluate_vit_image_only.py`
+- **Prior Test Set Disclosure:** The 422-case held-out test split was previously examined during multimodal benchmark auditing. Strictly compliant with scientific guidelines, the test set was NOT used for hyperparameter tuning, model selection, or threshold optimization.
+- **Test Results ($N = 422$, 211 Normal, 211 Abnormal):**
+  - Contingency Counts: $TP = 140, TN = 136, FP = 75, FN = 71$
+  - Accuracy: **65.40%** (95% CI: [60.74%, 69.78%])
+  - Balanced Accuracy: **65.40%**
+  - Sensitivity / Recall: **66.35%** (95% CI: [59.73%, 72.38%])
+  - Specificity: **64.45%** (95% CI: [57.79%, 70.60%])
+  - Precision (PPV): **65.12%** (95% CI: [58.53%, 71.17%])
+  - Negative Predictive Value (NPV): **65.70%**
+  - Macro F1-Score: **65.40%**
+  - Matthews Correlation Coefficient (MCC): **+0.3081**
+  - Cohen's Kappa ($\kappa$): **0.3081**
+  - ROC-AUC: **0.7062** (95% CI: [0.6552, 0.7569])
+  - PR-AUC: **0.7187**
+  - GPU Forward Latency: Mean **17.25 ms** (Median 13.48 ms, P95 30.28 ms)
+
+### 4. Resolution of Multimodal Representation Collapse
+- Contrasted with LLaVA-1.5-7B image-only adapter ($TP=211, TN=0$, all-abnormal collapse, Acc 50.00%, MCC 0.0000) and base LLaVA ($TP=0, TN=211$, all-normal collapse, Acc 50.00%, MCC 0.0000), fine-tuned ViT-B/16 achieves balanced sensitivity and specificity, yielding an MCC of +0.3081 and ROC-AUC of 0.7062 without text assistance.
+- Forward latency is reduced by 24.3x (17.25 ms vs. 419.58 ms).
+
+### 5. Verification & Research Artifact Export
+- All 11 dedicated ViT artifacts physically verified in `reports/image_only_experiment/vit/` and `checkpoints_vit_image_only/`.
+- Automated unit test suite expanded with `tests/test_vit_artifacts.py` covering split counts, schema conformance, probability bounds, and metric concordance.
+- **Status:** **COMPLETED, FULLY AUDITED & VERIFIED**.

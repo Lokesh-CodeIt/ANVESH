@@ -1,0 +1,2 @@
+Model,Total_N,TP,TN,FP,FN,Accuracy_pct,Sensitivity_pct,Specificity_pct,Precision_pct,Macro_F1_pct,MCC,ROC_AUC
+vit_b_16_image_only,422,140,136,75,71,65.40%,66.35%,64.45%,65.12%,65.40%,0.3081,0.7062

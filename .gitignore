@@ -32,8 +32,9 @@ dist-ssr/
 AI_PORJECT_DATASET/
 anvesh_dataset/images/
 
-# Intermediate checkpoint step directories (preserve final_adapter)
+# Intermediate checkpoint step directories and resumption checkpoints
 checkpoints_*/checkpoint-*/
+checkpoints_*/checkpoint_last.pt
 
 # Temporary and office lock files
 ~$*

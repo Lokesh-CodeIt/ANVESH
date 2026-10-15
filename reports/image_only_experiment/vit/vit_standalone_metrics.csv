@@ -1,0 +1,32 @@
+Metric,vit_b_16_image_only
+Total Cases (N),422
+Ground Truth Positives (Abnormal),211
+Ground Truth Negatives (Normal),211
+True Positives (TP),140
+True Negatives (TN),136
+False Positives (FP),75
+False Negatives (FN),71
+Accuracy,65.40%
+Accuracy 95% CI,"[60.74%, 69.78%]"
+Error Rate,34.60%
+Balanced Accuracy,65.40%
+Sensitivity / Recall (Abnormal),66.35%
+Sensitivity 95% CI,"[59.73%, 72.38%]"
+Specificity (Normal),64.45%
+Specificity 95% CI,"[57.79%, 70.60%]"
+Precision (PPV - Abnormal),65.12%
+Precision 95% CI,"[58.53%, 71.17%]"
+Negative Predictive Value (NPV),65.70%
+F1-Score (Abnormal),65.73%
+F1-Score (Normal),65.07%
+Macro F1-Score,65.40%
+Weighted F1-Score,65.40%
+Matthews Correlation Coefficient (MCC),0.3081
+Cohen's Kappa,0.3081
+ROC-AUC,0.7062
+ROC-AUC 95% CI,"[0.6552, 0.7569]"
+PR-AUC,0.7187
+Mean Latency (ms),17.2475
+Median Latency (ms),13.4787
+P95 Latency (ms),30.2843
+Latency Std (ms),9.2107

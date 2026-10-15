@@ -1,0 +1,30 @@
+% IEEE Table: ViT vs. Multimodal Baselines on Pure Image-Only CXR Classification
+\begin{table*}[t]
+\centering
+\caption{Comparative Performance on Held-Out Indiana University Open-i Chest Radiographs ($N = 422$) Under Pure Image-Only Supervision}
+\label{tab:vit_image_only_comparison}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Metric} & \textbf{ViT-B/16 (Ours)} & \textbf{LLaVA Adapter} & \textbf{LLaVA Base} & \textbf{Text-Ablation} & \textbf{MedGemma-4B} \\
+& (Fine-Tuned) & (Fine-Tuned) & (Zero-Shot) & (Ablated) & (Pretrained) \\
+\midrule
+Total Cases (N) & 422 & 422 & 422 & 422 & BLOCKED \\
+True Positives (TP) & 140 & 211 & 0 & 0 & BLOCKED \\
+True Negatives (TN) & 136 & 0 & 211 & 211 & BLOCKED \\
+False Positives (FP) & 75 & 211 & 0 & 0 & BLOCKED \\
+False Negatives (FN) & 71 & 0 & 211 & 211 & BLOCKED \\
+Accuracy & 65.40\% & 50.00\% & 50.00\% & 50.00\% & BLOCKED \\
+Balanced Accuracy & 65.40\% & 50.00\% & 50.00\% & 50.00\% & BLOCKED \\
+Sensitivity / Recall (Abnormal) & 66.35\% & 100.00\% & 0.00\% & 0.00\% & BLOCKED \\
+Specificity (Normal) & 64.45\% & 0.00\% & 100.00\% & 100.00\% & BLOCKED \\
+Precision (PPV - Abnormal) & 65.12\% & 50.00\% & 0.00\% & 0.00\% & BLOCKED \\
+Macro F1-Score & 65.40\% & 33.33\% & 33.33\% & 33.33\% & BLOCKED \\
+Matthews Correlation Coefficient (MCC) & 0.3081 & 0.0000 & 0.0000 & 0.0000 & BLOCKED \\
+Cohen's Kappa & 0.3081 & 0.0000 & 0.0000 & 0.0000 & BLOCKED \\
+ROC-AUC & 0.7062 & N/A & N/A & N/A & BLOCKED \\
+Mean Latency (ms) & 17.2475 & 419.5801 & 212.2753 & 330.5433 & BLOCKED \\
+\bottomrule
+\end{tabular}
+\vspace{1ex}
+{\footnotesize \textit{Note:} MedGemma-4B-IT was blocked from local image-only evaluation due to Hugging Face token gating restrictions. All values verified against disk manifests.}
+\end{table*}

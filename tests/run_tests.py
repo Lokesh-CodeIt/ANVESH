@@ -16,6 +16,7 @@ from tests.test_benchmark_integrity import (
 from tests.test_final_artifacts import TestFinalArtifacts
 from tests.test_image_only_artifacts import TestImageOnlyArtifacts
 from tests.test_image_only_diagnosis import TestImageOnlyDiagnosis
+from tests.test_vit_artifacts import TestViTArtifacts
 
 class MetricFormulasTestCase(unittest.TestCase, TestMetricFormulas):
     pass
@@ -35,6 +36,7 @@ if __name__ == "__main__":
     suite.addTests(loader.loadTestsFromTestCase(TestFinalArtifacts))
     suite.addTests(loader.loadTestsFromTestCase(TestImageOnlyArtifacts))
     suite.addTests(loader.loadTestsFromTestCase(TestImageOnlyDiagnosis))
+    suite.addTests(loader.loadTestsFromTestCase(TestViTArtifacts))
     
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)
