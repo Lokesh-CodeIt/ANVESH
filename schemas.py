@@ -238,6 +238,12 @@ class SubmissionResponse(BaseModel):
     clinical_indication: str
     prelim_findings: Optional[str] = None
     status: str
+    ai_status: str = "PENDING"
+    ai_source: Optional[str] = "NONE"
+    ai_model_version: Optional[str] = None
+    ai_evidence: Optional[Dict[str, Any]] = None
+    ai_error: Optional[str] = None
+    ai_processed_at: Optional[datetime] = None
     created_at: datetime
     submitted_at: Optional[datetime] = None
     updated_at: datetime

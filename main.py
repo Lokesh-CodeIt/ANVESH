@@ -65,6 +65,7 @@ from storage import (
     save_submission_file,
     validate_file_content,
 )
+from services.ai_service import trigger_async_submission_inference, process_submission_ai_inference
 from auth import (
     clear_session_cookie,
     create_session,
@@ -970,6 +971,12 @@ def format_submission_response(submission: Submission) -> SubmissionResponse:
         clinical_indication=submission.clinical_indication,
         prelim_findings=submission.prelim_findings,
         status=submission.status,
+        ai_status=getattr(submission, "ai_status", "PENDING") or "PENDING",
+        ai_source=getattr(submission, "ai_source", "NONE") or "NONE",
+        ai_model_version=getattr(submission, "ai_model_version", None),
+        ai_evidence=getattr(submission, "ai_evidence", None),
+        ai_error=getattr(submission, "ai_error", None),
+        ai_processed_at=getattr(submission, "ai_processed_at", None),
         created_at=submission.created_at,
         submitted_at=submission.submitted_at,
         updated_at=submission.updated_at,
@@ -1045,7 +1052,8 @@ def create_provider_submission(
             detail={"error": "Database error", "message": "Failed to create prior authorization submission."},
         )
 
-    logger.info("Created submission %s (ID %d) by provider %s", sub_ref, submission.id, current_user.email)
+    logger.info("Created submission %s (ID %d) by provider %s. Dispatching AI inference...", sub_ref, submission.id, current_user.email)
+    trigger_async_submission_inference(submission.id)
     return format_submission_response(submission)
 
 
@@ -1193,6 +1201,15 @@ async def upload_submission_file_endpoint(
         )
 
     logger.info("Uploaded file %s (ID %d) to submission %s", filename, sub_file.id, submission.submission_ref)
+    # If the file uploaded is a radiograph or image, invalidate stale evidence and trigger fresh inference
+    if category == "radiograph" or mime.startswith("image/"):
+        logger.info("New radiograph uploaded for submission %d. Invalidating stale evidence and re-triggering AI vision inference...", submission.id)
+        submission.ai_status = "PENDING"
+        submission.ai_evidence = None
+        submission.ai_source = "PROCESSING"
+        db.commit()
+        trigger_async_submission_inference(submission.id)
+
     return SubmissionFileResponse(
         id=sub_file.id,
         submission_id=sub_file.submission_id,
@@ -1480,6 +1497,60 @@ def record_submission_reviewer_decision(
 
     logger.info("Recorded decision '%s' for submission %s (ID %d) by %s", normalized, submission.submission_ref, submission.id, current_user.email)
     return format_submission_response(submission)
+
+
+@app.get("/api/insurance/submissions/{submission_id}/review", tags=["Insurance Prior Authorization"])
+@app.get("/insurance/submissions/{submission_id}/review", tags=["Insurance Prior Authorization"])
+def evaluate_submission_policy(
+    submission_id: int = Path(..., gt=0),
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """
+    Evaluates newly generated AI evidence for a submitted provider case against the selected payer policy.
+    Uses real-time ViT/LLaVA evidence rather than precomputed historical records.
+    """
+    if current_user.role not in RESEARCH_REVIEW_ROLES:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail={"error": "Forbidden", "message": f"Role '{current_user.role}' is not authorized to review submissions."},
+        )
+
+    submission = db.query(Submission).filter(Submission.id == submission_id).first()
+    if not submission:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"error": "Submission not found", "submission_id": submission_id},
+        )
+
+    # Fetch policy
+    policy = db.query(Policy).filter(Policy.plan_id == submission.payer_plan_id).first()
+    if not policy:
+        policy = db.query(Policy).first()
+
+    # If AI processing is not completed, run synchronously now so reviewer gets immediate feedback
+    if submission.ai_status != "COMPLETED" or not submission.ai_evidence:
+        logger.info("AI evidence not ready for submission %d; executing synchronous inference...", submission.id)
+        process_submission_ai_inference(submission.id)
+        db.refresh(submission)
+
+    evidence = submission.ai_evidence or {}
+    compliance = compare_evidence_to_policy(
+        evidence=evidence,
+        policy=policy,
+        has_source_text=bool(submission.prelim_findings and submission.prelim_findings.strip()),
+    )
+
+    return {
+        "submission_id": submission.id,
+        "submission_ref": submission.submission_ref,
+        "payer_plan_id": submission.payer_plan_id,
+        "ai_status": submission.ai_status,
+        "ai_source": submission.ai_source,
+        "ai_model_version": submission.ai_model_version,
+        "ai_evidence": evidence,
+        "policy_compliance": compliance,
+    }
 
 
 

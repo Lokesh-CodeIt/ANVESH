@@ -664,6 +664,12 @@ export interface SubmissionRecord {
   clinical_indication: string;
   prelim_findings?: string | null;
   status: string;
+  ai_status?: string;
+  ai_source?: string;
+  ai_model_version?: string | null;
+  ai_evidence?: any;
+  ai_error?: string | null;
+  ai_processed_at?: string | null;
   created_at: string;
   submitted_at?: string | null;
   updated_at: string;
@@ -780,5 +786,11 @@ export async function recordSubmissionDecision(
     throw new Error(typeof msg === 'string' ? msg : 'Decision recording failed');
   }
   return data;
+}
+
+export async function evaluateSubmissionPolicy(submissionId: number): Promise<any> {
+  const res = await fetch(`${API_BASE}/api/insurance/submissions/${submissionId}/review`, { credentials: 'include' });
+  if (!res.ok) throw new Error(`Failed to evaluate submission #${submissionId}: ${res.statusText}`);
+  return res.json();
 }
 

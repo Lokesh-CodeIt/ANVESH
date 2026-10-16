@@ -178,6 +178,12 @@ class Submission(Base):
     clinical_indication = Column(Text, nullable=False)
     prelim_findings = Column(Text, nullable=True)
     status = Column(String(50), default="SUBMITTED", nullable=False, index=True)
+    ai_status = Column(String(50), default="PENDING", nullable=False, index=True) # PENDING, PROCESSING, COMPLETED, FAILED
+    ai_source = Column(String(50), default="NONE", nullable=True) # REMOTE_LLAVA, LOCAL_VIT, UNPROCESSED, FAILED
+    ai_model_version = Column(String(100), nullable=True)
+    ai_evidence = Column(JSONB, nullable=True)
+    ai_error = Column(Text, nullable=True)
+    ai_processed_at = Column(DateTime(timezone=True), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     submitted_at = Column(DateTime(timezone=True), nullable=True)
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
