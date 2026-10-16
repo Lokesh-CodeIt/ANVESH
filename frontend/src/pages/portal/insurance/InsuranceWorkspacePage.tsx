@@ -260,6 +260,10 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
                 <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
                   {liveSubmission.status}
                 </span>
+                <span className="text-xs px-2.5 py-0.5 rounded-full font-semibold bg-purple-50 text-purple-700 border border-purple-200 flex items-center gap-1">
+                  <Sparkles className="w-3 h-3 text-purple-600" />
+                  {liveSubmission.ai_model_version || 'Fine-Tuned LLaVA-1.5-7B (Primary)'}
+                </span>
               </div>
               <div className="text-xs text-slate-500 mt-0.5">
                 Patient: <span className="font-medium text-slate-700">{liveSubmission.patient_name}</span> (ID: <span className="font-mono">{liveSubmission.member_id}</span>) • 
@@ -317,6 +321,63 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
                   <p className="text-[11px] text-slate-500 max-w-sm mx-auto">
                     The submitting provider has not attached medical radiograph binaries to this request.
                   </p>
+                </div>
+              )}
+            </div>
+
+            {/* Primary LLaVA Model Inference Evidence Card */}
+            <div className="bg-white border border-purple-200 rounded-xl p-5 shadow-sm space-y-3">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-purple-600" /> Primary AI Inference (Fine-Tuned LLaVA-1.5-7B)
+                </h3>
+                <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200 font-semibold">
+                  {liveSubmission.ai_model_version || 'Fine-Tuned LLaVA-1.5-7B (Primary)'}
+                </span>
+              </div>
+
+              {liveSubmission.ai_evidence?.image_evidence?.primary_llava_output ? (
+                <div className="space-y-3 text-xs">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">
+                      <span className="text-[10px] text-slate-500 uppercase font-semibold block">Model Output</span>
+                      <span className={`text-xs font-bold ${
+                        liveSubmission.ai_evidence.image_evidence.primary_llava_output.classification === 'abnormal'
+                          ? 'text-amber-700' : 'text-emerald-700'
+                      }`}>
+                        {liveSubmission.ai_evidence.image_evidence.primary_llava_output.classification?.toUpperCase()}
+                      </span>
+                    </div>
+                    <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">
+                      <span className="text-[10px] text-slate-500 uppercase font-semibold block">Confidence</span>
+                      <span className="text-xs font-bold text-slate-800">
+                        {Math.round(liveSubmission.ai_evidence.image_evidence.primary_llava_output.confidence * 100)}%
+                      </span>
+                    </div>
+                    <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">
+                      <span className="text-[10px] text-slate-500 uppercase font-semibold block">P(Abnormal)</span>
+                      <span className="text-xs font-bold text-slate-800">
+                        {(liveSubmission.ai_evidence.image_evidence.primary_llava_output.probabilities?.abnormal * 100).toFixed(1)}%
+                      </span>
+                    </div>
+                    <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-lg">
+                      <span className="text-[10px] text-slate-500 uppercase font-semibold block">GPU Latency</span>
+                      <span className="text-xs font-bold text-indigo-700">
+                        {liveSubmission.ai_evidence.image_evidence.primary_llava_output.latency_ms} ms
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-purple-50/50 border border-purple-100 rounded-lg text-slate-700 leading-relaxed">
+                    <span className="font-semibold text-purple-900 block mb-0.5">Model Impression Summary:</span>
+                    {liveSubmission.ai_evidence.image_evidence.impression_summary}
+                  </div>
+                </div>
+              ) : (
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500">
+                  {liveSubmission.ai_status === 'PENDING'
+                    ? 'Primary LLaVA inference is currently executing on RTX 4090...'
+                    : (liveSubmission.ai_error || 'Primary LLaVA is active and awaiting radiograph image attachment for vision-language inference.')}
                 </div>
               )}
             </div>
@@ -567,6 +628,10 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
               </span>
               <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
                 Payer Adjudication Mode
+              </span>
+              <span className="text-xs px-2.5 py-0.5 rounded-full font-semibold bg-purple-50 text-purple-700 border border-purple-200 flex items-center gap-1">
+                <Sparkles className="w-3 h-3 text-purple-600" />
+                Primary Model: Fine-Tuned LLaVA-1.5-7B
               </span>
             </div>
             <div className="text-xs text-slate-500 mt-1 flex flex-wrap items-center gap-2">

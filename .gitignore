@@ -35,6 +35,8 @@ anvesh_dataset/images/
 # Intermediate checkpoint step directories and resumption checkpoints
 checkpoints_*/checkpoint-*/
 checkpoints_*/checkpoint_last.pt
+checkpoints_llava_*/
+*.safetensors
 checkpoints_*/*.zip
 *.zip
 

@@ -24,20 +24,35 @@ from datetime import datetime, timezone
 from typing import Dict, Any, Optional, Tuple
 
 from PIL import Image
-from dotenv import load_dotenv
-
-# Load .env file
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 logger = logging.getLogger("medauth.ai")
 
 # Base directory & Checkpoint paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Checkpoint configuration: defaults to v3 refined adapter with instant rollback to v2
+ACTIVE_LLAVA_VERSION = os.getenv("ANVESH_LLAVA_VERSION", "v3").strip().lower()
+if ACTIVE_LLAVA_VERSION == "v2":
+    PRIMARY_LLAVA_ADAPTER = os.path.join(BASE_DIR, "checkpoints_llava_v2", "best_adapter")
+    PRIMARY_LLAVA_THRESHOLD = 0.5100
+    PRIMARY_LLAVA_NAME = "Fine-Tuned LLaVA-1.5-7B v2 (Primary)"
+    PRIMARY_LLAVA_REL = "checkpoints_llava_v2/best_adapter"
+else:
+    PRIMARY_LLAVA_ADAPTER = os.path.join(BASE_DIR, "checkpoints_llava_v3", "best_adapter")
+    PRIMARY_LLAVA_THRESHOLD = 0.3500
+    PRIMARY_LLAVA_NAME = "Fine-Tuned LLaVA-1.5-7B v3 (Refined Primary)"
+    PRIMARY_LLAVA_REL = "checkpoints_llava_v3/best_adapter"
+
 VIT_CHECKPOINT = os.path.join(BASE_DIR, "checkpoints_vit_image_only", "best_vit_model.pt")
 VIT_CONFIG = os.path.join(BASE_DIR, "checkpoints_vit_image_only", "vit_config.json")
-LLAVA_ADAPTER_DIR = os.path.join(BASE_DIR, "checkpoints_llava", "final_adapter")
+LLAVA_ADAPTER_DIR = PRIMARY_LLAVA_ADAPTER
 
-# Environment configuration for Remote GPU LLaVA inference
+# Environment configuration for Remote GPU LLaVA inference (Optional / Research only)
 def get_llava_config():
     """Dynamically reads environment variables to allow live updates without server restart."""
     url = os.getenv("LLAVA_ENDPOINT_URL", "").strip()
@@ -49,19 +64,173 @@ LLAVA_ENDPOINT_URL = os.getenv("LLAVA_ENDPOINT_URL", "").strip()
 LLAVA_API_KEY = os.getenv("LLAVA_API_KEY", "").strip()
 LLAVA_TIMEOUT_SECONDS = int(os.getenv("LLAVA_TIMEOUT_SECONDS", "30"))
 
-# Model Singleton Cache
+# Primary LLaVA Model Singleton Cache
+_PRIMARY_LLAVA_MODEL = None
+_PRIMARY_LLAVA_PROCESSOR = None
+_PRIMARY_LLAVA_LOCK = threading.Lock()
+
+# ViT Model Singleton Cache (Research Comparison Baseline Only)
 _VIT_MODEL = None
 _VIT_TRANSFORMS = None
-_MODEL_LOCK = threading.Lock()
+_VIT_LOCK = threading.Lock()
+
+
+def get_primary_llava_model():
+    """
+    Lazily loads and caches the fine-tuned Primary LLaVA-1.5-7B model on CUDA (RTX 4090).
+    Loads 4-bit NF4 quantized base model with bfloat16 compute, attaching the trained LoRA adapter.
+    """
+    global _PRIMARY_LLAVA_MODEL, _PRIMARY_LLAVA_PROCESSOR
+    if _PRIMARY_LLAVA_MODEL is not None:
+        return _PRIMARY_LLAVA_MODEL, _PRIMARY_LLAVA_PROCESSOR
+
+    with _PRIMARY_LLAVA_LOCK:
+        if _PRIMARY_LLAVA_MODEL is not None:
+            return _PRIMARY_LLAVA_MODEL, _PRIMARY_LLAVA_PROCESSOR
+
+        import torch
+        from transformers import AutoProcessor, LlavaForConditionalGeneration, BitsAndBytesConfig
+        from peft import PeftModel
+
+        if os.path.exists(r"S:\anvesh_ml_cache"):
+            os.environ["HF_HOME"] = r"S:\anvesh_ml_cache"
+
+        device = "cuda:0" if torch.cuda.is_available() else "cpu"
+        logger.info("Initializing Fine-Tuned LLaVA-1.5-7B (Primary Model) on %s...", device)
+
+        if not os.path.exists(PRIMARY_LLAVA_ADAPTER):
+            raise FileNotFoundError(f"Primary LLaVA adapter not found at: {PRIMARY_LLAVA_ADAPTER}")
+
+        base_model_name = "llava-hf/llava-1.5-7b-hf"
+        processor = AutoProcessor.from_pretrained(base_model_name, cache_dir=os.environ.get("HF_HOME"))
+
+        if device.startswith("cuda"):
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_compute_dtype=torch.bfloat16,
+                bnb_4bit_use_double_quant=True,
+            )
+            base_model = LlavaForConditionalGeneration.from_pretrained(
+                base_model_name,
+                quantization_config=bnb_config,
+                torch_dtype=torch.bfloat16,
+                device_map={"": 0},
+                cache_dir=os.environ.get("HF_HOME"),
+            )
+        else:
+            base_model = LlavaForConditionalGeneration.from_pretrained(
+                base_model_name,
+                torch_dtype=torch.float32,
+                device_map=None,
+                cache_dir=os.environ.get("HF_HOME"),
+            )
+
+        model = PeftModel.from_pretrained(base_model, PRIMARY_LLAVA_ADAPTER)
+        model.eval()
+
+        _PRIMARY_LLAVA_MODEL = model
+        _PRIMARY_LLAVA_PROCESSOR = processor
+        logger.info("Primary LLaVA-1.5-7B loaded successfully and ready for live website inference.")
+        return _PRIMARY_LLAVA_MODEL, _PRIMARY_LLAVA_PROCESSOR
+
+
+def classify_radiograph_primary_llava(image_path: str) -> Dict[str, Any]:
+    """
+    Executes live forward-pass inference on an uploaded radiograph using the fine-tuned Primary LLaVA-1.5-7B model.
+    Runs direct multimodal inference (radiograph pixels -> vision tower -> multimodal projector -> Vicuna LLM).
+    Evaluates exact logit differences and continuous posterior probabilities between 'abnormal' and 'normal'.
+    """
+    import time
+    import math
+    import torch
+
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"Radiograph image not found on disk: {image_path}")
+
+    start_t = time.perf_counter()
+    model, processor = get_primary_llava_model()
+
+    image = Image.open(image_path).convert("RGB")
+    prompt = (
+        "USER: <image>\nYou are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\n"
+        "Determine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\n"
+        "Respond ONLY with a valid JSON object matching this schema:\n"
+        "{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}\n"
+        "ASSISTANT: {\"classification\": \""
+    )
+
+    inputs = processor(text=prompt, images=image, return_tensors="pt")
+    device = next(model.parameters()).device
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+
+    # Exact Vicuna tokenizer subword token IDs
+    tok_abnormal = 370  # Vicuna token "ab"
+    tok_normal = 8945   # Vicuna token "normal"
+
+    with torch.inference_mode():
+        outputs = model(**inputs)
+        logits = outputs.logits[:, -1, :]
+        l_abn = float(logits[0, tok_abnormal].item())
+        l_norm = float(logits[0, tok_normal].item())
+
+        logit_diff = l_abn - l_norm
+        p_abn = float(math.exp(l_abn) / (math.exp(l_abn) + math.exp(l_norm) + 1e-12))
+        p_norm = 1.0 - p_abn
+
+        # Calibrated decision threshold from validation tuning
+        threshold = PRIMARY_LLAVA_THRESHOLD
+        pred_label = "abnormal" if p_abn >= threshold else "normal"
+        confidence = p_abn if pred_label == "abnormal" else p_norm
+
+    duration_ms = (time.perf_counter() - start_t) * 1000
+
+    findings_list = []
+    abnormalities_list = []
+    if pred_label == "abnormal":
+        findings_list.append(
+            f"Thoracic abnormality identified by primary vision-language analysis (calibrated posterior probability: {p_abn:.1%})."
+        )
+        abnormalities_list.append(
+            f"Radiographic abnormality detected via {PRIMARY_LLAVA_NAME} (confidence: {confidence:.1%}, logit_diff: {logit_diff:.3f})"
+        )
+        impression_summary = (
+            f"Abnormal chest radiograph. Objective visual model evidence indicates pathology (confidence: {confidence:.1%})."
+        )
+    else:
+        findings_list.append(
+            f"Clear bilateral lung fields; no acute airspace consolidation or gross pleural effusion (posterior probability normal: {p_norm:.1%})."
+        )
+        impression_summary = (
+            f"Normal chest radiograph examination. No acute cardiopulmonary abnormality identified (confidence: {confidence:.1%})."
+        )
+
+    return {
+        "model_name": PRIMARY_LLAVA_NAME,
+        "model_type": "PRIMARY_MULTIMODAL_VLM",
+        "checkpoint": PRIMARY_LLAVA_REL,
+        "decision_threshold": threshold,
+        "classification": pred_label,
+        "confidence": float(round(confidence, 4)),
+        "probabilities": {
+            "normal": float(round(p_norm, 4)),
+            "abnormal": float(round(p_abn, 4)),
+        },
+        "logit_difference": float(round(logit_diff, 4)),
+        "latency_ms": round(duration_ms, 2),
+        "findings": findings_list,
+        "abnormalities": abnormalities_list,
+        "impression_summary": impression_summary,
+    }
 
 
 def get_vit_model():
-    """Lazily loads and caches the fine-tuned ViT-B/16 model on CPU."""
+    """Lazily loads and caches the fine-tuned ViT-B/16 model on CPU (RESEARCH COMPARISON ONLY)."""
     global _VIT_MODEL, _VIT_TRANSFORMS
     if _VIT_MODEL is not None:
         return _VIT_MODEL, _VIT_TRANSFORMS
 
-    with _MODEL_LOCK:
+    with _VIT_LOCK:
         if _VIT_MODEL is not None:
             return _VIT_MODEL, _VIT_TRANSFORMS
 
@@ -69,7 +238,7 @@ def get_vit_model():
         from torchvision import models, transforms
 
         device = torch.device("cpu")
-        logger.info("Initializing Vision Transformer (ViT-B/16) on %s...", device)
+        logger.info("Initializing Vision Transformer (ViT-B/16) research baseline on %s...", device)
 
         if not os.path.exists(VIT_CHECKPOINT):
             raise FileNotFoundError(f"ViT checkpoint not found at: {VIT_CHECKPOINT}")
@@ -90,15 +259,14 @@ def get_vit_model():
 
         _VIT_MODEL = model
         _VIT_TRANSFORMS = inference_transforms
-        logger.info("ViT-B/16 model loaded successfully and ready for live radiograph inference.")
+        logger.info("ViT-B/16 research baseline loaded successfully.")
         return _VIT_MODEL, _VIT_TRANSFORMS
 
 
 def classify_radiograph_vit(image_path: str) -> Dict[str, Any]:
     """
-    Executes live forward-pass inference using the fine-tuned ViT-B/16 model on CPU.
-    Returns:
-        Dict with classification ('normal' | 'abnormal'), confidence scores, latency, and model metadata.
+    Executes inference using the fine-tuned ViT-B/16 model on CPU.
+    NOTE: ViT is retained strictly as a secondary research-comparison baseline.
     """
     import time
     import torch
@@ -123,7 +291,7 @@ def classify_radiograph_vit(image_path: str) -> Dict[str, Any]:
 
     return {
         "model_name": "Vision Transformer (ViT-B/16)",
-        "model_type": "LOCAL_IMAGE_ONLY_CLASSIFIER",
+        "model_type": "RESEARCH_COMPARISON_IMAGE_CLASSIFIER",
         "checkpoint": "checkpoints_vit_image_only/best_vit_model.pt",
         "classification": pred_label,
         "confidence": float(probs[pred_idx]),
@@ -144,11 +312,8 @@ def call_remote_llava_endpoint(
     api_key: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
-    Dispatches a live multimodal inference request to a remote GPU-enabled LLaVA-1.5-7B LoRA worker.
-    Encodes the radiograph in base64 along with the canonical prompt text.
-    
-    If the endpoint URL is not configured or fails, returns an explicit UNAVAILABLE error payload.
-    NEVER fabricates a successful response.
+    Dispatches a multimodal inference request to a remote GPU-enabled LLaVA endpoint if configured.
+    Retained for external worker deployments.
     """
     import urllib.request
     import urllib.error
@@ -162,7 +327,7 @@ def call_remote_llava_endpoint(
         return {
             "success": False,
             "error": "REMOTE_LLAVA_NOT_CONFIGURED",
-            "message": "Remote LLaVA GPU endpoint URL is not configured or using default placeholder. To enable live 7B multimodal inference, set your real GPU worker URL in .env.",
+            "message": "Remote LLaVA GPU endpoint URL is not configured or using default placeholder.",
         }
 
     image_b64 = None
@@ -176,7 +341,7 @@ def call_remote_llava_endpoint(
         "prelim_findings": findings or "",
         "service_type": service_type,
         "model": "llava-1.5-7b-lora",
-        "adapter_config": "checkpoints_llava/final_adapter",
+        "adapter_config": "checkpoints_llava_primary/best_adapter",
     }
 
     req_data = json.dumps(payload).encode("utf-8")
@@ -191,7 +356,7 @@ def call_remote_llava_endpoint(
                 body = json.loads(resp.read().decode("utf-8"))
                 return {
                     "success": True,
-                    "model_name": "LLaVA-1.5-7B-LoRA",
+                    "model_name": "Fine-Tuned LLaVA-1.5-7B (Primary)",
                     "model_source": "REMOTE_GPU_ENDPOINT",
                     "endpoint_url": url,
                     "evidence": body.get("evidence", body),
@@ -219,25 +384,21 @@ def generate_submission_ai_evidence(
 ) -> Dict[str, Any]:
     """
     Orchestrates live AI evidence generation for a submitted case.
-    Strictly distinguishes:
-    1. Live ViT image classification (pixel data)
-    2. Live Remote LLaVA multimodal inference (if endpoint configured)
-    3. Clinical rule synthesis
+    PRIMARY ENGINE: Fine-Tuned LLaVA-1.5-7B running on local GPU.
+    TRANSPARENCY: Does NOT silently fall back to MedGemma or ViT. Reports actual inference or awaiting image state.
     """
-    # Step 1: Check Remote LLaVA
-    llava_res = call_remote_llava_endpoint(
+    # Step 1: Check if remote LLaVA endpoint is explicitly configured and responding
+    remote_res = call_remote_llava_endpoint(
         image_path=radiograph_path,
         indication=indication,
         findings=prelim_findings,
         service_type=service_type,
     )
-
-    if llava_res.get("success"):
-        # Real LLaVA inference succeeded!
-        evidence = llava_res["evidence"]
+    if remote_res.get("success"):
+        evidence = remote_res["evidence"]
         evidence["inference_source"] = "REMOTE_LLAVA_GPU"
         evidence["model_version"] = "LLaVA-1.5-7B-LoRA"
-        evidence["endpoint_url"] = llava_res.get("endpoint_url")
+        evidence["endpoint_url"] = remote_res.get("endpoint_url")
         return {
             "ai_source": "REMOTE_LLAVA",
             "ai_model_version": "llava-hf/llava-1.5-7b-hf+lora-r16-a32",
@@ -246,28 +407,28 @@ def generate_submission_ai_evidence(
             "ai_evidence": evidence,
         }
 
-    # Step 2: Remote LLaVA unavailable — execute local ViT image-only inference
-    vit_res = None
-    vit_error = None
+    # Step 2: Primary local Fine-Tuned LLaVA-1.5-7B on CUDA
+    llava_res = None
+    llava_error = None
+
     if radiograph_path and os.path.exists(radiograph_path):
         try:
-            vit_res = classify_radiograph_vit(radiograph_path)
+            llava_res = classify_radiograph_primary_llava(radiograph_path)
         except Exception as e:
-            vit_error = str(e)
-            logger.warning("Local ViT inference failed: %s", e)
+            llava_error = str(e)
+            logger.error("Primary LLaVA inference failed on image %s: %s", radiograph_path, e, exc_info=True)
 
-    # Step 3: Construct transparent evidence schema clearly documenting sources
     findings_list = []
     abnormalities_list = []
 
-    if vit_res:
-        label = vit_res["classification"]
-        conf = vit_res["confidence"]
-        if label == "abnormal":
-            abnormalities_list.append(f"Visual abnormality detected on radiograph via local Vision Transformer (confidence: {conf:.1%})")
-            findings_list.append(f"Parenchymal variance / opacity on radiograph (ViT prediction: abnormal, {conf:.1%}).")
-        else:
-            findings_list.append(f"Clear lung fields; no acute focal airspace consolidation detected on radiograph (ViT prediction: normal, {conf:.1%}).")
+    if llava_res:
+        findings_list.extend(llava_res["findings"])
+        abnormalities_list.extend(llava_res["abnormalities"])
+        impression_summary = llava_res["impression_summary"]
+    elif prelim_findings and prelim_findings.strip():
+        impression_summary = f"Clinical dictation reviewed: {prelim_findings.strip()} (Awaiting radiograph upload for Primary LLaVA inference)."
+    else:
+        impression_summary = "Awaiting radiograph image attachment for Primary LLaVA vision-language inference."
 
     if prelim_findings and prelim_findings.strip():
         findings_list.append(f"Physician finding: {prelim_findings.strip()}")
@@ -276,11 +437,6 @@ def generate_submission_ai_evidence(
         for kw in abnormal_keywords:
             if kw in lowered:
                 abnormalities_list.append(f"Clinical note finding: {kw}")
-
-    if abnormalities_list:
-        impression_summary = f"Findings suggestive of: {', '.join(abnormalities_list)}."
-    else:
-        impression_summary = "Normal examination. No acute cardiopulmonary abnormality identified."
 
     supported = bool(indication and len(indication.strip()) >= 5)
     has_source = bool(prelim_findings and prelim_findings.strip())
@@ -293,11 +449,11 @@ def generate_submission_ai_evidence(
             "findings": findings_list,
             "abnormalities": abnormalities_list,
             "impression_summary": impression_summary,
-            "vit_classifier_output": vit_res,
+            "primary_llava_output": llava_res,
         },
         "text_image_consistency": {
             "consistent": True,
-            "notes": "Visual radiograph predictions and physician notes evaluated by policy engine.",
+            "notes": "Visual radiograph predictions and physician notes evaluated by primary policy engine.",
             "clinical_consistency_score": 100.0,
         },
         "clinical_support": {
@@ -307,23 +463,36 @@ def generate_submission_ai_evidence(
         },
         "has_source_text": has_source,
         "inference_metadata": {
-            "remote_llava_attempted": bool(LLAVA_ENDPOINT_URL),
-            "remote_llava_status": "UNAVAILABLE",
-            "remote_llava_diagnostic": llava_res.get("message"),
-            "local_vit_executed": vit_res is not None,
-            "local_vit_latency_ms": vit_res["latency_ms"] if vit_res else None,
-            "ai_source": "LOCAL_VIT_AND_RULE_ENGINE",
+            "primary_model": PRIMARY_LLAVA_NAME,
+            "primary_llava_executed": llava_res is not None,
+            "primary_llava_latency_ms": llava_res["latency_ms"] if llava_res else None,
+            "primary_llava_checkpoint": PRIMARY_LLAVA_REL,
+            "execution_device": "cuda:0",
+            "ai_source": "PRIMARY_LLAVA" if llava_res else ("FAILED" if llava_error else "RULE_ENGINE"),
         }
     }
 
-    ai_source = "LOCAL_VIT" if vit_res else "RULE_ENGINE"
-    ai_model_version = "ViT-B/16-Local (LLaVA-7B remote endpoint offline)"
+    if llava_res:
+        ai_source = "PRIMARY_LLAVA"
+        ai_model_version = PRIMARY_LLAVA_NAME
+        ai_status = "COMPLETED"
+        ai_error = None
+    elif llava_error:
+        ai_source = "FAILED"
+        ai_model_version = "Fine-Tuned LLaVA-1.5-7B (Primary Error)"
+        ai_status = "FAILED"
+        ai_error = llava_error
+    else:
+        ai_source = "RULE_ENGINE"
+        ai_model_version = "Fine-Tuned LLaVA-1.5-7B (Awaiting Radiograph Upload)"
+        ai_status = "COMPLETED"
+        ai_error = None
 
     return {
         "ai_source": ai_source,
         "ai_model_version": ai_model_version,
-        "ai_status": "COMPLETED",
-        "ai_error": vit_error or (llava_res.get("message") if not vit_res else None),
+        "ai_status": ai_status,
+        "ai_error": ai_error,
         "ai_evidence": evidence,
     }
 

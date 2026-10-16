@@ -199,12 +199,12 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
 
               <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
                 <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <Eye className="w-4 h-4 text-indigo-600" /> Precomputed VLM Evidence
+                  <Eye className="w-4 h-4 text-indigo-600" /> Live Primary VLM Evidence
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Multimodal extractions (text-image consistency, visual support, and observational findings) are 
-                  <strong>offline precomputed</strong> from research vision-language models (e.g. MedGemma-27B). 
-                  The runtime platform performs zero unverified real-time model inference, guaranteeing reproducible, auditable outputs.
+                  Primary radiograph vision-language extractions and diagnostic evaluations are generated directly by live GPU inference on the
+                  <strong> Fine-Tuned LLaVA-1.5-7B v2 (Primary Model)</strong>. Historical models such as MedGemma and ViT-B/16
+                  remain decoupled strictly as research-comparison benchmarks.
                 </p>
               </div>
 

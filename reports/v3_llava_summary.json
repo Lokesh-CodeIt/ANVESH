@@ -1,0 +1,46 @@
+{
+  "total_cases": 422,
+  "n_abnormal": 211,
+  "n_normal": 211,
+  "tp": 138,
+  "tn": 147,
+  "fp": 64,
+  "fn": 73,
+  "accuracy": 0.6754,
+  "accuracy_ci95": [
+    0.6293,
+    0.7183
+  ],
+  "balanced_accuracy": 0.6754,
+  "sensitivity": 0.654,
+  "sensitivity_ci95": [
+    0.5876,
+    0.7149
+  ],
+  "specificity": 0.6967,
+  "specificity_ci95": [
+    0.6316,
+    0.7547
+  ],
+  "precision": 0.6832,
+  "precision_ci95": [
+    0.6161,
+    0.7434
+  ],
+  "npv": 0.6682,
+  "macro_f1": 0.6752,
+  "f1_abnormal": 0.6683,
+  "f1_normal": 0.6821,
+  "weighted_f1": 0.6752,
+  "mcc": 0.351,
+  "cohens_kappa": 0.3507,
+  "roc_auc": 0.7421,
+  "pr_auc": 0.7313,
+  "latency_mean_ms": 175.35,
+  "latency_median_ms": 171.89,
+  "latency_p95_ms": 187.59,
+  "latency_p99_ms": 199.03,
+  "frozen_threshold": 0.35,
+  "adapter_path": "checkpoints_llava_v3/best_adapter",
+  "elapsed_seconds": 78.01
+}

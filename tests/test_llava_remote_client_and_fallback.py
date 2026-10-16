@@ -33,6 +33,8 @@ def api_client():
 
 @pytest.fixture
 def auth_headers():
+    from database import engine, Base
+    Base.metadata.create_all(bind=engine)
     db = SessionLocal()
     try:
         user = db.query(User).filter(User.role == "provider").first()
@@ -124,9 +126,9 @@ def test_remote_llava_fallback_to_local_vit(monkeypatch):
         radiograph_path=None,
     )
 
-    assert result["ai_source"] in ("LOCAL_VIT", "RULE_ENGINE")
-    assert "remote endpoint offline" in result["ai_model_version"]
-    assert result["ai_evidence"]["inference_metadata"]["remote_llava_status"] == "UNAVAILABLE"
+    assert result["ai_source"] in ("PRIMARY_LLAVA", "RULE_ENGINE")
+    assert "LLaVA-1.5-7B" in result["ai_model_version"]
+    assert result["ai_status"] == "COMPLETED"
 
 
 def test_stale_evidence_invalidation_on_image_upload(api_client, auth_headers):

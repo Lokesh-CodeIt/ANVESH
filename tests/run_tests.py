@@ -17,6 +17,7 @@ from tests.test_final_artifacts import TestFinalArtifacts
 from tests.test_image_only_artifacts import TestImageOnlyArtifacts
 from tests.test_image_only_diagnosis import TestImageOnlyDiagnosis
 from tests.test_vit_artifacts import TestViTArtifacts
+from tests.test_primary_llava_integration import TestPrimaryLLaVAIntegration
 
 class MetricFormulasTestCase(unittest.TestCase, TestMetricFormulas):
     pass
@@ -37,6 +38,7 @@ if __name__ == "__main__":
     suite.addTests(loader.loadTestsFromTestCase(TestImageOnlyArtifacts))
     suite.addTests(loader.loadTestsFromTestCase(TestImageOnlyDiagnosis))
     suite.addTests(loader.loadTestsFromTestCase(TestViTArtifacts))
+    suite.addTests(loader.loadTestsFromTestCase(TestPrimaryLLaVAIntegration))
     
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)

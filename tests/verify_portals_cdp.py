@@ -9,7 +9,7 @@ import sys
 from websockets.sync.client import connect
 
 CHROME_BIN = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-ARTIFACT_DIR = r"C:\Users\NILESH MARATHE\.gemini\antigravity-ide\brain\da2fa351-4323-4185-8172-3d49c42b5c93"
+ARTIFACT_DIR = r"C:\Users\24101A0072\.gemini\antigravity-ide\brain\c8320fd9-1ba8-431c-a40f-d26e7058194e"
 PORT = 9230
 USER_DATA = os.path.join(os.environ.get("TEMP", r"C:\Temp"), f"cdp_run_{int(time.time())}")
 

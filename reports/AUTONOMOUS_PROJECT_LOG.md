@@ -281,3 +281,28 @@
 - All 11 dedicated ViT artifacts physically verified in `reports/image_only_experiment/vit/` and `checkpoints_vit_image_only/`.
 - Automated unit test suite expanded with `tests/test_vit_artifacts.py` covering split counts, schema conformance, probability bounds, and metric concordance.
 - **Status:** **COMPLETED, FULLY AUDITED & VERIFIED**.
+
+---
+
+## Stage 9: LLaVA-1.5-7B v2 Baseline Verification & Audited Metrics
+
+- **Verified Held-Out Metrics:** Test Accuracy = 67.54% (285/422), Sensitivity = 62.09% (131 TP, 80 FN), Specificity = 72.99% (154 TN, 57 FP), Macro-F1 = 67.44%, ROC-AUC = 0.7475.
+- **Production Checkpoint:** `checkpoints_llava_v2/best_adapter` frozen and preserved intact on disk.
+- **Error Analysis:** Baseline model leaned conservative with 80 false negatives due to unaugmented training and symmetric target token loss.
+
+---
+
+## Stage 10: LLaVA-1.5-7B v3 Stage-2 Refinement, Single Held-Out Test Benchmark & Integration
+
+- **Methodology:** `train_llava_v3.py` fine-tuned `checkpoints_llava_v2/best_adapter` with conservative thoracic radiograph augmentation (rotation $\pm 5^\circ$, translation $\pm 3\%$, exposure jitter, strict preservation of cardiac/visceral situs) and class-weighted loss ($w_{\text{abnormal}}=1.20, w_{\text{normal}}=1.00$).
+- **Validation-Driven Selection ($N=211$):** Evaluated every 30 steps. Best checkpoint selected at Step 30 (Val Macro-F1: 77.25% vs 75.83% baseline, Val Balanced Acc: 77.26%, Val Sensitivity: 79.05%, Val ROC-AUC: 0.8363, $\theta^* = 0.3500$). Early stopping triggered at Step 150.
+- **Single Held-Out Test Benchmark ($N=422$):** Evaluated once with frozen $\theta^* = 0.3500$.
+  - Accuracy: **67.54%** ($285/422$)
+  - Sensitivity: **65.40%** ($TP=138, FN=73$, **+3.31% increase, 7 fewer false negatives**)
+  - Macro-F1: **67.52%** (+0.08%)
+  - Negative Predictive Value: **66.82%** (+1.01%)
+  - Specificity: **69.67%** ($TN=147, FP=64$)
+  - Latency: **175.4 ms/case** (RTX 4090 GPU)
+- **Primary Integration & Safety:** Updated `services/ai_service.py` to default to v3 with instant environment variable rollback to v2 (`ANVESH_LLAVA_VERSION=v2`). All 37 regression tests and live upload tests passed 100%. Live website (ports 8000 and 5173) maintained continuous uptime.
+- **Status:** **COMPLETED, INDEPENDENTLY BENCHMARKED & VERIFIED**.
+

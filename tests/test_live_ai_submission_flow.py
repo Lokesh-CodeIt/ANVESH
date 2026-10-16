@@ -26,6 +26,8 @@ def api_client():
 
 @pytest.fixture
 def test_users(api_client):
+    from database import engine, Base
+    Base.metadata.create_all(bind=engine)
     db = SessionLocal()
     try:
         provider = db.query(User).filter(User.email == "provider@hospital.org").first()
@@ -103,8 +105,8 @@ def test_live_ai_submission_and_policy_review_flow(api_client, test_users):
     eval_data = rev_eval_resp.json()
 
     assert eval_data["ai_status"] == "COMPLETED"
-    assert eval_data["ai_source"] in ("RULE_ENGINE", "LOCAL_VIT", "REMOTE_LLAVA")
-    assert "ViT-B/16" in eval_data["ai_model_version"]
+    assert eval_data["ai_source"] in ("RULE_ENGINE", "PRIMARY_LLAVA", "REMOTE_LLAVA")
+    assert "LLaVA-1.5-7B" in eval_data["ai_model_version"]
     assert "image_evidence" in eval_data["ai_evidence"]
     assert "clinical_support" in eval_data["ai_evidence"]
 

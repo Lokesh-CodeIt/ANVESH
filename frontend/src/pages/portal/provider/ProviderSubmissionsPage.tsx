@@ -310,6 +310,27 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
                                         <span className="text-slate-800">{s.reviewer_notes}</span>
                                       </div>
                                     )}
+                                    {s.ai_model_version && (
+                                      <div className="text-xs pt-1 border-t border-slate-100 flex items-center justify-between">
+                                        <span className="text-slate-500">AI Model:</span>
+                                        <span className="font-semibold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200 text-[10px]">
+                                          {s.ai_model_version}
+                                        </span>
+                                      </div>
+                                    )}
+                                    {s.ai_evidence?.image_evidence?.primary_llava_output && (
+                                      <div className="text-xs flex items-center justify-between">
+                                        <span className="text-slate-500">LLaVA Finding:</span>
+                                        <strong className={
+                                          s.ai_evidence.image_evidence.primary_llava_output.classification === 'abnormal'
+                                            ? 'text-amber-700 font-bold'
+                                            : 'text-emerald-700 font-bold'
+                                        }>
+                                          {s.ai_evidence.image_evidence.primary_llava_output.classification?.toUpperCase()}
+                                          {' '}({Math.round(s.ai_evidence.image_evidence.primary_llava_output.confidence * 100)}%)
+                                        </strong>
+                                      </div>
+                                    )}
                                   </div>
                                 </div>
 

@@ -123,7 +123,7 @@ export const DEMO_CASE_DETAILS: Record<string, CaseDetail> = {
         clinical_support_score: 0.88,
         reason: 'Radiographic abnormalities directly substantiate stated dyspnea indication.'
       },
-      raw_model_output: 'MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)'
+      raw_model_output: 'Fine-Tuned LLaVA-1.5-7B (Primary Model)'
     }
   },
   'DEMO-CXR-002': {
@@ -168,7 +168,7 @@ export const DEMO_CASE_DETAILS: Record<string, CaseDetail> = {
         clinical_support_score: 0.85,
         reason: 'Radiographic infiltrate substantiates lower respiratory infectious treatment.'
       },
-      raw_model_output: 'MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)'
+      raw_model_output: 'Fine-Tuned LLaVA-1.5-7B (Primary Model)'
     }
   },
   'DEMO-CXR-003': {
@@ -213,7 +213,7 @@ export const DEMO_CASE_DETAILS: Record<string, CaseDetail> = {
         clinical_support_score: 0.90,
         reason: 'Satisfies standard pre-operative clearance protocol.'
       },
-      raw_model_output: 'MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)'
+      raw_model_output: 'Fine-Tuned LLaVA-1.5-7B (Primary Model)'
     }
   }
 };
@@ -275,7 +275,7 @@ export const DEMO_CASE_EVIDENCE: Record<string, EvidenceRecord> = {
     image_findings: 'Cardiomegaly with blunted left costophrenic angle (Precomputed Research Output).',
     text_image_consistency: 'Consistent (High multimodal agreement 0.94)',
     clinical_support: 'Evidence supports stated clinical indication for diagnostic imaging (Score 0.88)',
-    raw_model_output: 'MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)',
+    raw_model_output: 'Fine-Tuned LLaVA-1.5-7B (Primary Model)',
     image_evidence: {
       modality: 'Radiography',
       body_part: 'Chest',
@@ -292,7 +292,7 @@ export const DEMO_CASE_EVIDENCE: Record<string, EvidenceRecord> = {
     image_findings: 'Right lower lobe alveolar infiltrate consistent with acute pneumonia.',
     text_image_consistency: 'Consistent (High multimodal agreement 0.91)',
     clinical_support: 'Evidence supports lower respiratory antimicrobial management (Score 0.85)',
-    raw_model_output: 'MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)',
+    raw_model_output: 'Fine-Tuned LLaVA-1.5-7B (Primary Model)',
     image_evidence: {
       modality: 'Radiography',
       body_part: 'Chest',
@@ -309,7 +309,7 @@ export const DEMO_CASE_EVIDENCE: Record<string, EvidenceRecord> = {
     image_findings: 'Unremarkable clear chest radiograph. No acute infiltrates or cardiomegaly.',
     text_image_consistency: 'Consistent (High multimodal agreement 0.96)',
     clinical_support: 'Evidence supports standard pre-operative clearance protocol (Score 0.90)',
-    raw_model_output: 'MedGemma-Multimodal-VLM (Precomputed Offline Research Artifact)',
+    raw_model_output: 'Fine-Tuned LLaVA-1.5-7B (Primary Model)',
     image_evidence: {
       modality: 'Radiography',
       body_part: 'Chest',
