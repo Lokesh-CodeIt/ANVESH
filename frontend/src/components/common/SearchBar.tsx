@@ -27,32 +27,34 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} role="search" className={`anvesh-search-bar ${className}`}>
+    <form onSubmit={handleSubmit} role="search" className={`flex items-center gap-3 w-full ${className}`}>
       <label htmlFor="clinical-search-input" className="sr-only">
         {placeholder}
       </label>
-      <div className="search-input-wrapper">
-        <Search size={18} className="search-icon-left" aria-hidden="true" />
+      <div className="clinical-search-wrapper flex-1">
         <input
           id="clinical-search-input"
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="search-input-field"
+          className="clinical-search-input"
         />
         {query && (
           <button
             type="button"
             onClick={handleClear}
-            className="search-clear-btn"
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
             aria-label="Clear search query"
           >
             <X size={16} aria-hidden="true" />
           </button>
         )}
       </div>
-      <button type="submit" className="search-submit-btn">
+      <button 
+        type="submit" 
+        className="px-5 py-2.5 bg-[#0F766E] hover:bg-[#0D655E] text-white font-semibold text-sm rounded-xl transition-colors shadow-xs shrink-0"
+      >
         Search
       </button>
     </form>

@@ -134,7 +134,10 @@ export const PortalShell: React.FC<PortalShellProps> = ({ onNavigatePublic }) =>
     if (caseId) {
       setActiveCaseId(caseId);
     }
-    window.scrollTo(0, 0);
+    const mainEl = document.getElementById('portal-main-content');
+    if (mainEl) {
+      mainEl.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const getPortalTitle = (): string => {
@@ -307,7 +310,7 @@ export const PortalShell: React.FC<PortalShellProps> = ({ onNavigatePublic }) =>
         <main
           id="portal-main-content"
           tabIndex={-1}
-          className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto outline-none"
+          className="portal-content-body flex-1 p-4 sm:p-6 lg:p-7 overflow-y-auto outline-none"
         >
           {role === 'auditor' && (
             <div className="mb-4 p-3 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center gap-3 text-amber-800 text-xs shadow-xs" role="status">

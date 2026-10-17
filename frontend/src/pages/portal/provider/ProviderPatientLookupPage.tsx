@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, UserCheck, AlertTriangle, ShieldAlert, FileText, ArrowRight, User } from 'lucide-react';
+import { Search, UserCheck, AlertTriangle, ShieldAlert, FileText, ArrowRight, User, X } from 'lucide-react';
 import { Button } from '../../../components/shared/Button';
 import { getCases, CaseRecord } from '../../../services/api';
 
@@ -36,7 +36,7 @@ export const ProviderPatientLookupPage: React.FC<ProviderPatientLookupProps> = (
   };
 
   return (
-    <div className="space-y-6 max-w-5xl">
+    <div className="space-y-6 max-w-7xl w-full mx-auto">
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Patient / Member Eligibility & Prior Auth Lookup</h1>
@@ -45,63 +45,87 @@ export const ProviderPatientLookupPage: React.FC<ProviderPatientLookupProps> = (
         </p>
       </div>
 
-      {/* Clear Guidance: Required Identifier, Access Rules, and Post-Lookup Workflow */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
-        <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
-          <span className="font-bold text-slate-800 flex items-center gap-1.5">
-            <span className="w-4 h-4 rounded-full bg-teal-700 text-white flex items-center justify-center text-[10px]">1</span>
-            Required Identifier
-          </span>
-          <p className="text-slate-600 leading-relaxed text-[11px]">
-            Input patient Member ID (e.g. <code>MEM-900001</code>), Case Reference (e.g. <code>CASE_000001</code>), or hospital MRN.
+      {/* Clear Guidance Cards: Required Identifier, Access Rules, and Post-Lookup Workflow */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Card 1: Required Identifier */}
+        <div className="bg-gradient-to-br from-teal-50/70 via-white to-teal-50/20 border-2 border-teal-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+          <div className="flex items-center gap-3">
+            <span className="w-7 h-7 rounded-lg bg-[#0F766E] text-white font-bold text-xs flex items-center justify-center shrink-0 shadow-2xs">
+              1
+            </span>
+            <h3 className="text-base font-bold text-slate-900 tracking-tight">
+              Required Identifier
+            </h3>
+          </div>
+          <p className="text-sm text-slate-600 leading-relaxed">
+            Input patient Member ID (e.g. <span className="font-mono font-semibold px-2 py-0.5 bg-teal-100/70 text-[#0F766E] rounded border border-teal-200 text-xs">MEM-900001</span>), Case Reference (e.g. <span className="font-mono font-semibold px-2 py-0.5 bg-teal-100/70 text-[#0F766E] rounded border border-teal-200 text-xs">CASE_000001</span>), or hospital MRN.
           </p>
         </div>
 
-        <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
-          <span className="font-bold text-slate-800 flex items-center gap-1.5">
-            <span className="w-4 h-4 rounded-full bg-teal-700 text-white flex items-center justify-center text-[10px]">2</span>
-            Permitted Access
-          </span>
-          <p className="text-slate-600 leading-relaxed text-[11px]">
-            HIPAA Minimum Necessary Access: Querying is restricted to active patients under current diagnosis or treatment in your department.
+        {/* Card 2: Permitted Access */}
+        <div className="bg-gradient-to-br from-blue-50/70 via-white to-indigo-50/20 border-2 border-blue-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+          <div className="flex items-center gap-3">
+            <span className="w-7 h-7 rounded-lg bg-blue-600 text-white font-bold text-xs flex items-center justify-center shrink-0 shadow-2xs">
+              2
+            </span>
+            <h3 className="text-base font-bold text-slate-900 tracking-tight">
+              Permitted Access
+            </h3>
+          </div>
+          <p className="text-sm text-slate-600 leading-relaxed">
+            <strong className="text-slate-800 font-semibold">HIPAA Minimum Necessary Access:</strong> Querying is restricted to active patients under current diagnosis or treatment in your department.
           </p>
         </div>
 
-        <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
-          <span className="font-bold text-slate-800 flex items-center gap-1.5">
-            <span className="w-4 h-4 rounded-full bg-teal-700 text-white flex items-center justify-center text-[10px]">3</span>
-            What Happens Next
-          </span>
-          <p className="text-slate-600 leading-relaxed text-[11px]">
-            Successful matches display active plan benefits and prior imaging reviews, and let you launch a pre-populated New Request.
+        {/* Card 3: What Happens Next */}
+        <div className="bg-gradient-to-br from-emerald-50/70 via-white to-emerald-50/20 border-2 border-emerald-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
+          <div className="flex items-center gap-3">
+            <span className="w-7 h-7 rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0 shadow-2xs">
+              3
+            </span>
+            <h3 className="text-base font-bold text-slate-900 tracking-tight">
+              What Happens Next
+            </h3>
+          </div>
+          <p className="text-sm text-slate-600 leading-relaxed">
+            Successful matches display active plan benefits and prior imaging reviews, and let you launch a pre-populated <strong className="text-emerald-800 font-semibold">New Request</strong>.
           </p>
         </div>
       </div>
 
-      {/* Search Form */}
-      <form onSubmit={handleSearch} className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="md:col-span-2">
-            <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">
+      {/* Search Form Card */}
+      <form onSubmit={handleSearch} className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+          <div className="md:col-span-2 space-y-2">
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
               Member ID, Case ID, or MRN
             </label>
-            <div className="relative">
+            <div className="clinical-search-wrapper">
               <input
                 type="text"
                 placeholder="e.g. CASE_000001, MEM-928471, or MRN-10492"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all font-mono"
+                className="clinical-search-input font-mono"
               />
-              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+                  aria-label="Clear search"
+                >
+                  <X size={16} />
+                </button>
+              )}
             </div>
           </div>
 
-          <div>
-            <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">
+          <div className="space-y-2">
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
               Contracted Payer
             </label>
-            <select className="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-700">
+            <select className="clinical-filter-select w-full">
               <option value="all">All Participating Payers</option>
               <option value="anthem">Aetna / CVS Health</option>
               <option value="bluecross">Blue Cross Blue Shield</option>
@@ -111,12 +135,12 @@ export const ProviderPatientLookupPage: React.FC<ProviderPatientLookupProps> = (
           </div>
         </div>
 
-        <div className="flex justify-end pt-2">
+        <div className="flex justify-end pt-3 border-t border-slate-100">
           <Button
             type="submit"
             variant="primary"
             disabled={loading || !searchTerm.trim()}
-            className="bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-2"
+            className="h-12 px-7 bg-[#0F766E] hover:bg-[#0D655E] text-white font-bold rounded-xl flex items-center gap-2 shadow-xs transition-colors"
           >
             {loading ? 'Querying Eligibility...' : 'Verify Eligibility & Lookup'}
           </Button>

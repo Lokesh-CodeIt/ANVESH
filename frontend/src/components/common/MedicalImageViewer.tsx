@@ -143,23 +143,25 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
   return (
     <div className="flex flex-col bg-slate-950 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
       {/* Top PACS Controls Toolbar */}
-      <div className="flex flex-wrap items-center justify-between px-4 py-2.5 bg-slate-900 border-b border-slate-800 text-xs text-slate-300 gap-2">
-        <div className="flex items-center gap-2">
-          <span className="font-mono text-[11px] font-semibold text-teal-400 bg-teal-950/80 px-2.5 py-0.5 rounded border border-teal-800/60 flex items-center gap-1.5">
-            <Layers className="w-3 h-3 text-teal-400" />
-            {currentProjection}
+      <div className="flex flex-wrap items-center justify-between px-3.5 py-2.5 bg-slate-900 border-b border-slate-700/80 text-xs text-white gap-2">
+        {/* Left Side: Series & Projection Selector */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="font-mono text-xs font-bold text-teal-300 bg-teal-950 border border-teal-600/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shadow-xs">
+            <Layers className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+            <span>{currentProjection}</span>
           </span>
+
           {images.length > 1 && (
-            <div className="flex items-center gap-1 bg-slate-950 p-0.5 rounded border border-slate-800">
+            <div className="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-700 shadow-xs">
               {images.map((img, idx) => (
                 <button
                   key={idx}
                   type="button"
                   onClick={() => onSelectIndex && onSelectIndex(idx)}
-                  className={`px-2 py-0.5 rounded text-[10px] font-mono font-medium transition-colors ${
+                  className={`px-3 py-1 rounded-md text-xs font-mono transition-all flex items-center gap-1 ${
                     selectedIndex === idx 
-                      ? 'bg-teal-600 text-white font-bold' 
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                      ? 'bg-teal-500 text-slate-950 font-bold border border-teal-400 shadow-xs' 
+                      : 'bg-slate-800 text-slate-100 hover:text-white hover:bg-slate-700 border border-slate-600 font-semibold'
                   }`}
                 >
                   Series {idx + 1} ({img.projection || 'PA'})
@@ -167,26 +169,23 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
               ))}
             </div>
           )}
-          <span className="text-slate-400 font-mono text-[11px] hidden sm:inline truncate max-w-[180px]">
-            {activeItem?.filename || (typeof currentSrc === 'string' ? currentSrc.split('/').pop() : 'CXR_STUDY')}
-          </span>
         </div>
 
-        {/* Toolbar Tools */}
-        <div className="flex items-center gap-1.5">
+        {/* Right Side: Visual Contrast, Invert & Zoom Controls */}
+        <div className="flex items-center gap-2 flex-wrap">
           {/* Invert Grayscale Toggle */}
           <button
             type="button"
             onClick={() => setIsInverted(!isInverted)}
-            title={isInverted ? "Invert: Black Bone Mode" : "Invert: White Bone Mode"}
-            className={`px-2.5 py-1 rounded text-[11px] font-mono flex items-center gap-1.5 transition-colors border ${
+            title={isInverted ? "Switch to Black Bone Mode" : "Switch to White Bone Mode"}
+            className={`px-3 py-1 rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 transition-all shadow-xs border ${
               isInverted 
-                ? 'bg-teal-950/90 text-teal-300 border-teal-700' 
-                : 'bg-slate-800 text-slate-300 border-slate-700 hover:text-white'
+                ? 'bg-teal-500 text-slate-950 border-teal-400 font-bold' 
+                : 'bg-slate-800 text-slate-100 hover:text-white hover:bg-slate-700 border border-slate-600'
             }`}
           >
-            <Contrast className="w-3.5 h-3.5" />
-            <span>{isInverted ? 'White Bone' : 'Invert'}</span>
+            <Contrast className="w-3.5 h-3.5 shrink-0" />
+            <span>{isInverted ? 'Black Bone' : 'White Bone'}</span>
           </button>
 
           {/* Contrast Mode Toggle */}
@@ -195,53 +194,55 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
             onClick={() => {
               setContrastMode(prev => prev === 'standard' ? 'high' : prev === 'high' ? 'soft' : 'standard');
             }}
-            title="Toggle Radiographic Window / Contrast"
-            className={`px-2.5 py-1 rounded text-[11px] font-mono flex items-center gap-1.5 transition-colors border ${
+            title="Toggle Radiographic Window / Contrast Mode"
+            className={`px-3 py-1 rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 transition-all shadow-xs border ${
               contrastMode !== 'standard'
-                ? 'bg-indigo-950/90 text-indigo-300 border-indigo-700'
-                : 'bg-slate-800 text-slate-300 border-slate-700 hover:text-white'
+                ? 'bg-indigo-500 text-white border-indigo-400 font-bold'
+                : 'bg-slate-800 text-slate-100 hover:text-white hover:bg-slate-700 border border-slate-600'
             }`}
           >
-            <Sun className="w-3.5 h-3.5" />
+            <Sun className="w-3.5 h-3.5 shrink-0" />
             <span>
               {contrastMode === 'standard' ? 'Window: Std' : contrastMode === 'high' ? 'Window: High' : 'Window: Soft'}
             </span>
           </button>
 
-          <div className="h-4 w-px bg-slate-700 mx-1" />
+          <div className="h-5 w-px bg-slate-700 mx-0.5" />
 
           {/* Zoom controls */}
-          <span className="text-[11px] font-mono text-slate-400 mr-1 min-w-[36px] text-right">
-            {Math.round(scale * 100)}%
-          </span>
-          <button
-            type="button"
-            onClick={handleZoomOut}
-            title="Zoom Out"
-            className="p-1.5 hover:bg-slate-800 rounded text-slate-300 hover:text-white transition-colors"
-          >
-            <ZoomOut className="w-4 h-4" />
-          </button>
-          <button
-            type="button"
-            onClick={handleZoomIn}
-            title="Zoom In"
-            className="p-1.5 hover:bg-slate-800 rounded text-slate-300 hover:text-white transition-colors"
-          >
-            <ZoomIn className="w-4 h-4" />
-          </button>
-          <button
-            type="button"
-            onClick={handleReset}
-            title="Reset Pan, Zoom & Windowing"
-            className="p-1.5 hover:bg-slate-800 rounded text-slate-300 hover:text-white transition-colors"
-          >
-            <RotateCcw className="w-4 h-4" />
-          </button>
+          <div className="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-700 shadow-xs">
+            <button
+              type="button"
+              onClick={handleZoomOut}
+              title="Zoom Out (-)"
+              className="p-1 hover:bg-slate-800 rounded text-slate-200 hover:text-white transition-colors"
+            >
+              <ZoomOut className="w-4 h-4" />
+            </button>
+            <span className="text-xs font-mono font-bold text-white px-1.5 min-w-[42px] text-center">
+              {Math.round(scale * 100)}%
+            </span>
+            <button
+              type="button"
+              onClick={handleZoomIn}
+              title="Zoom In (+)"
+              className="p-1 hover:bg-slate-800 rounded text-slate-200 hover:text-white transition-colors"
+            >
+              <ZoomIn className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
+              onClick={handleReset}
+              title="Reset Zoom, Pan & Filters"
+              className="p-1 hover:bg-slate-800 rounded text-slate-200 hover:text-white transition-colors ml-0.5"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Main Diagnostic Viewport */}
+      {/* Main Diagnostic Viewport (Clean, Unobstructed Image Area) */}
       <div
         ref={containerRef}
         onMouseDown={handleMouseDown}
@@ -263,9 +264,9 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
             className="max-h-full max-w-full object-contain pointer-events-none transition-filter duration-150"
           />
         ) : (
-          <div className="flex flex-col items-center justify-center text-slate-500 p-6 text-center space-y-2">
-            <ImageIcon className="w-12 h-12 text-slate-700 stroke-1" />
-            <span className="text-xs font-mono text-slate-400">
+          <div className="flex flex-col items-center justify-center text-slate-400 p-6 text-center space-y-2">
+            <ImageIcon className="w-12 h-12 text-slate-600 stroke-1" />
+            <span className="text-xs font-mono text-slate-300">
               Radiograph image could not be loaded.
             </span>
             <button
@@ -274,33 +275,12 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
                 setHasFallbackTriggered(true);
                 setCurrentSrc(defaultFallback);
               }}
-              className="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-teal-400 rounded text-xs font-mono flex items-center gap-1.5 mt-2 transition-colors border border-slate-700"
+              className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-teal-300 rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 mt-2 transition-colors border border-slate-600 shadow-xs"
             >
               <RefreshCw className="w-3.5 h-3.5" /> Load Reference Radiograph
             </button>
           </div>
         )}
-
-        {/* Informative PACS HUD Overlay */}
-        <div className="absolute bottom-2 left-3 text-[10px] text-slate-400 font-mono bg-black/75 px-2.5 py-1.5 rounded-lg backdrop-blur-md pointer-events-none border border-slate-800 space-y-0.5">
-          <div className="flex items-center gap-2">
-            <span className="text-teal-400 font-semibold">DICOM DX/CR</span>
-            <span className="text-slate-600">•</span>
-            <span>16-BIT GRAYSCALE</span>
-            <span className="text-slate-600">•</span>
-            <span>2048 x 2048 NATIVE</span>
-          </div>
-          <div className="text-slate-500 text-[9px]">
-            {hasFallbackTriggered 
-              ? 'REFERENCE STUDY: NIH / INDIANA UNIV CXR COHORT' 
-              : 'NATIVE STUDY: UNALTERED ORIGINAL GRAYSCALE'}
-          </div>
-        </div>
-
-        {/* Right Corner Projection Badge */}
-        <div className="absolute top-3 right-3 text-[10px] text-teal-300 font-mono bg-black/70 px-2 py-1 rounded border border-teal-900/60 pointer-events-none">
-          {currentProjection.toUpperCase()} • STANDING
-        </div>
       </div>
     </div>
   );

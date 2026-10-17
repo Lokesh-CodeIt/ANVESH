@@ -1,9 +1,10 @@
-import React, { useRef, useState } from 'react';
-import { ArrowRight, Layers, FileCheck, ShieldCheck, UserCheck } from 'lucide-react';
-import { gsap } from '../motion/registerGsap.ts';
-import { useGsapContext } from '../motion/hooks/useGsapContext.ts';
-import { revealText } from '../motion/patterns/revealText.ts';
-import { Button } from '../components/common/Button.tsx';
+import React, { useState } from 'react';
+import { 
+  ArrowRight, 
+  ShieldCheck, 
+  FileCheck,
+  CheckCircle2,
+} from 'lucide-react';
 
 interface HeroSceneProps {
   onExplore: () => void;
@@ -11,181 +12,141 @@ interface HeroSceneProps {
 }
 
 export const HeroScene: React.FC<HeroSceneProps> = ({ onExplore, onHowItWorks }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const cardsContainerRef = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  useGsapContext(
-    ({ isReducedMotion, isPaused }) => {
-      if (isReducedMotion || isPaused) return;
-
-      // 1. Headline reveal
-      if (headlineRef.current) {
-        revealText(headlineRef.current, { isReducedMotion });
-      }
-
-      // 2. Staggered introduction of the Three Layers
-      const cards = cardsContainerRef.current?.querySelectorAll('.three-layer-card');
-      if (cards && cards.length > 0) {
-        gsap.fromTo(
-          cards,
-          { opacity: 0, y: 16, scale: 0.96 },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.6,
-            stagger: 0.1,
-            delay: 0.1,
-            ease: 'power2.out',
-            onComplete: () => {
-              // 3. Gentle floating movement limited to <= 6px (chained after reveal)
-              gsap.to(cards, {
-                y: '-=6',
-                duration: 3.5,
-                repeat: -1,
-                yoyo: true,
-                ease: 'sine.inOut',
-                stagger: 0.2,
-              });
-            },
-          }
-        );
-      }
-    },
-    { scope: containerRef }
-  );
-
-  // Desktop Pointer Parallax limited to max 4 degrees
+  // Subtle interactive mouse parallax effect for depth
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    setTilt({
-      x: x * 4, // Max 4 degrees
-      y: -y * 4,
-    });
+    const { clientX, clientY, currentTarget } = e;
+    const { left, top, width, height } = currentTarget.getBoundingClientRect();
+    const x = ((clientX - left) / width - 0.5) * 12;
+    const y = ((clientY - top) / height - 0.5) * 12;
+    setMousePos({ x, y });
   };
 
   const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0 });
+    setMousePos({ x: 0, y: 0 });
   };
 
   return (
-    <section
-      ref={containerRef}
-      className="anvesh-hero-section anvesh-dot-grid"
-      aria-label="ANVESH Introduction"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="container hero-container">
-        {/* Left Column: Text Content */}
-        <div className="hero-text-content">
-          <div className="hero-badge">
-            <Layers size={14} className="hero-badge-icon" aria-hidden="true" />
-            <span>Prior-Authorization Evidence Review Prototype</span>
+    <section className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+      {/* Modern Medical SaaS Split Hero Container */}
+      <div 
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)',
+          borderRadius: '2.25rem',
+          boxShadow: '0 20px 40px -15px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04)',
+          border: '1px solid #E2E8F0',
+        }}
+        className="overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[580px] transition-all duration-300"
+      >
+        
+        {/* Left Side: Clean Editorial Clinical Architecture (7 cols) */}
+        <div className="lg:col-span-7 p-6 sm:p-10 lg:p-14 flex flex-col justify-between space-y-8 bg-transparent">
+          {/* Top Brand Pill with Subtle Status Pulse */}
+          <div className="flex items-center gap-3">
+            <span className="font-extrabold text-lg text-slate-900 tracking-tight flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-teal-600 animate-pulse"></span>
+              ANVESH Clinical
+            </span>
+            <span className="text-xs px-3 py-1 rounded-full bg-teal-50 text-teal-800 font-bold border border-teal-200/80 shadow-2xs">
+              MedAuth VLM Engine
+            </span>
           </div>
 
-          <h1 ref={headlineRef} className="hero-headline">
-            Medical Evidence.<br />
-            <span className="hero-headline-accent">Smarter Claims.</span>
-          </h1>
+          {/* Main Hero Headline & Value Proposition */}
+          <div className="space-y-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              Verify medical claims & prior authorizations in just a few clicks
+            </h1>
+            <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
+              Connect high-resolution diagnostic imaging, fine-tuned multimodal vision-language representations, and clinical policy criteria into an intelligent, physician-in-the-loop review workspace.
+            </p>
+          </div>
 
-          <p className="hero-subheading">
-            ANVESH helps insurance reviewers inspect medical evidence, compare it with policy
-            requirements, identify missing information, and make human-led decisions.
-          </p>
-
-          <div className="hero-cta-group">
-            <Button
-              variant="primary"
-              size="lg"
-              rightIcon={<ArrowRight size={18} />}
+          {/* Action CTAs */}
+          <div className="flex flex-wrap items-center gap-3.5 pt-2">
+            <button
+              type="button"
               onClick={onExplore}
-              className="hero-btn-primary"
+              style={{
+                background: 'linear-gradient(135deg, #0F766E 0%, #0D9488 100%)',
+                boxShadow: '0 4px 14px rgba(13, 148, 136, 0.28)',
+              }}
+              className="h-11 px-6 hover:brightness-105 active:scale-[0.98] text-white font-semibold rounded-lg text-sm inline-flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm border border-transparent"
             >
-              Explore the Platform
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
+              <span>Inspect Workflow</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
               onClick={onHowItWorks}
-              className="hero-btn-secondary"
+              className="h-11 px-6 bg-slate-50 hover:bg-slate-100/90 active:scale-[0.98] text-slate-700 hover:text-slate-900 font-semibold rounded-lg text-sm border border-slate-200/90 transition-all cursor-pointer inline-flex items-center justify-center shadow-2xs"
             >
-              How It Works
-            </Button>
+              <span>How It Works</span>
+            </button>
           </div>
 
-          <div className="hero-notice">
-            <span className="notice-dot" aria-hidden="true" />
-            <span>Offline precomputed VLM analysis &bull; Decision support only</span>
+          {/* Quick Stats Micro Row */}
+          <div className="flex flex-wrap items-center gap-6 pt-1 text-xs text-slate-600">
+            <span className="flex items-center gap-1.5 font-bold text-slate-800">
+              <ShieldCheck className="w-4 h-4 text-teal-600" /> 100% Licensed Physician Gate
+            </span>
+            <span className="flex items-center gap-1.5 font-bold text-slate-800">
+              <FileCheck className="w-4 h-4 text-emerald-600" /> 2,107 Verified Studies
+            </span>
+            <span className="flex items-center gap-1.5 font-bold text-slate-800">
+              <CheckCircle2 className="w-4 h-4 text-indigo-600" /> Indiana Univ. Open-i Cohort
+            </span>
           </div>
         </div>
 
-        {/* Right Column: Signature Three Layers Object */}
-        <div className="hero-visual-content">
-          {/* Pale teal background organic glow form */}
-          <div className="hero-organic-glow" aria-hidden="true" />
-
-          <div
-            ref={cardsContainerRef}
-            className="three-layers-container"
+        {/* Right Side: Clean, Standalone Doctor Visual (NO badges, NO buttons, NO overlays) */}
+        <div 
+          style={{
+            background: 'linear-gradient(145deg, #134E4A 0%, #0F3B39 100%)',
+          }}
+          className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden"
+        >
+          {/* Subtle Ambient Background Radial Glow */}
+          <div 
             style={{
-              transform: `perspective(1000px) rotateY(${tilt.x}deg) rotateX(${tilt.y}deg)`,
+              background: 'radial-gradient(circle, rgba(20, 184, 166, 0.22) 0%, transparent 70%)',
+              filter: 'blur(30px)',
+            }}
+            className="absolute inset-0 pointer-events-none"
+          />
+
+          {/* Clean Standalone Doctor Frame with Soft Parallax */}
+          <div 
+            style={{
+              transform: `translate3d(${mousePos.x}px, ${mousePos.y}px, 0)`,
               transition: 'transform 0.15s ease-out',
             }}
+            className="w-full max-w-sm sm:max-w-md flex items-center justify-center relative z-10"
           >
-            {/* Layer 1: Evidence */}
-            <div className="three-layer-card layer-evidence clinical-glass">
-              <div className="layer-card-header">
-                <FileCheck size={18} className="text-teal" aria-hidden="true" />
-                <span className="layer-title">Layer 1 &bull; Clinical Evidence</span>
-              </div>
-              <div className="layer-abstract-body">
-                <div className="abstract-line wide" />
-                <div className="abstract-line medium" />
-                <div className="abstract-tag-group">
-                  <span className="abstract-tag">Chest X-Ray</span>
-                  <span className="abstract-tag">PA View</span>
-                  <span className="abstract-tag">Grounded</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Layer 2: Policy */}
-            <div className="three-layer-card layer-policy clinical-glass">
-              <div className="layer-card-header">
-                <ShieldCheck size={18} className="text-info" aria-hidden="true" />
-                <span className="layer-title">Layer 2 &bull; Coverage Policy</span>
-              </div>
-              <div className="layer-abstract-body">
-                <div className="abstract-line wide" />
-                <div className="abstract-checklist">
-                  <span className="check-item verified">&bull; Medical Necessity Verified</span>
-                  <span className="check-item check-gray">&bull; Exclusion Screening Intact</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Layer 3: Human Decision */}
-            <div className="three-layer-card layer-decision clinical-glass">
-              <div className="layer-card-header">
-                <UserCheck size={18} className="text-accent" aria-hidden="true" />
-                <span className="layer-title">Layer 3 &bull; Human Adjudication</span>
-              </div>
-              <div className="layer-abstract-body">
-                <div className="abstract-status-box">
-                  <span className="status-indicator-dot" />
-                  <span className="status-label">Adjudicator Confirmation Required</span>
-                </div>
-              </div>
+            {/* Elegant Rounded Image Container with Smooth Shadow */}
+            <div 
+              style={{
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 8px 20px rgba(0, 0, 0, 0.25)',
+                borderRadius: '2rem',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+              }}
+              className="w-full aspect-[4/5] overflow-hidden bg-slate-900/30 flex items-center justify-center"
+            >
+              <img
+                src="/hero_doctor.jpg"
+                alt="Clinical Physician Reviewer"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out select-none pointer-events-none"
+              />
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
 };
+
+export default HeroScene;

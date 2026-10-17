@@ -13,6 +13,7 @@ import {
   Check, 
   Save, 
   AlertOctagon,
+  AlertCircle,
   Eye, 
   Info, 
   Building2, 
@@ -80,6 +81,7 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
   const [isSavingDecision, setIsSavingDecision] = useState(false);
   const [decisionPersistedResult, setDecisionPersistedResult] = useState<any>(null);
   const [decisionError, setDecisionError] = useState<string | null>(null);
+  const [validationWarning, setValidationWarning] = useState<string | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -155,13 +157,14 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
 
   const handleOpenConfirm = () => {
     if (!selectedDisposition) {
-      alert('Please select a clinical determination disposition.');
+      setValidationWarning('Please select an adjudication decision (Authorize, Adverse, or Request Info) above before persisting determination.');
       return;
     }
     if (!rationale.trim()) {
-      alert('Clinical rationale is required for all prior authorization determinations.');
+      setValidationWarning('Clinical rationale is required before persisting determination. Please enter justification notes or pick a quick template.');
       return;
     }
+    setValidationWarning(null);
     setConfirmModalOpen(true);
   };
 
@@ -169,6 +172,7 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
     setConfirmModalOpen(false);
     setIsSavingDecision(true);
     setDecisionError(null);
+    setValidationWarning(null);
 
     try {
       if (isLiveSubmission && liveSubmission) {
@@ -212,6 +216,7 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
 
   const applyRationaleTemplate = (text: string) => {
     setRationale(text);
+    setValidationWarning(null);
   };
 
   if (loading) {
@@ -243,39 +248,35 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
     const reportFiles = liveSubmission.files?.filter(f => f.file_category === 'clinical_report') || [];
 
     return (
-      <div className="space-y-6 max-w-7xl">
+      <div className="space-y-6 w-full max-w-[1720px] mx-auto">
         {/* Header Bar */}
-        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="bg-white border border-slate-200/80 rounded-xl p-4 sm:p-5 shadow-xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" onClick={onBack} className="text-slate-600 hover:text-slate-900 -ml-2">
-              <ArrowLeft className="w-4 h-4 mr-1" /> Queue
+            <Button variant="ghost" size="sm" onClick={onBack} className="text-slate-600 hover:text-slate-900 -ml-2 border border-slate-200 hover:bg-slate-50">
+              <ArrowLeft className="w-4 h-4 mr-1 text-slate-500" /> Queue
             </Button>
-            <div className="h-5 w-px bg-slate-300" />
+            <div className="h-5 w-px bg-slate-200" />
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="font-mono text-base font-bold text-slate-900">{liveSubmission.submission_ref}</span>
-                <span className="text-xs px-2.5 py-0.5 rounded-full font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span className="text-[11px] px-2.5 py-0.5 rounded-full font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/80">
                   Live Provider Case
                 </span>
-                <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                <span className="text-[11px] px-2.5 py-0.5 rounded-full font-semibold bg-teal-50 text-teal-800 border border-teal-200/80">
                   {liveSubmission.status}
                 </span>
-                <span className="text-xs px-2.5 py-0.5 rounded-full font-semibold bg-purple-50 text-purple-700 border border-purple-200 flex items-center gap-1">
-                  <Sparkles className="w-3 h-3 text-purple-600" />
-                  {liveSubmission.ai_model_version || 'Fine-Tuned LLaVA-1.5-7B (Primary)'}
-                </span>
               </div>
-              <div className="text-xs text-slate-500 mt-0.5">
-                Patient: <span className="font-medium text-slate-700">{liveSubmission.patient_name}</span> (ID: <span className="font-mono">{liveSubmission.member_id}</span>) • 
-                Provider: <span className="font-medium text-slate-700">{liveSubmission.provider_org || 'Regional Health Center'}</span> • 
-                Plan: <span className="font-mono text-slate-700">{liveSubmission.payer_plan_id}</span>
+              <div className="text-xs text-slate-500 mt-1">
+                Patient: <span className="font-medium text-slate-800">{liveSubmission.patient_name}</span> (ID: <span className="font-mono text-slate-600">{liveSubmission.member_id}</span>) • 
+                Provider: <span className="font-medium text-slate-800">{liveSubmission.provider_org || 'Regional Health Center'}</span> • 
+                Plan: <span className="font-mono text-slate-600">{liveSubmission.payer_plan_id}</span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
-            <span className="text-[11px] font-mono px-3 py-1 bg-slate-100 text-slate-600 rounded-lg border border-slate-200 flex items-center gap-1.5">
-              <Building2 className="w-3.5 h-3.5 text-slate-500" /> Authorized Payer Scope
+          <div className="flex items-center gap-2 shrink-0">
+            <span className="text-[11px] font-mono px-3 py-1 bg-slate-50 text-slate-600 rounded-lg border border-slate-200 flex items-center gap-1.5">
+              <Building2 className="w-3.5 h-3.5 text-slate-400" /> Payer Scope Verified
             </span>
           </div>
         </div>
@@ -440,20 +441,20 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
           </div>
 
           {/* Right Column (5 cols): Reviewer Determination */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
-              <div className="flex items-center justify-between">
+          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-4 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto pr-1">
+            <div className="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow space-y-4">
+              <div className="flex items-center justify-between border-b border-slate-100 pb-3">
                 <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <Shield className="w-4 h-4 text-indigo-600" /> Human Reviewer Determination
                 </h3>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-semibold">
                   Adjudication Portal
                 </span>
               </div>
 
               {/* Reviewer Identity */}
-              <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-indigo-100 border border-indigo-200 flex items-center justify-center text-indigo-700 font-bold text-xs">
+              <div className="p-3 bg-slate-50/80 border border-slate-200/90 rounded-xl flex items-center gap-3 shadow-xs">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-800 flex items-center justify-center text-white font-bold text-xs shadow-xs">
                   SJ
                 </div>
                 <div>
@@ -463,61 +464,64 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
               </div>
 
               <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-700 uppercase">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
                   Select Official Determination
                 </label>
                 <div className="grid grid-cols-3 gap-2 text-xs">
                   <button
                     type="button"
-                    onClick={() => setSelectedDisposition('APPROVE')}
-                    className={`p-2 rounded-lg border font-semibold text-center transition-all ${
+                    onClick={() => { setSelectedDisposition('APPROVE'); setValidationWarning(null); }}
+                    className={`p-3 rounded-xl border font-semibold text-center transition-all ${
                       selectedDisposition === 'APPROVE'
-                        ? 'border-emerald-600 bg-emerald-50 text-emerald-800 ring-2 ring-emerald-500'
-                        : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                        ? 'border-2 border-emerald-600 bg-emerald-50/90 text-emerald-900 ring-2 ring-emerald-500/30 shadow-sm'
+                        : 'border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-emerald-50/50 hover:border-emerald-300 hover:text-emerald-900 shadow-xs'
                     }`}
                   >
-                    Authorize
+                    <span className="block text-xs font-bold">Authorize</span>
+                    <span className="text-[10px] text-slate-500 block font-medium">(Approve)</span>
                   </button>
                   <button
                     type="button"
-                    onClick={() => setSelectedDisposition('DENY')}
-                    className={`p-2 rounded-lg border font-semibold text-center transition-all ${
+                    onClick={() => { setSelectedDisposition('DENY'); setValidationWarning(null); }}
+                    className={`p-3 rounded-xl border font-semibold text-center transition-all ${
                       selectedDisposition === 'DENY'
-                        ? 'border-red-600 bg-red-50 text-red-800 ring-2 ring-red-500'
-                        : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                        ? 'border-2 border-red-600 bg-red-50/90 text-red-900 ring-2 ring-red-500/30 shadow-sm'
+                        : 'border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-red-50/50 hover:border-red-300 hover:text-red-900 shadow-xs'
                     }`}
                   >
-                    Adverse (Deny)
+                    <span className="block text-xs font-bold">Adverse</span>
+                    <span className="text-[10px] text-slate-500 block font-medium">(Deny)</span>
                   </button>
                   <button
                     type="button"
-                    onClick={() => setSelectedDisposition('REQUEST_MORE_INFO')}
-                    className={`p-2 rounded-lg border font-semibold text-center transition-all ${
+                    onClick={() => { setSelectedDisposition('REQUEST_MORE_INFO'); setValidationWarning(null); }}
+                    className={`p-3 rounded-xl border font-semibold text-center transition-all ${
                       selectedDisposition === 'REQUEST_MORE_INFO'
-                        ? 'border-amber-600 bg-amber-50 text-amber-800 ring-2 ring-amber-500'
-                        : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                        ? 'border-2 border-amber-600 bg-amber-50/90 text-amber-900 ring-2 ring-amber-500/30 shadow-sm'
+                        : 'border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-amber-50/50 hover:border-amber-300 hover:text-amber-900 shadow-xs'
                     }`}
                   >
-                    Request Info
+                    <span className="block text-xs font-bold">Request Info</span>
+                    <span className="text-[10px] text-slate-500 block font-medium">(Pend)</span>
                   </button>
                 </div>
               </div>
 
               {/* Quick Clinical Rationale Templates */}
               <div className="space-y-1.5">
-                <span className="text-[11px] font-semibold text-slate-600 block">Quick Rationale Templates:</span>
+                <span className="text-[11px] font-bold text-slate-700 uppercase tracking-wider block">Quick Rationale Templates:</span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px]">
                   <button
                     type="button"
                     onClick={() => applyRationaleTemplate("Approved: Clinical indication and supporting diagnostic imaging satisfy medical necessity guidelines under health plan coverage criteria.")}
-                    className="p-1.5 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 border border-slate-200 rounded text-left transition-colors truncate"
+                    className="p-2.5 bg-slate-50/80 hover:bg-emerald-50/80 hover:text-emerald-950 border border-slate-200/90 hover:border-emerald-300 rounded-xl text-left transition-all truncate shadow-xs font-medium"
                   >
                     ✓ Standard Approval
                   </button>
                   <button
                     type="button"
                     onClick={() => applyRationaleTemplate("Information Requested: Supplemental prior chest radiograph or clarifying progress notes required to verify chronicity.")}
-                    className="p-1.5 bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200 rounded text-left transition-colors truncate"
+                    className="p-2.5 bg-slate-50/80 hover:bg-amber-50/80 hover:text-amber-950 border border-slate-200/90 hover:border-amber-300 rounded-xl text-left transition-all truncate shadow-xs font-medium"
                   >
                     ? Request Prior Film
                   </button>
@@ -525,35 +529,58 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
               </div>
 
               <div className="space-y-1.5">
-                <label className="block text-xs font-bold text-slate-700 uppercase">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
                   Adjudication Rationale
                 </label>
                 <textarea
                   rows={4}
                   required
                   value={rationale}
-                  onChange={e => setRationale(e.target.value)}
+                  onChange={e => { setRationale(e.target.value); setValidationWarning(null); }}
                   placeholder="State detailed clinical justification referencing submitted imaging findings and coverage guidelines..."
-                  className="w-full p-2.5 text-xs border rounded-lg bg-slate-50 border-slate-300 focus:bg-white focus:ring-2 focus:ring-indigo-500 leading-relaxed font-sans"
+                  className="w-full p-3 text-xs border rounded-xl bg-slate-50/80 border-slate-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 leading-relaxed font-sans shadow-xs transition-all"
                 />
               </div>
+
+              {validationWarning && (
+                <div className="p-3 bg-amber-50 border-2 border-amber-300 rounded-xl text-xs text-amber-950 font-medium flex items-center gap-2.5 shadow-xs">
+                  <AlertCircle className="w-4 h-4 shrink-0 text-amber-600" />
+                  <span>{validationWarning}</span>
+                </div>
+              )}
+
+              {decisionError && (
+                <div className="p-3 bg-red-50 border-2 border-red-300 rounded-xl text-xs text-red-900 font-medium flex items-center gap-2.5 shadow-xs">
+                  <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                  <span>Failed to persist determination: {decisionError}</span>
+                </div>
+              )}
 
               <Button
                 variant="primary"
                 size="sm"
-                disabled={isSavingDecision || !selectedDisposition || !rationale.trim()}
+                disabled={isSavingDecision}
                 onClick={handleOpenConfirm}
-                className="w-full text-white bg-indigo-600 hover:bg-indigo-700 flex items-center justify-center gap-2 text-xs py-2.5 font-bold shadow-sm"
+                className="w-full text-white bg-gradient-to-r from-teal-700 to-teal-800 hover:from-teal-800 hover:to-teal-900 flex items-center justify-center gap-2 text-xs py-3 font-bold rounded-xl shadow-md hover:shadow-lg transition-all"
               >
-                <Save className="w-4 h-4 shrink-0" /> <span>Persist Official Determination</span>
+                {isSavingDecision ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin shrink-0" />
+                    <span>Recording Determination...</span>
+                  </>
+                ) : (
+                  <>
+                    <Save className="w-4 h-4 shrink-0" /> <span>Persist Official Determination</span>
+                  </>
+                )}
               </Button>
 
               {decisionPersistedResult && (
-                <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs text-emerald-800 space-y-1">
+                <div className="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-800 space-y-1 shadow-xs">
                   <div className="font-bold flex items-center gap-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Determination Successfully Recorded
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" /> Determination Successfully Recorded
                   </div>
-                  <div className="font-mono text-[11px]">
+                  <div className="font-mono text-[11px] text-emerald-900">
                     Submission Ref: {liveSubmission.submission_ref} • Status: {decisionPersistedResult.status}
                   </div>
                 </div>
@@ -566,7 +593,8 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
         <ConfirmationDialog
           isOpen={confirmModalOpen}
           title="Confirm Clinical Adjudication"
-          message={`Are you sure you wish to submit an official determination of "${selectedDisposition}" for submission ${liveSubmission.submission_ref}? This determination will be cryptographically audited and recorded in the payer review log.`}
+          caseId={liveSubmission.submission_ref}
+          disposition={selectedDisposition}
           confirmLabel="Confirm & Save Determination"
           cancelLabel="Review Details"
           onConfirm={handleConfirmDecision}
@@ -608,30 +636,23 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
   const activePlanId = reviewPreview?.plan_id || policies[0]?.plan_id || '38344AK1060001-01';
 
   return (
-    <div className="space-y-6 max-w-7xl">
+    <div className="space-y-6 w-full max-w-[1720px] mx-auto">
       {/* Case Header Bar */}
-      <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="bg-white border border-slate-200/90 rounded-xl p-4 sm:p-5 shadow-xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm" onClick={onBack} className="text-slate-600 hover:text-slate-900 -ml-2">
-            <ArrowLeft className="w-4 h-4 mr-1" /> Queue
+          <Button variant="ghost" size="sm" onClick={onBack} className="text-slate-600 hover:text-slate-900 -ml-2 border border-slate-200 hover:bg-slate-50 shadow-xs">
+            <ArrowLeft className="w-4 h-4 mr-1 text-slate-500" /> Queue
           </Button>
-          <div className="h-5 w-px bg-slate-300" />
+          <div className="h-5 w-px bg-slate-200" />
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
               <span className="font-mono text-base font-bold text-slate-900">{caseData?.case_id}</span>
-              <span className={`text-xs px-2.5 py-0.5 rounded-full font-semibold border ${
+              <span className={`text-xs px-2.5 py-0.5 rounded-full font-semibold border shadow-xs ${
                 isNormal 
                   ? 'bg-emerald-50 text-emerald-800 border-emerald-200' 
                   : 'bg-amber-50 text-amber-800 border-amber-200'
               }`}>
                 {isNormal ? 'Normal Study (Clear)' : 'Abnormal Study'}
-              </span>
-              <span className="text-xs px-2 py-0.5 rounded-full font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
-                Payer Adjudication Mode
-              </span>
-              <span className="text-xs px-2.5 py-0.5 rounded-full font-semibold bg-purple-50 text-purple-700 border border-purple-200 flex items-center gap-1">
-                <Sparkles className="w-3 h-3 text-purple-600" />
-                Primary Model: Fine-Tuned LLaVA-1.5-7B
               </span>
             </div>
             <div className="text-xs text-slate-500 mt-1 flex flex-wrap items-center gap-2">
@@ -645,15 +666,15 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-[11px] font-mono px-3 py-1 bg-slate-100 text-slate-700 rounded-lg border border-slate-200 flex items-center gap-1.5 shadow-sm">
+          <span className="text-[11px] font-mono px-3 py-1 bg-slate-50 text-slate-700 rounded-lg border border-slate-200 flex items-center gap-1.5 shadow-xs">
             <Eye className="w-3.5 h-3.5 text-indigo-600" /> Diagnostic Prior Authorization View
           </span>
         </div>
       </div>
 
       {/* Main Two-Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left Column (7 cols): Medical Image Viewer + Clinical Report + VLM Evidence */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        {/* Left Column (7 cols): Diagnostic Images + Clinical Report + AI Multimodal Evidence */}
         <div className="lg:col-span-7 space-y-6">
           
           {/* Medical Image Viewer */}
@@ -680,79 +701,83 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
           </div>
 
           {/* Transmitted Clinical Report & Attending Notes (Structured & Readable) */}
-          <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-5">
+          <div className="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow space-y-5">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                 <FileText className="w-4 h-4 text-indigo-600" /> Transmitted Clinical Report & Attending Notes
               </h3>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200 flex items-center gap-1">
+              <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center gap-1 font-semibold shadow-xs">
                 <Check className="w-3 h-3 text-emerald-600" /> Verified Attending Transcript
               </span>
             </div>
 
             {/* Section 1: Clinical Indication */}
-            <div className="p-3.5 bg-indigo-50/60 border border-indigo-100 rounded-xl space-y-1.5">
+            <div className="p-4 bg-gradient-to-r from-blue-50/70 via-indigo-50/40 to-slate-50 border border-blue-200/80 rounded-xl space-y-1.5 shadow-xs">
               <div className="flex items-center gap-1.5 text-xs font-bold text-indigo-900 uppercase tracking-wider">
                 <Stethoscope className="w-3.5 h-3.5 text-indigo-600" />
                 Clinical Indication & Ordering Context
               </div>
               <div className="text-xs text-slate-800 leading-relaxed font-sans">
-                <span className="font-semibold text-indigo-950">Indication: </span>
+                <span className="font-semibold text-slate-950">Indication: </span>
                 {cleanIndication}
               </div>
-              <div className="text-[11px] text-slate-600">
-                Patient referred for routine prior-authorization chest radiograph screening following positive tuberculin skin test (PPD/TST) to rule out active pulmonary tuberculosis disease.
+              <div className="text-[11px] text-slate-500">
+                Routine prior-authorization chest radiograph screening to evaluate for active pulmonary disease.
               </div>
             </div>
 
-            {/* Section 2: Detailed Anatomical Findings */}
-            <div className="space-y-2.5">
+            {/* Section 2: Detailed Anatomical Findings (Structured 2-Column Grid) */}
+            <div className="space-y-3">
               <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800 uppercase tracking-wider">
                 <ClipboardCheck className="w-3.5 h-3.5 text-indigo-600" />
                 Radiologist Findings (Anatomical Systems Check)
               </div>
-              <div className="space-y-1.5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                 {structuredFindings.map((findingText, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-2.5 bg-slate-50 border border-slate-200/80 rounded-lg text-xs text-slate-800 leading-relaxed">
+                  <div 
+                    key={idx} 
+                    className="flex items-start gap-2.5 p-3 bg-slate-50/80 hover:bg-slate-50 border border-slate-200/90 hover:border-indigo-200 rounded-xl text-xs text-slate-800 leading-relaxed shadow-xs transition-all"
+                  >
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>{findingText.replace(/\[REDACTED\]/g, 'signs')}</span>
+                    <span className="font-medium text-slate-700">{findingText.replace(/\[REDACTED\]/g, 'signs')}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Section 3: Official Impression */}
-            <div className="p-4 bg-emerald-50/80 border border-emerald-200 rounded-xl space-y-1.5">
-              <div className="flex items-center justify-between">
+            <div className="p-4 bg-gradient-to-r from-emerald-50 via-teal-50/40 to-emerald-50/80 border-2 border-emerald-300/80 rounded-xl space-y-2 shadow-sm">
+              <div className="flex items-center justify-between flex-wrap gap-2">
                 <span className="text-xs font-bold text-emerald-950 uppercase tracking-wider flex items-center gap-1.5">
-                  <Activity className="w-3.5 h-3.5 text-emerald-700" />
+                  <Activity className="w-4 h-4 text-emerald-700" />
                   Official Diagnostic Impression
                 </span>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-200/70 text-emerald-900 font-mono">
+                <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-200/80 text-emerald-900 border border-emerald-300 font-mono flex items-center gap-1 shadow-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
                   NEGATIVE FOR ACTIVE TB
                 </span>
               </div>
-              <p className="text-xs font-semibold text-emerald-900 leading-relaxed">
+              <p className="text-xs font-bold text-emerald-950 leading-relaxed">
                 {cleanImpression}
               </p>
-              <div className="text-[11px] text-emerald-800">
+              <div className="text-[11px] text-emerald-800/90 leading-relaxed">
                 Concordant 2-view chest radiograph demonstrating clear lung parenchymal fields and unremarkable thoracic contours.
               </div>
             </div>
           </div>
 
           {/* Precomputed VLM Clinical Evidence Analysis */}
-          <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div className="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3 flex-wrap gap-2">
               <div>
                 <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-indigo-600" /> Precomputed VLM Clinical Evidence Analysis
+                  <Sparkles className="w-4 h-4 text-indigo-600" /> AI Multimodal Evidence Analysis
                 </h3>
                 <p className="text-[11px] text-slate-500 mt-0.5">
-                  Vision-Language Model (MedAuth-VLM) Multimodal Grounding & Feature Extraction
+                  Automated visual-language feature grounding and cross-modal corroboration
                 </p>
               </div>
-              <span className="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-bold border border-emerald-200 shadow-sm">
+              <span className="text-xs px-3 py-1 rounded-full bg-emerald-100/90 text-emerald-800 font-bold border border-emerald-300 shadow-xs">
                 Score: {Math.round(evidenceScore * 100)}% Match
               </span>
             </div>
@@ -760,9 +785,11 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
             {/* 3 Insight Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
               {/* Visual Findings */}
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5">
-                <span className="text-[11px] font-bold text-slate-600 uppercase block">Visual Findings</span>
-                <div className="font-semibold text-slate-900">
+              <div className="p-3.5 bg-gradient-to-b from-blue-50/40 to-white rounded-xl border-2 border-blue-100 hover:border-blue-200 space-y-1.5 shadow-xs transition-all">
+                <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider bg-blue-100/70 px-2 py-0.5 rounded inline-block">
+                  Visual Findings
+                </span>
+                <div className="font-bold text-slate-900">
                   {isNormal ? 'Zero Abnormalities' : 'Focal Abnormalities'}
                 </div>
                 <div className="text-[11px] text-slate-500 leading-normal">
@@ -773,9 +800,11 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
               </div>
 
               {/* Multimodal Grounding */}
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5">
-                <span className="text-[11px] font-bold text-slate-600 uppercase block">Multimodal Grounding</span>
-                <div className="font-semibold text-emerald-700 flex items-center gap-1">
+              <div className="p-3.5 bg-gradient-to-b from-emerald-50/40 to-white rounded-xl border-2 border-emerald-100 hover:border-emerald-200 space-y-1.5 shadow-xs transition-all">
+                <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider bg-emerald-100/70 px-2 py-0.5 rounded inline-block">
+                  Multimodal Grounding
+                </span>
+                <div className="font-bold text-emerald-800 flex items-center gap-1">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> High Concordance
                 </div>
                 <div className="text-[11px] text-slate-500 leading-normal">
@@ -784,9 +813,11 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
               </div>
 
               {/* Medical Necessity */}
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5">
-                <span className="text-[11px] font-bold text-slate-600 uppercase block">Medical Necessity</span>
-                <div className="font-semibold text-indigo-700 flex items-center gap-1">
+              <div className="p-3.5 bg-gradient-to-b from-indigo-50/40 to-white rounded-xl border-2 border-indigo-100 hover:border-indigo-200 space-y-1.5 shadow-xs transition-all">
+                <span className="text-[10px] font-bold text-indigo-700 uppercase tracking-wider bg-indigo-100/70 px-2 py-0.5 rounded inline-block">
+                  Medical Necessity
+                </span>
+                <div className="font-bold text-indigo-800 flex items-center gap-1">
                   <CheckSquare className="w-3.5 h-3.5 text-indigo-600" /> Supported
                 </div>
                 <div className="text-[11px] text-slate-500 leading-normal">
@@ -795,38 +826,41 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
               </div>
             </div>
           </div>
+        </div>
 
+        {/* Right Column (5 cols): Policy Compliance Checklist + Human Determination Panel */}
+        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-4 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto pr-1">
           {/* Prior Authorization Coverage Policy Checklist */}
-          <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div className="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3 flex-wrap gap-2">
               <div>
                 <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-indigo-600" /> Health Plan Policy Compliance Checklist
+                  <Shield className="w-4 h-4 text-indigo-600" /> Health Plan Policy Compliance
                 </h3>
                 <p className="text-[11px] text-slate-500 mt-0.5">
-                  Plan ID: <span className="font-mono font-medium text-slate-700">{activePlanId}</span> • Benefit Category: Diagnostic Radiography
+                  Plan: <span className="font-mono font-medium text-slate-700">{activePlanId}</span> • Diagnostic Radiography
                 </p>
               </div>
-              <span className="text-[11px] px-2.5 py-0.5 rounded font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+              <span className="text-[11px] px-2.5 py-0.5 rounded-full font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-xs">
                 Covered Benefit
               </span>
             </div>
 
             <div className="space-y-2 text-xs">
               {complianceChecklist.map((item: any, idx: number) => (
-                <div key={idx} className="p-3 bg-slate-50 border border-slate-200 rounded-lg flex items-center justify-between gap-3">
-                  <div className="space-y-0.5">
-                    <div className="font-semibold text-slate-800 flex items-center gap-1.5">
+                <div key={idx} className="p-3 bg-slate-50/80 hover:bg-slate-50 border border-slate-200/90 rounded-xl flex items-center justify-between gap-3 shadow-xs transition-all">
+                  <div className="space-y-0.5 min-w-0">
+                    <div className="font-semibold text-slate-800 flex items-center gap-1.5 truncate">
                       {item.status === 'PASS' ? (
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                       ) : (
-                        <Info className="w-3.5 h-3.5 text-indigo-600" />
+                        <Info className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
                       )}
-                      {item.requirement}
+                      <span className="truncate">{item.requirement}</span>
                     </div>
-                    <div className="text-[11px] text-slate-500">{item.detail}</div>
+                    <div className="text-[11px] text-slate-500 leading-tight">{item.detail}</div>
                   </div>
-                  <span className={`px-2 py-0.5 rounded text-[10px] font-bold font-mono uppercase ${
+                  <span className={`px-2 py-0.5 rounded text-[10px] font-bold font-mono uppercase shrink-0 ${
                     item.status === 'PASS' 
                       ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' 
                       : 'bg-indigo-100 text-indigo-800 border border-indigo-200'
@@ -837,23 +871,21 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Right Column (5 cols): Human Determination Panel */}
-        <div className="lg:col-span-5 space-y-6">
-          <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-5 sticky top-6">
+          {/* Human Reviewer Determination Panel */}
+          <div className="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow space-y-5">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                 <Shield className="w-4 h-4 text-indigo-600" /> Human Reviewer Determination
               </h3>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">
+              <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 font-semibold">
                 Official Review
               </span>
             </div>
 
             {/* Reviewer Profile Card */}
-            <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center shadow-sm">
+            <div className="p-3 bg-slate-50/80 border border-slate-200/90 rounded-xl flex items-center gap-3 shadow-xs">
+              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-800 text-white font-bold text-xs flex items-center justify-center shadow-xs">
                 SJ
               </div>
               <div className="space-y-0.5">
@@ -863,7 +895,7 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
             </div>
 
             {role === 'auditor' && (
-              <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800 space-y-1">
+              <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800 space-y-1 shadow-xs">
                 <span className="font-bold flex items-center gap-1.5">
                   <ShieldAlert className="w-3.5 h-3.5 text-amber-600" /> Read-Only Auditor Mode
                 </span>
@@ -874,50 +906,50 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
             {/* Disposition Selector */}
             <div className="space-y-2">
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Select Human Clinical Determination
+                Select Clinical Determination
               </label>
               <div className="grid grid-cols-3 gap-2 text-xs">
                 <button
                   type="button"
                   disabled={role === 'auditor'}
-                  onClick={() => setSelectedDisposition('APPROVE')}
-                  className={`p-2.5 rounded-lg border font-semibold text-center transition-all ${
+                  onClick={() => { setSelectedDisposition('APPROVE'); setValidationWarning(null); }}
+                  className={`p-3 rounded-xl border text-center transition-all ${
                     role === 'auditor' ? 'opacity-60 cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400' :
                     selectedDisposition === 'APPROVE'
-                      ? 'border-emerald-600 bg-emerald-50 text-emerald-800 ring-2 ring-emerald-500 shadow-sm'
-                      : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                      ? 'border-2 border-emerald-600 bg-emerald-50/90 text-emerald-900 ring-2 ring-emerald-500/30 shadow-sm'
+                      : 'border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-emerald-50/50 hover:border-emerald-300 hover:text-emerald-900 shadow-xs'
                   }`}
                 >
                   <span className="block text-xs font-bold">Authorize</span>
-                  <span className="text-[10px] text-slate-500 block">(Approve)</span>
+                  <span className="text-[10px] text-slate-500 block font-medium">(Approve)</span>
                 </button>
                 <button
                   type="button"
                   disabled={role === 'auditor'}
-                  onClick={() => setSelectedDisposition('DENY')}
-                  className={`p-2.5 rounded-lg border font-semibold text-center transition-all ${
+                  onClick={() => { setSelectedDisposition('DENY'); setValidationWarning(null); }}
+                  className={`p-3 rounded-xl border text-center transition-all ${
                     role === 'auditor' ? 'opacity-60 cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400' :
                     selectedDisposition === 'DENY'
-                      ? 'border-red-600 bg-red-50 text-red-800 ring-2 ring-red-500 shadow-sm'
-                      : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                      ? 'border-2 border-red-600 bg-red-50/90 text-red-900 ring-2 ring-red-500/30 shadow-sm'
+                      : 'border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-red-50/50 hover:border-red-300 hover:text-red-900 shadow-xs'
                   }`}
                 >
                   <span className="block text-xs font-bold">Adverse</span>
-                  <span className="text-[10px] text-slate-500 block">(Deny)</span>
+                  <span className="text-[10px] text-slate-500 block font-medium">(Deny)</span>
                 </button>
                 <button
                   type="button"
                   disabled={role === 'auditor'}
-                  onClick={() => setSelectedDisposition('REQUEST_MORE_INFO')}
-                  className={`p-2.5 rounded-lg border font-semibold text-center transition-all ${
+                  onClick={() => { setSelectedDisposition('REQUEST_MORE_INFO'); setValidationWarning(null); }}
+                  className={`p-3 rounded-xl border text-center transition-all ${
                     role === 'auditor' ? 'opacity-60 cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400' :
                     selectedDisposition === 'REQUEST_MORE_INFO'
-                      ? 'border-amber-600 bg-amber-50 text-amber-800 ring-2 ring-amber-500 shadow-sm'
-                      : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                      ? 'border-2 border-amber-600 bg-amber-50/90 text-amber-900 ring-2 ring-amber-500/30 shadow-sm'
+                      : 'border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-amber-50/50 hover:border-amber-300 hover:text-amber-900 shadow-xs'
                   }`}
                 >
                   <span className="block text-xs font-bold">Request Info</span>
-                  <span className="text-[10px] text-slate-500 block">(Pend)</span>
+                  <span className="text-[10px] text-slate-500 block font-medium">(Pend)</span>
                 </button>
               </div>
             </div>
@@ -932,36 +964,36 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
                   type="button"
                   disabled={role === 'auditor'}
                   onClick={() => applyRationaleTemplate("Approved: Multimodal diagnostic chest radiograph review demonstrates clear lung parenchymal fields and unremarkable cardiothoracic silhouette. Negative for active pulmonary tuberculosis or acute consolidation. Medical necessity criteria fully met under policy guidelines.")}
-                  className="w-full p-2 bg-slate-50 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200 rounded-lg text-left transition-colors flex items-center justify-between group"
+                  className="w-full p-2.5 bg-slate-50/80 hover:bg-emerald-50/80 hover:text-emerald-950 border border-slate-200/90 hover:border-emerald-300 rounded-xl text-left transition-all flex items-center justify-between group shadow-xs"
                 >
-                  <span className="truncate font-medium">✓ Approve: Clear TB Screening</span>
+                  <span className="truncate font-semibold">✓ Approve: Clear TB Screening</span>
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-600 shrink-0" />
                 </button>
                 <button
                   type="button"
                   disabled={role === 'auditor'}
                   onClick={() => applyRationaleTemplate("Approved: Clinical indication supported by concordant diagnostic radiograph findings. Multimodal VLM cross-validation confirms absence of acute pathology. Prior authorization granted.")}
-                  className="w-full p-2 bg-slate-50 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200 rounded-lg text-left transition-colors flex items-center justify-between group"
+                  className="w-full p-2.5 bg-slate-50/80 hover:bg-emerald-50/80 hover:text-emerald-950 border border-slate-200/90 hover:border-emerald-300 rounded-xl text-left transition-all flex items-center justify-between group shadow-xs"
                 >
-                  <span className="truncate font-medium">✓ Approve: Medical Necessity Satisfied</span>
+                  <span className="truncate font-semibold">✓ Approve: Medical Necessity Satisfied</span>
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-600 shrink-0" />
                 </button>
                 <button
                   type="button"
                   disabled={role === 'auditor'}
                   onClick={() => applyRationaleTemplate("Information Requested: Supplemental prior chest study (within 12-24 months) requested for interval comparison to verify radiographic stability.")}
-                  className="w-full p-2 bg-slate-50 hover:bg-amber-50 hover:text-amber-900 border border-slate-200 rounded-lg text-left transition-colors flex items-center justify-between group"
+                  className="w-full p-2.5 bg-slate-50/80 hover:bg-amber-50/80 hover:text-amber-950 border border-slate-200/90 hover:border-amber-300 rounded-xl text-left transition-all flex items-center justify-between group shadow-xs"
                 >
-                  <span className="truncate font-medium">? Pend: Prior Study Comparison Required</span>
+                  <span className="truncate font-semibold">? Pend: Prior Study Comparison Required</span>
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-amber-600 shrink-0" />
                 </button>
                 <button
                   type="button"
                   disabled={role === 'auditor'}
                   onClick={() => applyRationaleTemplate("Adverse Determination: Prior authorization denied. Submitting clinical documentation does not establish conservative treatment trial or required diagnostic indication threshold under plan guidelines.")}
-                  className="w-full p-2 bg-slate-50 hover:bg-red-50 hover:text-red-900 border border-slate-200 rounded-lg text-left transition-colors flex items-center justify-between group"
+                  className="w-full p-2.5 bg-slate-50/80 hover:bg-red-50/80 hover:text-red-950 border border-slate-200/90 hover:border-red-300 rounded-xl text-left transition-all flex items-center justify-between group shadow-xs"
                 >
-                  <span className="truncate font-medium">✕ Deny: Policy Criteria Not Met</span>
+                  <span className="truncate font-semibold">✕ Deny: Policy Criteria Not Met</span>
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-red-600 shrink-0" />
                 </button>
               </div>
@@ -982,20 +1014,27 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
                 required
                 disabled={role === 'auditor'}
                 value={rationale}
-                onChange={e => setRationale(e.target.value)}
+                onChange={e => { setRationale(e.target.value); setValidationWarning(null); }}
                 placeholder={role === 'auditor' ? 'Adjudication rationale is disabled in read-only auditor mode.' : 'State clinical justification for this determination referencing imaging findings and policy criteria...'}
-                className={`w-full p-3 text-xs border rounded-lg focus:ring-2 focus:ring-indigo-500 leading-relaxed font-sans ${role === 'auditor' ? 'bg-slate-100 border-slate-200 text-slate-400 cursor-not-allowed' : 'bg-slate-50 border-slate-300 focus:bg-white'}`}
+                className={`w-full p-3 text-xs border rounded-xl focus:ring-2 focus:ring-indigo-500 leading-relaxed font-sans shadow-xs transition-all ${role === 'auditor' ? 'bg-slate-100 border-slate-200 text-slate-400 cursor-not-allowed' : 'bg-slate-50/80 border-slate-300 focus:bg-white'}`}
               />
             </div>
+
+            {validationWarning && (
+              <div className="p-3 bg-amber-50 border-2 border-amber-300 rounded-xl text-xs text-amber-950 font-medium flex items-center gap-2.5 shadow-xs">
+                <AlertCircle className="w-4 h-4 shrink-0 text-amber-600" />
+                <span>{validationWarning}</span>
+              </div>
+            )}
 
             {/* Save Button */}
             <div className="pt-2">
               <Button
                 variant="primary"
                 size="sm"
-                disabled={role === 'auditor' || isSavingDecision || !selectedDisposition || !rationale.trim()}
+                disabled={role === 'auditor' || isSavingDecision}
                 onClick={handleOpenConfirm}
-                className={`w-full text-white flex items-center justify-center gap-2 text-xs py-2.5 font-bold shadow-sm ${role === 'auditor' ? 'bg-slate-400 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700'}`}
+                className={`w-full text-white flex items-center justify-center gap-2 text-xs py-3 font-bold rounded-xl shadow-md hover:shadow-lg transition-all ${role === 'auditor' ? 'bg-slate-400 cursor-not-allowed' : 'bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800'}`}
               >
                 {role === 'auditor' ? (
                   <>
@@ -1015,7 +1054,7 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
             </div>
 
             {decisionError && (
-              <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-700">
+              <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 shadow-xs">
                 Failed to persist determination: {decisionError}
               </div>
             )}
@@ -1029,7 +1068,7 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
                 <div className="text-[11px] text-emerald-700">
                   Recorded in cryptographic prior-authorization ledger.
                 </div>
-                <div className="font-mono text-[10px] bg-emerald-100/60 p-1.5 rounded border border-emerald-200 text-emerald-950">
+                <div className="font-mono text-[10px] bg-emerald-100/60 p-1.5 rounded-lg border border-emerald-200 text-emerald-950">
                   Case: {caseData?.case_id} • Review ID: {decisionPersistedResult.review_id} • Status: {decisionPersistedResult.status}
                 </div>
               </div>
@@ -1041,7 +1080,8 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
       <ConfirmationDialog
         isOpen={confirmModalOpen}
         title="Confirm Clinical Adjudication"
-        message={`Are you sure you wish to submit an official determination of "${selectedDisposition}" for Case ${caseData?.case_id}? This determination will be cryptographically audited and recorded in the payer review log.`}
+        caseId={caseData?.case_id}
+        disposition={selectedDisposition}
         confirmLabel="Confirm & Save Determination"
         cancelLabel="Review Details"
         onConfirm={handleConfirmDecision}

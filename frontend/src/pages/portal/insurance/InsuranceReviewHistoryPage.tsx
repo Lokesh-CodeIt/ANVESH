@@ -8,8 +8,9 @@ import {
   XCircle, 
   Clock, 
   User, 
-  RefreshCw,
-  FileText
+  RefreshCw, 
+  FileText,
+  X
 } from 'lucide-react';
 import { Button } from '../../../components/shared/Button';
 import { getReviews, ReviewRecord } from '../../../services/api';
@@ -54,7 +55,7 @@ export const InsuranceReviewHistoryPage: React.FC<InsuranceReviewHistoryProps> =
   });
 
   return (
-    <div className="space-y-6 max-w-6xl">
+    <div className="space-y-6 max-w-7xl w-full mx-auto">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
@@ -75,19 +76,28 @@ export const InsuranceReviewHistoryPage: React.FC<InsuranceReviewHistoryProps> =
       </div>
 
       {/* Filter / Search Bar */}
-      <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row items-center gap-4">
-        <div className="relative flex-1 w-full">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
+      <div className="bg-white border border-slate-200/90 rounded-xl p-4 shadow-sm flex flex-col md:flex-row items-center gap-4">
+        <div className="clinical-search-wrapper flex-1 w-full">
           <input
             type="text"
             placeholder="Search by Case ID, Reviewer ID, or Decision..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 font-mono"
+            className="clinical-search-input font-mono"
           />
+          {searchTerm && (
+            <button
+              type="button"
+              onClick={() => setSearchTerm('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+              aria-label="Clear search"
+            >
+              <X size={16} />
+            </button>
+          )}
         </div>
 
-        <div className="text-xs text-slate-500 whitespace-nowrap px-2">
+        <div className="text-xs text-slate-500 whitespace-nowrap px-2 shrink-0">
           Audited Determinations in DB: <strong className="text-slate-900 font-mono">{total}</strong>
         </div>
       </div>

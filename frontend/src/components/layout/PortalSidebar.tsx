@@ -48,25 +48,19 @@ export const PortalSidebar: React.FC<PortalSidebarProps> = ({
       case 'patient':
         return [
           { id: 'dashboard', label: 'Dashboard', icon: <Home size={18} /> },
+          { id: 'claims', label: 'My Claims & Prior Auths', icon: <FileText size={18} /> },
           { id: 'policies', label: 'My Insurance Policies', icon: <Shield size={18} /> },
-          { id: 'claims', label: 'My Claims & Prior Auths', icon: <FileText size={18} />, badge: 2 },
-          { id: 'documents', label: 'Required Documents', icon: <UploadCloud size={18} />, badge: 1 },
-          { id: 'notifications', label: 'Notifications', icon: <Bell size={18} /> },
-          { id: 'profile', label: 'Profile & Settings', icon: <User size={18} /> },
-          { id: 'help', label: 'Help & Support', icon: <HelpCircle size={18} /> },
+          { id: 'documents', label: 'Required Documents', icon: <UploadCloud size={18} /> },
+          { id: 'profile', label: 'Member Profile', icon: <User size={18} /> },
         ];
 
       case 'provider':
         return [
           { id: 'dashboard', label: 'Dashboard', icon: <Home size={18} /> },
-          { id: 'lookup', label: 'Patient / Member Lookup', icon: <Search size={18} /> },
-          { id: 'new-request', label: 'New Authorization Request', icon: <PlusCircle size={18} /> },
+          { id: 'new-request', label: 'New Request', icon: <PlusCircle size={18} /> },
           { id: 'submissions', label: 'My Submissions', icon: <FileText size={18} /> },
-          { id: 'additional-info', label: 'Additional Info Requests', icon: <AlertCircle size={18} />, badge: 1 },
-          { id: 'appeals', label: 'Resubmissions & Appeals', icon: <FileCheck size={18} /> },
-          { id: 'profile', label: 'Hospital Profile & Staff', icon: <User size={18} /> },
-          { id: 'notifications', label: 'Notifications', icon: <Bell size={18} /> },
-          { id: 'help', label: 'Help & Documentation', icon: <HelpCircle size={18} /> },
+          { id: 'lookup', label: 'Member Lookup', icon: <Search size={18} /> },
+          { id: 'profile', label: 'Hospital Profile', icon: <User size={18} /> },
         ];
 
       case 'insurance':
@@ -78,9 +72,6 @@ export const PortalSidebar: React.FC<PortalSidebarProps> = ({
           { id: 'history', label: 'Review History & Audit', icon: <FileCheck size={18} /> },
           { id: 'policies', label: 'Policy Library', icon: <Shield size={18} /> },
           { id: 'analytics', label: 'Analytics & Reports', icon: <BarChart2 size={18} /> },
-          { id: 'notifications', label: 'Notifications & Tasks', icon: <Bell size={18} /> },
-          { id: 'admin', label: 'Company Administration', icon: <Settings size={18} /> },
-          { id: 'help', label: 'How to Use ANVESH', icon: <HelpCircle size={18} /> },
         ];
     }
   };

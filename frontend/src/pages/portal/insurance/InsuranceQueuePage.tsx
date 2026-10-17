@@ -6,16 +6,17 @@ import {
   AlertTriangle, 
   CheckCircle2, 
   HelpCircle, 
-  RefreshCw,
-  ArrowRight,
-  ShieldAlert,
-  FileCheck,
-  ChevronLeft,
-  ChevronRight,
-  FileText,
-  Sparkles,
-  Building2,
-  Image as ImageIcon
+  RefreshCw, 
+  ArrowRight, 
+  ShieldAlert, 
+  FileCheck, 
+  ChevronLeft, 
+  ChevronRight, 
+  FileText, 
+  Sparkles, 
+  Building2, 
+  Image as ImageIcon,
+  X
 } from 'lucide-react';
 import { Button } from '../../../components/shared/Button';
 import { 
@@ -70,21 +71,46 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
     if (statusFilter !== 'all' && s.status !== statusFilter) return false;
     if (!searchTerm.trim()) return true;
     const term = searchTerm.toLowerCase();
+
+    // Check files for projection or filename matches (e.g. frontal, lateral, pa)
+    const matchesFiles = (s.files || []).some(f => 
+      f.original_filename?.toLowerCase().includes(term) ||
+      f.file_category?.toLowerCase().includes(term)
+    );
+
+    const service = (s.service_type || '').toLowerCase();
+    const isLateralMatch = term === 'lateral' && (service.includes('lat') || service.includes('2 views') || service.includes('lateral'));
+    const isFrontalMatch = term === 'frontal' && (service.includes('frontal') || service.includes('pa') || service.includes('single view'));
+
     return (
       s.submission_ref.toLowerCase().includes(term) ||
       s.member_id.toLowerCase().includes(term) ||
       s.patient_name.toLowerCase().includes(term) ||
       (s.provider_org && s.provider_org.toLowerCase().includes(term)) ||
-      s.service_type.toLowerCase().includes(term)
+      service.includes(term) ||
+      (s.clinical_indication && s.clinical_indication.toLowerCase().includes(term)) ||
+      (s.prelim_findings && s.prelim_findings.toLowerCase().includes(term)) ||
+      isLateralMatch ||
+      isFrontalMatch ||
+      matchesFiles
     );
   });
 
   const filteredCases = cases.filter(c => {
     if (!searchTerm.trim()) return true;
     const term = searchTerm.toLowerCase();
+    const service = (c.service_type || c.requested_procedure || '').toLowerCase();
+    const isLateralMatch = term === 'lateral' && (service.includes('lat') || service.includes('2 views') || service.includes('lateral'));
+    const isFrontalMatch = term === 'frontal' && (service.includes('frontal') || service.includes('pa') || service.includes('single view'));
+
     return (
       c.case_id.toLowerCase().includes(term) ||
-      (c.patient_id && c.patient_id.toLowerCase().includes(term))
+      (c.patient_id && c.patient_id.toLowerCase().includes(term)) ||
+      service.includes(term) ||
+      (c.indication && c.indication.toLowerCase().includes(term)) ||
+      (c.classification && c.classification.toLowerCase().includes(term)) ||
+      isLateralMatch ||
+      isFrontalMatch
     );
   });
 
@@ -125,7 +151,7 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
   };
 
   return (
-    <div className="space-y-6 max-w-6xl">
+    <div className="space-y-6 max-w-7xl w-full">
       {/* Title */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
@@ -148,48 +174,57 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
       </div>
 
       {/* Distinction Tabs: Real Submissions vs Research Cohort */}
-      <div className="flex border-b border-slate-200">
+      <div className="flex border-b border-slate-200/80">
         <button
           onClick={() => { setActiveTab('live'); setPage(0); }}
-          className={`py-2.5 px-4 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
+          className={`py-3 px-5 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
             activeTab === 'live'
-              ? 'border-indigo-600 text-indigo-900 bg-indigo-50/50'
-              : 'border-transparent text-slate-500 hover:text-slate-700'
+              ? 'border-[#176B68] text-[#176B68] bg-teal-50/40'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
           }`}
         >
-          <FileCheck className="w-4 h-4 text-indigo-600" /> Live Provider Requests ({submissions.length})
+          <FileCheck className="w-4 h-4 text-[#176B68]" /> Live Provider Requests ({submissions.length})
         </button>
         <button
           onClick={() => { setActiveTab('historical'); setPage(0); }}
-          className={`py-2.5 px-4 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
+          className={`py-3 px-5 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
             activeTab === 'historical'
-              ? 'border-indigo-600 text-indigo-900 bg-indigo-50/50'
-              : 'border-transparent text-slate-500 hover:text-slate-700'
+              ? 'border-[#176B68] text-[#176B68] bg-teal-50/40'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
           }`}
         >
-          <FileText className="w-4 h-4" /> Historical Research Archive (2,107 Cohort Cases)
+          <FileText className="w-4 h-4 text-[#176B68]" /> Historical Research Archive (2,107 Cohort Cases)
         </button>
       </div>
 
       {/* Filter / Search Bar */}
-      <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row items-center gap-4">
-        <div className="relative flex-1 w-full">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
+      <div className="bg-white border border-slate-200/90 rounded-xl p-4 shadow-xs flex flex-col md:flex-row items-center gap-3">
+        <div className="clinical-search-wrapper flex-1 w-full">
           <input
             type="text"
             placeholder={activeTab === 'live' ? "Search by Submission Ref (e.g. AUTH-202610-...), Patient, or Hospital..." : "Search Case ID (e.g. CASE_000001)..."}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 font-mono"
+            className="clinical-search-input font-mono"
           />
+          {searchTerm && (
+            <button
+              type="button"
+              onClick={() => setSearchTerm('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+              aria-label="Clear search"
+            >
+              <X size={16} />
+            </button>
+          )}
         </div>
 
         {activeTab === 'live' && (
-          <div className="flex items-center gap-2 w-full md:w-auto">
+          <div className="clinical-filter-select-wrapper w-full md:w-auto shrink-0 flex items-center gap-3">
             <select
               value={statusFilter}
               onChange={e => setStatusFilter(e.target.value)}
-              className="px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="clinical-filter-select"
             >
               <option value="all">All Statuses</option>
               <option value="SUBMITTED">Awaiting Review</option>
@@ -206,7 +241,7 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
       </div>
 
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-xs text-red-700 flex items-center justify-between">
+        <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 flex items-center justify-between">
           <span>Failed to load queue: {error}</span>
           <Button size="sm" variant="outline" onClick={loadQueue}>Retry</Button>
         </div>
@@ -214,11 +249,11 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
 
       {/* TAB 1: LIVE PROVIDER SUBMISSIONS */}
       {activeTab === 'live' && (
-        <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+        <div className="bg-white border border-slate-200/80 rounded-xl shadow-xs overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider">
+                <tr className="bg-slate-50/70 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider">
                   <th className="py-3 px-4">Submission Ref</th>
                   <th className="py-3 px-4">Submitted Time</th>
                   <th className="py-3 px-4">Provider / Facility</th>
@@ -246,7 +281,7 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                 ) : (
                   filteredSubmissions.map((s) => (
                     <tr key={s.id} className="hover:bg-slate-50/80 transition-colors">
-                      <td className="py-3.5 px-4 font-mono font-bold text-indigo-900">
+                      <td className="py-3.5 px-4 font-mono font-bold text-[#176B68]">
                         {s.submission_ref}
                       </td>
                       <td className="py-3.5 px-4 text-slate-500 whitespace-nowrap">
@@ -261,7 +296,7 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                         </div>
                       </td>
                       <td className="py-3.5 px-4 text-slate-900">
-                        <div>{s.patient_name}</div>
+                        <div className="font-medium">{s.patient_name}</div>
                         <div className="font-mono text-[10px] text-slate-400">{s.member_id}</div>
                       </td>
                       <td className="py-3.5 px-4 text-slate-800 font-medium">
@@ -272,19 +307,19 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                         {s.payer_plan_id}
                       </td>
                       <td className="py-3.5 px-4">
-                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/80">
                           <FileCheck className="w-3 h-3 text-emerald-600" /> {s.files?.length || 0} Attached
                         </span>
                       </td>
                       <td className="py-3.5 px-4">
                         {getStatusBadge(s.status)}
                       </td>
-                      <td className="py-3.5 px-4 text-right">
+                      <td className="py-3.5 px-4 text-right whitespace-nowrap">
                         <Button
                           variant="primary"
                           size="sm"
                           onClick={() => onNavigate?.('case-workspace', s.submission_ref)}
-                          className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs px-3 py-1 h-auto"
+                          className="text-xs font-semibold shadow-xs"
                         >
                           Open Review
                         </Button>
@@ -349,12 +384,12 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                         <Clock className="w-3 h-3" /> Human Review
                       </span>
                     </td>
-                    <td className="py-3.5 px-4 text-right">
+                    <td className="py-3.5 px-4 text-right whitespace-nowrap">
                       <Button
-                        variant="primary"
+                        variant="secondary"
                         size="sm"
                         onClick={() => onNavigate?.('case-workspace', c.case_id)}
-                        className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs px-3 py-1 h-auto"
+                        className="text-xs font-semibold"
                       >
                         Open Workspace
                       </Button>

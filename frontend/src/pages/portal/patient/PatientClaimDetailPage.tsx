@@ -93,45 +93,53 @@ export const PatientClaimDetailPage: React.FC<PatientClaimDetailPageProps> = ({
   ];
 
   return (
-    <div className="portal-page-container">
-      <button onClick={onBack} className="portal-back-btn">
-        <ArrowLeft size={16} aria-hidden="true" />
-        <span>Back to Prior Authorizations</span>
-      </button>
+    <div className="space-y-6 max-w-7xl w-full mx-auto">
+      {/* Back Button */}
+      <div className="pb-2">
+        <Button variant="ghost" size="sm" onClick={onBack} className="text-slate-600 hover:text-slate-900 -ml-2">
+          <ArrowLeft className="w-4 h-4 mr-1.5" /> Back to Prior Authorizations
+        </Button>
+      </div>
 
       {/* Claim Summary Card */}
-      <div className="claim-detail-header-card clinical-glass">
-        <div className="detail-header-top">
-          <div>
-            <span className="claim-meta-code">Reference: {claimMeta.ref}</span>
-            <h2 className="detail-service-title">{claimMeta.title}</h2>
-            <p className="detail-provider-info">
-              <Building2 size={16} className="inline-icon text-teal" />
+      <div className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-100 pb-5">
+          <div className="space-y-1.5">
+            <span className="font-mono text-xs font-bold text-teal-800 bg-teal-50 px-2.5 py-1 rounded-md border border-teal-200/80">
+              Reference: {claimMeta.ref}
+            </span>
+            <h1 className="text-2xl font-bold text-slate-900 tracking-tight mt-1">{claimMeta.title}</h1>
+            <p className="text-sm text-slate-600 flex items-center gap-1.5 font-medium">
+              <Building2 size={16} className="text-teal-700" />
               <span>{claimMeta.provider}</span>
             </p>
           </div>
-          <div className="text-right">
+          <div className="flex flex-col items-start md:items-end gap-2">
             <StatusBadge
               status={claimMeta.statusCode as any}
               label={claimMeta.statusLabel}
               size="md"
             />
-            <span className="claim-urgency-note">Standard Review (Research Prototype Demonstration)</span>
+            <span className="text-xs text-slate-400">Standard Review Cycle</span>
           </div>
         </div>
 
         {/* Current State & Next Steps Alert */}
-        <div className="claim-next-steps-banner" role="status">
-          <AlertCircle size={22} className="text-caution inline-icon" />
-          <div className="banner-text-body">
-            <strong>Current Status:</strong> {claimMeta.nextStep}
+        <div className="p-5 bg-amber-50/70 border border-amber-200/90 rounded-xl flex items-start gap-3.5 text-amber-900 text-sm shadow-2xs" role="status">
+          <AlertCircle size={22} className="text-amber-700 shrink-0 mt-0.5" />
+          <div className="space-y-2 flex-1">
+            <div>
+              <strong className="block font-bold">Current Adjudication Status:</strong>
+              <p className="text-xs sm:text-sm text-amber-800 mt-0.5 leading-relaxed">{claimMeta.nextStep}</p>
+            </div>
             {claimMeta.needsDocs && (
-              <div className="mt-2 flex gap-3">
+              <div className="pt-2">
                 <Button
-                  variant="secondary"
+                  variant="primary"
                   size="sm"
                   leftIcon={<UploadCloud size={14} />}
                   onClick={onUploadRequested}
+                  className="bg-[#176B68] hover:bg-[#0E4E4C] text-white shadow-xs"
                 >
                   Upload Requested Documentation
                 </Button>
@@ -142,47 +150,52 @@ export const PatientClaimDetailPage: React.FC<PatientClaimDetailPageProps> = ({
       </div>
 
       {/* Chronological Status Timeline */}
-      <div className="portal-panel clinical-glass mt-6">
-        <div className="panel-header">
-          <h3>Progress & Communication Timeline</h3>
+      <div className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6">
+        <div className="border-b border-slate-100 pb-3">
+          <h2 className="text-lg font-bold text-slate-900">Progress & Communication Timeline</h2>
+          <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Audited milestone progression for this medical necessity intake.</p>
         </div>
-        <div className="panel-body">
-          <div className="patient-timeline-list">
-            {timelineMilestones.map((m, idx) => {
-              const isCompleted = m.status === 'completed';
-              const isAction = m.status === 'action_required';
-              return (
-                <div key={idx} className={`timeline-milestone-item is-${m.status}`}>
-                  <div className="timeline-node-marker">
-                    {isCompleted ? (
-                      <CheckCircle2 size={18} className="text-success" />
-                    ) : isAction ? (
-                      <AlertCircle size={18} className="text-caution" />
-                    ) : (
-                      <Clock size={18} className="text-muted" />
-                    )}
-                  </div>
-                  <div className="timeline-milestone-content">
-                    <div className="milestone-title-row">
-                      <h4>{m.title}</h4>
-                      <span className="milestone-date">{m.date}</span>
-                    </div>
-                    <p className="milestone-desc">{m.description}</p>
-                  </div>
+
+        <div className="space-y-6 pl-2 sm:pl-4">
+          {timelineMilestones.map((m, idx) => {
+            const isCompleted = m.status === 'completed';
+            const isAction = m.status === 'action_required';
+            return (
+              <div key={idx} className="flex items-start gap-4 relative">
+                {idx < timelineMilestones.length - 1 && (
+                  <div className="absolute left-[13px] top-[26px] bottom-[-24px] w-0.5 bg-slate-200" />
+                )}
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 z-10 ${
+                  isCompleted ? 'bg-emerald-100 text-emerald-700' : isAction ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-400'
+                }`}>
+                  {isCompleted ? (
+                    <CheckCircle2 size={16} />
+                  ) : isAction ? (
+                    <AlertCircle size={16} />
+                  ) : (
+                    <Clock size={16} />
+                  )}
                 </div>
-              );
-            })}
-          </div>
+                <div className="space-y-1 flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <h3 className="text-sm font-bold text-slate-900">{m.title}</h3>
+                    <span className="text-xs text-slate-500 font-mono">{m.date}</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{m.description}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
       {/* Patient Rights & Support Section */}
-      <div className="patient-rights-card clinical-glass mt-6">
-        <div className="rights-header">
-          <HelpCircle size={20} className="text-teal inline-icon" />
-          <h4>Your Rights as a Member</h4>
+      <div className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-xs space-y-2">
+        <div className="flex items-center gap-2 text-teal-800 font-bold text-sm">
+          <HelpCircle size={18} className="text-teal-700" />
+          <h3>Your Rights as a Member</h3>
         </div>
-        <p className="rights-text">
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
           Under healthcare consumer protection guidelines, you have the right to receive timely updates
           on prior authorizations, request an expedited review if delayed care threatens your health,
           and appeal any adverse determination.

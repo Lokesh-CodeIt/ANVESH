@@ -105,32 +105,30 @@ export const SignInPage: React.FC<SignInPageProps> = ({ initialRole = 'insurance
           </p>
         </div>
 
-        {/* Authentication Architecture Alert */}
-        <div className="auth-notice-alert" role="status">
-          <AlertCircle size={18} className="notice-icon text-info" aria-hidden="true" />
-          <div className="notice-content">
-            <span className="notice-title">Server-Enforced Authentication Active</span>
-            <p className="notice-text">
-              Real session authentication with bcrypt hashing and RBAC authorization is active. Sign in with your registered account.
-            </p>
-            <div className="mt-2 p-2 bg-slate-900/60 rounded text-[11px] font-mono text-slate-300 space-y-1 border border-slate-700/40">
-              <div>Reviewer: <span className="text-teal-400">reviewer@anvesh.com</span> / <span className="text-slate-400">AnveshReview2026!</span></div>
-              <div>Auditor: <span className="text-teal-400">auditor@anvesh.com</span> / <span className="text-slate-400">AnveshAudit2026!</span></div>
-              <div>Admin: <span className="text-teal-400">admin@anvesh.com</span> / <span className="text-slate-400">AnveshAdmin2026!</span></div>
+        {/* ANVESH Project Image Banner */}
+        <div className="overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm mb-8 bg-slate-900 group">
+          <div className="relative aspect-[16/9] w-full overflow-hidden">
+            <img
+              src="/anvesh_logo.jpg"
+              alt="ANVESH AI-Powered Healthcare Solutions"
+              className="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
+              <div className="flex items-center justify-between w-full">
+                <span className="text-white text-xs font-bold tracking-wide flex items-center gap-1.5 drop-shadow">
+                  <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                  ANVESH MedAuth VLM
+                </span>
+                <span className="text-[10px] text-teal-200 font-mono bg-teal-950/60 px-2 py-0.5 rounded border border-teal-500/30">
+                  Multimodal AI
+                </span>
+              </div>
             </div>
-            <Button
-              variant="secondary"
-              size="sm"
-              onClick={handleEnterPreview}
-              className="mt-3 w-full border border-slate-700 text-xs text-slate-300 hover:text-white"
-            >
-              Visual Design Preview Mode ({selectedRole.toUpperCase()} — Synthetic UI Only)
-            </Button>
           </div>
         </div>
 
         {/* Standard Form */}
-        <form onSubmit={handleSubmit} className="auth-form">
+        <form onSubmit={handleSubmit} className="auth-form pt-2">
           <Input
             label="Email Address"
             type="email"

@@ -38,7 +38,7 @@ export function App() {
   useEffect(() => {
     const handlePopState = () => {
       setCurrentPath(window.location.pathname || '/');
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -49,7 +49,7 @@ export function App() {
     if (path !== currentPath) {
       window.history.pushState({}, '', path);
       setCurrentPath(path.split('?')[0]);
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -101,11 +101,6 @@ export function App() {
             <PortalShell onNavigatePublic={navigate} />
           ) : (
             <div className="anvesh-app-shell">
-              {/* Accessible Skip Link */}
-              <a href="#main-content" className="skip-link">
-                Skip to main clinical content
-              </a>
-
               {/* Navigation Bar */}
               <PublicNavbar currentPath={currentPath} onNavigate={navigate} />
 

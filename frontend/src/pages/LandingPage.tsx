@@ -16,7 +16,7 @@ interface LandingPageProps {
 
 export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
   const handleExplore = () => {
-    const el = document.getElementById('audiences-section-anchor');
+    const el = document.getElementById('how-it-works-anchor');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
@@ -35,19 +35,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
           />
         </ErrorBoundary>
 
-        <div id="audiences-section-anchor">
-          <ErrorBoundary fallbackTitle="Audience Portals Scene">
-            <RiseOverScene>
-              <AudiencesScene
-                onSelectRole={(role) => onNavigate(`/auth/signin?role=${role}`)}
-              />
-            </RiseOverScene>
+        <div id="how-it-works-anchor">
+          <ErrorBoundary fallbackTitle="Workflow Pipeline Scene">
+            <HowItWorksScene />
           </ErrorBoundary>
         </div>
-
-        <ErrorBoundary fallbackTitle="Workflow Pipeline Scene">
-          <HowItWorksScene />
-        </ErrorBoundary>
 
         <ErrorBoundary fallbackTitle="Responsible AI Scene">
           <ResponsibleAiScene />

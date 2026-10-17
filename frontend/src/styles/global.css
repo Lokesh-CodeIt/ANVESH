@@ -12,8 +12,13 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   background-color: var(--surface-page);
   color: var(--text-primary);
+  overflow-y: auto;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  overscroll-behavior-y: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -29,19 +34,24 @@ body {
   color: var(--text-primary);
   background-color: var(--surface-page);
   min-height: 100vh;
+  overflow-y: auto;
   overflow-x: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  letter-spacing: -0.01em;
 }
 
 /* Accessible Focus States */
 :focus-visible {
-  outline: 2px solid var(--accent-teal-deep);
+  outline: 2px solid var(--accent-teal);
   outline-offset: 2px;
+  box-shadow: var(--shadow-input-focus);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color var(--duration-quick) var(--ease-power2-out);
+  transition: color var(--duration-quick) ease, background-color var(--duration-quick) ease, border-color var(--duration-quick) ease, opacity var(--duration-quick) ease;
 }
 
 button, input, select, textarea {
@@ -54,6 +64,9 @@ button {
   cursor: pointer;
   background: none;
   border: none;
+  transition: color var(--duration-quick) ease, background-color var(--duration-quick) ease, border-color var(--duration-quick) ease, box-shadow var(--duration-quick) ease, opacity var(--duration-quick) ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:disabled {
@@ -66,20 +79,43 @@ img, svg {
   max-width: 100%;
 }
 
-/* Headings */
+/* Headings with Crisp Medical Typographic Hierarchy */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-headline);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-primary);
+  letter-spacing: -0.025em;
 }
 
-h1 { font-size: var(--font-size-4xl); }
-h2 { font-size: var(--font-size-3xl); }
-h3 { font-size: var(--font-size-2xl); }
-h4 { font-size: var(--font-size-xl); }
-h5 { font-size: var(--font-size-lg); }
-h6 { font-size: var(--font-size-base); }
+h1 { 
+  font-size: var(--font-size-4xl); 
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+h2 { 
+  font-size: var(--font-size-3xl); 
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+h3 { 
+  font-size: var(--font-size-2xl); 
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+h4 { 
+  font-size: var(--font-size-xl); 
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+h5 { 
+  font-size: var(--font-size-lg); 
+  font-weight: 600;
+}
+h6 { 
+  font-size: var(--font-size-base); 
+  font-weight: 600;
+}
 
 @media (min-width: 1024px) {
   h1 { font-size: var(--font-size-hero); }
@@ -89,11 +125,11 @@ h6 { font-size: var(--font-size-base); }
 /* Clinical Utility Classes */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-6);
-  padding-right: var(--space-6);
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
 }
 
 @media (max-width: 640px) {
@@ -151,22 +187,12 @@ h6 { font-size: var(--font-size-base); }
   border-width: 0;
 }
 
-/* Skip to content link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 10px;
-  background: var(--surface-navy);
-  color: var(--text-on-navy);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-sm);
-  z-index: 9999;
-  transition: top var(--duration-quick);
-  font-weight: var(--font-weight-medium);
-}
-
+/* Skip to content link (hidden) */
+.skip-link,
 .skip-link:focus {
-  top: 10px;
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 /* ScrollSmoother Structure (when used) */

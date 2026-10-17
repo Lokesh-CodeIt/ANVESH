@@ -36,7 +36,7 @@ export const ProviderProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 max-w-5xl">
+    <div className="space-y-6 max-w-7xl w-full mx-auto">
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Hospital Profile & Clinical Staff</h1>
@@ -96,29 +96,29 @@ export const ProviderProfilePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
             <div>
-              <label className="block font-semibold text-slate-500 uppercase mb-1">Organization NPI</label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-mono font-medium text-slate-800">
+              <label className="block font-semibold text-slate-500 uppercase mb-1 text-left">Organization NPI</label>
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-mono font-medium text-slate-800 flex items-center justify-start text-left">
                 1982736450 (Type 2 Organization)
               </div>
             </div>
 
             <div>
-              <label className="block font-semibold text-slate-500 uppercase mb-1">State License & Accreditation</label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-medium text-slate-800">
+              <label className="block font-semibold text-slate-500 uppercase mb-1 text-left">State License & Accreditation</label>
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-medium text-slate-800 flex items-center justify-start text-left">
                 The Joint Commission (TJC) Gold Seal • License #HOS-9921
               </div>
             </div>
 
             <div>
-              <label className="block font-semibold text-slate-500 uppercase mb-1">Primary Clinical Address</label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-medium text-slate-800 flex items-center gap-2">
+              <label className="block font-semibold text-slate-500 uppercase mb-1 text-left">Primary Clinical Address</label>
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-medium text-slate-800 flex items-center justify-start text-left gap-2">
                 <MapPin className="w-4 h-4 text-slate-400 shrink-0" /> 1200 Health Sciences Way, Portland, OR 97201
               </div>
             </div>
 
             <div>
-              <label className="block font-semibold text-slate-500 uppercase mb-1">Clinical Department Contact</label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-medium text-slate-800 flex items-center gap-2">
+              <label className="block font-semibold text-slate-500 uppercase mb-1 text-left">Clinical Department Contact</label>
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-medium text-slate-800 flex items-center justify-start text-left gap-2">
                 <Phone className="w-4 h-4 text-slate-400 shrink-0" /> (503) 555-0199 • priorauth@metrogeneral.org
               </div>
             </div>

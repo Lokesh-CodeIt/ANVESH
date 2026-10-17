@@ -6,34 +6,67 @@
 /* -------------------------------------------------------------
  * 1. Layout & Flexbox Utilities
  * ------------------------------------------------------------- */
-.flex { display: flex; }
-.inline-flex { display: inline-flex; }
-.flex-col { flex-direction: column; }
-.flex-row { flex-direction: row; }
-.flex-wrap { flex-wrap: wrap; }
-.flex-1 { flex: 1 1 0%; }
-.shrink-0 { flex-shrink: 0; }
+.flex { display: flex !important; }
+.inline-flex { display: inline-flex !important; }
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.hidden { display: none !important; }
+.flex-col { flex-direction: column !important; }
+.flex-row { flex-direction: row !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.flex-nowrap { flex-wrap: nowrap !important; }
+.flex-1 { flex: 1 1 0% !important; }
+.shrink-0 { flex-shrink: 0 !important; }
+.min-w-0 { min-width: 0 !important; }
+.whitespace-nowrap { white-space: nowrap !important; }
 
-.items-center { align-items: center; }
-.items-start { align-items: flex-start; }
-.items-end { align-items: flex-end; }
-.items-stretch { align-items: stretch; }
+.items-center { align-items: center !important; }
+.items-start { align-items: flex-start !important; }
+.items-end { align-items: flex-end !important; }
+.items-stretch { align-items: stretch !important; }
+.self-start { align-self: flex-start !important; }
+.self-center { align-self: center !important; }
+.self-end { align-self: flex-end !important; }
 
-.justify-start { justify-content: flex-start; }
-.justify-end { justify-content: flex-end; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.justify-around { justify-content: space-around; }
+.justify-start { justify-content: flex-start !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-center { justify-content: center !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
 
-.gap-1 { gap: 0.25rem; }
-.gap-1\.5 { gap: 0.375rem; }
-.gap-2 { gap: 0.5rem; }
-.gap-2\.5 { gap: 0.625rem; }
-.gap-3 { gap: 0.75rem; }
-.gap-4 { gap: 1rem; }
-.gap-5 { gap: 1.25rem; }
-.gap-6 { gap: 1.5rem; }
-.gap-8 { gap: 2rem; }
+.gap-1 { gap: 0.25rem !important; }
+.gap-1\.5 { gap: 0.375rem !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-2\.5 { gap: 0.625rem !important; }
+.gap-3 { gap: 0.75rem !important; }
+.gap-3\.5 { gap: 0.875rem !important; }
+.gap-4 { gap: 1.125rem !important; } /* 18px */
+.gap-5 { gap: 1.375rem !important; } /* 22px */
+.gap-6 { gap: 1.5rem !important; }   /* 24px Desktop Card Gap Standard */
+.gap-7 { gap: 1.75rem !important; }
+.gap-8 { gap: 2rem !important; }     /* 32px */
+.gap-10 { gap: 2.5rem !important; }
+.gap-12 { gap: 3rem !important; }
+
+/* Responsive Card Grids with Guaranteed Visual Separation (20-24px desktop, 12-16px mobile) */
+.gap-cards {
+  gap: 1.5rem !important; /* 24px desktop */
+}
+
+@media (max-width: 1024px) {
+  .gap-cards {
+    gap: 1.25rem !important; /* 20px tablet */
+  }
+}
+
+@media (max-width: 640px) {
+  .gap-4 { gap: 0.875rem !important; } /* 14px mobile */
+  .gap-5 { gap: 1rem !important; }    /* 16px mobile */
+  .gap-6 { gap: 1rem !important; }    /* 16px mobile */
+  .gap-cards {
+    gap: 1rem !important; /* 16px mobile */
+  }
+}
 
 /* -------------------------------------------------------------
  * 2. Grid System & Responsive Columns
@@ -43,6 +76,8 @@
 .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 .grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
 
 .col-span-1 { grid-column: span 1 / span 1; }
@@ -52,95 +87,201 @@
 .col-span-12 { grid-column: span 12 / span 12; }
 
 @media (min-width: 640px) {
-  .sm\:flex-row { flex-direction: row; }
-  .sm\:items-center { align-items: center; }
-  .sm\:justify-between { justify-content: space-between; }
+  .sm\:flex-row { flex-direction: row !important; }
+  .sm\:items-center { align-items: center !important; }
+  .sm\:justify-between { justify-content: space-between !important; }
+  .sm\:w-auto { width: auto !important; }
+  .sm\:flex-1 { flex: 1 1 0% !important; min-width: 0 !important; }
   .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .sm\:gap-4 { gap: 1rem; }
+  .sm\:gap-5 { gap: 1.25rem; }
+  .sm\:gap-6 { gap: 1.5rem; }
   .sm\:block { display: block !important; }
 }
 
 @media (min-width: 768px) {
-  .md\:flex-row { flex-direction: row; }
-  .md\:items-center { align-items: center; }
-  .md\:justify-between { justify-content: space-between; }
+  .md\:flex-row { flex-direction: row !important; }
+  .md\:items-center { align-items: center !important; }
+  .md\:justify-between { justify-content: space-between !important; }
+  .md\:w-auto { width: auto !important; }
+  .md\:flex-1 { flex: 1 1 0% !important; min-width: 0 !important; }
   .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .md\:gap-5 { gap: 1.25rem; }
+  .md\:gap-6 { gap: 1.5rem; }
+  .md\:gap-8 { gap: 2rem; }
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex-row { flex-direction: row !important; }
+  .lg\:items-center { align-items: center !important; }
+  .lg\:justify-between { justify-content: space-between !important; }
+  .lg\:w-auto { width: auto !important; }
+  .lg\:flex-1 { flex: 1 1 0% !important; min-width: 0 !important; }
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
   .lg\:col-span-7 { grid-column: span 7 / span 7; }
   .lg\:col-span-5 { grid-column: span 5 / span 5; }
   .lg\:col-span-8 { grid-column: span 8 / span 8; }
   .lg\:col-span-4 { grid-column: span 4 / span 4; }
+  .lg\:gap-6 { gap: 1.5rem; }
+  .lg\:gap-8 { gap: 2rem; }
 }
 
 /* -------------------------------------------------------------
  * 3. Space-Y and Space-X Margins
  * ------------------------------------------------------------- */
-.space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
-.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.375rem; }
-.space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
-.space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
-.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
-.space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem; }
-.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
-.space-y-8 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem; }
+.space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem !important; }
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.375rem !important; }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem !important; }
+.space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem !important; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem !important; }
+.space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem !important; }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem !important; }
+.space-y-8 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem !important; }
+.space-y-10 > :not([hidden]) ~ :not([hidden]) { margin-top: 2.5rem !important; }
+.space-y-12 > :not([hidden]) ~ :not([hidden]) { margin-top: 3rem !important; }
+.space-y-16 > :not([hidden]) ~ :not([hidden]) { margin-top: 4rem !important; }
 
-.space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.5rem; }
-.space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
-.space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-left: 1rem; }
+.space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.5rem !important; }
+.space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem !important; }
+.space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-left: 1rem !important; }
+.space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem !important; }
 
 /* -------------------------------------------------------------
  * 4. Padding and Margins
  * ------------------------------------------------------------- */
-.p-1 { padding: 0.25rem; }
-.p-1\.5 { padding: 0.375rem; }
-.p-2 { padding: 0.5rem; }
-.p-2\.5 { padding: 0.625rem; }
-.p-3 { padding: 0.75rem; }
-.p-4 { padding: 1rem; }
-.p-5 { padding: 1.25rem; }
-.p-6 { padding: 1.5rem; }
-.p-8 { padding: 2rem; }
+.p-0 { padding: 0 !important; }
+.p-1 { padding: 0.25rem !important; }
+.p-1\.5 { padding: 0.375rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-2\.5 { padding: 0.625rem !important; }
+.p-3 { padding: 0.75rem !important; }
+.p-3\.5 { padding: 0.875rem !important; }
+.p-4 { padding: 1rem !important; }
+.p-5 { padding: 1.25rem !important; }
+.p-6 { padding: 1.5rem !important; }
+.p-7 { padding: 1.75rem !important; }
+.p-8 { padding: 2rem !important; }
 
-.px-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
-.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
-.px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
-.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
-.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important; }
+.px-2 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+.px-2\.5 { padding-left: 0.625rem !important; padding-right: 0.625rem !important; }
+.px-3 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+.px-3\.5 { padding-left: 0.875rem !important; padding-right: 0.875rem !important; }
+.px-4 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.px-5 { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+.px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.px-7 { padding-left: 1.75rem !important; padding-right: 1.75rem !important; }
+.px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
 
-.py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
-.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
-.py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
-.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
-.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-0\.5 { padding-top: 0.125rem !important; padding-bottom: 0.125rem !important; }
+.py-1 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; }
+.py-1\.5 { padding-top: 0.375rem !important; padding-bottom: 0.375rem !important; }
+.py-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+.py-2\.5 { padding-top: 0.625rem !important; padding-bottom: 0.625rem !important; }
+.py-3 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+.py-3\.5 { padding-top: 0.875rem !important; padding-bottom: 0.875rem !important; }
+.py-4 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+.py-5 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+.py-6 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.py-7 { padding-top: 1.75rem !important; padding-bottom: 1.75rem !important; }
+.py-8 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
 
-.m-1 { margin: 0.25rem; }
-.mt-0\.5 { margin-top: 0.125rem; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 0.75rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-6 { margin-top: 1.5rem; }
-.mb-1 { margin-bottom: 0.25rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-3 { margin-bottom: 0.75rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.pb-2 { padding-bottom: 0.5rem; }
-.pb-3 { padding-bottom: 0.75rem; }
-.pt-2 { padding-top: 0.5rem; }
-.pt-3 { padding-top: 0.75rem; }
-.pt-4 { padding-top: 1rem; }
+.pt-2 { padding-top: 0.5rem !important; }
+.pt-3 { padding-top: 0.75rem !important; }
+.pt-4 { padding-top: 1rem !important; }
+.pt-5 { padding-top: 1.25rem !important; }
+.pt-6 { padding-top: 1.5rem !important; }
+
+.pb-2 { padding-bottom: 0.5rem !important; }
+.pb-3 { padding-bottom: 0.75rem !important; }
+.pb-4 { padding-bottom: 1rem !important; }
+.pb-5 { padding-bottom: 1.25rem !important; }
+.pb-6 { padding-bottom: 1.5rem !important; }
+
+/* Button Content Alignment Safeguards */
+.anvesh-button {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  gap: 0.5rem !important;
+}
+
+.anvesh-button .btn-label,
+.btn-label {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.375rem !important;
+  white-space: nowrap !important;
+}
+
+.anvesh-button .btn-icon-right,
+.anvesh-button .btn-icon-left {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.m-1 { margin: 0.25rem !important; }
+.mt-0\.5 { margin-top: 0.125rem !important; }
+.mt-1 { margin-top: 0.25rem !important; }
+.mt-2 { margin-top: 0.5rem !important; }
+.mt-3 { margin-top: 0.75rem !important; }
+.mt-4 { margin-top: 1rem !important; }
+.mt-5 { margin-top: 1.25rem !important; }
+.mt-6 { margin-top: 1.5rem !important; }
+.mt-8 { margin-top: 2rem !important; }
+.mt-10 { margin-top: 2.5rem !important; }
+.mt-12 { margin-top: 3rem !important; }
+.mt-14 { margin-top: 3.5rem !important; }
+.mt-16 { margin-top: 4rem !important; }
+
+.mb-1 { margin-bottom: 0.25rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+.mb-3 { margin-bottom: 0.75rem !important; }
+.mb-4 { margin-bottom: 1rem !important; }
+.mb-6 { margin-bottom: 1.5rem !important; }
+.mb-8 { margin-bottom: 2rem !important; }
+.mb-10 { margin-bottom: 2.5rem !important; }
+.mb-12 { margin-bottom: 3rem !important; }
+.mb-16 { margin-bottom: 4rem !important; }
+
+.my-2 { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+.my-4 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+.my-6 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+.my-8 { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+.my-10 { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+.my-12 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+
+.pb-2 { padding-bottom: 0.5rem !important; }
+.pb-3 { padding-bottom: 0.75rem !important; }
+.pb-4 { padding-bottom: 1rem !important; }
+.pb-6 { padding-bottom: 1.5rem !important; }
+.pb-8 { padding-bottom: 2rem !important; }
+.pb-10 { padding-bottom: 2.5rem !important; }
+.pb-12 { padding-bottom: 3rem !important; }
+
+.pt-2 { padding-top: 0.5rem !important; }
+.pt-3 { padding-top: 0.75rem !important; }
+.pt-4 { padding-top: 1rem !important; }
+.pt-6 { padding-top: 1.5rem !important; }
+.pt-8 { padding-top: 2rem !important; }
+.pt-10 { padding-top: 2.5rem !important; }
+.pt-12 { padding-top: 3rem !important; }
+.pt-16 { padding-top: 4rem !important; }
 
 /* -------------------------------------------------------------
  * 5. Surfaces & Color Styling
@@ -150,6 +291,7 @@
 .bg-slate-100 { background-color: #F1F5F9 !important; }
 .bg-slate-200 { background-color: #E2E8F0 !important; }
 .bg-slate-300 { background-color: #CBD5E1 !important; }
+.bg-slate-700 { background-color: #334155 !important; }
 .bg-slate-800 { background-color: #1E293B !important; }
 .bg-slate-900 { background-color: #0F172A !important; }
 .bg-slate-950 { background-color: #020617 !important; }
@@ -157,13 +299,20 @@
 
 .bg-teal-50 { background-color: #F0FDFA !important; }
 .bg-teal-100 { background-color: #CCFBF1 !important; }
+.bg-teal-500 { background-color: #14B8A6 !important; }
 .bg-teal-600 { background-color: #0D9488 !important; }
 .bg-teal-700 { background-color: #0F766E !important; }
+.bg-teal-800 { background-color: #115E59 !important; }
+.bg-teal-900 { background-color: #134E4A !important; }
+.bg-teal-950 { background-color: #042F2E !important; }
 
 .bg-indigo-50 { background-color: #EEF2FF !important; }
 .bg-indigo-100 { background-color: #E0E7FF !important; }
+.bg-indigo-500 { background-color: #6366F1 !important; }
 .bg-indigo-600 { background-color: #4F46E5 !important; }
 .bg-indigo-700 { background-color: #4338CA !important; }
+.bg-indigo-900 { background-color: #312E81 !important; }
+.bg-indigo-950 { background-color: #1E1B4B !important; }
 
 .bg-emerald-50 { background-color: #ECFDF5 !important; }
 .bg-emerald-100 { background-color: #D1FAE5 !important; }
@@ -181,61 +330,163 @@
 /* -------------------------------------------------------------
  * 6. Borders & Rounded Corners
  * ------------------------------------------------------------- */
-.border { border-width: 1px; border-style: solid; border-color: #E2E8F0; }
-.border-2 { border-width: 2px !important; border-style: solid; }
+.border { border-width: 1px; border-style: solid; border-color: #CBD5E1; }
+.border-2 { border-width: 2px !important; border-style: solid; border-color: #CBD5E1 !important; }
 .border-dashed { border-style: dashed !important; }
-.border-b { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #E2E8F0; }
-.border-t { border-top-width: 1px; border-top-style: solid; border-top-color: #E2E8F0; }
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #CBD5E1; }
+.border-t { border-top-width: 1px; border-top-style: solid; border-top-color: #CBD5E1; }
 
 .border-slate-100 { border-color: #F1F5F9 !important; }
-.border-slate-200 { border-color: #E2E8F0 !important; }
-.border-slate-300 { border-color: #CBD5E1 !important; }
+.border-slate-200\/90,
+.border-slate-200\/80,
+.border-slate-200 { border-color: #CBD5E1 !important; }
+.border-slate-300\/90,
+.border-slate-300\/80,
+.border-slate-300 { border-color: #94A3B8 !important; }
+.border-slate-400 { border-color: #94A3B8 !important; }
+.border-slate-500 { border-color: #64748B !important; }
+.border-slate-600 { border-color: #475569 !important; }
+.border-slate-700 { border-color: #334155 !important; }
 .border-slate-800 { border-color: #1E293B !important; }
+.border-slate-900 { border-color: #0F172A !important; }
+
+.border-teal-100 { border-color: #CCFBF1 !important; }
+.border-teal-200\/90,
+.border-teal-200\/80,
 .border-teal-200 { border-color: #99F6E4 !important; }
+.border-teal-300\/90,
+.border-teal-300\/80,
 .border-teal-300 { border-color: #5EEAD4 !important; }
+.border-teal-400 { border-color: #2DD4BF !important; }
 .border-teal-500 { border-color: #14B8A6 !important; }
+.border-teal-600 { border-color: #0D9488 !important; }
+.border-teal-700 { border-color: #0F766E !important; }
+.border-teal-800 { border-color: #115E59 !important; }
+
 .border-indigo-100 { border-color: #E0E7FF !important; }
+.border-indigo-200\/90,
+.border-indigo-200\/80,
 .border-indigo-200 { border-color: #C7D2FE !important; }
+.border-indigo-300\/90,
+.border-indigo-300\/80,
+.border-indigo-300 { border-color: #A5B4FC !important; }
+.border-indigo-400 { border-color: #818CF8 !important; }
+.border-indigo-500 { border-color: #6366F1 !important; }
 .border-indigo-600 { border-color: #4F46E5 !important; }
+
+.border-emerald-100 { border-color: #D1FAE5 !important; }
+.border-emerald-200\/90,
+.border-emerald-200\/80,
 .border-emerald-200 { border-color: #A7F3D0 !important; }
+.border-emerald-300\/90,
+.border-emerald-300\/80,
+.border-emerald-300 { border-color: #6EE7B7 !important; }
 .border-emerald-500 { border-color: #10B981 !important; }
 .border-emerald-600 { border-color: #059669 !important; }
+
+.border-amber-100 { border-color: #FEF3C7 !important; }
+.border-amber-200\/90,
+.border-amber-200\/80,
 .border-amber-200 { border-color: #FDE68A !important; }
+.border-amber-300\/90,
+.border-amber-300\/80,
 .border-amber-300 { border-color: #FCD34D !important; }
 .border-amber-600 { border-color: #D97706 !important; }
+
+.border-blue-100 { border-color: #DBEAFE !important; }
+.border-blue-200\/90,
+.border-blue-200\/80,
+.border-blue-200 { border-color: #BFDBFE !important; }
+.border-blue-300 { border-color: #93C5FD !important; }
+
 .border-red-200 { border-color: #FECACA !important; }
 .border-red-600 { border-color: #DC2626 !important; }
 
-.rounded { border-radius: 0.25rem; }
-.rounded-md { border-radius: 0.375rem; }
-.rounded-lg { border-radius: 0.5rem; }
-.rounded-xl { border-radius: 0.75rem; }
-.rounded-2xl { border-radius: 1rem; }
+.rounded { border-radius: 0.375rem; }
+.rounded-md { border-radius: 0.5rem; }
+.rounded-lg { border-radius: 0.75rem; }
+.rounded-xl { border-radius: 1rem; }
+.rounded-2xl { border-radius: 1.25rem; }
+.rounded-3xl { border-radius: 1.75rem; }
 .rounded-full { border-radius: 9999px; }
 
-.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); }
-.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
-.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+/* Prominent, Clean Enterprise Depth Shadows */
+.shadow-2xs { box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05) !important; }
+.shadow-xs { box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04) !important; }
+.shadow-sm { box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.08), 0 2px 5px -1px rgba(15, 23, 42, 0.04) !important; }
+.shadow { box-shadow: 0 8px 22px -3px rgba(15, 23, 42, 0.09), 0 3px 7px -1px rgba(15, 23, 42, 0.05) !important; }
+.shadow-md { box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.10), 0 4px 8px -2px rgba(15, 23, 42, 0.05) !important; }
+.shadow-lg { box-shadow: 0 18px 38px -5px rgba(15, 23, 42, 0.12), 0 6px 12px -3px rgba(15, 23, 42, 0.06) !important; }
+.shadow-xl { box-shadow: 0 25px 48px -6px rgba(15, 23, 42, 0.14), 0 10px 18px -4px rgba(15, 23, 42, 0.06) !important; }
+.shadow-card { box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 1px 4px rgba(15, 23, 42, 0.04) !important; }
+.shadow-card-hover { box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.13), 0 6px 14px -2px rgba(15, 23, 42, 0.06) !important; }
+
+/* Transitions */
+.transition-all { transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+.transition-shadow { transition: box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease !important; }
+.transition-colors { transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease !important; }
+.transition-transform { transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+.duration-200 { transition-duration: 200ms !important; }
+.duration-300 { transition-duration: 300ms !important; }
+.duration-500 { transition-duration: 500ms !important; }
+
+/* Hover Shadows & Border Highlights */
+.hover\:shadow-xs:hover { box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04) !important; }
+.hover\:shadow-sm:hover { box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.08), 0 2px 5px -1px rgba(15, 23, 42, 0.04) !important; }
+.hover\:shadow-md:hover { box-shadow: 0 14px 30px -3px rgba(15, 23, 42, 0.12), 0 5px 12px -2px rgba(15, 23, 42, 0.06) !important; }
+.hover\:shadow-lg:hover { box-shadow: 0 20px 40px -4px rgba(15, 23, 42, 0.14), 0 8px 16px -2px rgba(15, 23, 42, 0.07) !important; }
+.hover\:shadow-card-hover:hover { box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.14), 0 6px 14px -2px rgba(15, 23, 42, 0.06) !important; }
+
+.hover\:border-slate-300:hover { border-color: #94A3B8 !important; }
+.hover\:border-slate-400:hover { border-color: #64748B !important; }
+.hover\:border-amber-300:hover { border-color: #FCD34D !important; }
+.hover\:border-emerald-300:hover { border-color: #6EE7B7 !important; }
+.hover\:border-teal-300:hover { border-color: #5EEAD4 !important; }
+.hover\:border-teal-400:hover { border-color: #0F766E !important; }
+.hover\:border-indigo-300:hover { border-color: #A5B4FC !important; }
+
+/* Universal Card Hover Lift Effect */
+.card-hover,
+.hover-lift,
+div[class*="hover:shadow-md"],
+div[class*="hover:shadow-card-hover"] {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease !important;
+  will-change: transform, box-shadow;
+}
+
+.card-hover:hover,
+.hover-lift:hover,
+div[class*="hover:shadow-md"]:hover,
+div[class*="hover:shadow-card-hover"]:hover {
+  transform: translateY(-3px) !important;
+}
 
 /* -------------------------------------------------------------
- * 7. Typography Utilities
+ * 7. Typography Utilities (Readable Clinical Standards)
  * ------------------------------------------------------------- */
-.text-xs { font-size: 0.75rem !important; line-height: 1rem !important; }
-.text-\[10px\] { font-size: 10px !important; line-height: 14px !important; }
-.text-\[11px\] { font-size: 11px !important; line-height: 15px !important; }
-.text-sm { font-size: 0.875rem !important; line-height: 1.25rem !important; }
-.text-base { font-size: 1rem !important; line-height: 1.5rem !important; }
-.text-lg { font-size: 1.125rem !important; line-height: 1.75rem !important; }
-.text-xl { font-size: 1.25rem !important; line-height: 1.75rem !important; }
-.text-2xl { font-size: 1.5rem !important; line-height: 2rem !important; }
-.text-3xl { font-size: 1.875rem !important; line-height: 2.25rem !important; }
+.text-xs { font-size: 0.875rem !important; line-height: 1.4rem !important; } /* 14px - readable microcopy */
+.text-\[10px\] { font-size: 0.8125rem !important; line-height: 1.3rem !important; } /* 13px */
+.text-\[11px\] { font-size: 0.84375rem !important; line-height: 1.35rem !important; } /* 13.5px */
+.text-sm { font-size: 0.96875rem !important; line-height: 1.55rem !important; } /* 15.5px */
+.text-base { font-size: 1.0625rem !important; line-height: 1.65rem !important; } /* 17px */
+.text-lg { font-size: 1.25rem !important; line-height: 1.85rem !important; } /* 20px */
+.text-xl { font-size: 1.375rem !important; line-height: 1.95rem !important; } /* 22px */
+.text-2xl { font-size: 1.625rem !important; line-height: 2.15rem !important; } /* 26px */
+.text-3xl { font-size: 2rem !important; line-height: 2.5rem !important; } /* 32px */
 
 .font-normal { font-weight: 400 !important; }
 .font-medium { font-weight: 500 !important; }
 .font-semibold { font-weight: 600 !important; }
 .font-bold { font-weight: 700 !important; }
-.font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important; }
+.font-extrabold { font-weight: 800 !important; }
+.font-black { font-weight: 900 !important; }
+.font-metric {
+  font-family: var(--font-family-headline, 'Plus Jakarta Sans', var(--font-family-ui, 'Inter'), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif) !important;
+  font-variant-numeric: tabular-nums !important;
+  font-feature-settings: 'tnum' 1, 'cv05' 1 !important;
+  letter-spacing: -0.025em !important;
+}
+.font-mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important; }
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }
@@ -246,6 +497,9 @@
 .tracking-wider { letter-spacing: 0.05em; }
 
 .text-white { color: #FFFFFF !important; }
+.text-slate-100 { color: #F1F5F9 !important; }
+.text-slate-200 { color: #E2E8F0 !important; }
+.text-slate-300 { color: #CBD5E1 !important; }
 .text-slate-400 { color: #94A3B8 !important; }
 .text-slate-500 { color: #64748B !important; }
 .text-slate-600 { color: #475569 !important; }
@@ -253,6 +507,10 @@
 .text-slate-800 { color: #1E293B !important; }
 .text-slate-900 { color: #0F172A !important; }
 
+.text-teal-200 { color: #99F6E4 !important; }
+.text-teal-300 { color: #5EEAD4 !important; }
+.text-teal-400 { color: #2DD4BF !important; }
+.text-teal-500 { color: #14B8A6 !important; }
 .text-teal-600 { color: #0D9488 !important; }
 .text-teal-700 { color: #0F766E !important; }
 .text-teal-800 { color: #115E59 !important; }
@@ -277,26 +535,1395 @@
 .text-red-800 { color: #991B1B !important; }
 
 /* Sizing & Widths */
-.w-full { width: 100%; }
-.w-4 { width: 1rem; }
-.w-5 { width: 1.25rem; }
-.w-8 { width: 2rem; }
-.w-12 { width: 3rem; }
-.w-16 { width: 4rem; }
-.h-4 { height: 1rem; }
-.h-5 { height: 1.25rem; }
-.h-8 { height: 2rem; }
-.h-12 { height: 3rem; }
-.h-16 { height: 4rem; }
+.w-full { width: 100% !important; }
+.w-fit { width: fit-content !important; max-width: max-content !important; }
+.w-auto { width: auto !important; }
+.w-4 { width: 1rem !important; }
+.w-5 { width: 1.25rem !important; }
+.w-6 { width: 1.5rem !important; }
+.w-7 { width: 1.75rem !important; }
+.w-8 { width: 2rem !important; }
+.w-9 { width: 2.25rem !important; }
+.w-10 { width: 2.5rem !important; }
+.w-11 { width: 2.75rem !important; }
+.w-12 { width: 3rem !important; }
+.w-16 { width: 4rem !important; }
+
+.h-4 { height: 1rem !important; }
+.h-5 { height: 1.25rem !important; }
+.h-6 { height: 1.5rem !important; }
+.h-7 { height: 1.75rem !important; }
+.h-8 { height: 2rem !important; }
+.h-9 { height: 2.25rem !important; }
+.h-10 { height: 2.5rem !important; }
+.h-11 { height: 2.75rem !important; }
+.h-12 { height: 3rem !important; }
+.h-16 { height: 4rem !important; }
 .h-px { height: 1px; }
 .w-px { width: 1px; }
+
+/* Elegant Clinical Step Number Badge */
+.clinical-step-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  min-width: 2.5rem !important;
+  min-height: 2.5rem !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-family-headline, sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.01em !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+}
+
+.clinical-step-badge-teal {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  min-width: 2.5rem !important;
+  min-height: 2.5rem !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(135deg, #0F766E 0%, #115E59 100%) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-family-headline, sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.25) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  flex-shrink: 0 !important;
+}
 
 .max-w-md { max-width: 28rem; }
 .max-w-2xl { max-width: 42rem; }
 .max-w-4xl { max-width: 56rem; }
-.max-w-6xl { max-width: 72rem; }
-.max-w-7xl { max-width: 80rem; }
+.max-w-6xl { max-width: 100% !important; }
+.max-w-7xl { max-width: 100% !important; }
 
 .overflow-hidden { overflow: hidden; }
-.relative { position: relative; }
-.absolute { position: absolute; }
+.relative { position: relative !important; }
+.absolute { position: absolute !important; }
+.fixed { position: fixed !important; }
+.inset-0 { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; }
+.top-0 { top: 0 !important; }
+.right-0 { right: 0 !important; }
+.bottom-0 { bottom: 0 !important; }
+.left-0 { left: 0 !important; }
+.left-2 { left: 0.5rem !important; }
+.left-3 { left: 0.75rem !important; }
+.left-3\.5 { left: 0.875rem !important; }
+.left-4 { left: 1rem !important; }
+.top-1\/2 { top: 50% !important; }
+.-translate-y-1\/2 { transform: translateY(-50%) !important; }
+.pointer-events-none { pointer-events: none !important; }
+.cursor-pointer { cursor: pointer !important; }
+.z-10 { z-index: 10 !important; }
+.z-20 { z-index: 20 !important; }
+.z-50 { z-index: 50 !important; }
+.z-\[9999\],
+.z-modal { z-index: 9999 !important; }
+
+.bg-slate-900\/60,
+.bg-slate-900\/70,
+.bg-slate-900\/80 { background-color: rgba(15, 23, 42, 0.70) !important; }
+.backdrop-blur-xs,
+.backdrop-blur-sm,
+.backdrop-blur { backdrop-filter: blur(4px) !important; -webkit-backdrop-filter: blur(4px) !important; }
+
+/* Compact Confirmation Modal Styling */
+.confirmation-modal-card {
+  max-width: 460px !important;
+  width: 100% !important;
+  margin: auto !important;
+}
+
+.max-w-md { max-width: 28rem !important; }
+.max-w-lg { max-width: 32rem !important; }
+.max-w-\[460px\],
+.max-w-\[480px\],
+.max-w-\[490px\] { max-width: 460px !important; }
+
+.bg-teal-700,
+.bg-\[\#0F766E\] { background-color: #0F766E !important; }
+.hover\:bg-teal-800:hover,
+.hover\:bg-\[\#0D655E\]:hover { background-color: #0D655E !important; }
+
+/* Universal vertical spacing utilities */
+.space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem !important; }
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.375rem !important; }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem !important; }
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.625rem !important; }
+.space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem !important; }
+.space-y-3\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.875rem !important; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem !important; }
+.space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem !important; }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem !important; }
+
+.pl-8 { padding-left: 2rem !important; }
+.pl-9 { padding-left: 2.25rem !important; }
+.pl-10 { padding-left: 2.5rem !important; }
+.pl-11 { padding-left: 1.25rem !important; }
+.pl-12 { padding-left: 3rem !important; }
+.pr-8 { padding-right: 2rem !important; }
+.pr-10 { padding-right: 2.5rem !important; }
+.pr-11 { padding-right: 2.75rem !important; }
+
+/* Horizontal Carousel & Touchpad Scroll Utilities */
+.anvesh-horizontal-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  padding-bottom: 0.75rem;
+}
+
+.anvesh-horizontal-track:active {
+  cursor: grabbing;
+}
+
+.anvesh-horizontal-track::-webkit-scrollbar {
+  display: block;
+  height: 6px;
+}
+
+.anvesh-horizontal-track::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.6);
+  border-radius: 9999px;
+}
+
+.anvesh-horizontal-track::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+.anvesh-horizontal-track::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+/* Spacious Card Sizes for Carousel Tracks */
+.carousel-card-lg {
+  width: 420px !important;
+  min-width: 420px !important;
+  max-width: 420px !important;
+  flex-shrink: 0 !important;
+}
+
+.carousel-card-md {
+  width: 360px !important;
+  min-width: 360px !important;
+  max-width: 360px !important;
+  flex-shrink: 0 !important;
+}
+
+.carousel-card-sm {
+  width: 300px !important;
+  min-width: 300px !important;
+  max-width: 300px !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .carousel-card-lg {
+    width: 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  .carousel-card-md {
+    width: 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+  }
+
+  .carousel-card-sm {
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+  }
+}
+
+/* -------------------------------------------------------------
+ * Global Card & Panel Base Separation Rules
+ * Prevents cards from visually merging, touching unexpectedly,
+ * or lacking breathing room across all ANVESH views.
+ * ------------------------------------------------------------- */
+.anvesh-card {
+  background-color: var(--surface-card, #FFFFFF);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg, 16px);
+  padding: var(--padding-card-default, 1.75rem);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  backface-visibility: hidden;
+}
+
+.anvesh-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.12), 0 4px 8px -2px rgba(15, 23, 42, 0.05);
+  transform: none !important;
+}
+
+.anvesh-panel {
+  background-color: var(--surface-card, #FFFFFF);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-xl, 20px);
+  padding: 2rem;
+  box-shadow: 0 6px 20px -3px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+}
+
+/* Universal Card Lift & Crisp Border Definition for All Viewports */
+[class*="bg-white"][class*="rounded-xl"],
+[class*="bg-white"][class*="rounded-2xl"],
+[class*="bg-white"][class*="rounded-3xl"] {
+  border-color: #E2E8F0 !important;
+  transition: box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  backface-visibility: hidden;
+}
+
+/* Interactive Card Hover State - Stable and jitter-free */
+[class*="hover:border-slate-300"]:hover {
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+  transform: none !important;
+}
+
+@media (max-width: 640px) {
+  .anvesh-card {
+    padding: 1.25rem;
+    border-radius: var(--radius-md, 12px);
+  }
+  .anvesh-panel {
+    padding: 1.5rem;
+    border-radius: var(--radius-lg, 16px);
+  }
+}
+
+/* -------------------------------------------------------------
+ * 8. Universal Button Standardization & Alignment (Anti-Jitter)
+ * ------------------------------------------------------------- */
+button {
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-md, 12px);
+  transition: background-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  line-height: 1.25;
+  user-select: none;
+  transform: none !important;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+button:hover:not(:disabled) {
+  transform: none !important;
+}
+
+button:active:not(:disabled) {
+  transform: none !important;
+  opacity: 0.92 !important;
+}
+
+button:focus-visible {
+  outline: 2px solid #0F766E;
+  outline-offset: 2px;
+}
+
+/* Buttons with explicit utility padding classes */
+button[class*="px-3"][class*="py-1.5"],
+a[class*="px-3"][class*="py-1.5"],
+span[class*="px-3"][class*="py-1.5"] {
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem !important; /* 14px */
+  min-height: 38px !important;
+}
+
+button[class*="px-4"][class*="py-2"],
+a[class*="px-4"][class*="py-2"],
+span[class*="px-4"][class*="py-2"] {
+  padding: 0.625rem 1.25rem !important;
+  font-size: 0.9375rem !important; /* 15px */
+  min-height: 44px !important;
+}
+
+button[class*="px-5"][class*="py-2.5"],
+a[class*="px-5"][class*="py-2.5"],
+span[class*="px-5"][class*="py-2.5"] {
+  padding: 0.75rem 1.5rem !important;
+  font-size: 1rem !important; /* 16px */
+  min-height: 48px !important;
+}
+
+button[class*="px-6"][class*="py-3"],
+a[class*="px-6"][class*="py-3"],
+span[class*="px-6"][class*="py-3"] {
+  padding: 0.875rem 1.75rem !important;
+  font-size: 1.0625rem !important; /* 17px */
+  min-height: 52px !important;
+}
+
+/* -------------------------------------------------------------
+ * 9. Enterprise Clinical Tables
+ * ------------------------------------------------------------- */
+table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  table-layout: auto !important;
+}
+
+thead {
+  display: table-header-group !important;
+  width: 100% !important;
+}
+
+tbody {
+  display: table-row-group !important;
+  width: 100% !important;
+}
+
+tr {
+  display: table-row !important;
+}
+
+th {
+  display: table-cell !important;
+  font-family: var(--font-family-headline, sans-serif);
+  font-size: 0.8125rem !important; /* ~13px */
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569 !important;
+  background-color: #F8FAFC !important;
+  padding: 0.875rem 1rem !important;
+  border-bottom: 2px solid #E2E8F0 !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+}
+
+td {
+  display: table-cell !important;
+  font-size: 0.875rem !important; /* 14px */
+  color: #1E293B !important;
+  padding: 0.875rem 1rem !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+  vertical-align: middle !important;
+}
+
+tr:hover td {
+  background-color: rgba(240, 253, 250, 0.5) !important;
+}
+
+/* -------------------------------------------------------------
+ * 10. Form Controls (Crisp, High-Readability Inputs)
+ * ------------------------------------------------------------- */
+.anvesh-input,
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  min-height: 46px !important;
+  padding: 0.625rem 1rem !important;
+  font-size: 0.96875rem !important; /* 15.5px */
+  line-height: 1.4 !important;
+  border-radius: var(--radius-md, 12px) !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.anvesh-input:focus,
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #0F766E !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3.5px rgba(15, 118, 110, 0.18) !important;
+}
+
+textarea {
+  width: 100%;
+  min-height: 110px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.96875rem !important; /* 15.5px */
+  line-height: 1.5 !important;
+  border-radius: var(--radius-md, 12px) !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+textarea:focus {
+  border-color: #0F766E !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3.5px rgba(15, 118, 110, 0.18) !important;
+}
+
+.w-auto { width: auto !important; }
+
+/* -------------------------------------------------------------
+ * 11. Clinical Filter Pills & Interactive Search Controls
+ * ------------------------------------------------------------- */
+.clinical-search-wrapper {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  flex: 1 1 auto !important;
+  min-width: 260px !important;
+}
+
+.clinical-search-wrapper .search-icon,
+.clinical-search-wrapper svg.lucide-search,
+.search-icon-left,
+.search-input-wrapper svg.lucide-search { 
+  display: none !important; 
+}
+
+.clinical-search-input {
+  width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding-left: 1.125rem !important;
+  padding-right: 2.75rem !important;
+  font-size: 0.9375rem !important; /* 15px */
+  border-radius: 0.75rem !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.clinical-search-input:focus {
+  background-color: #FFFFFF !important;
+  border-color: #0F766E !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3.5px rgba(15, 118, 110, 0.16) !important;
+}
+
+.clinical-filter-select-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-shrink: 0 !important;
+  width: auto !important;
+}
+
+.clinical-filter-select {
+  width: auto !important;
+  min-width: 180px !important;
+  max-width: 280px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0.5rem 2.25rem 0.5rem 1rem !important;
+  font-size: 0.9375rem !important;
+  font-weight: 500 !important;
+  border-radius: 0.75rem !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background-color: #F8FAFC !important;
+  color: #1E293B !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.15s ease-in-out !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748B' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E") !important;
+  background-position: right 0.75rem center !important;
+  background-repeat: no-repeat !important;
+  background-size: 1.15rem !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.clinical-filter-select:focus {
+  border-color: #0F766E !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3.5px rgba(15, 118, 110, 0.16) !important;
+  background-color: #FFFFFF !important;
+}
+
+@media (max-width: 767px) {
+  .clinical-filter-select-wrapper {
+    width: 100% !important;
+  }
+  .clinical-filter-select {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Guaranteed icon centering in squares and avatar circles */
+.center-icon,
+.icon-center,
+.user-avatar,
+div[class*="w-"][class*="h-"][class*="rounded"][class*="p-2"],
+div[class*="w-"][class*="h-"][class*="rounded"][class*="p-2.5"],
+div[class*="w-"][class*="h-"][class*="rounded"][class*="p-3"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.clinical-filter-pills {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+}
+
+.clinical-filter-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.875rem !important; /* 14px */
+  font-weight: 600 !important;
+  color: #334155 !important;
+  background-color: #F8FAFC !important;
+  border: 1.5px solid #E2E8F0 !important;
+  cursor: pointer !important;
+  transition: background-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  transform: none !important;
+}
+
+.clinical-filter-pill:hover {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08) !important;
+  transform: none !important;
+}
+
+.clinical-filter-pill:active {
+  transform: none !important;
+  opacity: 0.92 !important;
+}
+
+.clinical-filter-pill.is-active {
+  background-color: #0F766E !important;
+  border-color: #0F766E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 3px 10px -1px rgba(15, 118, 110, 0.35) !important;
+  transform: none !important;
+}
+
+.clinical-filter-pill .pill-count {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 0.125rem 0.45rem !important;
+  border-radius: 9999px !important;
+  background-color: #E2E8F0 !important;
+  color: #475569 !important;
+  line-height: 1 !important;
+  min-width: 1.35rem !important;
+}
+
+.clinical-filter-pill.is-active .pill-count {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+}
+
+/* -------------------------------------------------------------
+ * 12. Enterprise Pagination & Line Clamp Utilities
+ * ------------------------------------------------------------- */
+.anvesh-pagination {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  margin-top: 2rem !important;
+  padding: 0.75rem !important;
+  user-select: none !important;
+  flex-wrap: wrap !important;
+}
+
+.pagination-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.375rem !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 0.75rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease !important;
+  transform: none !important;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #F8FAFC !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
+  transform: none !important;
+}
+
+.pagination-btn:active:not(:disabled) {
+  transform: none !important;
+  opacity: 0.88 !important;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.pagination-list {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.375rem !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pagination-item {
+  display: inline-flex !important;
+}
+
+.pagination-number {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.375rem !important;
+  height: 2.375rem !important;
+  min-width: 2.375rem !important;
+  min-height: 2.375rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #E2E8F0 !important;
+  border-radius: 0.625rem !important;
+  cursor: pointer !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease !important;
+  transform: none !important;
+}
+
+.pagination-number:hover {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+  transform: none !important;
+}
+
+.pagination-number:active {
+  transform: none !important;
+}
+
+.pagination-number.is-active {
+  background-color: #0F766E !important;
+  border-color: #0F766E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.3) !important;
+  transform: none !important;
+}
+
+.pagination-ellipsis {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 0.5rem !important;
+  color: #94A3B8 !important;
+  font-weight: 700 !important;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* -------------------------------------------------------------
+ * 13. Block & Visibility Utilities
+ * ------------------------------------------------------------- */
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.hidden { display: none !important; }
+
+/* -------------------------------------------------------------
+ * 14. High-Visibility Cost-Sharing Badges (Color-Coded)
+ * ------------------------------------------------------------- */
+.cost-metric-copay {
+  padding: 0.75rem !important;
+  background-color: #F0FDFA !important;
+  border: 1.5px solid #A7F3D0 !important;
+  border-radius: 0.75rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important;
+  transition: all 0.15s ease !important;
+}
+
+.cost-metric-copay .metric-label {
+  display: block !important;
+  font-size: 0.6875rem !important; /* 11px */
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #0F766E !important; /* Distinct Medical Teal */
+}
+
+.cost-metric-copay .metric-val {
+  display: block !important;
+  font-size: 0.9375rem !important; /* 15px */
+  font-weight: 700 !important;
+  color: #064E3B !important; /* High-contrast Deep Forest Teal */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.cost-metric-coinsurance {
+  padding: 0.75rem !important;
+  background-color: #EEF2FF !important;
+  border: 1.5px solid #C7D2FE !important;
+  border-radius: 0.75rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important;
+  transition: all 0.15s ease !important;
+}
+
+.cost-metric-coinsurance .metric-label {
+  display: block !important;
+  font-size: 0.6875rem !important; /* 11px */
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #4338CA !important; /* Distinct Royal Indigo */
+}
+
+.cost-metric-coinsurance .metric-val {
+  display: block !important;
+  font-size: 0.9375rem !important; /* 15px */
+  font-weight: 700 !important;
+  color: #1E1B4B !important; /* High-contrast Deep Dark Indigo */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* -------------------------------------------------------------
+ * 15. Standardized High-Contrast Card Borders & Clinical Policy Cards
+ * ------------------------------------------------------------- */
+.border-slate-200\/90,
+.border-slate-200 {
+  border-color: #CBD5E1 !important;
+}
+
+.clinical-policy-card {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 1rem !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-height: 290px !important;
+  transition: box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease !important;
+  transform: none !important;
+  backface-visibility: hidden !important;
+}
+
+.clinical-policy-card:hover {
+  border-color: #0F766E !important;
+  box-shadow: 0 14px 34px -4px rgba(15, 23, 42, 0.12), 0 6px 14px -2px rgba(15, 23, 42, 0.06) !important;
+  transform: none !important;
+}
+
+.clinical-policy-card .card-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.75rem !important;
+  margin-bottom: 0.875rem !important;
+}
+
+.clinical-policy-card .card-title-block {
+  margin-bottom: 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.375rem !important;
+}
+
+.clinical-policy-card .card-plan-title {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  min-height: 2.8rem !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.clinical-policy-card .card-plan-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.75rem !important;
+  color: #64748B !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.375rem !important;
+}
+
+.clinical-policy-card .card-plan-id strong {
+  color: #334155 !important;
+  font-weight: 700 !important;
+}
+
+.clinical-policy-card .card-cost-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.75rem !important;
+  padding-top: 0.875rem !important;
+  border-top: 1px solid #F1F5F9 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.clinical-policy-card .card-footer-btn {
+  width: 100% !important;
+  min-height: 42px !important;
+  padding: 0.625rem 1rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #0F766E !important;
+  background-color: #F8FAFC !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 0.625rem !important;
+  cursor: pointer !important;
+  transition: background-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform: none !important;
+}
+
+.clinical-policy-card .card-footer-btn:hover {
+  background-color: #0F766E !important;
+  border-color: #0F766E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25) !important;
+  transform: none !important;
+}
+
+.clinical-policy-card .card-footer-btn:active {
+  transform: none !important;
+  opacity: 0.92 !important;
+}
+
+/* -------------------------------------------------------------
+ * 16. Comprehensive Responsive Grid Column Spans
+ * ------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .sm\:col-span-1 { grid-column: span 1 / span 1 !important; }
+  .sm\:col-span-2 { grid-column: span 2 / span 2 !important; }
+}
+
+@media (min-width: 768px) {
+  .md\:col-span-1 { grid-column: span 1 / span 1 !important; }
+  .md\:col-span-2 { grid-column: span 2 / span 2 !important; }
+  .md\:col-span-3 { grid-column: span 3 / span 3 !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-span-1 { grid-column: span 1 / span 1 !important; }
+  .lg\:col-span-2 { grid-column: span 2 / span 2 !important; }
+  .lg\:col-span-3 { grid-column: span 3 / span 3 !important; }
+  .lg\:col-span-4 { grid-column: span 4 / span 4 !important; }
+  .lg\:col-span-5 { grid-column: span 5 / span 5 !important; }
+  .lg\:col-span-6 { grid-column: span 6 / span 6 !important; }
+  .lg\:col-span-7 { grid-column: span 7 / span 7 !important; }
+  .lg\:col-span-8 { grid-column: span 8 / span 8 !important; }
+  .lg\:col-span-12 { grid-column: span 12 / span 12 !important; }
+}
+
+/* -------------------------------------------------------------
+ * 17. Universal Anti-Jitter & Silky Smooth Transition Standards
+ * Completely eliminates button shaking, card shifts, and click jitter
+ * ------------------------------------------------------------- */
+button,
+[role="button"],
+.anvesh-button,
+.anvesh-btn-primary,
+.anvesh-btn-secondary,
+.anvesh-btn-outline,
+.anvesh-btn-ghost,
+.anvesh-btn-danger,
+.pagination-btn,
+.pagination-number,
+.clinical-filter-pill,
+.sidebar-nav-item,
+.auth-role-tab,
+.card-footer-btn {
+  transform: none !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+button:hover,
+[role="button"]:hover,
+.anvesh-button:hover,
+.anvesh-btn-primary:hover,
+.anvesh-btn-secondary:hover,
+.anvesh-btn-outline:hover,
+.anvesh-btn-ghost:hover,
+.anvesh-btn-danger:hover {
+  transform: none !important;
+}
+
+button:active,
+[role="button"]:active,
+.anvesh-button:active,
+.anvesh-btn-primary:active,
+.anvesh-btn-secondary:active,
+.anvesh-btn-outline:active,
+.anvesh-btn-ghost:active,
+.anvesh-btn-danger:active,
+.pagination-btn:active,
+.pagination-number:active,
+.clinical-filter-pill:active,
+.sidebar-nav-item:active,
+.auth-role-tab:active,
+.card-footer-btn:active {
+  transform: none !important;
+  opacity: 0.92 !important;
+}
+
+/* Smooth layout scrolling */
+#portal-main-content {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* -------------------------------------------------------------
+ * 18. Intake Wizard Stepper Navigation (High Contrast & Visible)
+ * ------------------------------------------------------------- */
+.wizard-stepper-card {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 1rem !important;
+  padding: 1.5rem 1.75rem !important;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03) !important;
+}
+
+.wizard-stepper-row {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.wizard-step-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  flex: 1 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.wizard-step-badge {
+  width: 2.5rem !important; /* 40px */
+  height: 2.5rem !important; /* 40px */
+  min-width: 2.5rem !important;
+  min-height: 2.5rem !important;
+  border-radius: 9999px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.9375rem !important; /* 15px */
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+}
+
+/* Inactive / Upcoming Step - High contrast, dark clearly readable number */
+.wizard-step-badge.is-upcoming {
+  background-color: #F8FAFC !important;
+  border: 2px solid #CBD5E1 !important;
+  color: #334155 !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05) !important;
+}
+
+.wizard-step-item:hover .wizard-step-badge.is-upcoming {
+  background-color: #FFFFFF !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
+}
+
+/* Active / Current Step - Deep Teal background, white number with aqua ring */
+.wizard-step-badge.is-active {
+  background-color: #0F766E !important;
+  border: 2.5px solid #0D9488 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 0 4px #CCFBF1, 0 4px 12px rgba(15, 118, 110, 0.35) !important;
+}
+
+/* Completed Step - Emerald Green with white check */
+.wizard-step-badge.is-completed {
+  background-color: #059669 !important;
+  border: 2px solid #059669 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25) !important;
+}
+
+/* Step Title Text beneath circle */
+.wizard-step-text {
+  font-size: 0.8125rem !important; /* 13px */
+  font-weight: 600 !important;
+  margin-top: 0.5rem !important;
+  text-align: center !important;
+  letter-spacing: -0.01em !important;
+}
+
+.wizard-step-text.is-active {
+  color: #0F766E !important;
+  font-weight: 800 !important;
+}
+
+.wizard-step-text.is-completed {
+  color: #0F172A !important;
+  font-weight: 700 !important;
+}
+
+.wizard-step-text.is-upcoming {
+  color: #64748B !important;
+}
+
+.wizard-step-item:hover .wizard-step-text.is-upcoming {
+  color: #1E293B !important;
+}
+
+/* Connecting Line between steps - perfectly aligned with 40px circle centers */
+.wizard-step-line {
+  height: 2px !important;
+  flex: 1 !important;
+  margin: 1.25rem 0.5rem 0 0.5rem !important;
+  background-color: #E2E8F0 !important;
+  border-radius: 9999px !important;
+}
+
+.wizard-step-line.is-completed {
+  background-color: #059669 !important;
+}
+
+/* -------------------------------------------------------------
+ * 19. Intake Wizard Content Cards & Form Alignments
+ * ------------------------------------------------------------- */
+.wizard-content-card {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 1rem !important;
+  padding: 2rem !important;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03) !important;
+}
+
+@media (min-width: 640px) {
+  .wizard-content-card {
+    padding: 2.25rem 2.5rem !important;
+  }
+}
+
+.wizard-card-header {
+  border-bottom: 1px solid #E2E8F0 !important;
+  padding-bottom: 1.25rem !important;
+  margin-bottom: 1.75rem !important;
+}
+
+.wizard-step-indicator-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.375rem !important;
+  padding: 0.25rem 0.625rem !important;
+  border-radius: 0.375rem !important;
+  font-size: 0.6875rem !important; /* 11px */
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  background-color: #F0FDFA !important;
+  color: #0F766E !important;
+  border: 1px solid #CCFBF1 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.wizard-card-title {
+  font-size: 1.375rem !important; /* 22px */
+  font-weight: 800 !important;
+  color: #0F172A !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+}
+
+.wizard-card-subtitle {
+  font-size: 0.875rem !important; /* 14px */
+  color: #64748B !important;
+  margin-top: 0.375rem !important;
+  line-height: 1.5 !important;
+}
+
+.wizard-form-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 1.5rem 1.75rem !important;
+}
+
+@media (min-width: 640px) {
+  .wizard-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+.wizard-field-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+}
+
+.wizard-field-label {
+  font-size: 0.8125rem !important; /* 13px */
+  font-weight: 700 !important;
+  color: #334155 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+}
+
+.wizard-required-star {
+  color: #DC2626 !important;
+  font-weight: 800 !important;
+}
+
+/* -------------------------------------------------------------
+ * 18. Deep-Dive Model Profile Cards & Dynamic Hover Engine
+ * ------------------------------------------------------------- */
+.model-profile-card {
+  position: relative;
+  border-radius: 1.75rem !important;
+  border: 1.5px solid transparent !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s ease !important;
+  will-change: transform, box-shadow;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+}
+
+.model-profile-card:hover {
+  transform: translateY(-10px) scale(1.015) !important;
+}
+
+/* ViT-B/16 (Indigo Theme) */
+.model-profile-card-vit {
+  background: linear-gradient(150deg, #FFFFFF 0%, #F5F7FF 55%, #EEF2FF 100%) !important;
+  border-color: rgba(199, 210, 254, 0.7) !important;
+  box-shadow: 0 16px 36px -10px rgba(79, 70, 229, 0.22), 0 4px 14px -2px rgba(15, 23, 42, 0.05) !important;
+}
+.model-profile-card-vit:hover {
+  border-color: rgba(99, 102, 241, 0.6) !important;
+  box-shadow: 0 28px 56px -12px rgba(79, 70, 229, 0.38), 0 0 35px 2px rgba(99, 102, 241, 0.26), 0 10px 20px -3px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* MedGemma-4B-IT (Amber Theme) */
+.model-profile-card-medgemma {
+  background: linear-gradient(150deg, #FFFFFF 0%, #FFFDF5 55%, #FFFBEB 100%) !important;
+  border-color: rgba(253, 230, 138, 0.7) !important;
+  box-shadow: 0 16px 36px -10px rgba(217, 119, 6, 0.22), 0 4px 14px -2px rgba(15, 23, 42, 0.05) !important;
+}
+.model-profile-card-medgemma:hover {
+  border-color: rgba(245, 158, 11, 0.6) !important;
+  box-shadow: 0 28px 56px -12px rgba(217, 119, 6, 0.38), 0 0 35px 2px rgba(245, 158, 11, 0.26), 0 10px 20px -3px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Fine-Tuned LLaVA-1.5-7B v2 (State-of-the-Art Healthcare Teal Theme) */
+.model-profile-card-llava {
+  background: linear-gradient(150deg, #FFFFFF 0%, #F0FDFA 55%, #E6FFFA 100%) !important;
+  border-color: rgba(94, 234, 212, 0.7) !important;
+  box-shadow: 0 18px 40px -10px rgba(13, 148, 136, 0.28), 0 4px 14px -2px rgba(15, 23, 42, 0.06) !important;
+}
+.model-profile-card-llava:hover {
+  border-color: rgba(20, 184, 166, 0.7) !important;
+  box-shadow: 0 32px 64px -12px rgba(13, 148, 136, 0.45), 0 0 42px 4px rgba(20, 184, 166, 0.35), 0 12px 24px -4px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Structured Metric Stat Box Inside Model Cards */
+.metric-stat-box {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(226, 232, 240, 0.85) !important;
+  border-radius: 1rem !important;
+  padding: 0.875rem 1rem !important;
+  box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.25s ease !important;
+  min-height: 74px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.model-profile-card:hover .metric-stat-box {
+  background: #FFFFFF !important;
+  border-color: rgba(203, 213, 225, 1) !important;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* -------------------------------------------------------------
+ * 19. Role-Based Clinical Portal Launch CTA Buttons
+ * ------------------------------------------------------------- */
+.portal-launch-btn {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.9375rem 1.25rem !important;
+  border-radius: 0.875rem !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 0.9375rem !important; /* 15px */
+  letter-spacing: -0.01em !important;
+  cursor: pointer !important;
+  border: none !important;
+  box-shadow: 0 4px 14px -1px rgba(15, 23, 42, 0.12) !important;
+  transition: all 0.25s ease !important;
+  margin-top: 1.5rem !important;
+  text-decoration: none !important;
+}
+
+.portal-launch-btn span,
+.portal-launch-btn svg {
+  color: #FFFFFF !important;
+  fill: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+}
+
+.portal-launch-btn-patient {
+  background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%) !important;
+}
+.portal-launch-btn-patient:hover {
+  background: linear-gradient(135deg, #0F766E 0%, #115E59 100%) !important;
+  box-shadow: 0 8px 20px -2px rgba(13, 148, 136, 0.4) !important;
+}
+
+.portal-launch-btn-provider {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+}
+.portal-launch-btn-provider:hover {
+  background: linear-gradient(135deg, #047857 0%, #065F46 100%) !important;
+  box-shadow: 0 8px 20px -2px rgba(16, 185, 129, 0.4) !important;
+}
+
+.portal-launch-btn-insurer {
+  background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%) !important;
+}
+.portal-launch-btn-insurer:hover {
+  background: linear-gradient(135deg, #4338CA 0%, #3730A3 100%) !important;
+  box-shadow: 0 8px 20px -2px rgba(79, 70, 229, 0.4) !important;
+}
+
+/* -------------------------------------------------------------
+ * 14. Universal Eyebrow Badges & Section Tags (Strict Left-Alignment)
+ * Ensures all clinical badges, member ID tags, and section headers
+ * are strictly aligned on the left, never stretch, and never center.
+ * ------------------------------------------------------------- */
+.badge-eyebrow,
+.clinical-eyebrow-badge,
+div[class*="uppercase"][class*="tracking-wide"][class*="bg-teal"]:not(tr):not(th):not(td),
+div[class*="uppercase"][class*="tracking-wide"][class*="bg-indigo"]:not(tr):not(th):not(td),
+div[class*="uppercase"][class*="tracking-wide"][class*="bg-amber"]:not(tr):not(th):not(td),
+div[class*="uppercase"][class*="tracking-wide"][class*="bg-emerald"]:not(tr):not(th):not(td),
+span[class*="uppercase"][class*="tracking-wide"][class*="bg-teal"]:not(tr):not(th):not(td),
+span[class*="uppercase"][class*="tracking-wide"][class*="bg-indigo"]:not(tr):not(th):not(td),
+span[class*="uppercase"][class*="tracking-wide"][class*="bg-amber"]:not(tr):not(th):not(td),
+span[class*="uppercase"][class*="tracking-wide"][class*="bg-emerald"]:not(tr):not(th):not(td) {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  max-width: max-content !important;
+  align-self: flex-start !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+
+
+
+

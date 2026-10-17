@@ -36,7 +36,7 @@ export const PatientProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 max-w-5xl">
+    <div className="space-y-6 max-w-7xl w-full mx-auto">
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Member Profile & Settings</h1>
@@ -104,47 +104,50 @@ export const PatientProfilePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 text-left">
                 Full Legal Name
               </label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800">
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center justify-start text-left">
                 Eleanor Maeve Silverwood
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 text-left">
                 Date of Birth
               </label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800">
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center justify-start text-left">
                 14 May 1968 (Age 57)
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 text-left">
                 Email Address
               </label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center gap-2">
-                <Mail className="w-4 h-4 text-slate-400" /> e.silverwood@example.org
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center justify-start text-left gap-2">
+                <Mail className="w-4 h-4 text-slate-400 shrink-0" />
+                <span>e.silverwood@example.org</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 text-left">
                 Contact Phone
               </label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center gap-2">
-                <Phone className="w-4 h-4 text-slate-400" /> +1 (555) 234-8910
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center justify-start text-left gap-2">
+                <Phone className="w-4 h-4 text-slate-400 shrink-0" />
+                <span>+1 (555) 234-8910</span>
               </div>
             </div>
 
             <div className="md:col-span-2">
-              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 text-left">
                 Residential Address
               </label>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-slate-400" /> 742 Evergreen Terrace, Springfield, OR 97477
+              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-sm font-medium text-slate-800 flex items-center justify-start text-left gap-2">
+                <MapPin className="w-4 h-4 text-slate-400 shrink-0" />
+                <span>742 Evergreen Terrace, Springfield, OR 97477</span>
               </div>
             </div>
           </div>

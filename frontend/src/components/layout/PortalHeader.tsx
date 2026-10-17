@@ -3,7 +3,7 @@ import { UserMenu } from './UserMenu.tsx';
 import { NotificationCenter } from './NotificationCenter.tsx';
 import { StatusBadge } from '../common/StatusBadge.tsx';
 import { useAuth, UserRole } from '../../context/AuthContext.tsx';
-import { Shield, Database, LogOut } from 'lucide-react';
+import { Shield, Database, LogOut, Menu, Sparkles } from 'lucide-react';
 
 interface PortalHeaderProps {
   portalTitle: string;
@@ -15,6 +15,7 @@ interface PortalHeaderProps {
 export const PortalHeader: React.FC<PortalHeaderProps> = ({
   portalTitle,
   sectionTitle,
+  onToggleSidebar,
   onNavigatePublic,
 }) => {
   const { role, isDesignPreview, enterDesignPreview, signOut } = useAuth();
@@ -33,13 +34,24 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
   };
 
   return (
-    <header className="anvesh-portal-header" role="banner">
-      <div className="portal-header-left">
-        <div className="portal-breadcrumbs-bar">
-          <span className="crumb-root">{portalTitle}</span>
-          <span className="crumb-sep">/</span>
-          <span className="crumb-active">{sectionTitle}</span>
+    <header className="anvesh-portal-header sticky top-0 z-30" role="banner">
+      <div className="portal-header-left flex items-center gap-3">
+        {onToggleSidebar && (
+          <button
+            onClick={onToggleSidebar}
+            className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors md:hidden"
+            aria-label="Toggle navigation menu"
+          >
+            <Menu size={20} />
+          </button>
+        )}
+
+        <div className="portal-breadcrumbs-bar flex items-center gap-2">
+          <span className="crumb-root text-xs font-medium text-slate-500">{portalTitle}</span>
+          <span className="crumb-sep text-slate-300">/</span>
+          <span className="crumb-active text-xs font-bold text-slate-900">{sectionTitle}</span>
         </div>
+
         <StatusBadge
           status="info"
           label={
@@ -53,11 +65,11 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
         />
       </div>
 
-      <div className="portal-header-right">
+      <div className="portal-header-right flex items-center gap-3">
         {/* Environment Data Mode Badge */}
         {isDesignPreview ? (
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 bg-amber-500/15 border border-amber-500/40 text-amber-800 text-[11px] font-bold tracking-wider uppercase rounded-full flex items-center gap-1.5 shadow-xs">
+            <span className="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold tracking-wider uppercase rounded-full flex items-center gap-1.5 shadow-xs">
               <Shield size={12} className="text-amber-600" /> DEV PREVIEW MODE
             </span>
             <div className="preview-role-switcher" title="Switch portal view in demonstration mode">
@@ -75,8 +87,8 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
             </div>
           </div>
         ) : (
-          <span className="px-2.5 py-1 bg-emerald-500/15 border border-emerald-500/40 text-emerald-800 text-[11px] font-bold tracking-wider uppercase rounded-full flex items-center gap-1.5 shadow-xs">
-            <Database size={12} className="text-emerald-600" /> LIVE POSTGRESQL (2,107 CASES)
+          <span className="px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold tracking-wider uppercase rounded-full flex items-center gap-1.5 shadow-2xs">
+            <Database size={13} className="text-emerald-600" /> LIVE POSTGRESQL (2,107 CASES)
           </span>
         )}
 
@@ -85,12 +97,12 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
         {/* Visible Direct Log Out Shortcut */}
         <button
           onClick={handleDirectSignOut}
-          className="px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors flex items-center gap-1.5 border border-transparent hover:border-red-200"
+          className="px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors flex items-center gap-1.5 border border-slate-200 hover:border-red-200 shadow-2xs"
           title="Sign out of active session"
           aria-label="Sign out of ANVESH"
         >
           <LogOut size={14} />
-          <span className="hidden md:inline">Log Out</span>
+          <span className="hidden sm:inline font-semibold">Log Out</span>
         </button>
 
         <UserMenu onNavigatePublic={onNavigatePublic} />

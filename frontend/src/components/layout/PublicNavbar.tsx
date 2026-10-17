@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Play, Pause } from 'lucide-react';
-import { useMotionPreferences } from '../../context/MotionPreferencesContext.tsx';
+import { Menu, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext.tsx';
 import { Button } from '../common/Button.tsx';
 
@@ -11,7 +10,6 @@ interface PublicNavbarProps {
 
 export const PublicNavbar: React.FC<PublicNavbarProps> = ({ currentPath, onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isAnimationsPaused, setAnimationsPaused } = useMotionPreferences();
   const { isDesignPreview, exitDesignPreview } = useAuth();
 
   const navLinks = [
@@ -86,34 +84,6 @@ export const PublicNavbar: React.FC<PublicNavbarProps> = ({ currentPath, onNavig
 
         {/* Navbar Actions */}
         <div className="navbar-actions">
-          {/* Pause Animations Toggle */}
-          <button
-            onClick={() => setAnimationsPaused(!isAnimationsPaused)}
-            className="navbar-anim-toggle"
-            title={isAnimationsPaused ? 'Resume ambient animations' : 'Pause animations'}
-            aria-label={isAnimationsPaused ? 'Resume ambient animations' : 'Pause animations'}
-            aria-pressed={isAnimationsPaused}
-          >
-            {isAnimationsPaused ? (
-              <Play size={14} aria-hidden="true" />
-            ) : (
-              <Pause size={14} aria-hidden="true" />
-            )}
-            <span className="anim-toggle-label">
-              {isAnimationsPaused ? 'Resume Motion' : 'Pause Motion'}
-            </span>
-          </button>
-
-          {/* Portal Demo Button */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => handleLinkClick('/portal')}
-            className="navbar-portal-btn text-xs font-semibold border-teal-600/40 text-teal-800 hover:bg-teal-50"
-          >
-            Portals Demo
-          </Button>
-
           {/* Sign In CTA */}
           <Button
             variant="primary"

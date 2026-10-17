@@ -15,12 +15,14 @@ import {
   Layers,
   HelpCircle,
   ExternalLink,
+  ChevronLeft,
   ChevronRight,
   RefreshCw,
   Eye,
   UploadCloud,
   FileCheck,
-  Info
+  Info,
+  Sparkles
 } from 'lucide-react';
 import { Button } from '../components/common/Button.tsx';
 import { Breadcrumbs } from '../components/common/Breadcrumbs.tsx';
@@ -31,6 +33,7 @@ interface HowToUsePageProps {
 }
 
 export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
+  const tabsScrollRef = React.useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<'about' | 'patient' | 'provider' | 'insurance' | 'status' | 'troubleshooting'>('about');
   const [systemHealth, setSystemHealth] = useState<{
     backendOnline: boolean;
@@ -73,6 +76,20 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
     checkStatus();
   }, []);
 
+  useEffect(() => {
+    const el = tabsScrollRef.current;
+    if (!el) return;
+    const handleWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+      }
+    };
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => el.removeEventListener('wheel', handleWheel);
+  }, []);
+
   const handleLink = (path: string) => {
     if (onNavigate) {
       onNavigate(path);
@@ -83,7 +100,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="anvesh-content-page max-w-6xl mx-auto px-4 py-8">
+    <div className="anvesh-content-page w-full px-4 sm:px-8 lg:px-12 py-10 space-y-10">
       {/* Breadcrumb Navigation */}
       <div className="mb-6">
         <Breadcrumbs
@@ -107,68 +124,101 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
           Learn clinical workflows, understand multimodal AI evidence limitations, and troubleshoot common scenarios.
         </p>
 
-        {/* Navigation Tabs */}
-        <div className="mt-8 flex flex-wrap gap-2 border-b border-slate-200 pb-3">
-          <button
-            onClick={() => setActiveTab('about')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'about'
-                ? 'bg-slate-900 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
+        {/* Navigation Tabs (Horizontally Scrollable Carousel with Arrow Controls) */}
+        <div className="mt-8 pt-4 border-t border-slate-200/80">
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              Select Handbook Section
+            </span>
+            <div className="flex items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => {
+                  tabsScrollRef.current?.scrollBy({ left: -200, behavior: 'smooth' });
+                }}
+                className="w-8 h-8 rounded-full border border-slate-300 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-700 shadow-2xs transition-all cursor-pointer"
+                aria-label="Scroll tabs left"
+              >
+                <ChevronLeft size={15} />
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  tabsScrollRef.current?.scrollBy({ left: 200, behavior: 'smooth' });
+                }}
+                className="w-8 h-8 rounded-full border border-slate-300 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-700 shadow-2xs transition-all cursor-pointer"
+                aria-label="Scroll tabs right"
+              >
+                <ChevronRight size={15} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            ref={tabsScrollRef}
+            className="anvesh-horizontal-track gap-2.5 pb-2"
           >
-            <Info className="w-3.5 h-3.5" /> A. About ANVESH
-          </button>
-          <button
-            onClick={() => setActiveTab('patient')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'patient'
-                ? 'bg-teal-700 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            <User className="w-3.5 h-3.5" /> B. Patient Guide
-          </button>
-          <button
-            onClick={() => setActiveTab('provider')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'provider'
-                ? 'bg-teal-700 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            <Building2 className="w-3.5 h-3.5" /> C. Hospital / Provider Guide
-          </button>
-          <button
-            onClick={() => setActiveTab('insurance')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'insurance'
-                ? 'bg-indigo-700 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            <ShieldCheck className="w-3.5 h-3.5" /> D. Insurer Reviewer Guide
-          </button>
-          <button
-            onClick={() => setActiveTab('status')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'status'
-                ? 'bg-emerald-700 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            <Server className="w-3.5 h-3.5" /> E. Live System Status
-          </button>
-          <button
-            onClick={() => setActiveTab('troubleshooting')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 ${
-              activeTab === 'troubleshooting'
-                ? 'bg-amber-700 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            <AlertTriangle className="w-3.5 h-3.5" /> F. Troubleshooting
-          </button>
+            <button
+              onClick={() => setActiveTab('about')}
+              className={`shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                activeTab === 'about'
+                  ? 'bg-slate-900 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Info className="w-3.5 h-3.5" /> A. About ANVESH
+            </button>
+            <button
+              onClick={() => setActiveTab('patient')}
+              className={`shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                activeTab === 'patient'
+                  ? 'bg-teal-700 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <User className="w-3.5 h-3.5" /> B. Patient Guide
+            </button>
+            <button
+              onClick={() => setActiveTab('provider')}
+              className={`shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                activeTab === 'provider'
+                  ? 'bg-teal-700 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Building2 className="w-3.5 h-3.5" /> C. Hospital / Provider Guide
+            </button>
+            <button
+              onClick={() => setActiveTab('insurance')}
+              className={`shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                activeTab === 'insurance'
+                  ? 'bg-indigo-700 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <ShieldCheck className="w-3.5 h-3.5" /> D. Insurer Reviewer Guide
+            </button>
+            <button
+              onClick={() => setActiveTab('status')}
+              className={`shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                activeTab === 'status'
+                  ? 'bg-emerald-700 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Server className="w-3.5 h-3.5" /> E. Live System Status
+            </button>
+            <button
+              onClick={() => setActiveTab('troubleshooting')}
+              className={`shrink-0 px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                activeTab === 'troubleshooting'
+                  ? 'bg-amber-700 text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <AlertTriangle className="w-3.5 h-3.5" /> F. Troubleshooting
+            </button>
+          </div>
         </div>
       </div>
 
@@ -185,49 +235,63 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" /> What the Platform Does
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  ANVESH is a healthcare insurance prior-authorization and medical evidence validation research prototype. 
-                  It correlates high-resolution diagnostic chest radiographs, clinical narratives, and health plan coverage rules 
-                  into a unified adjudication workspace to eliminate administrative delays and enhance transparency.
-                </p>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  Core Architectural Pillars (Swipe or use controls)
+                </span>
               </div>
+              <div className="anvesh-horizontal-track gap-6 py-2">
+                <div className="shrink-0 w-[290px] sm:w-[320px] p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2 flex flex-col justify-between shadow-2xs">
+                  <div>
+                    <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Platform Mission
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Correlates high-resolution diagnostic chest radiographs, clinical notes, and health plan coverage rules 
+                      into a unified workspace to eliminate administrative delays.
+                    </p>
+                  </div>
+                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100 w-fit">Decision Support</span>
+                </div>
 
-              <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <Eye className="w-4 h-4 text-indigo-600" /> Live Primary VLM Evidence
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Primary radiograph vision-language extractions and diagnostic evaluations are generated directly by live GPU inference on the
-                  <strong> Fine-Tuned LLaVA-1.5-7B v2 (Primary Model)</strong>. Historical models such as MedGemma and ViT-B/16
-                  remain decoupled strictly as research-comparison benchmarks.
-                </p>
-              </div>
+                <div className="shrink-0 w-[280px] sm:w-[310px] p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2 flex flex-col justify-between shadow-2xs">
+                  <div>
+                    <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-2">
+                      <Eye className="w-4 h-4 text-indigo-600" /> Primary VLM Engine
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Primary radiograph vision-language extractions and diagnostic evaluations are generated directly by live GPU inference on the
+                      <strong> Fine-Tuned LLaVA-1.5-7B v2</strong>.
+                    </p>
+                  </div>
+                  <span className="text-[10px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100 w-fit">LoRA Fine-Tuned</span>
+                </div>
 
-              <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <ShieldAlert className="w-4 h-4 text-amber-600" /> Mandatory Human Adjudication
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  ANVESH is <strong>strictly assistive</strong>. Artificial intelligence never approves, denies, or modifies 
-                  coverage autonomously. All final prior-authorization determinations require a licensed human medical reviewer's 
-                  recorded signature and documented clinical rationale.
-                </p>
-              </div>
+                <div className="shrink-0 w-[280px] sm:w-[310px] p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2 flex flex-col justify-between shadow-2xs">
+                  <div>
+                    <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-2">
+                      <ShieldAlert className="w-4 h-4 text-amber-600" /> Human Gate
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      AI never approves, denies, or modifies coverage autonomously. All final determinations require a licensed human medical reviewer's 
+                      recorded signature.
+                    </p>
+                  </div>
+                  <span className="text-[10px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 w-fit">Mandatory Sign-Off</span>
+                </div>
 
-              <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-teal-700" /> Evidence Score vs. Policy Outcome
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  A high <strong>Evidence Score</strong> (e.g. 90%) indicates observational data completeness between the radiograph and report. 
-                  It <em>does not equal approval</em>. Coverage requires fulfilling formal health plan policy criteria (e.g., deductible, 
-                  procedural frequency caps, and absence of exclusion riders).
-                </p>
+                <div className="shrink-0 w-[280px] sm:w-[310px] p-5 bg-slate-50 border border-slate-200 rounded-xl space-y-2 flex flex-col justify-between shadow-2xs">
+                  <div>
+                    <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-2">
+                      <Layers className="w-4 h-4 text-teal-700" /> Score vs. Outcome
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      A high Evidence Score indicates observational completeness between radiograph and report. It <em>does not equal approval</em> without meeting plan policy rules.
+                    </p>
+                  </div>
+                  <span className="text-[10px] font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded border border-teal-100 w-fit">Policy Dominance</span>
+                </div>
               </div>
             </div>
 
@@ -268,7 +332,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
 
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   1
                 </span>
                 <div>
@@ -287,7 +351,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   2
                 </span>
                 <div>
@@ -300,7 +364,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   3
                 </span>
                 <div>
@@ -313,7 +377,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   4
                 </span>
                 <div>
@@ -329,7 +393,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   5
                 </span>
                 <div>
@@ -360,7 +424,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
 
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   1
                 </span>
                 <div>
@@ -373,7 +437,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   2
                 </span>
                 <div>
@@ -393,7 +457,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   3
                 </span>
                 <div>
@@ -419,7 +483,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-teal-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge-teal">
                   4
                 </span>
                 <div>
@@ -451,7 +515,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
 
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-indigo-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge">
                   1
                 </span>
                 <div>
@@ -464,7 +528,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-indigo-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge">
                   2
                 </span>
                 <div>
@@ -478,7 +542,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-indigo-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge">
                   3
                 </span>
                 <div>
@@ -491,7 +555,7 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <span className="w-7 h-7 rounded-full bg-indigo-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                <span className="clinical-step-badge">
                   4
                 </span>
                 <div>
@@ -653,69 +717,218 @@ export const HowToUsePage: React.FC<HowToUsePageProps> = ({ onNavigate }) => {
         </section>
       )}
 
-      {/* Quick Launch Portal Cards */}
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-xs flex flex-col justify-between">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700">Member Access</span>
-            <h3 className="text-base font-bold text-slate-900 mt-1">Patient Portal</h3>
-            <p className="text-xs text-slate-500 mt-1">
-              Review personal claim history, benefit coverage guidelines, and requested clinical documents.
-            </p>
-          </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => {
-              sessionStorage.setItem('anvesh_design_preview_role', 'patient');
-              handleLink('/portal/patient');
-            }}
-            className="mt-4 flex items-center justify-between"
-          >
-            <span>Launch Patient Portal</span> <ArrowRight className="w-3.5 h-3.5" />
-          </Button>
+      {/* Quick Launch Portal Cards with Distinctive Role Styling & Generous Breathing Space */}
+      <div className="pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-slate-200/90 space-y-6">
+        <div className="flex flex-col items-start text-left">
+          <span className="w-fit self-start inline-flex items-center justify-start text-left gap-2 text-xs font-bold uppercase tracking-wider text-teal-800 bg-teal-50 px-3.5 py-1.5 rounded-lg border border-teal-200/90 shadow-2xs">
+            <Sparkles className="w-3.5 h-3.5 text-teal-600 shrink-0" /> Interactive Portals
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-2.5">
+            Launch Role-Based Clinical Portals
+          </h2>
+          <p className="text-sm text-slate-500 mt-1 max-w-2xl leading-relaxed">
+            Access the dedicated review, submission, and adjudication workspaces for each participant.
+          </p>
         </div>
 
-        <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-xs flex flex-col justify-between">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700">Clinical Access</span>
-            <h3 className="text-base font-bold text-slate-900 mt-1">Provider Portal</h3>
-            <p className="text-xs text-slate-500 mt-1">
-              Complete the 6-step authorization stepper, upload DICOM radiographs, and monitor adjudication.
-            </p>
-          </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => {
-              sessionStorage.setItem('anvesh_design_preview_role', 'provider');
-              handleLink('/portal/provider');
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10">
+          {/* Patient Portal Card */}
+          <div
+            style={{
+              boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03)',
+              border: 'none',
+              borderRadius: '1.5rem',
+              transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
-            className="mt-4 flex items-center justify-between"
+            className="group cursor-pointer rounded-3xl p-8 sm:p-9 lg:p-10 bg-gradient-to-b from-teal-50/60 via-white to-teal-50/20 hover:-translate-y-2.5 hover:scale-[1.012] hover:shadow-xl hover:shadow-teal-900/10 flex flex-col justify-between select-none"
           >
-            <span>Launch Provider Portal</span> <ArrowRight className="w-3.5 h-3.5" />
-          </Button>
-        </div>
+            <div>
+              {/* Top Row: Badge & Elevated Role Icon */}
+              <div className="flex items-center justify-between gap-4 mb-7">
+                <span className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-teal-800 bg-teal-100/80 px-3.5 py-1.5 rounded-full shadow-2xs">
+                  Member Access
+                </span>
+                <div className="w-13 h-13 rounded-2xl bg-teal-100/70 text-teal-700 flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:bg-teal-100 transition-all">
+                  <User className="w-6 h-6 text-teal-700" />
+                </div>
+              </div>
 
-        <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-xs flex flex-col justify-between">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-indigo-700">Payer Adjudication</span>
-            <h3 className="text-base font-bold text-slate-900 mt-1">Insurer Portal</h3>
-            <p className="text-xs text-slate-500 mt-1">
-              Inspect radiographs, evaluate precomputed VLM evidence, and record human clinical determinations.
-            </p>
+              {/* Title & Description with Generous Spacing */}
+              <div className="space-y-2.5">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                  Patient & Member Workspace
+                </div>
+                <h3 className="text-2xl sm:text-[1.65rem] font-black text-slate-900 tracking-tight leading-tight">
+                  Patient Portal
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed pt-1">
+                  Review personal claim history, benefit coverage guidelines, and requested clinical documents.
+                </p>
+              </div>
+
+              {/* Key Capabilities Checklist (Spacious & Clean) */}
+              <ul className="space-y-3.5 py-6 my-7 border-t border-b border-slate-100 text-xs sm:text-[13px] text-slate-700 font-medium leading-normal">
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                  <span>Track prior authorization review status</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                  <span>Verify clinical coverage & plan benefits</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                  <span>Submit requested doctor clinical documents</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Launch Action Button */}
+            <button
+              type="button"
+              onClick={() => {
+                sessionStorage.setItem('anvesh_design_preview_role', 'patient');
+                handleLink('/portal/patient');
+              }}
+              style={{ color: '#FFFFFF' }}
+              className="portal-launch-btn portal-launch-btn-patient"
+            >
+              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>Launch Patient Portal</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" style={{ color: '#FFFFFF' }} />
+            </button>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => {
-              sessionStorage.setItem('anvesh_design_preview_role', 'insurance');
-              handleLink('/portal/insurance');
+
+          {/* Provider Portal Card */}
+          <div
+            style={{
+              boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03)',
+              border: 'none',
+              borderRadius: '1.5rem',
+              transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
-            className="mt-4 flex items-center justify-between"
+            className="group cursor-pointer rounded-3xl p-8 sm:p-9 lg:p-10 bg-gradient-to-b from-emerald-50/60 via-white to-emerald-50/20 hover:-translate-y-2.5 hover:scale-[1.012] hover:shadow-xl hover:shadow-emerald-900/10 flex flex-col justify-between select-none"
           >
-            <span>Launch Insurer Portal</span> <ArrowRight className="w-3.5 h-3.5" />
-          </Button>
+            <div>
+              {/* Top Row: Badge & Elevated Role Icon */}
+              <div className="flex items-center justify-between gap-4 mb-7">
+                <span className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-3.5 py-1.5 rounded-full shadow-2xs">
+                  Clinical Access
+                </span>
+                <div className="w-13 h-13 rounded-2xl bg-emerald-100/70 text-emerald-700 flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:bg-emerald-100 transition-all">
+                  <Building2 className="w-6 h-6 text-emerald-700" />
+                </div>
+              </div>
+
+              {/* Title & Description with Generous Spacing */}
+              <div className="space-y-2.5">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                  Hospital & Clinic Staff
+                </div>
+                <h3 className="text-2xl sm:text-[1.65rem] font-black text-slate-900 tracking-tight leading-tight">
+                  Provider Portal
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed pt-1">
+                  Complete the 6-step authorization stepper, upload DICOM radiographs, and monitor adjudication.
+                </p>
+              </div>
+
+              {/* Key Capabilities Checklist (Spacious & Clean) */}
+              <ul className="space-y-3.5 py-6 my-7 border-t border-b border-slate-100 text-xs sm:text-[13px] text-slate-700 font-medium leading-normal">
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>6-step clinical authorization intake stepper</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Automated policy eligibility pre-screening</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>DICOM radiograph & clinical report upload</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Launch Action Button */}
+            <button
+              type="button"
+              onClick={() => {
+                sessionStorage.setItem('anvesh_design_preview_role', 'provider');
+                handleLink('/portal/provider');
+              }}
+              style={{ color: '#FFFFFF' }}
+              className="portal-launch-btn portal-launch-btn-provider"
+            >
+              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>Launch Provider Portal</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" style={{ color: '#FFFFFF' }} />
+            </button>
+          </div>
+
+          {/* Insurer Portal Card */}
+          <div
+            style={{
+              boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03)',
+              border: 'none',
+              borderRadius: '1.5rem',
+              transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+            }}
+            className="group cursor-pointer rounded-3xl p-8 sm:p-9 lg:p-10 bg-gradient-to-b from-indigo-50/60 via-white to-indigo-50/20 hover:-translate-y-2.5 hover:scale-[1.012] hover:shadow-xl hover:shadow-indigo-900/10 flex flex-col justify-between select-none"
+          >
+            <div>
+              {/* Top Row: Badge & Elevated Role Icon */}
+              <div className="flex items-center justify-between gap-4 mb-7">
+                <span className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-indigo-800 bg-indigo-100/80 px-3.5 py-1.5 rounded-full shadow-2xs">
+                  Payer Adjudication
+                </span>
+                <div className="w-13 h-13 rounded-2xl bg-indigo-100/70 text-indigo-700 flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:bg-indigo-100 transition-all">
+                  <ShieldCheck className="w-6 h-6 text-indigo-700" />
+                </div>
+              </div>
+
+              {/* Title & Description with Generous Spacing */}
+              <div className="space-y-2.5">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                  Payer Medical Review Team
+                </div>
+                <h3 className="text-2xl sm:text-[1.65rem] font-black text-slate-900 tracking-tight leading-tight">
+                  Insurer Portal
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed pt-1">
+                  Inspect radiographs, evaluate precomputed VLM evidence, and record human clinical determinations.
+                </p>
+              </div>
+
+              {/* Key Capabilities Checklist (Spacious & Clean) */}
+              <ul className="space-y-3.5 py-6 my-7 border-t border-b border-slate-100 text-xs sm:text-[13px] text-slate-700 font-medium leading-normal">
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />
+                  <span>Side-by-side policy vs. multimodal evidence</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />
+                  <span>Automated VLM scoring & exclusion gating</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />
+                  <span>Record audited human medical determinations</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Launch Action Button */}
+            <button
+              type="button"
+              onClick={() => {
+                sessionStorage.setItem('anvesh_design_preview_role', 'insurance');
+                handleLink('/portal/insurance');
+              }}
+              style={{ color: '#FFFFFF' }}
+              className="portal-launch-btn portal-launch-btn-insurer"
+            >
+              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>Launch Insurer Portal</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" style={{ color: '#FFFFFF' }} />
+            </button>
+          </div>
         </div>
       </div>
     </div>

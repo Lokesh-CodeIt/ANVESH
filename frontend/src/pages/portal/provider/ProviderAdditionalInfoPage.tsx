@@ -46,14 +46,14 @@ export const ProviderAdditionalInfoPage: React.FC<ProviderAdditionalInfoProps> =
   };
 
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 max-w-7xl w-full mx-auto">
       {/* Header */}
-      <div className="flex items-center gap-3 pb-2 border-b border-slate-200">
+      <div className="flex items-center gap-3 pb-4 border-b border-slate-200">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-slate-600 hover:text-slate-900 -ml-2">
           <ArrowLeft className="w-4 h-4 mr-1" /> Back
         </Button>
-        <div className="h-4 w-px bg-slate-300" />
-        <h1 className="text-xl font-bold text-slate-900 tracking-tight">
+        <div className="h-5 w-px bg-slate-300" />
+        <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
           Additional Clinical Documentation & Clarification
         </h1>
       </div>

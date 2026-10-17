@@ -35,9 +35,6 @@ export const UserMenu: React.FC<UserMenuProps> = ({ onNavigatePublic }) => {
           <span className="user-name text-xs font-bold text-slate-800 block">
             {user?.name || (role === 'patient' ? 'Eleanor Vance' : role === 'provider' ? 'Dr. Marcus Vance' : 'Dr. Elizabeth Thorne')}
           </span>
-          <span className="user-role-badge text-[10px] text-slate-500 font-medium block">
-            {isDesignPreview ? 'Preview Mode' : 'Authenticated Staff'}
-          </span>
         </div>
       </button>
 

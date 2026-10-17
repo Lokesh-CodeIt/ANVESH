@@ -7,14 +7,15 @@ import {
   CheckCircle2, 
   AlertCircle, 
   ChevronRight, 
-  ChevronDown,
-  ArrowUpDown,
-  RefreshCw,
-  Image as ImageIcon,
-  FileCheck,
-  Download,
-  ShieldCheck,
-  Sparkles
+  ChevronDown, 
+  ArrowUpDown, 
+  RefreshCw, 
+  Image as ImageIcon, 
+  FileCheck, 
+  Download, 
+  ShieldCheck, 
+  Sparkles,
+  X
 } from 'lucide-react';
 import { Button } from '../../../components/shared/Button';
 import { 
@@ -66,11 +67,44 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
     if (statusFilter !== 'all' && s.status !== statusFilter) return false;
     if (!searchTerm.trim()) return true;
     const term = searchTerm.toLowerCase();
+
+    const matchesFiles = (s.files || []).some(f => 
+      f.original_filename?.toLowerCase().includes(term) ||
+      f.file_category?.toLowerCase().includes(term)
+    );
+
+    const service = (s.service_type || '').toLowerCase();
+    const isLateralMatch = term === 'lateral' && (service.includes('lat') || service.includes('2 views') || service.includes('lateral'));
+    const isFrontalMatch = term === 'frontal' && (service.includes('frontal') || service.includes('pa') || service.includes('single view'));
+
     return (
       s.submission_ref.toLowerCase().includes(term) ||
       s.member_id.toLowerCase().includes(term) ||
       s.patient_name.toLowerCase().includes(term) ||
-      s.service_type.toLowerCase().includes(term)
+      service.includes(term) ||
+      (s.clinical_indication && s.clinical_indication.toLowerCase().includes(term)) ||
+      (s.prelim_findings && s.prelim_findings.toLowerCase().includes(term)) ||
+      isLateralMatch ||
+      isFrontalMatch ||
+      matchesFiles
+    );
+  });
+
+  const filteredCases = cases.filter(c => {
+    if (!searchTerm.trim()) return true;
+    const term = searchTerm.toLowerCase();
+    const service = (c.service_type || c.requested_procedure || '').toLowerCase();
+    const isLateralMatch = term === 'lateral' && (service.includes('lat') || service.includes('2 views') || service.includes('lateral'));
+    const isFrontalMatch = term === 'frontal' && (service.includes('frontal') || service.includes('pa') || service.includes('single view'));
+
+    return (
+      c.case_id.toLowerCase().includes(term) ||
+      (c.patient_id && c.patient_id.toLowerCase().includes(term)) ||
+      service.includes(term) ||
+      (c.indication && c.indication.toLowerCase().includes(term)) ||
+      (c.classification && c.classification.toLowerCase().includes(term)) ||
+      isLateralMatch ||
+      isFrontalMatch
     );
   });
 
@@ -78,40 +112,40 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
     switch (status) {
       case 'APPROVED':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
-            <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Authorized
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-300 shadow-2xs whitespace-nowrap">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> Authorized
           </span>
         );
       case 'DENIED':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-red-50 text-red-800 border border-red-200">
-            <AlertCircle className="w-3 h-3 text-red-600" /> Denied
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-rose-50 text-rose-800 border border-rose-300 shadow-2xs whitespace-nowrap">
+            <AlertCircle className="w-3.5 h-3.5 text-rose-600 shrink-0" /> Denied
           </span>
         );
       case 'ADDITIONAL_INFO_REQUIRED':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
-            <AlertCircle className="w-3 h-3 text-amber-600" /> Additional Info Required
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-900 border border-amber-300 shadow-2xs whitespace-nowrap">
+            <AlertCircle className="w-3.5 h-3.5 text-amber-600 shrink-0" /> Action Required
           </span>
         );
       case 'UNDER_REVIEW':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
-            <Clock className="w-3 h-3 text-indigo-600" /> In Review
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-800 border border-indigo-300 shadow-2xs whitespace-nowrap">
+            <Clock className="w-3.5 h-3.5 text-indigo-600 shrink-0" /> In Review
           </span>
         );
       case 'SUBMITTED':
       default:
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-200">
-            <Clock className="w-3 h-3 text-blue-600" /> Submitted (Pending Review)
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-800 border border-teal-300 shadow-2xs whitespace-nowrap">
+            <Clock className="w-3.5 h-3.5 text-teal-600 shrink-0" /> Submitted
           </span>
         );
     }
   };
 
   return (
-    <div className="space-y-6 max-w-6xl">
+    <div className="space-y-6 max-w-7xl w-full">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
@@ -142,48 +176,57 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
       </div>
 
       {/* Primary Tabs: Live Submissions vs Historical Research Cases */}
-      <div className="flex border-b border-slate-200">
+      <div className="flex border-b border-slate-200/80">
         <button
           onClick={() => setActiveTab('live')}
-          className={`py-2.5 px-4 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
+          className={`py-3 px-5 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
             activeTab === 'live'
-              ? 'border-teal-600 text-teal-800 bg-teal-50/50'
-              : 'border-transparent text-slate-500 hover:text-slate-700'
+              ? 'border-[#176B68] text-[#176B68] bg-teal-50/40'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
           }`}
         >
-          <FileCheck className="w-4 h-4" /> Live Submissions ({submissions.length})
+          <FileCheck className="w-4 h-4 text-[#176B68]" /> Live Submissions ({submissions.length})
         </button>
         <button
           onClick={() => setActiveTab('historical')}
-          className={`py-2.5 px-4 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
+          className={`py-3 px-5 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 ${
             activeTab === 'historical'
-              ? 'border-teal-600 text-teal-800 bg-teal-50/50'
-              : 'border-transparent text-slate-500 hover:text-slate-700'
+              ? 'border-[#176B68] text-[#176B68] bg-teal-50/40'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
           }`}
         >
-          <FileText className="w-4 h-4" /> Research Cohort Archive (2,107 Cases)
+          <FileText className="w-4 h-4 text-[#176B68]" /> Research Cohort Archive (2,107 Cases)
         </button>
       </div>
 
       {/* Filter / Search Bar */}
-      <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row items-center gap-4">
-        <div className="relative flex-1 w-full">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
+      <div className="bg-white border border-slate-200/90 rounded-xl p-4 shadow-xs flex flex-col md:flex-row items-center gap-3">
+        <div className="clinical-search-wrapper flex-1 w-full">
           <input
             type="text"
             placeholder={activeTab === 'live' ? "Search by AUTH Reference (e.g. AUTH-202610-...) or Patient Name..." : "Search Case ID (e.g. CASE_000001)..."}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono"
+            className="clinical-search-input font-mono"
           />
+          {searchTerm && (
+            <button
+              type="button"
+              onClick={() => setSearchTerm('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+              aria-label="Clear search"
+            >
+              <X size={16} />
+            </button>
+          )}
         </div>
 
         {activeTab === 'live' && (
-          <div className="flex items-center gap-2 w-full md:w-auto">
+          <div className="clinical-filter-select-wrapper w-full md:w-auto shrink-0">
             <select 
               value={statusFilter}
               onChange={e => setStatusFilter(e.target.value)}
-              className="px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="clinical-filter-select"
             >
               <option value="all">All Statuses</option>
               <option value="SUBMITTED">Submitted</option>
@@ -210,15 +253,15 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider">
-                  <th className="py-3 px-4">Submission Ref</th>
-                  <th className="py-3 px-4">Patient / Member</th>
-                  <th className="py-3 px-4">Requested Service</th>
-                  <th className="py-3 px-4">Policy Plan</th>
-                  <th className="py-3 px-4">Evidence Files</th>
-                  <th className="py-3 px-4">Submitted At</th>
-                  <th className="py-3 px-4">Status</th>
-                  <th className="py-3 px-4 text-right">Details</th>
+                <tr className="bg-slate-50 border-b-2 border-slate-200 text-slate-700 font-bold uppercase tracking-wider">
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Submission Ref</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Patient / Member</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Requested Service</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Policy Plan</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Evidence Files</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Submitted At</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Status</th>
+                  <th className="py-3.5 px-4 text-right whitespace-nowrap">Details</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -237,40 +280,82 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
                 ) : (
                   filteredSubmissions.map((s) => {
                     const isExpanded = expandedId === s.id;
+                    const fileCount = s.files?.length || 0;
                     return (
                       <React.Fragment key={s.id}>
-                        <tr className="hover:bg-slate-50/80 transition-colors">
-                          <td className="py-3.5 px-4 font-mono font-bold text-teal-900">
-                            {s.submission_ref}
-                          </td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">
-                            <div>{s.patient_name}</div>
-                            <div className="font-mono text-[11px] text-slate-400">{s.member_id}</div>
-                          </td>
-                          <td className="py-3.5 px-4 text-slate-800 font-medium">
-                            <div>{s.service_type}</div>
-                            {s.cpt_code && <div className="text-[10px] font-mono text-slate-500">CPT: {s.cpt_code}</div>}
-                          </td>
-                          <td className="py-3.5 px-4 font-mono text-slate-600">
-                            {s.payer_plan_id}
-                          </td>
-                          <td className="py-3.5 px-4">
-                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">
-                              <FileText className="w-3 h-3 text-slate-500" /> {s.files?.length || 0} File{s.files?.length !== 1 ? 's' : ''}
+                        <tr className="hover:bg-teal-50/30 transition-colors">
+                          {/* 1. Submission Ref */}
+                          <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                            <span className="font-mono font-bold text-xs text-teal-900 bg-teal-50/90 border border-teal-200/90 px-2.5 py-1 rounded-md shadow-2xs inline-flex items-center gap-1.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+                              {s.submission_ref}
                             </span>
                           </td>
-                          <td className="py-3.5 px-4 text-slate-500">
-                            {new Date(s.submitted_at || s.created_at).toLocaleString()}
+
+                          {/* 2. Patient / Member */}
+                          <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                            <div className="font-bold text-slate-900 text-xs sm:text-sm">{s.patient_name}</div>
+                            <span className="font-mono text-[11px] font-semibold text-indigo-700 bg-indigo-50/80 px-2 py-0.5 rounded border border-indigo-100/90 inline-block mt-0.5">
+                              {s.member_id}
+                            </span>
                           </td>
-                          <td className="py-3.5 px-4">
+
+                          {/* 3. Requested Service */}
+                          <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                            <div className="text-slate-900 font-semibold text-xs sm:text-sm">{s.service_type}</div>
+                            {s.cpt_code && (
+                              <span className="text-[10px] font-mono font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 inline-block mt-0.5">
+                                CPT: {s.cpt_code}
+                              </span>
+                            )}
+                          </td>
+
+                          {/* 4. Policy Plan */}
+                          <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                            <span className="font-mono text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/90 px-2.5 py-1 rounded-md inline-block shadow-2xs">
+                              {s.payer_plan_id}
+                            </span>
+                          </td>
+
+                          {/* 5. Evidence Files */}
+                          <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                            <span className={`inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-md border shadow-2xs ${
+                              fileCount > 0 
+                                ? 'bg-cyan-50 text-cyan-800 border-cyan-200/90' 
+                                : 'bg-slate-100 text-slate-600 border-slate-200'
+                            }`}>
+                              <FileText className={`w-3.5 h-3.5 ${fileCount > 0 ? 'text-cyan-600' : 'text-slate-400'}`} />
+                              {fileCount} {fileCount === 1 ? 'File' : 'Files'}
+                            </span>
+                          </td>
+
+                          {/* 6. Submitted At */}
+                          <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                            <div className="text-slate-700 font-medium text-xs">
+                              {new Date(s.submitted_at || s.created_at).toLocaleDateString()}
+                            </div>
+                            <div className="text-slate-400 font-mono text-[11px]">
+                              {new Date(s.submitted_at || s.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                            </div>
+                          </td>
+
+                          {/* 7. Status Badge */}
+                          <td className="py-3.5 px-4 align-middle whitespace-nowrap">
                             {getStatusBadge(s.status)}
                           </td>
-                          <td className="py-3.5 px-4 text-right">
+
+                          {/* 8. Action Details */}
+                          <td className="py-3.5 px-4 align-middle text-right whitespace-nowrap">
                             <button
                               onClick={() => setExpandedId(isExpanded ? null : s.id)}
-                              className="inline-flex items-center gap-1 text-xs text-teal-700 hover:text-teal-900 font-semibold px-2 py-1 rounded hover:bg-teal-50"
+                              className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-all shadow-2xs ${
+                                isExpanded 
+                                  ? 'bg-teal-700 text-white border-teal-700' 
+                                  : 'bg-teal-50 hover:bg-teal-100/90 text-teal-800 border-teal-200'
+                              }`}
                             >
-                              {isExpanded ? 'Hide' : 'View'} {isExpanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
+                              <span>{isExpanded ? 'Hide' : 'View'}</span>
+                              {isExpanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
                             </button>
                           </td>
                         </tr>
@@ -399,12 +484,12 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider">
-                  <th className="py-3 px-4">Research Case ID</th>
-                  <th className="py-3 px-4">Indication</th>
-                  <th className="py-3 px-4">Requested Modality</th>
-                  <th className="py-3 px-4">Classification</th>
-                  <th className="py-3 px-4">Source Clinical Text</th>
+                <tr className="bg-slate-50 border-b-2 border-slate-200 text-slate-700 font-bold uppercase tracking-wider">
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Research Case ID</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Indication</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Requested Modality</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Classification</th>
+                  <th className="py-3.5 px-4 text-left whitespace-nowrap">Source Clinical Text</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -421,26 +506,36 @@ export const ProviderSubmissionsPage: React.FC<ProviderSubmissionsProps> = ({ on
                     </td>
                   </tr>
                 ) : (
-                  cases.map(c => (
-                    <tr key={c.case_id} className="hover:bg-slate-50/80 transition-colors">
-                      <td className="py-3.5 px-4 font-mono font-bold text-slate-900">
-                        {c.case_id}
+                  filteredCases.map(c => (
+                    <tr key={c.case_id} className="hover:bg-amber-50/25 transition-colors">
+                      <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                        <span className="font-mono font-bold text-xs text-amber-900 bg-amber-50/90 border border-amber-200/90 px-2.5 py-1 rounded-md shadow-2xs inline-block">
+                          {c.case_id}
+                        </span>
                       </td>
-                      <td className="py-3.5 px-4 text-slate-700">
+                      <td className="py-3.5 px-4 align-middle text-slate-800 font-medium">
                         {c.indication || '—'}
                       </td>
-                      <td className="py-3.5 px-4 font-medium text-slate-800">
+                      <td className="py-3.5 px-4 align-middle font-medium text-slate-900">
                         {c.service_type || 'Chest Radiography'}
                       </td>
-                      <td className="py-3.5 px-4">
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
-                          c.classification === 'abnormal' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'
+                      <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                        <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wide border shadow-2xs ${
+                          c.classification === 'abnormal' 
+                            ? 'bg-amber-50 text-amber-900 border-amber-300' 
+                            : 'bg-emerald-50 text-emerald-800 border-emerald-300'
                         }`}>
                           {c.classification || 'normal'}
                         </span>
                       </td>
-                      <td className="py-3.5 px-4 text-slate-500">
-                        {c.has_source_text ? 'Available' : 'Absent'}
+                      <td className="py-3.5 px-4 align-middle whitespace-nowrap">
+                        <span className={`inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded border ${
+                          c.has_source_text 
+                            ? 'bg-teal-50 text-teal-800 border-teal-200' 
+                            : 'bg-slate-100 text-slate-500 border-slate-200'
+                        }`}>
+                          {c.has_source_text ? 'Available' : 'Absent'}
+                        </span>
                       </td>
                     </tr>
                   ))

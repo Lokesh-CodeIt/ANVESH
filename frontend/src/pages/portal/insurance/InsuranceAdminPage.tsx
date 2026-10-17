@@ -35,7 +35,7 @@ export const InsuranceAdminPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 max-w-6xl">
+    <div className="space-y-6 max-w-7xl w-full mx-auto">
       {/* Title */}
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Payer Organization Administration & Access Governance</h1>
