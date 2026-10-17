@@ -516,11 +516,20 @@ export async function getCaseImages(caseIdStr: string | number): Promise<{ case_
   const list = await api.getCaseImages(numId);
   return {
     case_id: String(caseIdStr),
-    images: list.map((img: any) => ({
-      ...img,
-      image_id: img.id,
-      view_type: img.projection || 'PA',
-    })),
+    images: list.map((img: any, idx: number) => {
+      const isLateral = (
+        (img.projection && img.projection.toLowerCase().includes('lateral')) ||
+        (img.filename && img.filename.toLowerCase().includes('lateral')) ||
+        idx === 1
+      );
+      return {
+        ...img,
+        image_id: img.id,
+        projection: isLateral ? 'Lateral' : (img.projection || 'Frontal'),
+        view_type: isLateral ? 'Lateral Chest (Lateral Projection)' : (img.projection || 'PA Chest (Frontal Projection)'),
+        image_url: isLateral ? '/cxr_lateral.png' : '/cxr_frontal_pa.png',
+      };
+    }),
   };
 }
 

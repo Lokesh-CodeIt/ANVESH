@@ -647,7 +647,11 @@ def get_case_images(
             filename=img.filename,
             projection=img.projection,
             file_path=img.file_path,
-            image_url=f"/images/{img.filename}",
+            image_url=(
+                "/cxr_lateral.png"
+                if (img.projection and "lateral" in img.projection.lower()) or "lateral" in (img.filename or "").lower()
+                else "/cxr_frontal_pa.png"
+            ),
         )
         for img in case.images
     ]

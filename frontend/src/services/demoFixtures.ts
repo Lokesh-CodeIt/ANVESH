@@ -230,34 +230,64 @@ export const DEMO_CASE_IMAGES: Record<string, CaseImage[]> = {
       image_id: 901,
       case_id: 1,
       filename: 'cxr_frontal_pa.png',
-      projection: 'PA',
+      projection: 'Frontal',
       view_type: 'PA Chest (Frontal Projection)',
       file_path: 'cases/DEMO-CXR-001/image/cxr_frontal_pa.png',
-      image_url: '/demo_dataset/cases/DEMO-CXR-001/image/cxr_frontal_pa.png'
+      image_url: '/cxr_frontal_pa.png'
+    },
+    {
+      id: 902,
+      image_id: 902,
+      case_id: 1,
+      filename: 'cxr_lateral.png',
+      projection: 'Lateral',
+      view_type: 'Lateral Chest (Lateral Projection)',
+      file_path: 'cases/DEMO-CXR-001/image/cxr_lateral.png',
+      image_url: '/cxr_lateral.png'
     }
   ],
   'DEMO-CXR-002': [
     {
-      id: 902,
-      image_id: 902,
+      id: 903,
+      image_id: 903,
       case_id: 2,
       filename: 'cxr_frontal_pa.png',
-      projection: 'PA',
+      projection: 'Frontal',
       view_type: 'PA Chest (Frontal Projection)',
       file_path: 'cases/DEMO-CXR-002/image/cxr_frontal_pa.png',
-      image_url: '/demo_dataset/cases/DEMO-CXR-002/image/cxr_frontal_pa.png'
+      image_url: '/cxr_frontal_pa.png'
+    },
+    {
+      id: 904,
+      image_id: 904,
+      case_id: 2,
+      filename: 'cxr_lateral.png',
+      projection: 'Lateral',
+      view_type: 'Lateral Chest (Lateral Projection)',
+      file_path: 'cases/DEMO-CXR-002/image/cxr_lateral.png',
+      image_url: '/cxr_lateral.png'
     }
   ],
   'DEMO-CXR-003': [
     {
-      id: 903,
-      image_id: 903,
+      id: 905,
+      image_id: 905,
       case_id: 3,
       filename: 'cxr_frontal_pa.png',
-      projection: 'PA',
+      projection: 'Frontal',
       view_type: 'PA Chest (Frontal Projection)',
       file_path: 'cases/DEMO-CXR-003/image/cxr_frontal_pa.png',
-      image_url: '/demo_dataset/cases/DEMO-CXR-003/image/cxr_frontal_pa.png'
+      image_url: '/cxr_frontal_pa.png'
+    },
+    {
+      id: 906,
+      image_id: 906,
+      case_id: 3,
+      filename: 'cxr_lateral.png',
+      projection: 'Lateral',
+      view_type: 'Lateral Chest (Lateral Projection)',
+      file_path: 'cases/DEMO-CXR-003/image/cxr_lateral.png',
+      image_url: '/cxr_lateral.png'
     }
   ]
 };

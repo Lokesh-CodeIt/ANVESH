@@ -59,19 +59,40 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
 
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Determine fallback image based on classification or case ID
-  const defaultFallback = classification.toLowerCase().includes('abnormal')
-    ? '/demo_dataset/cases/DEMO-CXR-002/image/cxr_frontal_pa.png'
-    : '/demo_dataset/cases/DEMO-CXR-001/image/cxr_frontal_pa.png';
+  // Determine current projection
+  const activeItem = images.length > 0 && images[selectedIndex] ? images[selectedIndex] : null;
+  const currentProjection = activeItem?.projection || activeItem?.view_type || viewType;
+  const isLateral = (
+    (currentProjection && currentProjection.toLowerCase().includes('lateral')) ||
+    (activeItem?.filename && activeItem.filename.toLowerCase().includes('lateral')) ||
+    (selectedIndex === 1 && images.length > 1)
+  );
+
+  // Determine fallback image based on projection (Frontal vs Lateral) and classification
+  const defaultFallback = isLateral
+    ? '/cxr_lateral.png'
+    : (classification.toLowerCase().includes('abnormal')
+      ? '/demo_dataset/cases/DEMO-CXR-002/image/cxr_frontal_pa.png'
+      : '/cxr_frontal_pa.png');
 
   // Normalize image source
   useEffect(() => {
     let resolved = '';
-    const activeItem = images.length > 0 && images[selectedIndex] ? images[selectedIndex] : null;
-    const targetPath = activeItem?.image_url || activeItem?.file_path || directImageUrl || imagePath || '';
+    const currentItem = images.length > 0 && images[selectedIndex] ? images[selectedIndex] : null;
+    const isCurrentLateral = (
+      (currentItem?.projection && currentItem.projection.toLowerCase().includes('lateral')) ||
+      (currentItem?.view_type && currentItem.view_type.toLowerCase().includes('lateral')) ||
+      (currentItem?.filename && currentItem.filename.toLowerCase().includes('lateral')) ||
+      (viewType && viewType.toLowerCase().includes('lateral')) ||
+      (selectedIndex === 1 && images.length > 1)
+    );
 
-    if (targetPath) {
-      if (targetPath.startsWith('http') || targetPath.startsWith('/demo_dataset') || targetPath.startsWith('/api') || targetPath.startsWith('/submissions')) {
+    const targetPath = currentItem?.image_url || currentItem?.file_path || directImageUrl || imagePath || '';
+
+    if (isCurrentLateral) {
+      resolved = targetPath && (targetPath.includes('lateral') || targetPath.startsWith('http')) ? targetPath : '/cxr_lateral.png';
+    } else if (targetPath) {
+      if (targetPath.startsWith('http') || targetPath.startsWith('/cxr_') || targetPath.startsWith('/demo_dataset') || targetPath.startsWith('/api') || targetPath.startsWith('/submissions')) {
         resolved = targetPath;
       } else if (targetPath.startsWith('cases/DEMO')) {
         resolved = `/demo_dataset/${targetPath}`;
@@ -91,7 +112,7 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
     setCurrentSrc(resolved);
     setImageError(false);
     setHasFallbackTriggered(false);
-  }, [imagePath, directImageUrl, selectedIndex, images, defaultFallback]);
+  }, [imagePath, directImageUrl, selectedIndex, images, defaultFallback, viewType]);
 
   const handleZoomIn = () => setScale(prev => Math.min(prev + 0.25, 4));
   const handleZoomOut = () => setScale(prev => Math.max(prev - 0.25, 0.5));
@@ -127,10 +148,6 @@ export const MedicalImageViewer: React.FC<MedicalImageViewerProps> = ({
       setImageError(true);
     }
   };
-
-  // Determine current projection label
-  const activeItem = images.length > 0 && images[selectedIndex] ? images[selectedIndex] : null;
-  const currentProjection = activeItem?.projection || activeItem?.view_type || viewType;
 
   // Filter styles for PACS manipulation
   const filterStyles = [
