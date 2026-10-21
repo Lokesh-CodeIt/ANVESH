@@ -318,10 +318,14 @@
 .bg-emerald-100 { background-color: #D1FAE5 !important; }
 .bg-emerald-600 { background-color: #059669 !important; }
 .bg-emerald-700 { background-color: #047857 !important; }
+.bg-emerald-800 { background-color: #065F46 !important; }
+.bg-green-600 { background-color: #16A34A !important; }
+.bg-green-700 { background-color: #15803D !important; }
 
 .bg-amber-50 { background-color: #FFFBEB !important; }
 .bg-amber-100 { background-color: #FEF3C7 !important; }
 .bg-amber-600 { background-color: #D97706 !important; }
+.bg-amber-700 { background-color: #B45309 !important; }
 
 .bg-red-50 { background-color: #FEF2F2 !important; }
 .bg-red-100 { background-color: #FEE2E2 !important; }
