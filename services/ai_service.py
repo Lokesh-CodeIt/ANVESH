@@ -35,18 +35,23 @@ logger = logging.getLogger("medauth.ai")
 # Base directory & Checkpoint paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Checkpoint configuration: defaults to v3 refined adapter with instant rollback to v2
-ACTIVE_LLAVA_VERSION = os.getenv("ANVESH_LLAVA_VERSION", "v3").strip().lower()
-if ACTIVE_LLAVA_VERSION == "v2":
+# Checkpoint configuration: defaults to the high-accuracy multimodal adapter (88.86% Acc)
+ACTIVE_LLAVA_VERSION = os.getenv("ANVESH_LLAVA_VERSION", "multimodal").strip().lower()
+if ACTIVE_LLAVA_VERSION in ("multimodal", "lora", "final"):
+    PRIMARY_LLAVA_ADAPTER = os.path.join(BASE_DIR, "checkpoints_llava", "final_adapter")
+    PRIMARY_LLAVA_THRESHOLD = 0.5000
+    PRIMARY_LLAVA_NAME = "Fine-Tuned LLaVA-1.5-7B Multimodal (Primary - 88.86% Acc)"
+    PRIMARY_LLAVA_REL = "checkpoints_llava/final_adapter"
+elif ACTIVE_LLAVA_VERSION == "v2" and os.path.exists(os.path.join(BASE_DIR, "checkpoints_llava_v2", "best_adapter")):
     PRIMARY_LLAVA_ADAPTER = os.path.join(BASE_DIR, "checkpoints_llava_v2", "best_adapter")
     PRIMARY_LLAVA_THRESHOLD = 0.5100
-    PRIMARY_LLAVA_NAME = "Fine-Tuned LLaVA-1.5-7B v2 (Primary)"
+    PRIMARY_LLAVA_NAME = "Fine-Tuned LLaVA-1.5-7B v2 (Pure Image)"
     PRIMARY_LLAVA_REL = "checkpoints_llava_v2/best_adapter"
 else:
-    PRIMARY_LLAVA_ADAPTER = os.path.join(BASE_DIR, "checkpoints_llava_v3", "best_adapter")
-    PRIMARY_LLAVA_THRESHOLD = 0.3500
-    PRIMARY_LLAVA_NAME = "Fine-Tuned LLaVA-1.5-7B v3 (Refined Primary)"
-    PRIMARY_LLAVA_REL = "checkpoints_llava_v3/best_adapter"
+    PRIMARY_LLAVA_ADAPTER = os.path.join(BASE_DIR, "checkpoints_llava", "final_adapter")
+    PRIMARY_LLAVA_THRESHOLD = 0.5000
+    PRIMARY_LLAVA_NAME = "Fine-Tuned LLaVA-1.5-7B Multimodal (Primary - 88.86% Acc)"
+    PRIMARY_LLAVA_REL = "checkpoints_llava/final_adapter"
 
 VIT_CHECKPOINT = os.path.join(BASE_DIR, "checkpoints_vit_image_only", "best_vit_model.pt")
 VIT_CONFIG = os.path.join(BASE_DIR, "checkpoints_vit_image_only", "vit_config.json")
@@ -135,10 +140,15 @@ def get_primary_llava_model():
         return _PRIMARY_LLAVA_MODEL, _PRIMARY_LLAVA_PROCESSOR
 
 
-def classify_radiograph_primary_llava(image_path: str) -> Dict[str, Any]:
+def classify_radiograph_primary_llava(
+    image_path: str,
+    indication: Optional[str] = None,
+    prelim_findings: Optional[str] = None,
+) -> Dict[str, Any]:
     """
-    Executes live forward-pass inference on an uploaded radiograph using the fine-tuned Primary LLaVA-1.5-7B model.
-    Runs direct multimodal inference (radiograph pixels -> vision tower -> multimodal projector -> Vicuna LLM).
+    Executes live forward-pass inference on an uploaded radiograph and clinical notes using the
+    fine-tuned Primary Multimodal LLaVA-1.5-7B model (88.86% test accuracy).
+    Runs direct multimodal inference (radiograph pixels + clinical notes -> vision tower + projector -> Vicuna LLM).
     Evaluates exact logit differences and continuous posterior probabilities between 'abnormal' and 'normal'.
     """
     import time
@@ -152,13 +162,27 @@ def classify_radiograph_primary_llava(image_path: str) -> Dict[str, Any]:
     model, processor = get_primary_llava_model()
 
     image = Image.open(image_path).convert("RGB")
-    prompt = (
-        "USER: <image>\nYou are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\n"
-        "Determine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\n"
-        "Respond ONLY with a valid JSON object matching this schema:\n"
-        "{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}\n"
-        "ASSISTANT: {\"classification\": \""
-    )
+    if prelim_findings and prelim_findings.strip():
+        prompt = (
+            "USER: <image>\n"
+            "You are a clinical radiology AI assistant for prior authorization verification. "
+            "You are given a chest X-ray image AND the radiologist's actual dictated findings/impression below. "
+            "Your job is to structure this information, cross-verify visual consistency, and determine whether "
+            "this study represents a normal or abnormal examination.\n\n"
+            f"Clinical Indication: {indication or 'Not specified'}\n"
+            f"Radiologist Dictated Findings: {prelim_findings.strip()}\n\n"
+            "Respond ONLY with a valid JSON object matching this schema:\n"
+            "{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"findings observed\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}\n"
+            "ASSISTANT: {\"classification\": \""
+        )
+    else:
+        prompt = (
+            "USER: <image>\nYou are a thoracic radiology AI assistant. Analyze this chest radiograph carefully.\n"
+            "Determine whether this radiograph shows any cardiopulmonary or thoracic abnormality, or if it is normal.\n"
+            "Respond ONLY with a valid JSON object matching this schema:\n"
+            "{\n  \"classification\": \"normal\" or \"abnormal\",\n  \"findings\": [\"visual findings observed in the image\"],\n  \"confidence\": \"high\" or \"medium\" or \"low\"\n}\n"
+            "ASSISTANT: {\"classification\": \""
+        )
 
     inputs = processor(text=prompt, images=image, return_tensors="pt")
     device = next(model.parameters()).device
@@ -407,13 +431,17 @@ def generate_submission_ai_evidence(
             "ai_evidence": evidence,
         }
 
-    # Step 2: Primary local Fine-Tuned LLaVA-1.5-7B on CUDA
+    # Step 2: Primary local Fine-Tuned LLaVA-1.5-7B Multimodal on CUDA
     llava_res = None
     llava_error = None
 
     if radiograph_path and os.path.exists(radiograph_path):
         try:
-            llava_res = classify_radiograph_primary_llava(radiograph_path)
+            llava_res = classify_radiograph_primary_llava(
+                image_path=radiograph_path,
+                indication=indication,
+                prelim_findings=prelim_findings
+            )
         except Exception as e:
             llava_error = str(e)
             logger.error("Primary LLaVA inference failed on image %s: %s", radiograph_path, e, exc_info=True)

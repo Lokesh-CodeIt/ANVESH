@@ -1,0 +1,67 @@
+% ANVESH IEEE Research Paper - LaTeX Tables Package
+% Compatible with IEEEtran class and booktabs
+
+% TABLE I: Comprehensive Benchmark Model Comparison on Held-Out Test Set (N=422)
+\begin{table*}[t]
+\centering
+\caption{Comprehensive Abnormality Classification Performance on Held-Out Test Cohort ($N = 422$)}
+\label{tab:benchmark_comparison}
+\begin{tabular}{llcccccccc}
+\toprule
+\textbf{Model Architecture} & \textbf{Modality} & \textbf{Parameters} & \textbf{Accuracy (\%)} & \textbf{Sensitivity (\%)} & \textbf{Specificity (\%)} & \textbf{Macro $F_1$} & \textbf{MCC} & \textbf{ROC-AUC} & \textbf{Latency} \\
+\midrule
+Base LLaVA-1.5-7B (Zero-Shot) & Pure Image & 7.06 B & 50.00 & 0.00 & \textbf{100.00} & 0.3333 & 0.0000 & 0.5547 & 145.2 ms \\
+Prior LLaVA-1.5-7B v1 (Step 184) & Pure Image & 7.08 B & 50.24 & 0.47 & \textbf{100.00} & 0.3344 & +0.0487 & 0.5500 & 419.6 ms \\
+Google MedGemma-4B-IT (Precomputed) & Multi/Text & 4.0 B & 64.93 & 31.75 & 98.10 & 0.6059 & +0.3991 & --- & Offline \\
+Vision Transformer (ViT-B/16) & Pure Image & \textbf{85.8 M} & 65.40 & \textbf{66.35} & 64.45 & 0.6540 & +0.3081 & 0.7062 & \textbf{17.2 ms} \\
+\textbf{Fine-Tuned LLaVA-1.5-7B v2 (Ours)} & Pure Image & 7.08 B & \textbf{67.54} & 62.09 & 72.99 & \textbf{0.6744} & \textbf{+0.3528} & \textbf{0.7481} & 141.1 ms \\
+\midrule
+\textit{LLaVA-1.5-7B LoRA (Multimodal)}* & \textit{Image+Text} & \textit{7.08 B} & \textit{88.86} & \textit{83.89} & \textit{93.84} & \textit{0.8883} & \textit{+0.7811} & \textit{---} & \textit{2433 ms} \\
+\bottomrule
+\multicolumn{10}{l}{\footnotesize *Multimodal LLaVA condition includes dictated radiologist report text in prompt; reported for extraction reference.}
+\end{tabular}
+\end{table*}
+
+% TABLE II: 2x2 Contingency Confusion Matrices
+\begin{table}[ht]
+\centering
+\caption{Held-Out Confusion Matrices ($N = 422$, 211 Normal / 211 Abnormal)}
+\label{tab:confusion_matrices}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model Evaluated} & \textbf{TP} & \textbf{TN} & \textbf{FP} & \textbf{FN} \\
+\midrule
+Base LLaVA-1.5-7B (Zero-Shot) & 0 & 211 & 0 & 211 \\
+Vision Transformer (ViT-B/16) & 140 & 136 & 75 & 71 \\
+Fine-Tuned LLaVA-1.5-7B v2 (Primary) & 131 & 154 & 57 & 80 \\
+Google MedGemma-4B-IT (Precomputed) & 67 & 207 & 4 & 144 \\
+Multimodal LLaVA-1.5-7B (Report-Assisted) & 177 & 198 & 13 & 34 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% TABLE III: QLoRA and Vision Transformer Training Hyperparameters
+\begin{table}[ht]
+\centering
+\caption{Model Training and Hyperparameter Configurations}
+\label{tab:hyperparameters}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Hyperparameter / Setting} & \textbf{Primary LLaVA v2} & \textbf{ViT-B/16 Classifier} \\
+\midrule
+Base Architecture & LLaVA-1.5-7B-hf & torchvision vit\_b\_16 \\
+Pretrained Weights & Vicuna-7B + CLIP & ImageNet-1K \\
+Quantization / Precision & 4-bit NF4 (Double Quant) & 32-bit Float \\
+LoRA Rank ($r$) / Alpha ($\alpha$) & $r = 16$, $\alpha = 32$ & N/A (Full Head Tuning) \\
+Adapted Modules & Projector + LLM Layers & Linear Head ($768 \to 2$) \\
+Trainable Parameters & 20,496,384 (0.289\%) & 85,800,194 \\
+Optimizer & AdamW & AdamW \\
+Peak Learning Rate & $5.0 \times 10^{-5}$ & $2.0 \times 10^{-5}$ / $2.0 \times 10^{-4}$ \\
+LR Scheduler & Cosine Annealing & Fixed with Weight Decay \\
+Effective Batch Size & 16 (4 batch $\times$ 4 accum) & 32 \\
+Training Epochs & 6 (552 steps) & 15 \\
+Selected Best Checkpoint & Step 460 (Epoch 5) & Epoch 12 \\
+Inference Latency (Mean) & 141.14 ms (RTX 4090) & 17.25 ms (Intel CPU) \\
+\bottomrule
+\end{tabular}
+\end{table}

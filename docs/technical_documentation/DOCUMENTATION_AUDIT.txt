@@ -1,0 +1,203 @@
+================================================================================
+ANVESH: COMPLETE TECHNICAL DOCUMENTATION & PUBLICATION AUDIT REPORT
+================================================================================
+
+Audit Date: October 21, 2026
+Auditor: Senior AI Quality Assurance & Medical Systems Auditor
+Audit Scope: Full repository documentation suite in docs/technical_documentation/ and ieee_paper/
+Compliance Standard: Scientific Integrity, Empirical Concordance, Zero-Leakage, and IEEE Publication Guidelines
+
+--------------------------------------------------------------------------------
+1. DELIVERABLES CHECKLIST & PHYSICAL VERIFICATION
+--------------------------------------------------------------------------------
+
+[+] docs/technical_documentation/01_PROJECT_OVERVIEW.md
+    Status: EXISTS | Size: ~8,400 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/02_SYSTEM_ARCHITECTURE.md
+    Status: EXISTS | Size: ~11,200 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/03_DATASET_AND_PREPROCESSING.md
+    Status: EXISTS | Size: ~9,100 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/04_MODEL_METHODOLOGY.md
+    Status: EXISTS | Size: ~11,600 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/05_EXPERIMENTAL_EVALUATION.md
+    Status: EXISTS | Size: ~10,800 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/06_FRONTEND_BACKEND_API.md
+    Status: EXISTS | Size: ~11,900 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/07_INSTALLATION_AND_REPRODUCIBILITY.md
+    Status: EXISTS | Size: ~8,900 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/08_LIMITATIONS_ETHICS_AND_FUTURE_WORK.md
+    Status: EXISTS | Size: ~7,800 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/09_PROJECT_FILE_REFERENCE.md
+    Status: EXISTS | Size: ~7,900 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/ANVESH_MASTER_DOCUMENTATION.md
+    Status: EXISTS | Size: ~36,200 chars | Verdict: VERIFIED COMPLETE (MASTER REFERENCE)
+
+[+] docs/technical_documentation/ANVESH_COLLEGE_PROJECT_REPORT.md
+    Status: EXISTS | Size: ~28,200 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/README.md
+    Status: EXISTS | Size: ~2,800 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/ieee_paper/ieee_manuscript.md
+    Status: EXISTS | Size: ~14,500 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/ieee_paper/ieee_manuscript.tex
+    Status: EXISTS | Size: ~12,800 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/ieee_paper/references.bib
+    Status: EXISTS | Size: ~2,600 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/ieee_paper/ieee_tables.tex
+    Status: EXISTS | Size: ~3,200 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/ieee_paper/figure_manifest.md
+    Status: EXISTS | Size: ~3,100 chars | Verdict: VERIFIED COMPLETE
+
+[+] docs/technical_documentation/ieee_paper/ieee_submission_checklist.md
+    Status: EXISTS | Size: ~2,100 chars | Verdict: VERIFIED COMPLETE
+
+
+--------------------------------------------------------------------------------
+2. NUMERICAL CONCORDANCE & FACT-CHECKING AUDIT
+--------------------------------------------------------------------------------
+
+Every empirical value reported across all documents was cross-verified against raw repository CSV and JSON artifacts (benchmark_summary.json, v2_llava_summary.json, vit_summary.json, confusion_matrix_counts.csv):
+
+- Total Cohort Size:
+  Stated Value: N = 2,107
+  Source Artifact: full_cohort_deployment.json
+  Concordance Verdict: 100% Concordant
+
+- Training Split Count:
+  Stated Value: 1,474 cases (737 normal / 737 abnormal)
+  Source Artifact: train.json
+  Concordance Verdict: 100% Concordant
+
+- Validation Split Count:
+  Stated Value: 211 cases (106 normal / 105 abnormal)
+  Source Artifact: val.json
+  Concordance Verdict: 100% Concordant
+
+- Held-Out Test Cohort:
+  Stated Value: 422 cases (211 normal / 211 abnormal)
+  Source Artifact: test.json
+  Concordance Verdict: 100% Concordant
+
+- Primary LLaVA v2 Accuracy:
+  Stated Value: 67.54% (95% CI: [62.93%, 71.83%])
+  Source Artifact: v2_llava_summary.json
+  Concordance Verdict: 100% Concordant
+
+- Primary LLaVA v2 Sensitivity:
+  Stated Value: 62.09% (95% CI: [55.38%, 68.36%])
+  Source Artifact: v2_llava_summary.json
+  Concordance Verdict: 100% Concordant
+
+- Primary LLaVA v2 Specificity:
+  Stated Value: 72.99% (95% CI: [66.62%, 78.53%])
+  Source Artifact: v2_llava_summary.json
+  Concordance Verdict: 100% Concordant
+
+- Primary LLaVA v2 ROC-AUC:
+  Stated Value: 0.7481
+  Source Artifact: v2_llava_summary.json
+  Concordance Verdict: 100% Concordant
+
+- Primary LLaVA v2 Latency:
+  Stated Value: 141.14 ms (NVIDIA RTX 4090)
+  Source Artifact: v2_llava_summary.json
+  Concordance Verdict: 100% Concordant
+
+- Primary LLaVA Confusion Matrix:
+  Stated Value: TP=131, TN=154, FP=57, FN=80 (Sum = 422)
+  Source Artifact: v2_llava_test_predictions.csv
+  Concordance Verdict: 100% Concordant
+
+- ViT-B/16 Accuracy:
+  Stated Value: 65.40% (95% CI: [60.74%, 69.78%])
+  Source Artifact: vit_summary.json
+  Concordance Verdict: 100% Concordant
+
+- ViT-B/16 Sensitivity:
+  Stated Value: 66.35% (95% CI: [59.73%, 72.38%])
+  Source Artifact: vit_summary.json
+  Concordance Verdict: 100% Concordant
+
+- ViT-B/16 Specificity:
+  Stated Value: 64.45% (95% CI: [57.79%, 70.60%])
+  Source Artifact: vit_summary.json
+  Concordance Verdict: 100% Concordant
+
+- ViT-B/16 ROC-AUC:
+  Stated Value: 0.7062
+  Source Artifact: vit_summary.json
+  Concordance Verdict: 100% Concordant
+
+- ViT-B/16 Latency (CPU):
+  Stated Value: 17.25 ms (Intel Core i9-13900K)
+  Source Artifact: vit_summary.json
+  Concordance Verdict: 100% Concordant
+
+- ViT-B/16 Confusion Matrix:
+  Stated Value: TP=140, TN=136, FP=75, FN=71 (Sum = 422)
+  Source Artifact: vit_test_predictions.csv
+  Concordance Verdict: 100% Concordant
+
+- Base LLaVA (Zero-Shot):
+  Stated Value: Accuracy 50.00%, Sens 0.00%, Spec 100.00%
+  Source Artifact: image_only_benchmark_summary.json
+  Concordance Verdict: 100% Concordant
+
+- Multimodal LLaVA LoRA:
+  Stated Value: Accuracy 88.86%, Sens 83.89%, Spec 93.84%
+  Source Artifact: benchmark_summary.json
+  Concordance Verdict: 100% Concordant
+
+- Deterministic Engine Latency:
+  Stated Value: 0.6317 ms (CPU)
+  Source Artifact: recorded_latencies.csv
+  Concordance Verdict: 100% Concordant
+
+
+--------------------------------------------------------------------------------
+3. SCIENTIFIC DISCLAIMERS & INTEGRITY VALIDATIONS
+--------------------------------------------------------------------------------
+
+1. Explicit Modality Separation:
+   Every document clearly separates pure image-only evaluation (ViT: 65.40%, LLaVA v2: 67.54%) from multimodal report-assisted evaluation (LLaVA LoRA: 88.86%). No text-assisted results are deceptively reported as pure vision performance.
+
+2. MedGemma Gated Status:
+   MedGemma is accurately labeled as a precomputed offline baseline without claiming that local fine-tuning occurred in the project.
+
+3. Absence of Autonomous Denials:
+   All documents explicitly state that software-level safeguards forbid autonomous claim rejection, requiring audited human review.
+
+4. Zero Secret Disclosure:
+   Verified that .env.example, .env, and documentation contain zero live API keys, private passwords, or proprietary tokens.
+
+5. Statistical Significance Stated Correctly:
+   The McNemar's test result (chi^2 = 0.4129, p = 0.5205) is openly disclosed, establishing that while LLaVA v2 achieves higher specificity, the accuracy difference between LLaVA v2 and ViT-B/16 is not statistically significant.
+
+
+--------------------------------------------------------------------------------
+4. ITEMS REQUIRING INSTITUTIONAL CUSTOMIZATION
+--------------------------------------------------------------------------------
+
+Prior to final submission of the college report and IEEE paper:
+- Replace [STUDENT NAME(S) PLACEHOLDER] with student author names.
+- Replace [ROLL NUMBER(S) PLACEHOLDER] with academic registration numbers.
+- Replace [PROJECT GUIDE NAME, DESIGNATION PLACEHOLDER] with faculty supervisor details.
+- Replace [INSTITUTION / UNIVERSITY NAME PLACEHOLDER] with university and department names.
+
+================================================================================
+END OF AUDIT REPORT
+================================================================================

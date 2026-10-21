@@ -1,0 +1,156 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{url}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{ANVESH: Multimodal Prior-Authorization Verification and Radiographic Evidence Grounding Engine\\
+\thanks{This research was conducted using the public Indiana University Open-i chest radiograph collection made available by the National Library of Medicine (NLM/NIH).}
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+\IEEEauthorblockA{\textit{Department of Computer Science \& Engineering} \\
+\textit{Institution Name Placeholder}\\
+City, Country \\
+email@institution.edu}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+\IEEEauthorblockA{\textit{Department of Computer Science \& Engineering} \\
+\textit{Institution Name Placeholder}\\
+City, Country \\
+email@institution.edu}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} Supervisor Name, \IEEEmembership{Senior Member, IEEE}}
+\IEEEauthorblockA{\textit{Department of Computer Science \& Engineering} \\
+\textit{Institution Name Placeholder}\\
+City, Country \\
+supervisor@institution.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+Prior authorization in healthcare is a labor-intensive administrative bottleneck requiring clinical providers to demonstrate medical necessity before insurers approve coverage for diagnostic procedures. Current manual review workflows exacerbate clinician burnout, delay patient care, and introduce inconsistent claim determinations. We present ANVESH, an end-to-end clinical AI and policy compliance system that cross-verifies chest radiographs and clinical indications against health insurance guidelines. ANVESH pairs deep neural feature extractors with a deterministic, zero-hallucination rules engine under an auditable human-in-the-loop framework. 
+
+To overcome gradient dilution in generative Vision-Language Models (VLMs), we introduce a Projector-Augmented QLoRA fine-tuning method with exact target-only loss masking on LLaVA-1.5-7B. We benchmark our model against an ImageNet-pretrained Vision Transformer (ViT-B/16), zero-shot foundation models, and Google MedGemma-4B-IT on an audited held-out test cohort of $N = 422$ chest radiographs from the Indiana University Open-i collection. In pure image-only abnormality classification, our fine-tuned LLaVA-1.5-7B v2 model achieves 67.54\% Accuracy (95\% CI: [62.9\%, 71.8\%]), 62.09\% Sensitivity, 72.99\% Specificity, 0.6744 Macro $F_1$, and 0.7481 ROC-AUC, substantially outperforming off-the-shelf zero-shot LLaVA which collapsed entirely to normal predictions. Concurrently, our discriminative ViT-B/16 baseline delivers 65.40\% Accuracy and 0.7062 ROC-AUC while executing in 17.25 ms on standard CPU hardware ($8.2\times$ faster than the 7B VLM on an RTX 4090). When radiologist report text is provided for multimodal evidence structuring, LLaVA achieves 88.86\% Accuracy and an MCC of +0.7811. A companion deterministic policy engine evaluates compliance in 0.63 ms on CPU, enforcing strict safeguards including score capping when source reports are missing. ANVESH provides an empirical blueprint for verifiable utilization management in clinical radiology.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Medical Artificial Intelligence, Prior Authorization, Vision-Language Models, Vision Transformers, Chest Radiography, Clinical Decision Support Systems, Healthcare Informatics.
+\end{IEEEkeywords}
+
+\section{Introduction}
+Prior authorization (PA) is mandated by healthcare insurers to verify that requested diagnostic examinations are medically necessary and adhere to evidence-based clinical criteria. According to recent surveys by the American Medical Association, physicians complete an average of 43 prior authorization requests per week, consuming over 14 hours of clinical staff time, with 94\% reporting care delays that adversely affect patient outcomes \cite{ama2024priorauth}. Conversely, insurance medical review teams face crushing case queues, creating a precarious balance between improper claim rejections and unchecked fraud, waste, and abuse.
+
+Automating prior authorization via purely autonomous black-box deep learning models has failed because healthcare payers and providers demand complete auditability. If an automated system recommends denying a diagnostic claim, it must articulate the exact clinical finding and policy criterion that justified the decision. 
+
+To address this challenge, we present \textbf{ANVESH (MedAuth-VLM)}. Rather than relying on unconstrained generative language models to make autonomous coverage decisions, ANVESH introduces a hybrid neuro-symbolic framework:
+\begin{enumerate}
+    \item Deep neural vision representations (ViT-B/16 and Projector-Augmented QLoRA LLaVA-1.5-7B v2) inspect radiograph pixels to identify disease indicators and extract clinical evidence.
+    \item An independent, deterministic Python rules engine cross-references extracted clinical findings against structured coverage criteria from Centers for Medicare \& Medicaid Services (CMS) Qualified Health Plan policies \cite{cms2024qhp}.
+    \item The platform strictly forbids autonomous rejections, presenting human reviewers with an auditable 5-point verification checklist.
+\end{enumerate}
+
+\section{Related Work}
+\subsection{Automated Chest Radiography Interpretation}
+Automated pathology detection from chest radiographs was largely pioneered by convolutional neural networks such as CheXNet \cite{rajpurkar2017chexnet}. While CNNs excel at localized feature extraction, they typically operate as single-task black boxes with fixed classification heads. More recently, Vision Transformers (ViT) \cite{dosovitskiy2020image} have demonstrated that global self-attention across non-overlapping image patches captures long-range thoracic dependencies without convolutional inductive biases.
+
+\subsection{Multimodal Vision-Language Models in Medicine}
+Instruction-tuned multimodal models, initiated by LLaVA \cite{liu2023visual}, connect visual patch encoders (CLIP-ViT) to autoregressive language decoders (Vicuna/LLaMA) via projection matrices. Biomedical adaptations such as Med-PaLM M \cite{tu2024towards} demonstrate remarkable generative reasoning across multimodal clinical data. However, fine-tuning large generative models for diagnostic discrimination faces severe obstacles: when prompted to output structured JSON, standard causal language modeling loss optimizes boilerplate syntax rather than clinical pathology tokens---a defect we formally term \textit{loss dilution}.
+
+\subsection{Parameter-Efficient Fine-Tuning (PEFT)}
+Quantized Low-Rank Adaptation (QLoRA) \cite{dettmers2023qlora, hu2021lora} enables 4-bit NormalFloat (NF4) quantization of 7B-parameter models while maintaining 16-bit adapter gradients, dramatically reducing VRAM requirements and allowing state-of-the-art multimodal fine-tuning on commercial workstation GPUs.
+
+\section{Materials and Methods}
+\subsection{Dataset Provenance and Cohort Curation}
+Experiments were conducted using the Indiana University (IU) Hospital Chest X-ray Collection made available by the National Library of Medicine (NLM) Open-i repository \cite{demner2016preparing}. The natural distribution of this dataset is imbalanced (35.8\% normal vs. 64.2\% abnormal).
+
+We assembled an audited, balanced benchmark cohort of $N = 2,107$ clinical studies (4,093 images) partitioned into three immutable splits:
+\begin{itemize}
+    \item \textbf{Training Set:} 1,474 cases (737 normal, 737 abnormal) --- 70.0\%
+    \item \textbf{Validation Set:} 211 cases (106 normal, 105 abnormal) --- 10.0\%
+    \item \textbf{Held-Out Test Set:} 422 cases (211 normal, 211 abnormal) --- 20.0\%
+\end{itemize}
+Partitions enforce zero case overlap ($\text{Train} \cap \text{Test} = \emptyset$) and zero SHA-256 image collisions. The 422-case test split remained locked and untouched during all model architecture decisions and threshold tuning.
+
+\subsection{Task Formulations: Image-Only vs. Multimodal Conditioning}
+We establish a strict distinction between two separate experimental conditions:
+\begin{enumerate}
+    \item \textbf{Pure Image-Only Classification:} The model receives only the radiograph pixel tensor ($X \in \mathbb{R}^{H \times W \times C}$) and a standardized task prompt without clinical notes. The objective is to identify thoracic abnormality purely from image contrast.
+    \item \textbf{Multimodal Report-Assisted Structuring:} The model receives the radiograph \textbf{and} the dictated radiologist findings/impression text. The objective is to act as an extraction agent, converting clinical narrative into structured prior-authorization evidence.
+\end{enumerate}
+
+\section{Model Architectures \& Training Strategy}
+\subsection{Discriminative Vision Transformer (ViT-B/16 Baseline)}
+We implement \texttt{torchvision.models.vit\_b\_16} pretrained on ImageNet-1K. The radiograph is resized to $224 \times 224$ and divided into $196$ patches of $16 \times 16$ pixels. Patch tokens are projected into a 768-dimensional latent space, concatenated with a learnable \texttt{[CLS]} token, and processed across 12 transformer encoder layers. A linear head maps the final class token state to binary logits $\mathbb{R}^2$. 
+Total parameters: $85,800,194$ ($\approx 85.8\text{ M}$). Trained for 15 epochs using AdamW ($\text{lr}_{\text{backbone}} = 2\times 10^{-5}, \text{lr}_{\text{head}} = 2\times 10^{-4}$), batch size 32.
+
+\subsection{Generative Vision-Language Model (LLaVA-1.5-7B v2)}
+The LLaVA-1.5-7B architecture pairs a CLIP-ViT-L/14 visual encoder ($336 \times 336$ resolution, 576 visual tokens) with a 4-bit NF4 quantized Vicuna-7B-v1.5 language model linked via a 2-layer MLP projector.
+
+We introduce two methodological modifications in \texttt{train\_llava\_v2.py}:
+\begin{enumerate}
+    \item \textbf{Projector-Augmented LoRA:} LoRA adapters ($r=16, \alpha=32$, dropout 0.05) are attached not only to LLM attention projections (\texttt{q\_proj}, \texttt{v\_proj}, etc.) but also to the visual projection layers (\texttt{linear\_1}, \texttt{linear\_2}), aligning web-pretrained visual embeddings to medical grayscale contrast.
+    \item \textbf{Exact Target-Only Loss Masking:} To resolve loss dilution, input sequences are left-padded and terminated at \texttt{ASSISTANT: \{"classification": "}. Target tokens are restricted solely to the diagnostic classification string and closing brace (\texttt{normal"\}} or \texttt{abnormal"\}}). All prompt, pad, and boilerplate tokens are masked with label $-100$:
+\end{enumerate}
+\begin{equation}
+\mathcal{L} = -\sum_{t \in \mathcal{T}_{\text{diagnostic}}} \log P(x_t \mid x_{<t}, H_v)
+\end{equation}
+Trainable parameters: $20,496,384$ (0.289\% of 7.08B total). Trained for 6 epochs (552 steps) using AdamW ($\text{lr} = 5\times 10^{-5}$, Cosine Annealing), effective batch size 16 on an NVIDIA RTX 4090 24GB GPU. Optimal validation checkpoint selected at Step 460 ($\theta^* = 0.5100$).
+
+\section{Results \& Discussion}
+
+\begin{table*}[t]
+\centering
+\caption{Comprehensive Abnormality Classification Performance on Held-Out Test Cohort ($N = 422$)}
+\label{tab:benchmark_comparison}
+\begin{tabular}{llcccccccc}
+\toprule
+\textbf{Model Architecture} & \textbf{Modality} & \textbf{Parameters} & \textbf{Accuracy (\%)} & \textbf{Sensitivity (\%)} & \textbf{Specificity (\%)} & \textbf{Macro $F_1$} & \textbf{MCC} & \textbf{ROC-AUC} & \textbf{Latency} \\
+\midrule
+Base LLaVA-1.5-7B (Zero-Shot) & Pure Image & 7.06 B & 50.00 & 0.00 & \textbf{100.00} & 0.3333 & 0.0000 & 0.5547 & 145.2 ms \\
+Prior LLaVA-1.5-7B v1 (Step 184) & Pure Image & 7.08 B & 50.24 & 0.47 & \textbf{100.00} & 0.3344 & +0.0487 & 0.5500 & 419.6 ms \\
+Google MedGemma-4B-IT (Precomputed) & Multi/Text & 4.0 B & 64.93 & 31.75 & 98.10 & 0.6059 & +0.3991 & --- & Offline \\
+Vision Transformer (ViT-B/16) & Pure Image & \textbf{85.8 M} & 65.40 & \textbf{66.35} & 64.45 & 0.6540 & +0.3081 & 0.7062 & \textbf{17.2 ms} \\
+\textbf{Fine-Tuned LLaVA-1.5-7B v2 (Ours)} & Pure Image & 7.08 B & \textbf{67.54} & 62.09 & 72.99 & \textbf{0.6744} & \textbf{+0.3528} & \textbf{0.7481} & 141.1 ms \\
+\midrule
+\textit{LLaVA-1.5-7B LoRA (Multimodal)}* & \textit{Image+Text} & \textit{7.08 B} & \textit{88.86} & \textit{83.89} & \textit{93.84} & \textit{0.8883} & \textit{+0.7811} & \textit{---} & \textit{2433 ms} \\
+\bottomrule
+\multicolumn{10}{l}{\footnotesize *Multimodal LLaVA condition includes dictated radiologist report text in prompt; reported for extraction reference.}
+\end{tabular}
+\end{table*}
+
+All models were evaluated on the identical 422-case held-out test cohort (211 normal, 211 abnormal). The comprehensive performance results are reported in Table~\ref{tab:benchmark_comparison}.
+
+\subsection{Key Empirical Findings}
+\begin{enumerate}
+    \item \textbf{Failure of Zero-Shot Foundation Models:} Base LLaVA-1.5-7B suffered single-class collapse ($\text{TP}=0, \text{TN}=211, \text{FN}=211$), predicting normal for 100\% of cases, demonstrating that unadapted web-scale VLMs cannot reliably evaluate diagnostic radiographs.
+    \item \textbf{Efficacy of Projector Adaptation:} Fine-tuned LLaVA-1.5-7B v2 achieved 67.54\% Accuracy, 72.99\% Specificity, and 0.7481 ROC-AUC, demonstrating substantial improvement over unmasked v1 runs (50.24\% accuracy).
+    \item \textbf{ViT CPU Competitiveness:} The 85.8M ViT-B/16 model achieved 65.40\% accuracy and 0.7062 ROC-AUC with a mean latency of \textbf{17.25 ms on CPU}. McNemar's paired test ($\chi^2 = 0.4129, p = 0.5205$) confirms that the overall diagnostic accuracy difference between LLaVA v2 and ViT-B/16 is not statistically significant, establishing ViT-B/16 as an ultra-efficient edge deployment baseline.
+\end{enumerate}
+
+\subsection{Deterministic Policy Engine}
+Extracted evidence is cross-referenced against 100 CMS health policies in $0.63\text{ ms}$ on CPU. The engine computes an evidence score $S \in [0, 100]$:
+\begin{equation}
+S = 40 \cdot \mathbb{I}(\text{consistent}) + 40 \cdot \mathbb{I}(\text{supported}) + 20 \cdot \mathbb{I}(\text{covered})
+\end{equation}
+If report text is absent, the score is capped at $S \le 40/100$, forcing mandatory human reviewer verification.
+
+\section{Conclusion}
+ANVESH provides an auditable, open-source framework for prior-authorization verification in diagnostic radiography. By resolving VLM loss dilution and validating lightweight ViT CPU baselines, ANVESH demonstrates that deep learning and deterministic rules engines can effectively collaborate to reduce administrative burden while safeguarding clinical accuracy.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
