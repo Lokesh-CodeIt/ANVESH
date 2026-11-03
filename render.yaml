@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: anvesh-platform
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./medauth.db
+      - key: SECRET_KEY
+        generateValue: true
+

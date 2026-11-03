@@ -1560,3 +1560,29 @@ def evaluate_submission_policy(
 
 
 
+
+
+# ---------------------------------------------------------------------------
+# Frontend SPA Static Assets & Route Fallback
+# ---------------------------------------------------------------------------
+FRONTEND_DIST_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend', 'dist'))
+if os.path.isdir(FRONTEND_DIST_DIR):
+    assets_dir = os.path.join(FRONTEND_DIST_DIR, 'assets')
+    if os.path.isdir(assets_dir):
+        app.mount('/assets', StaticFiles(directory=assets_dir), name='frontend_assets')
+        logger.info('Mounted static frontend assets from: %s', assets_dir)
+
+    @app.get('/{full_path:path}', include_in_schema=False)
+    async def serve_spa(full_path: str):
+        reserved_prefixes = ('api/', 'health', 'docs', 'redoc', 'openapi.json', 'images/', 'demo_dataset/')
+        if any(full_path.startswith(prefix) for prefix in reserved_prefixes):
+            raise HTTPException(status_code=404, detail='Endpoint not found')
+
+        target_file = os.path.join(FRONTEND_DIST_DIR, full_path)
+        if full_path and os.path.isfile(target_file):
+            return FileResponse(target_file)
+
+        index_file = os.path.join(FRONTEND_DIST_DIR, 'index.html')
+        if os.path.isfile(index_file):
+            return FileResponse(index_file)
+        raise HTTPException(status_code=404, detail='SPA entrypoint not found')
