@@ -14,7 +14,8 @@ import {
   ChevronRight, 
   FileText, 
   Sparkles, 
-  Building2, 
+  Building2,
+  Eye, 
   Image as ImageIcon,
   X
 } from 'lucide-react';
@@ -280,9 +281,24 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                   </tr>
                 ) : (
                   filteredSubmissions.map((s) => (
-                    <tr key={s.id} className="hover:bg-slate-50/80 transition-colors">
-                      <td className="py-3.5 px-4 font-mono font-bold text-[#176B68]">
-                        {s.submission_ref}
+                    <tr 
+                      key={s.id} 
+                      onClick={() => onNavigate?.('case-workspace', s.submission_ref || String(s.id))}
+                      className="hover:bg-teal-50/60 cursor-pointer transition-colors group"
+                      title="Click row to open this clinical request in Case Workspace"
+                    >
+                      <td className="py-3.5 px-4 font-mono font-bold text-teal-800">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onNavigate?.('case-workspace', s.submission_ref || String(s.id));
+                          }}
+                          className="font-mono font-bold text-teal-700 hover:text-teal-950 hover:underline inline-flex items-center gap-1 cursor-pointer"
+                        >
+                          <span>{s.submission_ref}</span>
+                          <ChevronRight className="w-3.5 h-3.5 text-teal-500 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                        </button>
                       </td>
                       <td className="py-3.5 px-4 text-slate-500 whitespace-nowrap">
                         {new Date(s.submitted_at || s.created_at).toLocaleString()}
@@ -296,7 +312,7 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                         </div>
                       </td>
                       <td className="py-3.5 px-4 text-slate-900">
-                        <div className="font-medium">{s.patient_name}</div>
+                        <div className="font-medium text-slate-900 group-hover:text-teal-950 transition-colors">{s.patient_name}</div>
                         <div className="font-mono text-[10px] text-slate-400">{s.member_id}</div>
                       </td>
                       <td className="py-3.5 px-4 text-slate-800 font-medium">
@@ -307,9 +323,19 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                         {s.payer_plan_id}
                       </td>
                       <td className="py-3.5 px-4">
-                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/80">
-                          <FileCheck className="w-3 h-3 text-emerald-600" /> {s.files?.length || 0} Attached
-                        </span>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onNavigate?.('case-workspace', s.submission_ref || String(s.id));
+                          }}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 shadow-2xs transition-all cursor-pointer"
+                          title="Open attached diagnostic files in Case Workspace"
+                        >
+                          <FileCheck className="w-3.5 h-3.5 text-emerald-600" />
+                          <span>{s.files?.length || 0} Attached</span>
+                          <Eye className="w-3 h-3 text-emerald-700 ml-0.5" />
+                        </button>
                       </td>
                       <td className="py-3.5 px-4">
                         {getStatusBadge(s.status)}
@@ -318,10 +344,14 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                         <Button
                           variant="primary"
                           size="sm"
-                          onClick={() => onNavigate?.('case-workspace', s.submission_ref)}
-                          className="text-xs font-semibold shadow-xs"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onNavigate?.('case-workspace', s.submission_ref || String(s.id));
+                          }}
+                          className="text-xs font-semibold shadow-xs flex items-center gap-1 ml-auto"
                         >
-                          Open Review
+                          <span>Open Review</span>
+                          <ChevronRight className="w-3.5 h-3.5" />
                         </Button>
                       </td>
                     </tr>
@@ -364,9 +394,24 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                     </td>
                   </tr>
                 ) : filteredCases.map((c) => (
-                  <tr key={c.case_id} className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3.5 px-4 font-mono font-bold text-slate-900">
-                      {c.case_id}
+                  <tr 
+                    key={c.case_id} 
+                    onClick={() => onNavigate?.('case-workspace', c.case_id)}
+                    className="hover:bg-indigo-50/50 cursor-pointer transition-colors group"
+                    title="Click row to open this clinical case in Case Workspace"
+                  >
+                    <td className="py-3.5 px-4 font-mono font-bold text-indigo-900">
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onNavigate?.('case-workspace', c.case_id);
+                        }}
+                        className="font-mono font-bold text-indigo-700 hover:text-indigo-950 hover:underline inline-flex items-center gap-1 cursor-pointer"
+                      >
+                        <span>{c.case_id}</span>
+                        <ChevronRight className="w-3.5 h-3.5 text-indigo-500 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                      </button>
                     </td>
                     <td className="py-3.5 px-4 font-mono text-slate-600">
                       {c.patient_id || 'ANV-PT-9012'}
@@ -388,10 +433,14 @@ export const InsuranceQueuePage: React.FC<InsuranceQueueProps> = ({ onNavigate }
                       <Button
                         variant="secondary"
                         size="sm"
-                        onClick={() => onNavigate?.('case-workspace', c.case_id)}
-                        className="text-xs font-semibold"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onNavigate?.('case-workspace', c.case_id);
+                        }}
+                        className="text-xs font-semibold flex items-center gap-1 ml-auto"
                       >
-                        Open Workspace
+                        <span>Open Workspace</span>
+                        <ChevronRight className="w-3.5 h-3.5" />
                       </Button>
                     </td>
                   </tr>

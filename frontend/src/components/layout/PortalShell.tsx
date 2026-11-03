@@ -57,6 +57,8 @@ export const PortalShell: React.FC<PortalShellProps> = ({ onNavigatePublic }) =>
   });
   const [activeCaseId, setActiveCaseId] = useState<string>(() => {
     if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('anvesh_active_case_id');
+      if (saved) return saved;
       const path = window.location.pathname;
       const match = path.match(/CASE_\d+|AUTH-[A-Za-z0-9-]+|DEMO-[A-Za-z0-9-]+/i);
       if (match) return match[0];
@@ -64,7 +66,7 @@ export const PortalShell: React.FC<PortalShellProps> = ({ onNavigatePublic }) =>
       const c = params.get('caseId');
       if (c) return c;
     }
-    return isDesignPreview ? 'DEMO-CASE-101' : 'CASE_000001';
+    return isDesignPreview ? 'DEMO-CXR-003' : 'AUTH-202610-C891';
   });
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
@@ -133,6 +135,14 @@ export const PortalShell: React.FC<PortalShellProps> = ({ onNavigatePublic }) =>
     setCurrentSection(section);
     if (caseId) {
       setActiveCaseId(caseId);
+      try {
+        sessionStorage.setItem('anvesh_active_case_id', caseId);
+      } catch (_) {}
+    } else if (section === 'workspace' || section === 'case-workspace') {
+      try {
+        const saved = sessionStorage.getItem('anvesh_active_case_id');
+        if (saved) setActiveCaseId(saved);
+      } catch (_) {}
     }
     const mainEl = document.getElementById('portal-main-content');
     if (mainEl) {
