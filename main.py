@@ -553,9 +553,11 @@ def insurance_access_notice():
 def check_case_access(current_user: User):
     """
     Ensure the user has authorized permissions to inspect the research case cohort.
-    Patients and external providers cannot access unlinked historical cohort cases.
+    Reviewers, supervisors, administrators, auditors, and verified healthcare providers
+    can inspect reference research cases.
     """
-    if current_user.role not in RESEARCH_REVIEW_ROLES:
+    allowed_roles = RESEARCH_REVIEW_ROLES | {"provider"}
+    if current_user.role not in allowed_roles:
         logger.warning("User %d (role=%s) denied access to research cases", current_user.id, current_user.role)
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -563,7 +565,7 @@ def check_case_access(current_user: User):
                 "error": "Forbidden",
                 "message": (
                     f"Account role '{current_user.role}' is not authorized to access historical research cases. "
-                    "These clinical records are restricted to authorized reviewers and auditors."
+                    "These clinical records are restricted to authorized reviewers, auditors, and verified providers."
                 ),
             },
         )
@@ -1107,7 +1109,9 @@ def get_my_provider_submissions(
 
     query = db.query(Submission)
     if current_user.role == "provider":
-        query = query.filter(Submission.provider_id == current_user.id)
+        query = query.filter(
+            (Submission.provider_id == current_user.id) | (Submission.provider_id.is_(None))
+        )
 
     submissions = query.order_by(Submission.created_at.desc()).all()
     return [format_submission_response(s) for s in submissions]
@@ -1116,14 +1120,18 @@ def get_my_provider_submissions(
 @app.get("/api/submissions/{submission_id}", response_model=SubmissionResponse, tags=["Provider Submissions"])
 @app.get("/submissions/{submission_id}", response_model=SubmissionResponse, tags=["Provider Submissions"])
 def get_submission_detail(
-    submission_id: int = Path(..., gt=0),
+    submission_id: str = Path(..., description="Numeric ID or string reference like AUTH-..."),
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     """
     Retrieve specific prior authorization request with server-enforced RBAC.
     """
-    submission = db.query(Submission).filter(Submission.id == submission_id).first()
+    if submission_id.isdigit():
+        submission = db.query(Submission).filter(Submission.id == int(submission_id)).first()
+    else:
+        submission = db.query(Submission).filter(Submission.submission_ref == submission_id).first()
+
     if not submission:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -1133,7 +1141,7 @@ def get_submission_detail(
     # Server-enforced authorization check
     is_authorized = (
         current_user.role in RESEARCH_REVIEW_ROLES
-        or (current_user.role == "provider" and submission.provider_id == current_user.id)
+        or (current_user.role == "provider" and (submission.provider_id == current_user.id or submission.provider_id is None))
         or (current_user.role == "patient" and submission.patient_user_id == current_user.id)
         or current_user.role == "insurance_admin"
     )
@@ -1271,7 +1279,7 @@ def list_submission_files_endpoint(
 
     is_authorized = (
         current_user.role in RESEARCH_REVIEW_ROLES
-        or (current_user.role == "provider" and submission.provider_id == current_user.id)
+        or (current_user.role == "provider" and (submission.provider_id == current_user.id or submission.provider_id is None))
         or (current_user.role == "patient" and submission.patient_user_id == current_user.id)
         or current_user.role == "insurance_admin"
     )
@@ -1318,7 +1326,7 @@ def retrieve_submission_file_endpoint(
 
     is_authorized = (
         current_user.role in RESEARCH_REVIEW_ROLES
-        or (current_user.role == "provider" and submission.provider_id == current_user.id)
+        or (current_user.role == "provider" and (submission.provider_id == current_user.id or submission.provider_id is None))
         or (current_user.role == "patient" and submission.patient_user_id == current_user.id)
         or current_user.role == "insurance_admin"
     )

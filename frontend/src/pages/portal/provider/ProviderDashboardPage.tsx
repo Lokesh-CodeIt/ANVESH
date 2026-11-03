@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { Button } from '../../../components/common/Button.tsx';
 import { StatusBadge } from '../../../components/common/StatusBadge.tsx';
-import { getCases, getSummary, CaseRecord, SummaryData } from '../../../services/api.ts';
+import { getCases, getSummary, getMySubmissions, CaseRecord, SummaryData, SubmissionRecord } from '../../../services/api.ts';
 
 interface ProviderDashboardProps {
   onNavigate?: (tab: string, caseId?: string) => void;
