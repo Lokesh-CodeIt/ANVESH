@@ -240,6 +240,16 @@ if os.path.isdir(DEMO_DATASET_DIR):
 else:
     logger.warning("Demo dataset directory not found for static mount: %s", DEMO_DATASET_DIR)
 
+FRONTEND_DIST_DIR = os.getenv(
+    "FRONTEND_DIST_DIR",
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "frontend", "dist")),
+)
+if os.path.isdir(FRONTEND_DIST_DIR):
+    _assets_dir = os.path.join(FRONTEND_DIST_DIR, "assets")
+    if os.path.isdir(_assets_dir):
+        app.mount("/assets", StaticFiles(directory=_assets_dir), name="frontend_assets")
+        logger.info("Mounted static frontend assets from: %s", _assets_dir)
+
 
 @app.get("/images/{image_path:path}", tags=["Images"])
 def serve_medical_image(image_path: str):
@@ -289,9 +299,10 @@ def serve_medical_image(image_path: str):
 # API Endpoints
 # ---------------------------------------------------------------------------
 
-@app.get("/", tags=["Health"])
+@app.get("/api", tags=["Health"])
+@app.get("/api/info", tags=["Health"])
 def root_info():
-    """Root info endpoint."""
+    """Root API info endpoint."""
     return {
         "app": "MedAuth-VLM Backend API",
         "status": "online",
@@ -300,7 +311,20 @@ def root_info():
     }
 
 
-@app.get("/health", response_model=HealthResponse, tags=["Health"])
+@app.api_route("/", methods=["GET", "HEAD"], include_in_schema=False)
+def root_page():
+    index_file = os.path.join(FRONTEND_DIST_DIR, "index.html")
+    if os.path.isfile(index_file):
+        return FileResponse(index_file)
+    return {
+        "app": "MedAuth-VLM Backend API",
+        "status": "online",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "docs_url": "/docs",
+    }
+
+
+@app.api_route("/health", methods=["GET", "HEAD"], response_model=HealthResponse, tags=["Health"])
 def health_check(db: Session = Depends(get_db)):
     """Health check endpoint with database connectivity status."""
     try:
@@ -1559,30 +1583,21 @@ def evaluate_submission_policy(
     }
 
 
-
-
-
 # ---------------------------------------------------------------------------
 # Frontend SPA Static Assets & Route Fallback
 # ---------------------------------------------------------------------------
-FRONTEND_DIST_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend', 'dist'))
 if os.path.isdir(FRONTEND_DIST_DIR):
-    assets_dir = os.path.join(FRONTEND_DIST_DIR, 'assets')
-    if os.path.isdir(assets_dir):
-        app.mount('/assets', StaticFiles(directory=assets_dir), name='frontend_assets')
-        logger.info('Mounted static frontend assets from: %s', assets_dir)
-
-    @app.get('/{full_path:path}', include_in_schema=False)
+    @app.api_route("/{full_path:path}", methods=["GET", "HEAD"], include_in_schema=False)
     async def serve_spa(full_path: str):
-        reserved_prefixes = ('api/', 'health', 'docs', 'redoc', 'openapi.json', 'images/', 'demo_dataset/')
+        reserved_prefixes = ("api/", "health", "docs", "redoc", "openapi.json", "images/", "demo_dataset/")
         if any(full_path.startswith(prefix) for prefix in reserved_prefixes):
-            raise HTTPException(status_code=404, detail='Endpoint not found')
+            raise HTTPException(status_code=404, detail="Endpoint not found")
 
         target_file = os.path.join(FRONTEND_DIST_DIR, full_path)
         if full_path and os.path.isfile(target_file):
             return FileResponse(target_file)
 
-        index_file = os.path.join(FRONTEND_DIST_DIR, 'index.html')
+        index_file = os.path.join(FRONTEND_DIST_DIR, "index.html")
         if os.path.isfile(index_file):
             return FileResponse(index_file)
-        raise HTTPException(status_code=404, detail='SPA entrypoint not found')
+        raise HTTPException(status_code=404, detail="SPA entrypoint not found")
