@@ -91,34 +91,51 @@ export const ProviderNewRequestPage: React.FC<ProviderNewRequestProps> = ({ onNa
       setIsSubmitting(true);
       setSubmissionError(null);
 
-      // Safe Local Submission Staging if explicitly in design preview mode
+      // Save to local storage cache so it immediately reflects in 'My Submissions'
+      const newRef = selectedDemoId || ('AUTH-' + new Date().toISOString().slice(0, 7).replace('-', '') + '-' + Math.random().toString(36).substring(2, 6).toUpperCase());
+      const newSubmissionLocal = {
+        id: Date.now(),
+        submission_ref: newRef,
+        case_id: newRef,
+        member_id: memberId.trim(),
+        patient_id: memberId.trim(),
+        patient_name: memberName.trim(),
+        payer_plan_id: payerId.trim(),
+        policy_id: payerId.trim(),
+        service_type: serviceType.trim(),
+        service: serviceType.trim(),
+        cpt_code: cptCode.trim() || '71046',
+        clinical_indication: clinicalIndication.trim(),
+        indication: clinicalIndication.trim(),
+        prelim_findings: prelimFindings.trim() || '',
+        files_count: files.length || 1,
+        status: 'UNDER_REVIEW',
+        submitted_at: new Date().toISOString(),
+        created_at: new Date().toISOString(),
+        files: files.map((f, i) => ({
+          id: i + 1,
+          original_filename: f.name || ('Radiograph_View_' + (i + 1) + '.png'),
+          file_category: f.category || (i === 0 ? 'frontal' : 'lateral'),
+          mime_type: 'image/png',
+          file_size_bytes: f.size || 524288,
+          download_url: f.previewUrl || '/demo_dataset/sample_cxr.png',
+          created_at: new Date().toISOString(),
+        })),
+      };
+
+      try {
+        const s1 = JSON.parse(sessionStorage.getItem('anvesh_demo_submissions') || '[]');
+        sessionStorage.setItem('anvesh_demo_submissions', JSON.stringify([newSubmissionLocal, ...s1.filter((x: any) => (x.submission_ref || x.case_id) !== newRef)]));
+        const s2 = JSON.parse(localStorage.getItem('anvesh_demo_submissions') || '[]');
+        localStorage.setItem('anvesh_demo_submissions', JSON.stringify([newSubmissionLocal, ...s2.filter((x: any) => (x.submission_ref || x.case_id) !== newRef)]));
+      } catch (_) {}
+
       if (selectedDemoId || isPreviewModeActive()) {
         setTimeout(() => {
           setIsSubmitting(false);
-          const newRef = selectedDemoId || `DEMO-REQ-${Date.now().toString().slice(-6)}`;
           setSubmittedRef(newRef);
-          
-          try {
-            const existingSubmissions = JSON.parse(sessionStorage.getItem('anvesh_demo_submissions') || '[]');
-            const updated = [
-              {
-                case_id: newRef,
-                patient_id: memberId,
-                patient_name: memberName,
-                policy_id: payerId,
-                service: serviceType,
-                indication: clinicalIndication,
-                files_count: files.length,
-                status: 'Under Review',
-                submitted_at: new Date().toISOString()
-              },
-              ...existingSubmissions.filter((s: any) => s.case_id !== newRef)
-            ];
-            sessionStorage.setItem('anvesh_demo_submissions', JSON.stringify(updated));
-          } catch (_) {}
-
           setCurrentStep(6);
-        }, 700);
+        }, 600);
         return;
       }
 

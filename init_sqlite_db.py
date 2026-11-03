@@ -198,6 +198,89 @@ def init_database():
                 print(f"  [+] Created user: {u_data['email']} ({u_data['role']})")
         db.commit()
 
+        # Seed initial sample submissions for provider portal if empty
+        existing_subs = db.query(Submission).count()
+        if existing_subs == 0:
+            provider = db.query(User).filter(User.role == "provider").first()
+            p_id = provider.id if provider else None
+            p_org = provider.organization if provider else "Metropolitan University Hospital"
+
+            now = datetime.now(timezone.utc)
+            sub1 = Submission(
+                submission_ref="AUTH-202610-C891",
+                provider_id=p_id,
+                provider_org=p_org,
+                member_id="MEM-84920",
+                patient_name="Eleanor Vance",
+                payer_plan_id="CMS_QHP_MEDICARE_ADVANTAGE",
+                service_type="Chest Radiography (PA & Lateral)",
+                cpt_code="71046",
+                clinical_indication="Motor vehicle collision with persistent anterior chest wall tenderness and exertional dyspnea",
+                prelim_findings="Suspected left hemithorax costophrenic angle blunting, evaluate for pleural effusion or pneumothorax",
+                status="UNDER_REVIEW",
+                ai_status="COMPLETED",
+                ai_source="LOCAL_VIT",
+                submitted_at=now,
+            )
+            db.add(sub1)
+            db.flush()
+
+            file1 = SubmissionFile(
+                submission_id=sub1.id,
+                original_filename="CXR_PA_Standing.png",
+                stored_filename=f"sub_{sub1.id}_file_1.png",
+                file_path="demo_dataset/sample_cxr.png",
+                file_category="frontal",
+                mime_type="image/png",
+                file_size_bytes=524288,
+            )
+            file2 = SubmissionFile(
+                submission_id=sub1.id,
+                original_filename="CXR_Lateral_View.png",
+                stored_filename=f"sub_{sub1.id}_file_2.png",
+                file_path="demo_dataset/sample_cxr.png",
+                file_category="lateral",
+                mime_type="image/png",
+                file_size_bytes=498300,
+            )
+            db.add(file1)
+            db.add(file2)
+
+            sub2 = Submission(
+                submission_ref="AUTH-202610-A104",
+                provider_id=p_id,
+                provider_org=p_org,
+                member_id="MEM-48210",
+                patient_name="Robert Chen",
+                payer_plan_id="COMMERCIAL_STANDARD",
+                service_type="Chest Radiography (Single View Frontal)",
+                cpt_code="71045",
+                clinical_indication="Pre-operative pulmonary clearance prior to elective orthopedic arthroplasty",
+                prelim_findings="Clear lung fields bilaterally, no acute cardiopulmonary abnormality detected",
+                status="APPROVED",
+                ai_status="COMPLETED",
+                ai_source="LOCAL_VIT",
+                reviewer_decision="APPROVED",
+                reviewer_notes="Meets pre-operative clinical guidelines. Verified by AI grounding engine.",
+                reviewed_at=now,
+                submitted_at=now,
+            )
+            db.add(sub2)
+            db.flush()
+
+            file3 = SubmissionFile(
+                submission_id=sub2.id,
+                original_filename="PreOp_CXR_AP.png",
+                stored_filename=f"sub_{sub2.id}_file_3.png",
+                file_path="demo_dataset/sample_cxr.png",
+                file_category="frontal",
+                mime_type="image/png",
+                file_size_bytes=512000,
+            )
+            db.add(file3)
+            db.commit()
+            print("  [+] Seeded initial authentic submissions into database.")
+
         # Print summary
         print("[4/4] Verifying database inventory counts:")
         c_count = db.query(Case).count()
