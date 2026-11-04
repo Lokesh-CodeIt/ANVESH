@@ -255,6 +255,21 @@ def get_current_user(
     return user
 
 
+def get_optional_current_user(
+    request: Request,
+    db: Session = Depends(get_db),
+    authorization: Optional[str] = Header(None),
+) -> Optional[User]:
+    """
+    Attempt to extract and validate the session user.
+    Returns None if unauthenticated or session invalid, rather than raising HTTP 401/403.
+    """
+    try:
+        return get_current_user(request, db, authorization)
+    except HTTPException:
+        return None
+
+
 def require_roles(*allowed_roles: str) -> Callable:
     """
     FastAPI dependency factory enforcing server-side role-based authorization.

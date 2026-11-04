@@ -176,7 +176,8 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
       if (isLiveSubmission && liveSubmission) {
         // Real Live Provider Submission Decision
         const decisionCode = selectedDisposition === 'APPROVE' ? 'APPROVED' : selectedDisposition === 'DENY' ? 'DENIED' : 'ADDITIONAL_INFO_REQUIRED';
-        const updated = await recordSubmissionDecision(liveSubmission.id, {
+        const targetId = liveSubmission.submission_ref || liveSubmission.id;
+        const updated = await recordSubmissionDecision(targetId, {
           decision: decisionCode,
           notes: rationale.trim(),
         });
@@ -184,8 +185,9 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
         setDecisionPersistedResult({
           review_id: updated.id,
           status: updated.status,
-          decision: updated.reviewer_decision,
+          decision: updated.reviewer_decision || decisionCode,
         });
+        setDecisionError(null);
       } else {
         // Historical Research Case Decision
         const reviewId = reviewPreview?.review_id || reviewPreview?.id || 0;
@@ -204,6 +206,7 @@ export const InsuranceWorkspacePage: React.FC<InsuranceWorkspaceProps> = ({
           status: res?.status || 'DECIDED',
           decision: selectedDisposition,
         });
+        setDecisionError(null);
       }
     } catch (err: any) {
       setDecisionError(err.message || 'Failed to persist decision to backend.');
